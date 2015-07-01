@@ -3,6 +3,7 @@
  *
  * @author RedBrick
  */
+
 package org.redbrick.medright;
 
 public class MedRight {
