@@ -10,6 +10,10 @@ public class MedRight {
 
     public static void main(String[] args) {
         /* TODO Enter code here... */
+
+
+
+
     }
 
 }
