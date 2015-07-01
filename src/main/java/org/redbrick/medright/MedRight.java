@@ -10,7 +10,6 @@ package org.redbrick.medright;
 public class MedRight {
 
 /**
-
  Believe that what I really need here is an array of arrays and not individual arrays
 /* TODO Find out how to create an array of array's
 
@@ -28,6 +27,8 @@ public class MedRight {
      public int[] dateOfLastArrival;
      public int[] numberOfDaysToReceiveDelivery;
      public int[] dateOfFirstDoseFromThisOrder;
+     public int[] estimatedReorderDate;
+     public string[] drugInfo;
  */
 
     public static void main(String[] args) {
