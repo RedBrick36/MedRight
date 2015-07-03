@@ -6,7 +6,6 @@
  *
  * @author RedBrick
  */
-
 package org.redbrick.medright;
 
 /** MedRight will assist in keeping track of medicinal regimens; both for keeping the medicinal schedule as
