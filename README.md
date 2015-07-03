@@ -1,8 +1,8 @@
 #MedRight
 MedRight will assist in keeping track of medicinal regimens; both for keeping the medicinal schedule as
-prescribed, as well as re-ordering those medications/supplements required by the regimen.
+prescribed, as well as timely re-ordering the medications/supplements required by the regimen.
 
-MedRight has been designed with ease-of-use and clear user interface as the top priorities. As a result, the GUI is
+MedRight has been designed with ease-of-use and a clean user interface as the top priorities. As a result, the GUI is
  limited to only displaying what is absolutely necessary for the current operation. This in no way limits its
  functionality or usefulness. On the contrary, providing a clear, easy-to-use interface reduces errors and provides a
  clean display of associated information. The underlying structure of the application maintains every aspect of the
