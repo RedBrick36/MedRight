@@ -49,10 +49,13 @@ Name the medication, the name of the condition or illness it treats, and the tre
    public bool pill;
 
 // Track the quantity of pills in each order
-   public int numberOfPillsInOrder
+   public int numberOfPillsInOrder;
+
+// Track the date that the current order started being consumed
+   string dateOfFirstDoseFromThisOrder;
 
 // Track how many refills are remaining on the prescription
-   public int numberOfRefillsRemaining
+   public int numberOfRefillsRemaining;
 
 // Track the size of each pill as received in the prescription order
    public double sizeInMilligrams;
@@ -67,17 +70,16 @@ Name the medication, the name of the condition or illness it treats, and the tre
    public int numberOfTimesPerDayTaken;
 
 // Track the number of pills on hand at the moment
-   public double quantityOnHand
+   public double quantityOnHand;
 
-// Calculate nextOrderDate by using
-// Instantiate a Date object
+// Calculate nextOrderDate by using:
+   Instantiating a Date object
        Date date = new Date();
-  and use the following string variables:
+   and use the following string variables:
 
    string dateOfLastOrder;
    string dateOfLastArrival;
    string numberOfDaysToReceiveDelivery;
-   string dateOfFirstDoseFromThisOrder;
    string nextOrderDate;
 ------------------------------------------------------------------
 
@@ -85,10 +87,13 @@ Name the medication, the name of the condition or illness it treats, and the tre
    public bool liquid;
 
 // Track the quantity of bottles in each order
-   public int numberOfBottlesInOrder
+   public int numberOfBottlesInOrder;
+
+// Track the date that the current order started being consumed
+   string dateOfFirstDoseFromThisOrder;
 
 // Track how many refills are remaining on the prescription
-   public int numberOfRefillsRemaining
+   public int numberOfRefillsRemaining;
 
 // Track the size of each bottle as received in the prescription order
    public double sizeInMilliliters;
@@ -102,17 +107,16 @@ Name the medication, the name of the condition or illness it treats, and the tre
    public int numberOfTimesPerDayTaken;
 
 // Track the number of bottles on hand at the moment
-   public double quantityOnHand
+   public double quantityOnHand;
 
 // Calculate nextOrderDate by using:
-// Instantiate a Date object
+   Instantiating a Date object
        Date date = new Date();
-  and use the following string variables:
+   and use the following string variables:
 
    string dateOfLastOrder;
    string dateOfLastArrival;
    string numberOfDaysToReceiveDelivery;
-   string dateOfFirstDoseFromThisOrder;
    string nextOrderDate;
 ------------------------------------------------------------------
 
@@ -120,10 +124,13 @@ Name the medication, the name of the condition or illness it treats, and the tre
    public bool topical;
 
 // Track the quantity of units in each order (tubes, tubs, containers)
-   public int numberOfUnitsInOrder
+   public int numberOfUnitsInOrder;
+
+// Track the date that the current order started being consumed
+   string dateOfFirstDoseFromThisOrder;
 
 // Track how many refills are remaining on the prescription
-   public int numberOfRefillsRemaining
+   public int numberOfRefillsRemaining;
 
 // Track the size of each unit as received in the prescription order
    public double sizeInMilliliters;
@@ -137,17 +144,16 @@ Name the medication, the name of the condition or illness it treats, and the tre
    public int numberOfTimesPerDayTaken;
 
 // Track the number of containers on hand at the moment
-   public double quantityOnHand
+   public double quantityOnHand;
 
-// Calculate nextOrderDate by using
-// Instantiate a Date object
+// Calculate nextOrderDate by using:
+   Instantiating a Date object
        Date date = new Date();
-  and use the following string variables:
+   and use the following string variables:
 
    string dateOfLastOrder;
    string dateOfLastArrival;
    string numberOfDaysToReceiveDelivery;
-   string dateOfFirstDoseFromThisOrder;
    string nextOrderDate;
 ------------------------------------------------------------------
 */
