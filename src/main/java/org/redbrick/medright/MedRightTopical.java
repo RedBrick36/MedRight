@@ -30,13 +30,25 @@ int numberOfTimesPerDayTaken;
 // Track the number of containers on hand at the moment
 double quantityOnHand;
 
-/*
-Methods //TODO
-   Calculate totalNumberOfDosagesAvailable;
-   Calculate numberOfDaysTillAllDosagesConsumed;
-   Calculate avgNumberOfDaysBetweenOrderAndDelivery;
-   Calculate nextOrderDate;
-   Create calendarReminders;
-   Prompt for displayNotificatons;
-   Pull and Store medication info from reliable source and make available in GUI
-*/
+// Methods TODO
+        public void totalNumberOfDosagesAvailable(){
+           Calculate totalNumberOfDosagesAvailable;
+        }
+        public void numberOfDaysTillAllDosagesConsumed(){
+           Calculate numberOfDaysTillAllDosagesConsumed;
+        }
+        public void avgNumberOfDaysBetweenOrderAndDelivery(){
+           Calculate avgNumberOfDaysBetweenOrderAndDelivery;
+        }
+        public void nextOrderDate(){
+           Calculate nextOrderDate;
+        }
+        public void calendarRemeinders(){
+           Create calendarReminders;
+        }
+        public void displayNotifications(){
+           Prompt for displayNotificatons;
+        }
+        public void PullAndStoreMedicationInfoFromReliableSourceAndMakeAvailableInGUI(){
+
+        }
