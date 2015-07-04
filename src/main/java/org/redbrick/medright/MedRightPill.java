@@ -3,15 +3,20 @@ package org.redbrick.medright;
 /**
  * Created by RedBrick on 7/4/15.
  */
-public class MedRightLiquid {
+public class MedRightPill {
 
-// What it means to be a liquid treatment
+//What it means to be a pill treatment
 
-    // Is the treatment a liquid?
-    boolean liquid;
+// Name the medication, the name of the condition or illness it treats, and the treatment type:
+    String treatmentMedicationName;
+    String treatmentCondition;
+    String treatmentType;
 
-    // Track the quantity of bottles in each order
-    int numberOfBottlesInOrder;
+    // Is the treatment a pill?
+    boolean pill;
+
+    // Track the quantity of pills in each order
+    int numberOfPillsInOrder;
 
     // Track the date that the current order started being consumed
     String dateOfFirstDoseFromThisOrder;
@@ -19,19 +24,28 @@ public class MedRightLiquid {
     // Track how many refills are remaining on the prescription
     int numberOfRefillsRemaining;
 
-    // Track the size of each bottle as received in the prescription order
-    double sizeInMilliliters;
-    double sizeInOunces;
+    // Track the size of each pill as received in the prescription order
+    double sizeInMilligrams;
+
+    // Track whether pill is to be cut in half for the correct dosage
+    boolean isPillCutInHalf;
 
     // Track the amount to be used in each dose
-    double millilitersPerDose;
-    double ouncesPerDose;
+    double milligramsPerDose;
 
-    //Track the number of times per day that the dosage is prescribed
+    // Track the number of times per day that the dosage is taken
     int numberOfTimesPerDayTaken;
 
-    // Track the number of bottles on hand at the moment
+    // Track the number of pills on hand at the moment
     double quantityOnHand;
+
+    // Track how long it takes between order and delivery
+    String dateOfLastOrder;
+    String dateOfLastArrival;
+    String numberOfDaysToReceiveDelivery;
+
+    // Store next order date
+    String nextOrderDate;
 
     // Methods TODO
     public void totalNumberOfDosagesAvailable(){
