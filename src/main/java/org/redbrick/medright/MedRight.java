@@ -34,139 +34,145 @@ import javax.swing.*;
 
 public class MedRight {
 
-/* TODO Create and refine a list of those properties that define all treatment types possible within this class.
-TODO Ensure that all type definitions are clear, concise and comprehensive.
-*/
+// Showing what it means to be a pill treatment
 
-/*
-Name the medication, the name of the condition or illness it treats, and the treatment type:
-   public string treatmentMedicationName;
-   public string treatmentCondition;
-   public string treatmentType
-------------------------------------------------------------------
+// Name the medication, the name of the condition or illness it treats, and the treatment type:
+String treatmentMedicationName;
+String treatmentCondition;
+String treatmentType;
 
 // Is the treatment a pill?
-   public bool pill;
+boolean pill;
 
 // Track the quantity of pills in each order
-   public int numberOfPillsInOrder;
+int numberOfPillsInOrder;
 
 // Track the date that the current order started being consumed
-   string dateOfFirstDoseFromThisOrder;
+String dateOfFirstDoseFromThisOrder;
 
 // Track how many refills are remaining on the prescription
-   public int numberOfRefillsRemaining;
+int numberOfRefillsRemaining;
 
 // Track the size of each pill as received in the prescription order
-   public double sizeInMilligrams;
+double sizeInMilligrams;
 
 // Track whether pill is to be cut in half for the correct dosage
-   public bool isPillCutInHalf;
+boolean isPillCutInHalf;
 
 // Track the amount to be used in each dose
-   public double milligramsPerDose;
+double milligramsPerDose;
 
 // Track the number of times per day that the dosage is taken
-   public int numberOfTimesPerDayTaken;
+int numberOfTimesPerDayTaken;
 
 // Track the number of pills on hand at the moment
-   public double quantityOnHand;
+double quantityOnHand;
 
-// Calculate nextOrderDate by using:
-   Instantiating a Date object
-       Date date = new Date();
-   and use the following string variables:
+// Track how long it takes between order and delivery
+String dateOfLastOrder;
+String dateOfLastArrival;
+String numberOfDaysToReceiveDelivery;
 
-   string dateOfLastOrder;
-   string dateOfLastArrival;
-   string numberOfDaysToReceiveDelivery;
-   string nextOrderDate;
-------------------------------------------------------------------
+// Store next order date
+String nextOrderDate;
+/*
+Methods //TODO
+   Calculate totalNumberOfDosagesAvailable;
+   Calculate numberOfDaysTillAllDosagesConsumed;
+   Calculate avgNumberOfDaysBetweenOrderAndDelivery;
+   Calculate nextOrderDate;
+   Create calendarReminders;
+   Prompt for displayNotificatons;
+   Pull and Store medication info from reliable source and make available in GUI
+*/
+// ----------------------------------------------------------------
+// Showing what it means to be a liquid treatment
 
 // Is the treatment a liquid?
-   public bool liquid;
+boolean liquid;
 
 // Track the quantity of bottles in each order
-   public int numberOfBottlesInOrder;
+int numberOfBottlesInOrder;
 
 // Track the date that the current order started being consumed
-   string dateOfFirstDoseFromThisOrder;
+String dateOfFirstDoseFromThisOrder;
 
 // Track how many refills are remaining on the prescription
-   public int numberOfRefillsRemaining;
+int numberOfRefillsRemaining;
 
 // Track the size of each bottle as received in the prescription order
-   public double sizeInMilliliters;
-   public double sizeInOunces;
+double sizeInMilliliters;
+double sizeInOunces;
 
 // Track the amount to be used in each dose
-   public double millilitersPerDose;
-   public double ouncesPerDose;
+double millilitersPerDose;
+double ouncesPerDose;
 
 //Track the number of times per day that the dosage is prescribed
-   public int numberOfTimesPerDayTaken;
+int numberOfTimesPerDayTaken;
 
 // Track the number of bottles on hand at the moment
-   public double quantityOnHand;
+double quantityOnHand;
 
-// Calculate nextOrderDate by using:
-   Instantiating a Date object
-       Date date = new Date();
-   and use the following string variables:
-
-   string dateOfLastOrder;
-   string dateOfLastArrival;
-   string numberOfDaysToReceiveDelivery;
-   string nextOrderDate;
-------------------------------------------------------------------
+/*
+Methods //TODO
+   Calculate totalNumberOfDosagesAvailable;
+   Calculate numberOfDaysTillAllDosagesConsumed;
+   Calculate avgNumberOfDaysBetweenOrderAndDelivery;
+   Calculate nextOrderDate;
+   Create calendarReminders;
+   Prompt for displayNotificatons;
+   Pull and Store medication info from reliable source and make available in GUI
+*/
+// ----------------------------------------------------------------
+// Showing what it means to be a topical treatment
 
 // Is the treatment a topical (lotion, cream, salve, ointment, etc.)?
-   public bool topical;
+boolean topical;
 
 // Track the quantity of units in each order (tubes, tubs, containers)
-   public int numberOfUnitsInOrder;
+int numberOfUnitsInOrder;
 
-// Track the date that the current order started being consumed
-   string dateOfFirstDoseFromThisOrder;
+// Track the date that the current order started being consume
+String dateOfFirstDoseFromThisOrder;
 
 // Track how many refills are remaining on the prescription
-   public int numberOfRefillsRemaining;
+int numberOfRefillsRemaining;
 
 // Track the size of each unit as received in the prescription order
-   public double sizeInMilliliters;
-   public double sizeInOunces;
+double sizeInMilliliters;
+double sizeInOunces;
 
 // Track the amount to be used in each dose
-   public double millilitersPerDose;
-      public double ouncesPerDose;
+double millilitersPerDose;
+double ouncesPerDose;
 
 //Track the number of times per day that the dosage is prescribed
-   public int numberOfTimesPerDayTaken;
+int numberOfTimesPerDayTaken;
 
 // Track the number of containers on hand at the moment
-   public double quantityOnHand;
+double quantityOnHand;
 
-// Calculate nextOrderDate by using:
-   Instantiating a Date object
-       Date date = new Date();
-   and use the following string variables:
-
-   string dateOfLastOrder;
-   string dateOfLastArrival;
-   string numberOfDaysToReceiveDelivery;
-   string nextOrderDate;
-------------------------------------------------------------------
+/*
+Methods //TODO
+   Calculate totalNumberOfDosagesAvailable;
+   Calculate numberOfDaysTillAllDosagesConsumed;
+   Calculate avgNumberOfDaysBetweenOrderAndDelivery;
+   Calculate nextOrderDate;
+   Create calendarReminders;
+   Prompt for displayNotificatons;
+   Pull and Store medication info from reliable source and make available in GUI
 */
-
-// We need (because the data types differ) a Collections Framework (Map?) for the data...
-// TODO Research declaring and using the Collections Framework for this application
-
-
+/*
     public static void main(String[] args) {
-        /* TODO Enter code here... */
 
-    System.out.println("Hello World!");
+        System.out.println("Hello World!");
 
     }
 
+
 }
+*/
+
+
+
