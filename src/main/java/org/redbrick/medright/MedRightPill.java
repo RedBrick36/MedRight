@@ -5,15 +5,10 @@ package org.redbrick.medright;
  */
 public class MedRightPill {
 
-//What it means to be a pill treatment
-
-// Name the medication, the name of the condition or illness it treats, and the treatment type:
+    // Name the medication, the name of the condition or illness it treats, and the treatment type:
     String treatmentMedicationName;
     String treatmentCondition;
     String treatmentType;
-
-    // Is the treatment a pill?
-    boolean pill;
 
     // Track the quantity of pills in each order
     int numberOfPillsInOrder;

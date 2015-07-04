@@ -5,10 +5,10 @@ package org.redbrick.medright;
  */
 public class MedRightTopical {
 
-// What it means to be a topical treatment
-
-    // Is the treatment a topical (lotion, cream, salve, ointment, etc.)?
-    boolean topical;
+    // Name the medication, the name of the condition or illness it treats, and the treatment type:
+    String treatmentMedicationName;
+    String treatmentCondition;
+    String treatmentType;
 
     // Track the quantity of units in each order (tubes, tubs, containers)
     int numberOfUnitsInOrder;
@@ -32,6 +32,14 @@ public class MedRightTopical {
 
     // Track the number of containers on hand at the moment
     double quantityOnHand;
+
+    // Track how long it takes between order and delivery
+    String dateOfLastOrder;
+    String dateOfLastArrival;
+    String numberOfDaysToReceiveDelivery;
+
+    // Store next order date
+    String nextOrderDate;
 
     // Methods TODO
     public void totalNumberOfDosagesAvailable(){

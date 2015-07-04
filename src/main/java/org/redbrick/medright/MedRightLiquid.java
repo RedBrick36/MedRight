@@ -5,10 +5,10 @@ package org.redbrick.medright;
  */
 public class MedRightLiquid {
 
-// What it means to be a liquid treatment
-
-    // Is the treatment a liquid?
-    boolean liquid;
+    // Name the medication, the name of the condition or illness it treats, and the treatment type:
+    String treatmentMedicationName;
+    String treatmentCondition;
+    String treatmentType;
 
     // Track the quantity of bottles in each order
     int numberOfBottlesInOrder;
@@ -32,6 +32,14 @@ public class MedRightLiquid {
 
     // Track the number of bottles on hand at the moment
     double quantityOnHand;
+
+    // Track how long it takes between order and delivery
+    String dateOfLastOrder;
+    String dateOfLastArrival;
+    String numberOfDaysToReceiveDelivery;
+
+    // Store next order date
+    String nextOrderDate;
 
     // Methods TODO
     public void totalNumberOfDosagesAvailable(){
