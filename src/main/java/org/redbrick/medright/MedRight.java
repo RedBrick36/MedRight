@@ -27,13 +27,26 @@ Medical care can range from prescriptions for pills/liquids, to vitamin/mineral 
 MedRight assists in all cases where a prescription has been issued by the doctor. It can also be very useful to those
  who just wish to keep track of their own, particular vitamin/supplement regimen.
  */
-
+/*
 import java.util.*;
 import java.text.*;
 import javax.swing.*;
-
+*/
 public class MedRight {
-
+    // TODO
+/* The overall processing of this application will be to:
+For each treatment to be entered by the user: (add treatment button?)
+1. Display the data entry GUI
+2. Prompt user to specify the type of medication (pill, liquid or topical)
+3. Instantiate an object from the correct class based upon user input
+4. Have user fill out all fields that are delineated as variables in that classes object
+5. Initialize the variables based upon user input
+6. Have user decide on the creation of calendar events and pop-up reminder notifications
+7. Run the methods to fill in the remaining variables
+8. Write all object data to a file
+9. Repeat until user is finished inputting treatments
+10. Allow user interaction through GUI to view various presentations of the data gathered through a display info GUI.
+ */
     public static void main(String[] args) {
 
         System.out.println("Hello World!");

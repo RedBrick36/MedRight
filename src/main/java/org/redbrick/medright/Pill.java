@@ -3,12 +3,18 @@ package org.redbrick.medright;
 /**
  * Created by RedBrick on 7/4/15.
  */
-public class MedRightPill {
+// As used in MedRight, Pill covers both tablets and capsules
 
-    // Name the medication, the name of the condition or illness it treats, and the treatment type:
+/* As an object of this class is instantiated it will have the listed variables available.
+Almost all of these variables will be initialized through a GUI; the remainder by calling the methods outlined within
+ the object
+*/
+
+public class Pill {
+
+    // Name the medication, and the name of the condition or illness it treats:
     String treatmentMedicationName;
     String treatmentCondition;
-    String treatmentType;
 
     // Track the quantity of pills in each order
     int numberOfPillsInOrder;
@@ -42,6 +48,12 @@ public class MedRightPill {
     // Store next order date
     String nextOrderDate;
 
+    // Track whether person wants pop-up reminders
+    boolean reminders;
+
+    // Track whether of not calendar events should be created
+    boolean calendarEvents;
+
     // Methods TODO
     public void totalNumberOfDosagesAvailable(){
 
@@ -59,16 +71,17 @@ public class MedRightPill {
 
         Calculate nextOrderDate;
     }
-    public void calendarRemeinders(){
+    public void calendarReminders(){
 
         Create calendarReminders;
     }
     public void displayNotifications(){
 
-        Prompt for displayNotificatons;
+        create displayNotificatons;
     }
     public void PullAndStoreMedicationInfoFromReliableSourceAndMakeAvailableInGUI(){
 
+        //TODO Decide on method and sources for inclusion here...
     }
 
 }
