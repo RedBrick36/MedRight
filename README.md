@@ -1,5 +1,5 @@
 #MedRight
-MedRight will assist in keeping track of medicinal regimens; both for keeping the medicinal schedule as
+MedRight will assist in keeping track of medicinal regiments; both for keeping the medicinal schedule as
 prescribed, as well as timely re-ordering the medications/supplements required by the regimen.
 
 MedRight has been designed with ease-of-use and a clean user interface as the top priorities. As a result, the GUI is
