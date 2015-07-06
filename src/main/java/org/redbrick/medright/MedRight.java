@@ -8,7 +8,7 @@
  */
 package org.redbrick.medright;
 
-/** MedRight will assist in keeping track of medicinal regimens; both for keeping the medicinal schedule as
+/** MedRight will assist in keeping track of medicinal regiments; both for keeping the medicinal schedule as
 prescribed, as well as re-ordering those medications/supplements required by the regimen.
 
 MedRight has been designed with ease-of-use and clear user interface as the top priorities. As a result, the GUI is
