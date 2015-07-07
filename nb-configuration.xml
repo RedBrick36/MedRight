@@ -18,6 +18,8 @@ Any value defined here will override the pom.xml file value but is only applicab
     </properties>
     <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
         <word>GUI</word>
+        <word>Maven</word>
         <word>MedRight</word>
+        <word>plugin</word>
     </spellchecker-wordlist>
 </project-shared-configuration>
