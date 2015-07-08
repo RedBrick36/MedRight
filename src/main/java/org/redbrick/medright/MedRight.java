@@ -1,7 +1,8 @@
 /**
  * Project started by RedBrick on 6/30/15.
  *
- * JDK 1.8.0_45 Maven 3.3.3
+ * JDK 1.8.0_45 
+ * Maven 3.3.3
  *
  * @author RedBrick
  * 
@@ -9,10 +10,12 @@
  * keeping the medicinal schedule as prescribed, as well as re-ordering those
  * medications/supplements required by the regimen.
  *
- * MedRight has been designed with ease-of-use and a clear user interface as the
- * top priorities. As a result, the GUI is limited to only displaying what is
- * absolutely necessary for the current operation. This in no way limits its
- * functionality or usefulness. On the contrary, providing a clear, easy-to-use
+ * MedRight has been designed with ease-of-use and an uncluttered user interface 
+ * as the top priorities. As a result, each pane of the GUI is limited to only 
+ * displaying what is absolutely necessary for the current operation. 
+ * 
+ * This in no way limits its functionality or usefulness. 
+ * On the contrary, providing a "bare-bones", uncluttered and easy-to-use
  * interface reduces errors and provides a clean display of associated
  * information. The underlying structure of the application maintains every
  * aspect of the regimen as a whole and provides user prompts in a focused and
@@ -38,19 +41,22 @@ package org.redbrick.medright;
  */
 public class MedRight {
 
-/* Processes for data entry (draft):
+/* Processes for intial launch and data entry (draft):
      1. Display the main user GUI
         Create DB file
         For each treatment to be entered by the user: (add treatment button)
         (User required to indicate which type prior to Add New button)
         Type selected prior to Add New can be one of the following:
-        Pill, Liquid, Topical, Schedule, Reminder (schedule is just an alternate/different point of view for data entry)
+        Pill, Liquid, Topical, Schedule, Reminder (schedule is just an 
+        alternate/different point of view for data entry)
      2. Instantiate an object from the correct class based upon user input
      3. Present user with appropriate data entry panel
-        Have user fill out all fields that are delineated by the variables in that classes object
+        Have user fill out all fields that are delineated by the variables in 
+        that classes object
         Place input values for each treatment, schedule or reminder
      4. Initialize the variables based upon user input for object
-     5. Have user decide on the creation of calendar events and pop-up reminder notifications
+     5. Have user decide on the creation of calendar events and pop-up reminder 
+        notifications
      6. Run the methods to fill in the remaining variables
      7. Run methods to accomplish:
         Place variables in the appropriate array (pill, liquid, topical)
@@ -59,25 +65,31 @@ public class MedRight {
         Add calendar event for re-order treatment
         Add reminders; if indicated by user
      8. Repeat until user is finished inputting treatments
-     9. Allow user interaction through GUI to view various presentations of the data gathered through a display info GUI.
+     9. Allow user interaction through GUI to view various presentations of the 
+        data gathered through a display info GUI.
 
    Launch Processes:
-    1. At each application launch
-        Populate GUI fields from DB
-    2. Check re-order dates on all treatments
-        If any treatments are within 48 hours of re-ordering, unhide "Alerts!" button on GUI
-        When user presses Alerts! button
-            User receives popup listing all treatments due for re-order withing 48 hours
-    3. Check for reminders and provide popup
-        Provide remind later and cancel buttons
+        1. At each application launch
+            Display StartGUI
+            Populate StartGUI fields from DB
+        2. Check re-order dates on all treatments
+            If any treatments are within 48 hours of re-ordering, unhide "Alerts!" 
+            button on GUI
+            When user presses Alerts! button
+                User receives popup listing all treatments due for re-order withing 
+                48 hours
+        3. Check for reminders and provide popup
+            Provide "Remind Later" and "Cancel" buttons
     
-   Background Processes:
-    1. Check re-order dates on all treatments
-        If any treatments are within 48 hours of re-ordering, unhide "Alerts!" button on GUI
-        When user presses Alerts! button
-            User receives popup listing all treatments due for re-order withing 48 hours
-    2. Check for reminders and provide popup
-        Provide remind later and cancel buttons
+   Background Services:
+        1. Check re-order dates on all treatments
+            If any treatments are within 48 hours of re-ordering, unhide "Alerts!" 
+            button on GUI
+            When user presses Alerts! button
+                User receives popup listing all treatments due for re-order withing 
+                48 hours
+        2. Check for reminders and provide popup
+            Provide "Remind Later" and "Cancel" buttons
 */
       
     public static void main(String[] args) {
