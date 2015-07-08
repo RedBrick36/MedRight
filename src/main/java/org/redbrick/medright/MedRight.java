@@ -40,6 +40,8 @@ package org.redbrick.medright;
  import javax.swing.*;
  */
 public class MedRight {
+    
+    public static void main(String[] args) {
 
 /* Processes for intial launch and data entry (draft):
      1. Display the main user GUI
@@ -90,11 +92,8 @@ public class MedRight {
                 48 hours
         2. Check for reminders and provide popup
             Provide "Remind Later" and "Cancel" buttons
-*/
-      
-    public static void main(String[] args) {
-
-        System.out.println("Hello World!");
+*/     
+                System.out.println("Hello World!");
 
     }
 
