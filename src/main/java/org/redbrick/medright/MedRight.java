@@ -4,10 +4,7 @@
  * JDK 1.8.0_45 Maven 3.3.3
  *
  * @author RedBrick
- */
-package org.redbrick.medright;
-
-/**
+ * 
  * MedRight will assist in keeping track of medicinal regiments; both for
  * keeping the medicinal schedule as prescribed, as well as re-ordering those
  * medications/supplements required by the regimen.
@@ -33,6 +30,7 @@ package org.redbrick.medright;
  * doctor. It can also be very useful to those who just wish to keep track of
  * their own, particular vitamin/supplement regimen.
  */
+package org.redbrick.medright;
 /*
  import java.util.*;
  import java.text.*;
@@ -40,7 +38,7 @@ package org.redbrick.medright;
  */
 public class MedRight {
 
-/* Processes (draft):
+/* Processes for data entry (draft):
      1. Display the main user GUI
         Create DB file
         For each treatment to be entered by the user: (add treatment button)
@@ -62,8 +60,26 @@ public class MedRight {
         Add reminders; if indicated by user
      8. Repeat until user is finished inputting treatments
      9. Allow user interaction through GUI to view various presentations of the data gathered through a display info GUI.
-     */
 
+   Launch Processes:
+    1. At each application launch
+        Populate GUI fields from DB
+    2. Check re-order dates on all treatments
+        If any treatments are within 48 hours of re-ordering, unhide "Alerts!" button on GUI
+        When user presses Alerts! button
+            User receives popup listing all treatments due for re-order withing 48 hours
+    3. Check for reminders and provide popup
+        Provide remind later and cancel buttons
+    
+   Background Processes:
+    1. Check re-order dates on all treatments
+        If any treatments are within 48 hours of re-ordering, unhide "Alerts!" button on GUI
+        When user presses Alerts! button
+            User receives popup listing all treatments due for re-order withing 48 hours
+    2. Check for reminders and provide popup
+        Provide remind later and cancel buttons
+*/
+      
     public static void main(String[] args) {
 
         System.out.println("Hello World!");
