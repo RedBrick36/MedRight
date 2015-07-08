@@ -9,12 +9,12 @@ package org.redbrick.medright;
  *
  * @author RedBrick
  */
-public class MedRightTopLevel extends javax.swing.JFrame {
+public class MedRightStartGUI extends javax.swing.JFrame {
 
     /**
      * Creates new form MedRightTopLevel
      */
-    public MedRightTopLevel() {
+    public MedRightStartGUI() {
         initComponents();
     }
 
@@ -28,25 +28,25 @@ public class MedRightTopLevel extends javax.swing.JFrame {
     private void initComponents() {
 
         entityMedRight = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory(null).createEntityManager();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
+        MainPane = new javax.swing.JTabbedPane();
         pills = new javax.swing.JPanel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        pillScrollPane = new javax.swing.JScrollPane();
+        pillTable = new javax.swing.JTable();
         liquids = new javax.swing.JPanel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        liquidsScrollPane = new javax.swing.JScrollPane();
+        liquidsTable = new javax.swing.JTable();
         topicals = new javax.swing.JPanel();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
+        topicalsScrollPane = new javax.swing.JScrollPane();
+        topicalsTable = new javax.swing.JTable();
         schedule = new javax.swing.JPanel();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        jTable4 = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
+        scheduleScrollPane = new javax.swing.JScrollPane();
+        scheduleTable = new javax.swing.JTable();
+        scheduleLable1 = new javax.swing.JLabel();
         calendar = new javax.swing.JPanel();
         iteminfo = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        MedList = new javax.swing.JTree();
-        jScrollPane2 = new javax.swing.JScrollPane();
+        iteminfoScrollPanel = new javax.swing.JScrollPane();
+        iteminfoJTree = new javax.swing.JTree();
+        iteminfoScrollPane = new javax.swing.JScrollPane();
         banner = new javax.swing.JLabel();
         version = new javax.swing.JLabel();
         preferences = new javax.swing.JButton();
@@ -55,13 +55,13 @@ public class MedRightTopLevel extends javax.swing.JFrame {
         select = new javax.swing.JComboBox();
         addnew = new javax.swing.JButton();
         creator = new javax.swing.JLabel();
-        jToggleButton1 = new javax.swing.JToggleButton();
-        jToggleButton2 = new javax.swing.JToggleButton();
-        jToggleButton3 = new javax.swing.JToggleButton();
-        jToggleButton4 = new javax.swing.JToggleButton();
-        jToggleButton5 = new javax.swing.JToggleButton();
-        jToggleButton6 = new javax.swing.JToggleButton();
-        jToggleButton7 = new javax.swing.JToggleButton();
+        toggleTookAM = new javax.swing.JToggleButton();
+        toggleTookMM = new javax.swing.JToggleButton();
+        toggleTookNoon = new javax.swing.JToggleButton();
+        toggleTookMA = new javax.swing.JToggleButton();
+        toggleTookAft = new javax.swing.JToggleButton();
+        toggleTookEve = new javax.swing.JToggleButton();
+        toggleTookBedtime = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("MedRight© Regiment Tracker");
@@ -71,12 +71,12 @@ public class MedRightTopLevel extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(761, 620));
         setSize(new java.awt.Dimension(761, 620));
 
-        jTabbedPane1.setToolTipText("");
+        MainPane.setToolTipText("");
 
         pills.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         pills.setToolTipText("");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        pillTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -111,29 +111,29 @@ public class MedRightTopLevel extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jTable1.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
-        jTable1.setCellSelectionEnabled(true);
-        jTable1.setShowGrid(true);
-        jScrollPane3.setViewportView(jTable1);
+        pillTable.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
+        pillTable.setCellSelectionEnabled(true);
+        pillTable.setShowGrid(true);
+        pillScrollPane.setViewportView(pillTable);
 
         org.jdesktop.layout.GroupLayout pillsLayout = new org.jdesktop.layout.GroupLayout(pills);
         pills.setLayout(pillsLayout);
         pillsLayout.setHorizontalGroup(
             pillsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jScrollPane3, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 726, Short.MAX_VALUE)
+            .add(pillScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 726, Short.MAX_VALUE)
         );
         pillsLayout.setVerticalGroup(
             pillsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(pillsLayout.createSequentialGroup()
-                .add(jScrollPane3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 340, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(pillScrollPane, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 340, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(0, 0, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Pills", pills);
+        MainPane.addTab("Pills", pills);
 
         liquids.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        liquidsTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -158,27 +158,27 @@ public class MedRightTopLevel extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jTable2.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
-        jScrollPane4.setViewportView(jTable2);
+        liquidsTable.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
+        liquidsScrollPane.setViewportView(liquidsTable);
 
         org.jdesktop.layout.GroupLayout liquidsLayout = new org.jdesktop.layout.GroupLayout(liquids);
         liquids.setLayout(liquidsLayout);
         liquidsLayout.setHorizontalGroup(
             liquidsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jScrollPane4, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 726, Short.MAX_VALUE)
+            .add(liquidsScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 726, Short.MAX_VALUE)
         );
         liquidsLayout.setVerticalGroup(
             liquidsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(liquidsLayout.createSequentialGroup()
-                .add(jScrollPane4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 399, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(liquidsScrollPane, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 399, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(0, 0, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Liquids", liquids);
+        MainPane.addTab("Liquids", liquids);
 
         topicals.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+        topicalsTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -203,27 +203,27 @@ public class MedRightTopLevel extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane5.setViewportView(jTable3);
+        topicalsScrollPane.setViewportView(topicalsTable);
 
         org.jdesktop.layout.GroupLayout topicalsLayout = new org.jdesktop.layout.GroupLayout(topicals);
         topicals.setLayout(topicalsLayout);
         topicalsLayout.setHorizontalGroup(
             topicalsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jScrollPane5, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 726, Short.MAX_VALUE)
+            .add(topicalsScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 726, Short.MAX_VALUE)
         );
         topicalsLayout.setVerticalGroup(
             topicalsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(topicalsLayout.createSequentialGroup()
-                .add(jScrollPane5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 399, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(topicalsScrollPane, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 399, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(0, 0, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Topicals", topicals);
+        MainPane.addTab("Topicals", topicals);
 
         schedule.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jTable4.setAutoCreateRowSorter(true);
-        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+        scheduleTable.setAutoCreateRowSorter(true);
+        scheduleTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
@@ -253,34 +253,34 @@ public class MedRightTopLevel extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jTable4.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
-        jTable4.setColumnSelectionAllowed(true);
-        jTable4.setEnabled(false);
-        jScrollPane6.setViewportView(jTable4);
+        scheduleTable.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
+        scheduleTable.setColumnSelectionAllowed(true);
+        scheduleTable.setEnabled(false);
+        scheduleScrollPane.setViewportView(scheduleTable);
 
-        jLabel1.setText("Treatments that are on your schedule for today.");
+        scheduleLable1.setText("Treatments that are on your schedule for today.");
 
         org.jdesktop.layout.GroupLayout scheduleLayout = new org.jdesktop.layout.GroupLayout(schedule);
         schedule.setLayout(scheduleLayout);
         scheduleLayout.setHorizontalGroup(
             scheduleLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jScrollPane6, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 726, Short.MAX_VALUE)
+            .add(scheduleScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 726, Short.MAX_VALUE)
             .add(scheduleLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(jLabel1)
+                .add(scheduleLable1)
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         scheduleLayout.setVerticalGroup(
             scheduleLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(scheduleLayout.createSequentialGroup()
                 .add(7, 7, 7)
-                .add(jLabel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 14, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(scheduleLable1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 14, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jScrollPane6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 366, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(scheduleScrollPane, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 366, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Todays Schedule", schedule);
+        MainPane.addTab("Todays Schedule", schedule);
 
         calendar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -295,7 +295,7 @@ public class MedRightTopLevel extends javax.swing.JFrame {
             .add(0, 337, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Calendar", calendar);
+        MainPane.addTab("Calendar", calendar);
 
         iteminfo.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -306,28 +306,28 @@ public class MedRightTopLevel extends javax.swing.JFrame {
         treeNode1.add(treeNode2);
         treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Topicals");
         treeNode1.add(treeNode2);
-        MedList.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
-        MedList.setAutoscrolls(true);
-        MedList.setMinimumSize(new java.awt.Dimension(78, 72));
-        MedList.setSize(new java.awt.Dimension(78, 72));
-        jScrollPane1.setViewportView(MedList);
+        iteminfoJTree.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        iteminfoJTree.setAutoscrolls(true);
+        iteminfoJTree.setMinimumSize(new java.awt.Dimension(78, 72));
+        iteminfoJTree.setSize(new java.awt.Dimension(78, 72));
+        iteminfoScrollPanel.setViewportView(iteminfoJTree);
 
         org.jdesktop.layout.GroupLayout iteminfoLayout = new org.jdesktop.layout.GroupLayout(iteminfo);
         iteminfo.setLayout(iteminfoLayout);
         iteminfoLayout.setHorizontalGroup(
             iteminfoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(iteminfoLayout.createSequentialGroup()
-                .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 115, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(iteminfoScrollPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 115, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jScrollPane2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 605, Short.MAX_VALUE))
+                .add(iteminfoScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 605, Short.MAX_VALUE))
         );
         iteminfoLayout.setVerticalGroup(
             iteminfoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 337, Short.MAX_VALUE)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jScrollPane2)
+            .add(iteminfoScrollPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 337, Short.MAX_VALUE)
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, iteminfoScrollPane)
         );
 
-        jTabbedPane1.addTab("Item Info", iteminfo);
+        MainPane.addTab("Item Info", iteminfo);
 
         banner.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         banner.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -386,54 +386,54 @@ public class MedRightTopLevel extends javax.swing.JFrame {
 
         creator.setText("RedBrick.Org, 2015");
 
-        jToggleButton1.setText("Took AM");
-        jToggleButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        toggleTookAM.setText("Took AM");
+        toggleTookAM.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jToggleButton2.setText("Took MM");
-        jToggleButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
+        toggleTookMM.setText("Took MM");
+        toggleTookMM.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        toggleTookMM.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton2ActionPerformed(evt);
+                toggleTookMMActionPerformed(evt);
             }
         });
 
-        jToggleButton3.setText("Took Noon");
-        jToggleButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
+        toggleTookNoon.setText("Took Noon");
+        toggleTookNoon.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        toggleTookNoon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton3ActionPerformed(evt);
+                toggleTookNoonActionPerformed(evt);
             }
         });
 
-        jToggleButton4.setText("Took MA");
-        jToggleButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jToggleButton4.addActionListener(new java.awt.event.ActionListener() {
+        toggleTookMA.setText("Took MA");
+        toggleTookMA.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        toggleTookMA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton4ActionPerformed(evt);
+                toggleTookMAActionPerformed(evt);
             }
         });
 
-        jToggleButton5.setText("Took Aft.");
-        jToggleButton5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jToggleButton5.addActionListener(new java.awt.event.ActionListener() {
+        toggleTookAft.setText("Took Aft.");
+        toggleTookAft.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        toggleTookAft.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton5ActionPerformed(evt);
+                toggleTookAftActionPerformed(evt);
             }
         });
 
-        jToggleButton6.setText("Took Eve");
-        jToggleButton6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jToggleButton6.addActionListener(new java.awt.event.ActionListener() {
+        toggleTookEve.setText("Took Eve");
+        toggleTookEve.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        toggleTookEve.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton6ActionPerformed(evt);
+                toggleTookEveActionPerformed(evt);
             }
         });
 
-        jToggleButton7.setText("Took Bedtime");
-        jToggleButton7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jToggleButton7.addActionListener(new java.awt.event.ActionListener() {
+        toggleTookBedtime.setText("Took Bedtime");
+        toggleTookBedtime.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        toggleTookBedtime.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton7ActionPerformed(evt);
+                toggleTookBedtimeActionPerformed(evt);
             }
         });
 
@@ -444,7 +444,7 @@ public class MedRightTopLevel extends javax.swing.JFrame {
             .add(layout.createSequentialGroup()
                 .addContainerGap()
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jTabbedPane1)
+                    .add(MainPane)
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
                         .add(0, 0, Short.MAX_VALUE)
                         .add(preferences, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 85, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
@@ -462,19 +462,19 @@ public class MedRightTopLevel extends javax.swing.JFrame {
                         .add(backgroundForAddNew, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(30, 30, 30))
                     .add(layout.createSequentialGroup()
-                        .add(jToggleButton1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 104, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(toggleTookAM, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 104, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jToggleButton2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 98, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(toggleTookMM, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 98, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jToggleButton3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 95, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(toggleTookNoon, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 95, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(jToggleButton4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 95, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(toggleTookMA, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 95, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(jToggleButton5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 95, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(toggleTookAft, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 95, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(jToggleButton6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 95, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(toggleTookEve, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 95, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jToggleButton7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 93, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(toggleTookBedtime, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 93, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -497,16 +497,17 @@ public class MedRightTopLevel extends javax.swing.JFrame {
                             .add(backgroundForAddNew, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                         .add(12, 12, 12)))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 3, Short.MAX_VALUE)
-                .add(jTabbedPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 369, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(MainPane, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 369, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(18, 18, 18)
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jToggleButton1)
-                    .add(jToggleButton2)
-                    .add(jToggleButton3)
-                    .add(jToggleButton4)
-                    .add(jToggleButton5)
-                    .add(jToggleButton6)
-                    .add(jToggleButton7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 18, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(toggleTookBedtime, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 18, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                        .add(toggleTookAM)
+                        .add(toggleTookMM)
+                        .add(toggleTookNoon)
+                        .add(toggleTookMA)
+                        .add(toggleTookAft)
+                        .add(toggleTookEve)))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(preferences, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 20, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(19, 19, 19))
@@ -519,29 +520,29 @@ public class MedRightTopLevel extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_alertsActionPerformed
 
-    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
+    private void toggleTookMMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleTookMMActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton2ActionPerformed
+    }//GEN-LAST:event_toggleTookMMActionPerformed
 
-    private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
+    private void toggleTookNoonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleTookNoonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton3ActionPerformed
+    }//GEN-LAST:event_toggleTookNoonActionPerformed
 
-    private void jToggleButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton4ActionPerformed
+    private void toggleTookMAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleTookMAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton4ActionPerformed
+    }//GEN-LAST:event_toggleTookMAActionPerformed
 
-    private void jToggleButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton5ActionPerformed
+    private void toggleTookAftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleTookAftActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton5ActionPerformed
+    }//GEN-LAST:event_toggleTookAftActionPerformed
 
-    private void jToggleButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton6ActionPerformed
+    private void toggleTookEveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleTookEveActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton6ActionPerformed
+    }//GEN-LAST:event_toggleTookEveActionPerformed
 
-    private void jToggleButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton7ActionPerformed
+    private void toggleTookBedtimeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleTookBedtimeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton7ActionPerformed
+    }//GEN-LAST:event_toggleTookBedtimeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -561,29 +562,30 @@ public class MedRightTopLevel extends javax.swing.JFrame {
             }
         }
         catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MedRightTopLevel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MedRightStartGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MedRightTopLevel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MedRightStartGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MedRightTopLevel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MedRightStartGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MedRightTopLevel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MedRightStartGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MedRightTopLevel().setVisible(true);
+                new MedRightStartGUI().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTree MedList;
+    private javax.swing.JTabbedPane MainPane;
     private javax.swing.JButton addnew;
     private javax.swing.JButton alerts;
     private javax.swing.JPanel backgroundForAddNew;
@@ -592,31 +594,31 @@ public class MedRightTopLevel extends javax.swing.JFrame {
     private javax.swing.JLabel creator;
     private javax.persistence.EntityManager entityMedRight;
     private javax.swing.JPanel iteminfo;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
-    private javax.swing.JTable jTable4;
-    private javax.swing.JToggleButton jToggleButton1;
-    private javax.swing.JToggleButton jToggleButton2;
-    private javax.swing.JToggleButton jToggleButton3;
-    private javax.swing.JToggleButton jToggleButton4;
-    private javax.swing.JToggleButton jToggleButton5;
-    private javax.swing.JToggleButton jToggleButton6;
-    private javax.swing.JToggleButton jToggleButton7;
+    private javax.swing.JTree iteminfoJTree;
+    private javax.swing.JScrollPane iteminfoScrollPane;
+    private javax.swing.JScrollPane iteminfoScrollPanel;
     private javax.swing.JPanel liquids;
+    private javax.swing.JScrollPane liquidsScrollPane;
+    private javax.swing.JTable liquidsTable;
+    private javax.swing.JScrollPane pillScrollPane;
+    private javax.swing.JTable pillTable;
     private javax.swing.JPanel pills;
     private javax.swing.JButton preferences;
     private javax.swing.JPanel schedule;
+    private javax.swing.JLabel scheduleLable1;
+    private javax.swing.JScrollPane scheduleScrollPane;
+    private javax.swing.JTable scheduleTable;
     private javax.swing.JComboBox select;
+    private javax.swing.JToggleButton toggleTookAM;
+    private javax.swing.JToggleButton toggleTookAft;
+    private javax.swing.JToggleButton toggleTookBedtime;
+    private javax.swing.JToggleButton toggleTookEve;
+    private javax.swing.JToggleButton toggleTookMA;
+    private javax.swing.JToggleButton toggleTookMM;
+    private javax.swing.JToggleButton toggleTookNoon;
     private javax.swing.JPanel topicals;
+    private javax.swing.JScrollPane topicalsScrollPane;
+    private javax.swing.JTable topicalsTable;
     private javax.swing.JLabel version;
     // End of variables declaration//GEN-END:variables
 }
