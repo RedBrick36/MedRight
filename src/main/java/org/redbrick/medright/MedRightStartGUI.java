@@ -38,6 +38,11 @@ public class MedRightStartGUI extends javax.swing.JFrame {
         topicals = new javax.swing.JPanel();
         topicalsScrollPane = new javax.swing.JScrollPane();
         topicalsTable = new javax.swing.JTable();
+        calendar = new javax.swing.JPanel();
+        iteminfo = new javax.swing.JPanel();
+        iteminfoScrollPanel = new javax.swing.JScrollPane();
+        iteminfoJTree = new javax.swing.JTree();
+        iteminfoScrollPane = new javax.swing.JScrollPane();
         schedule = new javax.swing.JPanel();
         scheduleScrollPane = new javax.swing.JScrollPane();
         scheduleTable = new javax.swing.JTable();
@@ -49,11 +54,6 @@ public class MedRightStartGUI extends javax.swing.JFrame {
         toggleTookAM5 = new javax.swing.JToggleButton();
         toggleTookAM6 = new javax.swing.JToggleButton();
         toggleTookAM7 = new javax.swing.JToggleButton();
-        calendar = new javax.swing.JPanel();
-        iteminfo = new javax.swing.JPanel();
-        iteminfoScrollPanel = new javax.swing.JScrollPane();
-        iteminfoJTree = new javax.swing.JTree();
-        iteminfoScrollPane = new javax.swing.JScrollPane();
         banner = new javax.swing.JLabel();
         version = new javax.swing.JLabel();
         creator = new javax.swing.JLabel();
@@ -170,7 +170,7 @@ public class MedRightStartGUI extends javax.swing.JFrame {
         );
         liquidsLayout.setVerticalGroup(
             liquidsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(liquidsScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 336, Short.MAX_VALUE)
+            .add(liquidsScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 347, Short.MAX_VALUE)
         );
 
         MainPane.addTab("Liquids", liquids);
@@ -212,16 +212,69 @@ public class MedRightStartGUI extends javax.swing.JFrame {
         );
         topicalsLayout.setVerticalGroup(
             topicalsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(topicalsScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 336, Short.MAX_VALUE)
+            .add(topicalsScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 347, Short.MAX_VALUE)
         );
 
         MainPane.addTab("Topicals", topicals);
 
+        calendar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        org.jdesktop.layout.GroupLayout calendarLayout = new org.jdesktop.layout.GroupLayout(calendar);
+        calendar.setLayout(calendarLayout);
+        calendarLayout.setHorizontalGroup(
+            calendarLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 726, Short.MAX_VALUE)
+        );
+        calendarLayout.setVerticalGroup(
+            calendarLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 347, Short.MAX_VALUE)
+        );
+
+        MainPane.addTab("Calendar", calendar);
+
+        iteminfo.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("root");
+        javax.swing.tree.DefaultMutableTreeNode treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Treatments");
+        javax.swing.tree.DefaultMutableTreeNode treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Pills");
+        treeNode2.add(treeNode3);
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Liquids");
+        treeNode2.add(treeNode3);
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Topicals");
+        treeNode2.add(treeNode3);
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Fitness");
+        treeNode1.add(treeNode2);
+        iteminfoJTree.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        iteminfoJTree.setAutoscrolls(true);
+        iteminfoJTree.setMinimumSize(new java.awt.Dimension(78, 72));
+        iteminfoJTree.setSize(new java.awt.Dimension(78, 72));
+        iteminfoScrollPanel.setViewportView(iteminfoJTree);
+
+        org.jdesktop.layout.GroupLayout iteminfoLayout = new org.jdesktop.layout.GroupLayout(iteminfo);
+        iteminfo.setLayout(iteminfoLayout);
+        iteminfoLayout.setHorizontalGroup(
+            iteminfoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(iteminfoLayout.createSequentialGroup()
+                .add(iteminfoScrollPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 115, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(iteminfoScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 605, Short.MAX_VALUE))
+        );
+        iteminfoLayout.setVerticalGroup(
+            iteminfoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(iteminfoScrollPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 347, Short.MAX_VALUE)
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, iteminfoScrollPane)
+        );
+
+        MainPane.addTab("Item Info", iteminfo);
+
         schedule.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        schedule.setPreferredSize(new java.awt.Dimension(722, 340));
 
         scheduleTable.setAutoCreateRowSorter(true);
         scheduleTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
@@ -394,60 +447,9 @@ public class MedRightStartGUI extends javax.swing.JFrame {
 
         MainPane.addTab("Todays Schedule", schedule);
 
-        calendar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        org.jdesktop.layout.GroupLayout calendarLayout = new org.jdesktop.layout.GroupLayout(calendar);
-        calendar.setLayout(calendarLayout);
-        calendarLayout.setHorizontalGroup(
-            calendarLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 726, Short.MAX_VALUE)
-        );
-        calendarLayout.setVerticalGroup(
-            calendarLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 336, Short.MAX_VALUE)
-        );
-
-        MainPane.addTab("Calendar", calendar);
-
-        iteminfo.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("root");
-        javax.swing.tree.DefaultMutableTreeNode treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Treatments");
-        javax.swing.tree.DefaultMutableTreeNode treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Pills");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Liquids");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Topicals");
-        treeNode2.add(treeNode3);
-        treeNode1.add(treeNode2);
-        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Fitness");
-        treeNode1.add(treeNode2);
-        iteminfoJTree.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
-        iteminfoJTree.setAutoscrolls(true);
-        iteminfoJTree.setMinimumSize(new java.awt.Dimension(78, 72));
-        iteminfoJTree.setSize(new java.awt.Dimension(78, 72));
-        iteminfoScrollPanel.setViewportView(iteminfoJTree);
-
-        org.jdesktop.layout.GroupLayout iteminfoLayout = new org.jdesktop.layout.GroupLayout(iteminfo);
-        iteminfo.setLayout(iteminfoLayout);
-        iteminfoLayout.setHorizontalGroup(
-            iteminfoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(iteminfoLayout.createSequentialGroup()
-                .add(iteminfoScrollPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 115, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(iteminfoScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 605, Short.MAX_VALUE))
-        );
-        iteminfoLayout.setVerticalGroup(
-            iteminfoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(iteminfoScrollPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 336, Short.MAX_VALUE)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, iteminfoScrollPane)
-        );
-
-        MainPane.addTab("Item Info", iteminfo);
-
         banner.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         banner.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        banner.setText("MedRight© Regiment Tracker");
+        banner.setText("MedRight© Schedule Tracker");
         banner.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         version.setText("Ver 0.1");
@@ -505,45 +507,42 @@ public class MedRightStartGUI extends javax.swing.JFrame {
                         .add(MainPane, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .add(layout.createSequentialGroup()
-                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(banner, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 315, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(layout.createSequentialGroup()
-                                .add(27, 27, 27)
-                                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                    .add(creator)
-                                    .add(layout.createSequentialGroup()
-                                        .add(version)
-                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .add(jButton1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))))
-                        .add(82, 82, 82))))
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(jButton4)
-                .add(18, 18, 18)
-                .add(jButton3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(18, 18, 18)
-                .add(jButton2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(44, 44, 44))
+                        .add(banner, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 315, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .add(jButton4)
+                        .add(18, 18, 18)
+                        .add(jButton3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(18, 18, 18)
+                        .add(jButton2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(35, 35, 35))))
+            .add(layout.createSequentialGroup()
+                .add(37, 37, 37)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(creator)
+                    .add(version))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .add(jButton1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(54, 54, 54))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
                 .add(6, 6, 6)
-                .add(banner, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 47, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(version, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButton1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 30, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(creator)
-                .add(18, 18, 18)
-                .add(MainPane, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 368, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(banner, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 47, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jButton3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jButton2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jButton4))
-                .addContainerGap())
+                .add(18, 18, 18)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(layout.createSequentialGroup()
+                        .add(version, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(creator))
+                    .add(jButton1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 30, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 40, Short.MAX_VALUE)
+                .add(MainPane, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 379, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(20, 20, 20))
         );
 
         pack();
