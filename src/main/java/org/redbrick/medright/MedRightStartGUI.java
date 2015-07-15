@@ -57,10 +57,10 @@ public class MedRightStartGUI extends javax.swing.JFrame {
         banner = new javax.swing.JLabel();
         version = new javax.swing.JLabel();
         creator = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        jbAddNewSchedule = new javax.swing.JButton();
+        jbQuit = new javax.swing.JButton();
+        jbHelp = new javax.swing.JButton();
+        jbPrint = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("MedRight© Regiment Tracker");
@@ -456,63 +456,63 @@ public class MedRightStartGUI extends javax.swing.JFrame {
 
         creator.setText("RedBrick.Org, 2015");
 
-        jButton1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(204, 255, 204));
-        jButton1.setText("  Add New Schedule  ");
-        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton1.setIconTextGap(6);
-        jButton1.setMargin(new java.awt.Insets(4, 14, 4, 14));
-        jButton1.setMaximumSize(new java.awt.Dimension(147, 25));
-        jButton1.setMinimumSize(new java.awt.Dimension(147, 25));
-        jButton1.setPreferredSize(new java.awt.Dimension(147, 25));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jbAddNewSchedule.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jbAddNewSchedule.setForeground(new java.awt.Color(204, 255, 204));
+        jbAddNewSchedule.setText("  Add New Schedule  ");
+        jbAddNewSchedule.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jbAddNewSchedule.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jbAddNewSchedule.setIconTextGap(6);
+        jbAddNewSchedule.setMargin(new java.awt.Insets(4, 14, 4, 14));
+        jbAddNewSchedule.setMaximumSize(new java.awt.Dimension(147, 25));
+        jbAddNewSchedule.setMinimumSize(new java.awt.Dimension(147, 25));
+        jbAddNewSchedule.setPreferredSize(new java.awt.Dimension(147, 25));
+        jbAddNewSchedule.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jbAddNewScheduleActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 51, 0));
-        jButton2.setText("  Quit  ");
-        jButton2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton2.setIconTextGap(6);
-        jButton2.setMargin(new java.awt.Insets(4, 14, 4, 14));
-        jButton2.setMaximumSize(new java.awt.Dimension(45, 25));
-        jButton2.setMinimumSize(new java.awt.Dimension(45, 25));
-        jButton2.setPreferredSize(new java.awt.Dimension(45, 25));
-        jButton2.setSize(new java.awt.Dimension(79, 25));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jbQuit.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        jbQuit.setForeground(new java.awt.Color(255, 51, 0));
+        jbQuit.setText("  Quit  ");
+        jbQuit.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jbQuit.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jbQuit.setIconTextGap(6);
+        jbQuit.setMargin(new java.awt.Insets(4, 14, 4, 14));
+        jbQuit.setMaximumSize(new java.awt.Dimension(45, 25));
+        jbQuit.setMinimumSize(new java.awt.Dimension(45, 25));
+        jbQuit.setPreferredSize(new java.awt.Dimension(45, 25));
+        jbQuit.setSize(new java.awt.Dimension(79, 25));
+        jbQuit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jbQuitActionPerformed(evt);
             }
         });
 
-        jButton3.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(102, 102, 255));
-        jButton3.setText("  Help  ");
-        jButton3.setToolTipText("");
-        jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton3.setIconTextGap(6);
-        jButton3.setMargin(new java.awt.Insets(4, 14, 4, 14));
-        jButton3.setMaximumSize(new java.awt.Dimension(51, 25));
-        jButton3.setMinimumSize(new java.awt.Dimension(51, 25));
-        jButton3.setPreferredSize(new java.awt.Dimension(51, 25));
-        jButton3.setSize(new java.awt.Dimension(79, 25));
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jbHelp.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jbHelp.setForeground(new java.awt.Color(102, 102, 255));
+        jbHelp.setText("  Help  ");
+        jbHelp.setToolTipText("");
+        jbHelp.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jbHelp.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jbHelp.setIconTextGap(6);
+        jbHelp.setMargin(new java.awt.Insets(4, 14, 4, 14));
+        jbHelp.setMaximumSize(new java.awt.Dimension(51, 25));
+        jbHelp.setMinimumSize(new java.awt.Dimension(51, 25));
+        jbHelp.setPreferredSize(new java.awt.Dimension(51, 25));
+        jbHelp.setSize(new java.awt.Dimension(79, 25));
+        jbHelp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jbHelpActionPerformed(evt);
             }
         });
 
-        jButton4.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jButton4.setText("  Print  ");
-        jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        jbPrint.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jbPrint.setText("  Print  ");
+        jbPrint.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jbPrint.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                jbPrintActionPerformed(evt);
             }
         });
 
@@ -529,11 +529,11 @@ public class MedRightStartGUI extends javax.swing.JFrame {
                     .add(layout.createSequentialGroup()
                         .add(banner, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 315, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .add(jButton4)
+                        .add(jbPrint)
                         .add(18, 18, 18)
-                        .add(jButton3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(jbHelp, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(18, 18, 18)
-                        .add(jButton2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(jbQuit, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(35, 35, 35))))
             .add(layout.createSequentialGroup()
                 .add(37, 37, 37)
@@ -541,7 +541,7 @@ public class MedRightStartGUI extends javax.swing.JFrame {
                     .add(creator)
                     .add(version))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(jButton1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(jbAddNewSchedule, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(54, 54, 54))
         );
         layout.setVerticalGroup(
@@ -550,16 +550,16 @@ public class MedRightStartGUI extends javax.swing.JFrame {
                 .add(6, 6, 6)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(banner, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 47, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButton3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButton2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButton4))
+                    .add(jbHelp, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jbQuit, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jbPrint))
                 .add(18, 18, 18)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(layout.createSequentialGroup()
                         .add(version, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(creator))
-                    .add(jButton1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 30, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(jbAddNewSchedule, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 30, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 40, Short.MAX_VALUE)
                 .add(MainPane, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 379, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(20, 20, 20))
@@ -596,21 +596,21 @@ public class MedRightStartGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_toggleTookAM7ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jbAddNewScheduleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAddNewScheduleActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jbAddNewScheduleActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void jbPrintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbPrintActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_jbPrintActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jbHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbHelpActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_jbHelpActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jbQuitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbQuitActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jbQuitActionPerformed
 
     /**
      * @param args the command line arguments
@@ -662,10 +662,10 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     private javax.swing.JTree iteminfoJTree;
     private javax.swing.JScrollPane iteminfoScrollPane;
     private javax.swing.JScrollPane iteminfoScrollPanel;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jbAddNewSchedule;
+    private javax.swing.JButton jbHelp;
+    private javax.swing.JButton jbPrint;
+    private javax.swing.JButton jbQuit;
     private javax.swing.JPanel liquids;
     private javax.swing.JScrollPane liquidsScrollPane;
     private javax.swing.JTable liquidsTable;

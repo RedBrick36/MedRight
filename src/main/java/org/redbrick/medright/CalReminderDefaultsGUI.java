@@ -10,6 +10,7 @@ package org.redbrick.medright;
  * @author RedBrick
  */
 public class CalReminderDefaultsGUI extends javax.swing.JFrame {
+    private static final long serialVersionUID = 1L;
 
     /**
      * Creates new form ReminderDataEntry
@@ -58,9 +59,19 @@ public class CalReminderDefaultsGUI extends javax.swing.JFrame {
 
         jcbReminderMinutes.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jcbReminderMinutes.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select --", "00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55" }));
+        jcbReminderMinutes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbReminderMinutesActionPerformed(evt);
+            }
+        });
 
         jcbReminderHours.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jcbReminderHours.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select --", "1 HR", "2 HR's", "3 HR's" }));
+        jcbReminderHours.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbReminderHoursActionPerformed(evt);
+            }
+        });
 
         RemHours.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         RemHours.setText("  Hours  ");
@@ -76,12 +87,27 @@ public class CalReminderDefaultsGUI extends javax.swing.JFrame {
 
         jcbCalDays.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jcbCalDays.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select --", "1", "2", "3", "4", "5", "6", "1 Week", "2 Weeks" }));
+        jcbCalDays.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbCalDaysActionPerformed(evt);
+            }
+        });
 
         jcbCalHours.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jcbCalHours.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select --", "1 HR", "2 HR's", "3 HR's" }));
+        jcbCalHours.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbCalHoursActionPerformed(evt);
+            }
+        });
 
         jcbCalMinutes.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jcbCalMinutes.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select --", "00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55" }));
+        jcbCalMinutes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbCalMinutesActionPerformed(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel5.setText("  Days  ");
@@ -100,9 +126,19 @@ public class CalReminderDefaultsGUI extends javax.swing.JFrame {
 
         jbtnDone.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jbtnDone.setText("  Done  ");
+        jbtnDone.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnDoneActionPerformed(evt);
+            }
+        });
 
         jcbrRepeatMins.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jcbrRepeatMins.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Minutes", "00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55" }));
+        jcbrRepeatMins.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbrRepeatMinsActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel1.setText("Repeat Every");
@@ -112,6 +148,11 @@ public class CalReminderDefaultsGUI extends javax.swing.JFrame {
 
         jcbCalRepeatMins.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jcbCalRepeatMins.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Minutes", "00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55" }));
+        jcbCalRepeatMins.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbCalRepeatMinsActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -236,6 +277,38 @@ public class CalReminderDefaultsGUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jbtnDoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDoneActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbtnDoneActionPerformed
+
+    private void jcbReminderHoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbReminderHoursActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcbReminderHoursActionPerformed
+
+    private void jcbReminderMinutesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbReminderMinutesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcbReminderMinutesActionPerformed
+
+    private void jcbrRepeatMinsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbrRepeatMinsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcbrRepeatMinsActionPerformed
+
+    private void jcbCalDaysActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbCalDaysActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcbCalDaysActionPerformed
+
+    private void jcbCalHoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbCalHoursActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcbCalHoursActionPerformed
+
+    private void jcbCalMinutesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbCalMinutesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcbCalMinutesActionPerformed
+
+    private void jcbCalRepeatMinsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbCalRepeatMinsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcbCalRepeatMinsActionPerformed
 
     /**
      * @param args the command line arguments
