@@ -1,430 +1,343 @@
 package org.redbrick.medright;
 
-import java.beans.PropertyChangeSupport;
-import java.beans.PropertyVetoException;
-import java.beans.VetoableChangeSupport;
-
-public class Schedule {
-    public static final String PROP_UUID = "PROP_UUID";
-    public static final String PROP_TYPE = "PROP_TYPE";
-    public static final String PROP_NAME = "PROP_NAME";
-    public static final String PROP_CONDITION = "PROP_CONDITION";
-    public static final String PROP_DOSE = "PROP_DOSE";
-    public static final String PROP_DOSEMEASURE = "PROP_DOSEMEASURE";
-    public static final String PROP_REMINDER = "PROP_REMINDER";
-    public static final String PROP_CALENDAREVENT = "PROP_CALENDAREVENT";
-    public static final String PROP_MONDAY = "PROP_MONDAY";
-    public static final String PROP_TUESDAY = "PROP_TUESDAY";
-    public static final String PROP_WEDNESDAY = "PROP_WEDNESDAY";
-    public static final String PROP_THURSDAY = "PROP_THURSDAY";
-    public static final String PROP_FRIDAY = "PROP_FRIDAY";
-    public static final String PROP_SATURDAY = "PROP_SATURDAY";
-    public static final String PROP_SUNDAY = "PROP_SUNDAY";
-    public static final String PROP_AM = "PROP_AM";
-    public static final String PROP_MIDAM = "PROP_MIDAM";
-    public static final String PROP_NOON = "PROP_NOON";
-    public static final String PROP_MIDAFT = "PROP_MIDAFT";
-    public static final String PROP_AFTERNOON = "PROP_AFTERNOON";
-    public static final String PROP_EVENING = "PROP_EVENING";
-    public static final String PROP_BEDTIME = "PROP_BEDTIME";
+/**
+ *
+ * @author RedBrick
+ */
+class Schedule {
 
 // Define the variable set for each Schedule object
-    public String UUID;
-    public String Type;
-    public String Name;
-    public String Condition;
-    public double Dose;
-    public String doseMeasure;
-    public boolean Reminder;
-    public boolean calendarEvent;
-    public boolean Monday;
-    public boolean Tuesday;
-    public boolean Wednesday;
-    public boolean Thursday;
-    public boolean Friday;
-    public boolean Saturday;
-    public boolean Sunday;
-    public boolean AM;
-    public boolean midAM;
-    public boolean Noon;
-    public boolean midAft;
-    public boolean Afternoon;
-    public boolean Evening;
-    public boolean Bedtime;
-    private final transient PropertyChangeSupport propertyChangeSupport = new java.beans.PropertyChangeSupport(this);
-    private final transient VetoableChangeSupport vetoableChangeSupport = new java.beans.VetoableChangeSupport(this);
+    protected String uuid;
+    protected String type;
+    protected String name;
+    protected String condition;
+    protected double dose;
+    protected String doseMeasure;
+    protected boolean reminder;
+    protected boolean calendarEvent;
+    protected boolean monday;
+    protected boolean tuesday;
+    protected boolean wednesday;
+    protected boolean thursday;
+    protected boolean friday;
+    protected boolean saturday;
+    protected boolean sunday;
+    protected boolean am;
+    protected boolean midAM;
+    protected boolean noon;
+    protected boolean midAft;
+    protected boolean afternoon;
+    protected boolean evening;
+    protected boolean bedtime;
 
     /**
-     * @return the UUID
+     * @return the uuid
      */
-    public String getUUID() {
-        return UUID;
+    String getUuid() {
+        return uuid;
     }
 
     /**
-     * @param UUID the UUID to set
+     * @param uuid the uuid to set
      */
-    public void setUUID(String UUID) throws PropertyVetoException {
-        java.lang.String oldUUID = this.UUID;
-        vetoableChangeSupport.fireVetoableChange(PROP_UUID, oldUUID, UUID);
-        this.UUID = UUID;
-        propertyChangeSupport.firePropertyChange(PROP_UUID, oldUUID, UUID);
+    void setUuid(String uuid) {
+        this.uuid = uuid;
     }
 
     /**
-     * @return the Type
+     * @return the type
      */
-    public String getType() {
-        return Type;
+    String getType() {
+        return type;
     }
 
     /**
-     * @param Type the Type to set
+     * @param type the type to set
      */
-    public void setType(String Type) throws PropertyVetoException {
-        java.lang.String oldType = this.Type;
-        vetoableChangeSupport.fireVetoableChange(PROP_TYPE, oldType, Type);
-        this.Type = Type;
-        propertyChangeSupport.firePropertyChange(PROP_TYPE, oldType, Type);
+    void setType(String type) {
+        this.type = type;
     }
 
     /**
-     * @return the Name
+     * @return the name
      */
-    public String getName() {
-        return Name;
+    String getName() {
+        return name;
     }
 
     /**
-     * @param Name the Name to set
+     * @param name the name to set
      */
-    public void setName(String Name) throws PropertyVetoException {
-        java.lang.String oldName = this.Name;
-        vetoableChangeSupport.fireVetoableChange(PROP_NAME, oldName, Name);
-        this.Name = Name;
-        propertyChangeSupport.firePropertyChange(PROP_NAME, oldName, Name);
+    void setName(String name) {
+        this.name = name;
     }
 
     /**
-     * @return the Condition
+     * @return the condition
      */
-    public String getCondition() {
-        return Condition;
+    String getCondition() {
+        return condition;
     }
 
     /**
-     * @param Condition the Condition to set
+     * @param condition the condition to set
      */
-    public void setCondition(String Condition) throws PropertyVetoException {
-        java.lang.String oldCondition = this.Condition;
-        vetoableChangeSupport.fireVetoableChange(PROP_CONDITION, oldCondition, Condition);
-        this.Condition = Condition;
-        propertyChangeSupport.firePropertyChange(PROP_CONDITION, oldCondition, Condition);
+    void setCondition(String condition) {
+        this.condition = condition;
     }
 
     /**
-     * @return the Dose
+     * @return the dose
      */
-    public double getDose() {
-        return Dose;
+    double getDose() {
+        return dose;
     }
 
     /**
-     * @param Dose the Dose to set
+     * @param dose the dose to set
      */
-    public void setDose(double Dose) throws PropertyVetoException {
-        double oldDose = this.Dose;
-        vetoableChangeSupport.fireVetoableChange(PROP_DOSE, oldDose, Dose);
-        this.Dose = Dose;
-        propertyChangeSupport.firePropertyChange(PROP_DOSE, oldDose, Dose);
+    void setDose(double dose) {
+        this.dose = dose;
     }
 
     /**
      * @return the doseMeasure
      */
-    public String getDoseMeasure() {
+    String getDoseMeasure() {
         return doseMeasure;
     }
 
     /**
      * @param doseMeasure the doseMeasure to set
      */
-    public void setDoseMeasure(String doseMeasure) throws PropertyVetoException {
-        java.lang.String oldDoseMeasure = this.doseMeasure;
-        vetoableChangeSupport.fireVetoableChange(PROP_DOSEMEASURE, oldDoseMeasure, doseMeasure);
+    void setDoseMeasure(String doseMeasure) {
         this.doseMeasure = doseMeasure;
-        propertyChangeSupport.firePropertyChange(PROP_DOSEMEASURE, oldDoseMeasure, doseMeasure);
     }
 
     /**
-     * @return the Reminder
+     * @return the reminder
      */
-    public boolean isReminder() {
-        return Reminder;
+    boolean isReminder() {
+        return reminder;
     }
 
     /**
-     * @param Reminder the Reminder to set
+     * @param reminder the reminder to set
      */
-    public void setReminder(boolean Reminder) throws PropertyVetoException {
-        boolean oldReminder = this.Reminder;
-        vetoableChangeSupport.fireVetoableChange(PROP_REMINDER, oldReminder, Reminder);
-        this.Reminder = Reminder;
-        propertyChangeSupport.firePropertyChange(PROP_REMINDER, oldReminder, Reminder);
+    void setReminder(boolean reminder) {
+        this.reminder = reminder;
     }
 
     /**
      * @return the calendarEvent
      */
-    public boolean isCalendarEvent() {
+    boolean isCalendarEvent() {
         return calendarEvent;
     }
 
     /**
      * @param calendarEvent the calendarEvent to set
      */
-    public void setCalendarEvent(boolean calendarEvent) throws PropertyVetoException {
-        boolean oldCalendarEvent = this.calendarEvent;
-        vetoableChangeSupport.fireVetoableChange(PROP_CALENDAREVENT, oldCalendarEvent, calendarEvent);
+    void setCalendarEvent(boolean calendarEvent) {
         this.calendarEvent = calendarEvent;
-        propertyChangeSupport.firePropertyChange(PROP_CALENDAREVENT, oldCalendarEvent, calendarEvent);
     }
 
     /**
-     * @return the Monday
+     * @return the monday
      */
-    public boolean isMonday() {
-        return Monday;
+    boolean isMonday() {
+        return monday;
     }
 
     /**
-     * @param Monday the Monday to set
+     * @param monday the monday to set
      */
-    public void setMonday(boolean Monday) throws PropertyVetoException {
-        boolean oldMonday = this.Monday;
-        vetoableChangeSupport.fireVetoableChange(PROP_MONDAY, oldMonday, Monday);
-        this.Monday = Monday;
-        propertyChangeSupport.firePropertyChange(PROP_MONDAY, oldMonday, Monday);
+    void setMonday(boolean monday) {
+        this.monday = monday;
     }
 
     /**
-     * @return the Tuesday
+     * @return the tuesday
      */
-    public boolean isTuesday() {
-        return Tuesday;
+    boolean isTuesday() {
+        return tuesday;
     }
 
     /**
-     * @param Tuesday the Tuesday to set
+     * @param tuesday the tuesday to set
      */
-    public void setTuesday(boolean Tuesday) throws PropertyVetoException {
-        boolean oldTuesday = this.Tuesday;
-        vetoableChangeSupport.fireVetoableChange(PROP_TUESDAY, oldTuesday, Tuesday);
-        this.Tuesday = Tuesday;
-        propertyChangeSupport.firePropertyChange(PROP_TUESDAY, oldTuesday, Tuesday);
+    void setTuesday(boolean tuesday) {
+        this.tuesday = tuesday;
     }
 
     /**
-     * @return the Wednesday
+     * @return the wednesday
      */
-    public boolean isWednesday() {
-        return Wednesday;
+    boolean isWednesday() {
+        return wednesday;
     }
 
     /**
-     * @param Wednesday the Wednesday to set
+     * @param wednesday the wednesday to set
      */
-    public void setWednesday(boolean Wednesday) throws PropertyVetoException {
-        boolean oldWednesday = this.Wednesday;
-        vetoableChangeSupport.fireVetoableChange(PROP_WEDNESDAY, oldWednesday, Wednesday);
-        this.Wednesday = Wednesday;
-        propertyChangeSupport.firePropertyChange(PROP_WEDNESDAY, oldWednesday, Wednesday);
+    void setWednesday(boolean wednesday) {
+        this.wednesday = wednesday;
     }
 
     /**
-     * @return the Thursday
+     * @return the thursday
      */
-    public boolean isThursday() {
-        return Thursday;
+    boolean isThursday() {
+        return thursday;
     }
 
     /**
-     * @param Thursday the Thursday to set
+     * @param thursday the thursday to set
      */
-    public void setThursday(boolean Thursday) throws PropertyVetoException {
-        boolean oldThursday = this.Thursday;
-        vetoableChangeSupport.fireVetoableChange(PROP_THURSDAY, oldThursday, Thursday);
-        this.Thursday = Thursday;
-        propertyChangeSupport.firePropertyChange(PROP_THURSDAY, oldThursday, Thursday);
+    void setThursday(boolean thursday) {
+        this.thursday = thursday;
     }
 
     /**
-     * @return the Friday
+     * @return the friday
      */
-    public boolean isFriday() {
-        return Friday;
+    boolean isFriday() {
+        return friday;
     }
 
     /**
-     * @param Friday the Friday to set
+     * @param friday the friday to set
      */
-    public void setFriday(boolean Friday) throws PropertyVetoException {
-        boolean oldFriday = this.Friday;
-        vetoableChangeSupport.fireVetoableChange(PROP_FRIDAY, oldFriday, Friday);
-        this.Friday = Friday;
-        propertyChangeSupport.firePropertyChange(PROP_FRIDAY, oldFriday, Friday);
+    void setFriday(boolean friday) {
+        this.friday = friday;
     }
 
     /**
-     * @return the Saturday
+     * @return the saturday
      */
-    public boolean isSaturday() {
-        return Saturday;
+    boolean isSaturday() {
+        return saturday;
     }
 
     /**
-     * @param Saturday the Saturday to set
+     * @param saturday the saturday to set
      */
-    public void setSaturday(boolean Saturday) throws PropertyVetoException {
-        boolean oldSaturday = this.Saturday;
-        vetoableChangeSupport.fireVetoableChange(PROP_SATURDAY, oldSaturday, Saturday);
-        this.Saturday = Saturday;
-        propertyChangeSupport.firePropertyChange(PROP_SATURDAY, oldSaturday, Saturday);
+    void setSaturday(boolean saturday) {
+        this.saturday = saturday;
     }
 
     /**
-     * @return the Sunday
+     * @return the sunday
      */
-    public boolean isSunday() {
-        return Sunday;
+    boolean isSunday() {
+        return sunday;
     }
 
     /**
-     * @param Sunday the Sunday to set
+     * @param sunday the sunday to set
      */
-    public void setSunday(boolean Sunday) throws PropertyVetoException {
-        boolean oldSunday = this.Sunday;
-        vetoableChangeSupport.fireVetoableChange(PROP_SUNDAY, oldSunday, Sunday);
-        this.Sunday = Sunday;
-        propertyChangeSupport.firePropertyChange(PROP_SUNDAY, oldSunday, Sunday);
+    void setSunday(boolean sunday) {
+        this.sunday = sunday;
     }
 
     /**
-     * @return the AM
+     * @return the am
      */
-    public boolean isAM() {
-        return AM;
+    boolean isAm() {
+        return am;
     }
 
     /**
-     * @param AM the AM to set
+     * @param am the am to set
      */
-    public void setAM(boolean AM) throws PropertyVetoException {
-        boolean oldAM = this.AM;
-        vetoableChangeSupport.fireVetoableChange(PROP_AM, oldAM, AM);
-        this.AM = AM;
-        propertyChangeSupport.firePropertyChange(PROP_AM, oldAM, AM);
+    void setAm(boolean am) {
+        this.am = am;
     }
 
     /**
      * @return the midAM
      */
-    public boolean isMidAM() {
+    boolean isMidAM() {
         return midAM;
     }
 
     /**
      * @param midAM the midAM to set
      */
-    public void setMidAM(boolean midAM) throws PropertyVetoException {
-        boolean oldMidAM = this.midAM;
-        vetoableChangeSupport.fireVetoableChange(PROP_MIDAM, oldMidAM, midAM);
+    void setMidAM(boolean midAM) {
         this.midAM = midAM;
-        propertyChangeSupport.firePropertyChange(PROP_MIDAM, oldMidAM, midAM);
     }
 
     /**
-     * @return the Noon
+     * @return the noon
      */
-    public boolean isNoon() {
-        return Noon;
+    boolean isNoon() {
+        return noon;
     }
 
     /**
-     * @param Noon the Noon to set
+     * @param noon the noon to set
      */
-    public void setNoon(boolean Noon) throws PropertyVetoException {
-        boolean oldNoon = this.Noon;
-        vetoableChangeSupport.fireVetoableChange(PROP_NOON, oldNoon, Noon);
-        this.Noon = Noon;
-        propertyChangeSupport.firePropertyChange(PROP_NOON, oldNoon, Noon);
+    void setNoon(boolean noon) {
+        this.noon = noon;
     }
 
     /**
      * @return the midAft
      */
-    public boolean isMidAft() {
+    boolean isMidAft() {
         return midAft;
     }
 
     /**
      * @param midAft the midAft to set
      */
-    public void setMidAft(boolean midAft) throws PropertyVetoException {
-        boolean oldMidAft = this.midAft;
-        vetoableChangeSupport.fireVetoableChange(PROP_MIDAFT, oldMidAft, midAft);
+    void setMidAft(boolean midAft) {
         this.midAft = midAft;
-        propertyChangeSupport.firePropertyChange(PROP_MIDAFT, oldMidAft, midAft);
     }
 
     /**
-     * @return the Afternoon
+     * @return the afternoon
      */
-    public boolean isAfternoon() {
-        return Afternoon;
+    boolean isAfternoon() {
+        return afternoon;
     }
 
     /**
-     * @param Afternoon the Afternoon to set
+     * @param afternoon the afternoon to set
      */
-    public void setAfternoon(boolean Afternoon) throws PropertyVetoException {
-        boolean oldAfternoon = this.Afternoon;
-        vetoableChangeSupport.fireVetoableChange(PROP_AFTERNOON, oldAfternoon, Afternoon);
-        this.Afternoon = Afternoon;
-        propertyChangeSupport.firePropertyChange(PROP_AFTERNOON, oldAfternoon, Afternoon);
+    void setAfternoon(boolean afternoon) {
+        this.afternoon = afternoon;
     }
 
     /**
-     * @return the Evening
+     * @return the evening
      */
-    public boolean isEvening() {
-        return Evening;
+    boolean isEvening() {
+        return evening;
     }
 
     /**
-     * @param Evening the Evening to set
+     * @param evening the evening to set
      */
-    public void setEvening(boolean Evening) throws PropertyVetoException {
-        boolean oldEvening = this.Evening;
-        vetoableChangeSupport.fireVetoableChange(PROP_EVENING, oldEvening, Evening);
-        this.Evening = Evening;
-        propertyChangeSupport.firePropertyChange(PROP_EVENING, oldEvening, Evening);
+    void setEvening(boolean evening) {
+        this.evening = evening;
     }
 
     /**
-     * @return the Bedtime
+     * @return the bedtime
      */
-    public boolean isBedtime() {
-        return Bedtime;
+    boolean isBedtime() {
+        return bedtime;
     }
 
     /**
-     * @param Bedtime the Bedtime to set
+     * @param bedtime the bedtime to set
      */
-    public void setBedtime(boolean Bedtime) throws PropertyVetoException {
-        boolean oldBedtime = this.Bedtime;
-        vetoableChangeSupport.fireVetoableChange(PROP_BEDTIME, oldBedtime, Bedtime);
-        this.Bedtime = Bedtime;
-        propertyChangeSupport.firePropertyChange(PROP_BEDTIME, oldBedtime, Bedtime);
+    void setBedtime(boolean bedtime) {
+        this.bedtime = bedtime;
     }
+
+
+
 }
