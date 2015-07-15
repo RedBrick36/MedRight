@@ -4,13 +4,14 @@ package org.redbrick.medright;
  *
  * @author RedBrick
  */
-class Schedule {
+public class Schedule {
 
 // Define the variable set for each Schedule object
+    @SuppressWarnings("ProtectedField")
     protected String uuid;
     protected String type;
     protected String name;
-    protected String condition;
+    protected String medCondition;
     protected double dose;
     protected String doseMeasure;
     protected boolean reminder;
@@ -33,308 +34,308 @@ class Schedule {
     /**
      * @return the uuid
      */
-    String getUuid() {
+    public String getUuid() {
         return uuid;
     }
 
     /**
      * @param uuid the uuid to set
      */
-    void setUuid(String uuid) {
+    public void setUuid(String uuid) {
         this.uuid = uuid;
     }
 
     /**
      * @return the type
      */
-    String getType() {
+    public String getType() {
         return type;
     }
 
     /**
      * @param type the type to set
      */
-    void setType(String type) {
+    public void setType(String type) {
         this.type = type;
     }
 
     /**
      * @return the name
      */
-    String getName() {
+    public String getName() {
         return name;
     }
 
     /**
      * @param name the name to set
      */
-    void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
     /**
-     * @return the condition
+     * @return the medCondition
      */
-    String getCondition() {
-        return condition;
+    public String getMedCondition() {
+        return medCondition;
     }
 
     /**
-     * @param condition the condition to set
+     * @param medCondition the medCondition to set
      */
-    void setCondition(String condition) {
-        this.condition = condition;
+    public void setMedCondition(String medCondition) {
+        this.medCondition = medCondition;
     }
 
     /**
      * @return the dose
      */
-    double getDose() {
+    public double getDose() {
         return dose;
     }
 
     /**
      * @param dose the dose to set
      */
-    void setDose(double dose) {
+    public void setDose(double dose) {
         this.dose = dose;
     }
 
     /**
      * @return the doseMeasure
      */
-    String getDoseMeasure() {
+    public String getDoseMeasure() {
         return doseMeasure;
     }
 
     /**
      * @param doseMeasure the doseMeasure to set
      */
-    void setDoseMeasure(String doseMeasure) {
+    public void setDoseMeasure(String doseMeasure) {
         this.doseMeasure = doseMeasure;
     }
 
     /**
      * @return the reminder
      */
-    boolean isReminder() {
+    public boolean isReminder() {
         return reminder;
     }
 
     /**
      * @param reminder the reminder to set
      */
-    void setReminder(boolean reminder) {
+    public void setReminder(boolean reminder) {
         this.reminder = reminder;
     }
 
     /**
      * @return the calendarEvent
      */
-    boolean isCalendarEvent() {
+    public boolean isCalendarEvent() {
         return calendarEvent;
     }
 
     /**
      * @param calendarEvent the calendarEvent to set
      */
-    void setCalendarEvent(boolean calendarEvent) {
+    public void setCalendarEvent(boolean calendarEvent) {
         this.calendarEvent = calendarEvent;
     }
 
     /**
      * @return the monday
      */
-    boolean isMonday() {
+    public boolean isMonday() {
         return monday;
     }
 
     /**
      * @param monday the monday to set
      */
-    void setMonday(boolean monday) {
+    public void setMonday(boolean monday) {
         this.monday = monday;
     }
 
     /**
      * @return the tuesday
      */
-    boolean isTuesday() {
+    public boolean isTuesday() {
         return tuesday;
     }
 
     /**
      * @param tuesday the tuesday to set
      */
-    void setTuesday(boolean tuesday) {
+    public void setTuesday(boolean tuesday) {
         this.tuesday = tuesday;
     }
 
     /**
      * @return the wednesday
      */
-    boolean isWednesday() {
+    public boolean isWednesday() {
         return wednesday;
     }
 
     /**
      * @param wednesday the wednesday to set
      */
-    void setWednesday(boolean wednesday) {
+    public void setWednesday(boolean wednesday) {
         this.wednesday = wednesday;
     }
 
     /**
      * @return the thursday
      */
-    boolean isThursday() {
+    public boolean isThursday() {
         return thursday;
     }
 
     /**
      * @param thursday the thursday to set
      */
-    void setThursday(boolean thursday) {
+    public void setThursday(boolean thursday) {
         this.thursday = thursday;
     }
 
     /**
      * @return the friday
      */
-    boolean isFriday() {
+    public boolean isFriday() {
         return friday;
     }
 
     /**
      * @param friday the friday to set
      */
-    void setFriday(boolean friday) {
+    public void setFriday(boolean friday) {
         this.friday = friday;
     }
 
     /**
      * @return the saturday
      */
-    boolean isSaturday() {
+    public boolean isSaturday() {
         return saturday;
     }
 
     /**
      * @param saturday the saturday to set
      */
-    void setSaturday(boolean saturday) {
+    public void setSaturday(boolean saturday) {
         this.saturday = saturday;
     }
 
     /**
      * @return the sunday
      */
-    boolean isSunday() {
+    public boolean isSunday() {
         return sunday;
     }
 
     /**
      * @param sunday the sunday to set
      */
-    void setSunday(boolean sunday) {
+    public void setSunday(boolean sunday) {
         this.sunday = sunday;
     }
 
     /**
      * @return the am
      */
-    boolean isAm() {
+    public boolean isAm() {
         return am;
     }
 
     /**
      * @param am the am to set
      */
-    void setAm(boolean am) {
+    public void setAm(boolean am) {
         this.am = am;
     }
 
     /**
      * @return the midAM
      */
-    boolean isMidAM() {
+    public boolean isMidAM() {
         return midAM;
     }
 
     /**
      * @param midAM the midAM to set
      */
-    void setMidAM(boolean midAM) {
+    public void setMidAM(boolean midAM) {
         this.midAM = midAM;
     }
 
     /**
      * @return the noon
      */
-    boolean isNoon() {
+    public boolean isNoon() {
         return noon;
     }
 
     /**
      * @param noon the noon to set
      */
-    void setNoon(boolean noon) {
+    public void setNoon(boolean noon) {
         this.noon = noon;
     }
 
     /**
      * @return the midAft
      */
-    boolean isMidAft() {
+    public boolean isMidAft() {
         return midAft;
     }
 
     /**
      * @param midAft the midAft to set
      */
-    void setMidAft(boolean midAft) {
+    public void setMidAft(boolean midAft) {
         this.midAft = midAft;
     }
 
     /**
      * @return the afternoon
      */
-    boolean isAfternoon() {
+    public boolean isAfternoon() {
         return afternoon;
     }
 
     /**
      * @param afternoon the afternoon to set
      */
-    void setAfternoon(boolean afternoon) {
+    public void setAfternoon(boolean afternoon) {
         this.afternoon = afternoon;
     }
 
     /**
      * @return the evening
      */
-    boolean isEvening() {
+    public boolean isEvening() {
         return evening;
     }
 
     /**
      * @param evening the evening to set
      */
-    void setEvening(boolean evening) {
+    public void setEvening(boolean evening) {
         this.evening = evening;
     }
 
     /**
      * @return the bedtime
      */
-    boolean isBedtime() {
+    public boolean isBedtime() {
         return bedtime;
     }
 
     /**
      * @param bedtime the bedtime to set
      */
-    void setBedtime(boolean bedtime) {
+    public void setBedtime(boolean bedtime) {
         this.bedtime = bedtime;
     }
 
