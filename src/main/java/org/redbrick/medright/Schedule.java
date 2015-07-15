@@ -5,57 +5,71 @@ import java.beans.PropertyVetoException;
 import java.beans.VetoableChangeSupport;
 
 public class Schedule {
+    public static final String PROP_UUID = "PROP_UUID";
+    public static final String PROP_TYPE = "PROP_TYPE";
+    public static final String PROP_NAME = "PROP_NAME";
+    public static final String PROP_CONDITION = "PROP_CONDITION";
+    public static final String PROP_DOSE = "PROP_DOSE";
+    public static final String PROP_DOSEMEASURE = "PROP_DOSEMEASURE";
+    public static final String PROP_REMINDER = "PROP_REMINDER";
+    public static final String PROP_CALENDAREVENT = "PROP_CALENDAREVENT";
+    public static final String PROP_MONDAY = "PROP_MONDAY";
+    public static final String PROP_TUESDAY = "PROP_TUESDAY";
+    public static final String PROP_WEDNESDAY = "PROP_WEDNESDAY";
+    public static final String PROP_THURSDAY = "PROP_THURSDAY";
+    public static final String PROP_FRIDAY = "PROP_FRIDAY";
+    public static final String PROP_SATURDAY = "PROP_SATURDAY";
+    public static final String PROP_SUNDAY = "PROP_SUNDAY";
+    public static final String PROP_AM = "PROP_AM";
+    public static final String PROP_MIDAM = "PROP_MIDAM";
+    public static final String PROP_NOON = "PROP_NOON";
+    public static final String PROP_MIDAFT = "PROP_MIDAFT";
+    public static final String PROP_AFTERNOON = "PROP_AFTERNOON";
+    public static final String PROP_EVENING = "PROP_EVENING";
+    public static final String PROP_BEDTIME = "PROP_BEDTIME";
 
-// Provide basic attributes for all Schedule's    
-public static final String PROP_TYPE = "PROP_TYPE";
-public static final String PROP_NAME = "PROP_NAME";
-public static final String PROP_CONDITION = "PROP_CONDITION";
-public static final String PROP_DOSE = "PROP_DOSE";
-public static final String PROP_DOSEMEASURE = "PROP_DOSEMEASURE";
-// Provide boolean's for the Reminder & Calender Event triggers
-public static final String PROP_REMINDER = "PROP_REMINDER";
-public static final String PROP_CALENDAREVENT = "PROP_CALENDAREVENT";
-// Provide boolean's for the Days Taken checkboxes
-public static final String PROP_MONDAY = "PROP_MONDAY";
-public static final String PROP_TUESDAY = "PROP_TUESDAY";
-public static final String PROP_WEDNESDAY = "PROP_WEDNESDAY";
-public static final String PROP_THURSDAY = "PROP_THURSDAY";
-public static final String PROP_FRIDAY = "PROP_FRIDAY";
-public static final String PROP_SATURDAY = "PROP_SATURDAY";
-public static final String PROP_SUNDAY = "PROP_SUNDAY";
-// Provide boolean's for the Time Taken checkboxes
-public static final String PROP_AM = "PROP_AM";
-public static final String PROP_MIDAM = "PROP_MIDAM";
-public static final String PROP_NOON = "PROP_NOON";
-public static final String PROP_MIDAFT = "PROP_MIDAFT";
-public static final String PROP_AFTERNOON = "PROP_AFTERNOON";
-public static final String PROP_EVENING = "PROP_EVENING";
-public static final String PROP_BEDTIME = "PROP_BEDTIME";
-
-// Define the methods to take all of the variable values and write them to a database for retreival and display in the main GUI.
-    private String Type;
-    private String Name;
-    private String Condition;
-    private double Dose;
-    private String doseMeasure;
-    private boolean Reminder;
-    private boolean calendarEvent;
-    private boolean Monday;
-    private boolean Tuesday;
-    private boolean Wednesday;
-    private boolean Thursday;
-    private boolean Friday;
-    private boolean Saturday;
-    private boolean Sunday;
-    private boolean AM;
-    private boolean midAM;
-    private boolean Noon;
-    private boolean midAft;
-    private boolean Afternoon;
-    private boolean Evening;
-    private boolean Bedtime;
+// Define the variable set for each Schedule object
+    public String UUID;
+    public String Type;
+    public String Name;
+    public String Condition;
+    public double Dose;
+    public String doseMeasure;
+    public boolean Reminder;
+    public boolean calendarEvent;
+    public boolean Monday;
+    public boolean Tuesday;
+    public boolean Wednesday;
+    public boolean Thursday;
+    public boolean Friday;
+    public boolean Saturday;
+    public boolean Sunday;
+    public boolean AM;
+    public boolean midAM;
+    public boolean Noon;
+    public boolean midAft;
+    public boolean Afternoon;
+    public boolean Evening;
+    public boolean Bedtime;
     private final transient PropertyChangeSupport propertyChangeSupport = new java.beans.PropertyChangeSupport(this);
     private final transient VetoableChangeSupport vetoableChangeSupport = new java.beans.VetoableChangeSupport(this);
+
+    /**
+     * @return the UUID
+     */
+    public String getUUID() {
+        return UUID;
+    }
+
+    /**
+     * @param UUID the UUID to set
+     */
+    public void setUUID(String UUID) throws PropertyVetoException {
+        java.lang.String oldUUID = this.UUID;
+        vetoableChangeSupport.fireVetoableChange(PROP_UUID, oldUUID, UUID);
+        this.UUID = UUID;
+        propertyChangeSupport.firePropertyChange(PROP_UUID, oldUUID, UUID);
+    }
 
     /**
      * @return the Type
@@ -66,7 +80,6 @@ public static final String PROP_BEDTIME = "PROP_BEDTIME";
 
     /**
      * @param Type the Type to set
-     * @throws java.beans.PropertyVetoException
      */
     public void setType(String Type) throws PropertyVetoException {
         java.lang.String oldType = this.Type;
@@ -84,7 +97,6 @@ public static final String PROP_BEDTIME = "PROP_BEDTIME";
 
     /**
      * @param Name the Name to set
-     * @throws java.beans.PropertyVetoException
      */
     public void setName(String Name) throws PropertyVetoException {
         java.lang.String oldName = this.Name;
@@ -102,7 +114,6 @@ public static final String PROP_BEDTIME = "PROP_BEDTIME";
 
     /**
      * @param Condition the Condition to set
-     * @throws java.beans.PropertyVetoException
      */
     public void setCondition(String Condition) throws PropertyVetoException {
         java.lang.String oldCondition = this.Condition;
@@ -120,7 +131,6 @@ public static final String PROP_BEDTIME = "PROP_BEDTIME";
 
     /**
      * @param Dose the Dose to set
-     * @throws java.beans.PropertyVetoException
      */
     public void setDose(double Dose) throws PropertyVetoException {
         double oldDose = this.Dose;
@@ -138,7 +148,6 @@ public static final String PROP_BEDTIME = "PROP_BEDTIME";
 
     /**
      * @param doseMeasure the doseMeasure to set
-     * @throws java.beans.PropertyVetoException
      */
     public void setDoseMeasure(String doseMeasure) throws PropertyVetoException {
         java.lang.String oldDoseMeasure = this.doseMeasure;
@@ -156,7 +165,6 @@ public static final String PROP_BEDTIME = "PROP_BEDTIME";
 
     /**
      * @param Reminder the Reminder to set
-     * @throws java.beans.PropertyVetoException
      */
     public void setReminder(boolean Reminder) throws PropertyVetoException {
         boolean oldReminder = this.Reminder;
@@ -174,7 +182,6 @@ public static final String PROP_BEDTIME = "PROP_BEDTIME";
 
     /**
      * @param calendarEvent the calendarEvent to set
-     * @throws java.beans.PropertyVetoException
      */
     public void setCalendarEvent(boolean calendarEvent) throws PropertyVetoException {
         boolean oldCalendarEvent = this.calendarEvent;
@@ -192,7 +199,6 @@ public static final String PROP_BEDTIME = "PROP_BEDTIME";
 
     /**
      * @param Monday the Monday to set
-     * @throws java.beans.PropertyVetoException
      */
     public void setMonday(boolean Monday) throws PropertyVetoException {
         boolean oldMonday = this.Monday;
@@ -210,7 +216,6 @@ public static final String PROP_BEDTIME = "PROP_BEDTIME";
 
     /**
      * @param Tuesday the Tuesday to set
-     * @throws java.beans.PropertyVetoException
      */
     public void setTuesday(boolean Tuesday) throws PropertyVetoException {
         boolean oldTuesday = this.Tuesday;
@@ -228,7 +233,6 @@ public static final String PROP_BEDTIME = "PROP_BEDTIME";
 
     /**
      * @param Wednesday the Wednesday to set
-     * @throws java.beans.PropertyVetoException
      */
     public void setWednesday(boolean Wednesday) throws PropertyVetoException {
         boolean oldWednesday = this.Wednesday;
@@ -246,7 +250,6 @@ public static final String PROP_BEDTIME = "PROP_BEDTIME";
 
     /**
      * @param Thursday the Thursday to set
-     * @throws java.beans.PropertyVetoException
      */
     public void setThursday(boolean Thursday) throws PropertyVetoException {
         boolean oldThursday = this.Thursday;
@@ -264,7 +267,6 @@ public static final String PROP_BEDTIME = "PROP_BEDTIME";
 
     /**
      * @param Friday the Friday to set
-     * @throws java.beans.PropertyVetoException
      */
     public void setFriday(boolean Friday) throws PropertyVetoException {
         boolean oldFriday = this.Friday;
@@ -282,7 +284,6 @@ public static final String PROP_BEDTIME = "PROP_BEDTIME";
 
     /**
      * @param Saturday the Saturday to set
-     * @throws java.beans.PropertyVetoException
      */
     public void setSaturday(boolean Saturday) throws PropertyVetoException {
         boolean oldSaturday = this.Saturday;
@@ -300,7 +301,6 @@ public static final String PROP_BEDTIME = "PROP_BEDTIME";
 
     /**
      * @param Sunday the Sunday to set
-     * @throws java.beans.PropertyVetoException
      */
     public void setSunday(boolean Sunday) throws PropertyVetoException {
         boolean oldSunday = this.Sunday;
@@ -318,7 +318,6 @@ public static final String PROP_BEDTIME = "PROP_BEDTIME";
 
     /**
      * @param AM the AM to set
-     * @throws java.beans.PropertyVetoException
      */
     public void setAM(boolean AM) throws PropertyVetoException {
         boolean oldAM = this.AM;
@@ -336,7 +335,6 @@ public static final String PROP_BEDTIME = "PROP_BEDTIME";
 
     /**
      * @param midAM the midAM to set
-     * @throws java.beans.PropertyVetoException
      */
     public void setMidAM(boolean midAM) throws PropertyVetoException {
         boolean oldMidAM = this.midAM;
@@ -354,7 +352,6 @@ public static final String PROP_BEDTIME = "PROP_BEDTIME";
 
     /**
      * @param Noon the Noon to set
-     * @throws java.beans.PropertyVetoException
      */
     public void setNoon(boolean Noon) throws PropertyVetoException {
         boolean oldNoon = this.Noon;
@@ -372,7 +369,6 @@ public static final String PROP_BEDTIME = "PROP_BEDTIME";
 
     /**
      * @param midAft the midAft to set
-     * @throws java.beans.PropertyVetoException
      */
     public void setMidAft(boolean midAft) throws PropertyVetoException {
         boolean oldMidAft = this.midAft;
@@ -390,7 +386,6 @@ public static final String PROP_BEDTIME = "PROP_BEDTIME";
 
     /**
      * @param Afternoon the Afternoon to set
-     * @throws java.beans.PropertyVetoException
      */
     public void setAfternoon(boolean Afternoon) throws PropertyVetoException {
         boolean oldAfternoon = this.Afternoon;
@@ -408,7 +403,6 @@ public static final String PROP_BEDTIME = "PROP_BEDTIME";
 
     /**
      * @param Evening the Evening to set
-     * @throws java.beans.PropertyVetoException
      */
     public void setEvening(boolean Evening) throws PropertyVetoException {
         boolean oldEvening = this.Evening;
@@ -426,7 +420,6 @@ public static final String PROP_BEDTIME = "PROP_BEDTIME";
 
     /**
      * @param Bedtime the Bedtime to set
-     * @throws java.beans.PropertyVetoException
      */
     public void setBedtime(boolean Bedtime) throws PropertyVetoException {
         boolean oldBedtime = this.Bedtime;
@@ -434,5 +427,4 @@ public static final String PROP_BEDTIME = "PROP_BEDTIME";
         this.Bedtime = Bedtime;
         propertyChangeSupport.firePropertyChange(PROP_BEDTIME, oldBedtime, Bedtime);
     }
-
 }
