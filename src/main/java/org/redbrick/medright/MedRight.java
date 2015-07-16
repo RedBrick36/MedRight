@@ -22,7 +22,9 @@
  * timely fashion designed toward compliance with the regimen.
  *
  * Within the scope of this application, a treatment is defined as: Medical care
- * given by a doctor, to a patient, for an illness or injury.
+ * given by a doctor, to a patient, for an illness or injury. Because of the 
+ * nature of the way the program was built, it also encompasses Fitness 
+ * Treatments - mostly comprised of supplements.
  *
  * Medical care can range from prescriptions for pills/liquids, to
  * vitamin/mineral supplements, to topical applications (such as ointments,
@@ -89,7 +91,7 @@ public class MedRight {
         System.out.println(newSchedule.isAm());
         System.out.println(newSchedule.isBedtime());
         System.out.println(newSchedule.isMonday());
-        System.out.println(newSchedule.isTuesday());
+        System.out.println(newSchedule.isTuesday()); // This should return false
         System.out.println(newSchedule.isWednesday());
         System.out.println(newSchedule.isFriday());
         

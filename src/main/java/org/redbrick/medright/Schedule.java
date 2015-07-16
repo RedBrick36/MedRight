@@ -7,30 +7,30 @@ package org.redbrick.medright;
 public class Schedule {
     
     /**
-     * Define the field set for the class
+     * Define the field-set for the class
      */
-    protected String uuid;
-    protected String type;
-    protected String name;
-    protected String condition;
-    protected double dose;
-    protected String doseMeasure;
-    protected boolean reminder;
-    protected boolean calendarEvent;
-    protected boolean monday;
-    protected boolean tuesday;
-    protected boolean wednesday;
-    protected boolean thursday;
-    protected boolean friday;
-    protected boolean saturday;
-    protected boolean sunday;
-    protected boolean am;
-    protected boolean midAM;
-    protected boolean noon;
-    protected boolean midAft;
-    protected boolean afternoon;
-    protected boolean evening;
-    protected boolean bedtime;
+    private String uuid;
+    private String type;
+    private String name;
+    private String condition;
+    private double dose;
+    private String doseMeasure;
+    private boolean reminder;
+    private boolean calendarEvent;
+    private boolean monday;
+    private boolean tuesday;
+    private boolean wednesday;
+    private boolean thursday;
+    private boolean friday;
+    private boolean saturday;
+    private boolean sunday;
+    private boolean am;
+    private boolean midAM;
+    private boolean noon;
+    private boolean midAft;
+    private boolean afternoon;
+    private boolean evening;
+    private boolean bedtime;
 
     /**
      * Default Constructor 
@@ -72,7 +72,7 @@ public class Schedule {
         ","+midAft+","+afternoon+","+evening+","+bedtime;   
     }    
     
-    // Define getters and setters for each field
+    // Define getter and setter pairs for each field
     
     /**
      * @return - uuid
