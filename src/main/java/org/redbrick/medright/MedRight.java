@@ -41,8 +41,28 @@ package org.redbrick.medright;
  */
 public class MedRight {
     
+    /*
+    Create a new Schedule object and print out the default state
+    */
     public static void main(String[] args) {
-
+        String state;
+        Schedule newSchedule = new Schedule();
+        state = newSchedule.getState();
+        System.out.println(state);
+        
+        /*
+        Use get and set methods and recheck state...
+        */
+        System.out.println(); //Add in a couple of blank lines between outputs
+        System.out.println();        
+        newSchedule.setAm(true);
+        newSchedule.setBedtime(true);
+        newSchedule.setMonday(true);
+        newSchedule.setWednesday(true);
+        newSchedule.setFriday(true);
+        state = newSchedule.getState();
+        System.out.println(state);
+    }
 /* Processes for intial launch and data entry (draft):
      1. Display the main user GUI
         Create DB file
@@ -93,8 +113,5 @@ public class MedRight {
         2. Check for reminders and provide popup
             Provide "Remind Later" and "Cancel" buttons
 */     
-                System.out.println("Hello World!");
-
-    }
 
 }
