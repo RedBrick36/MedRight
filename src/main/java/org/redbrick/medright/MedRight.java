@@ -29,8 +29,8 @@
  * lotions and creams, etc.), as well as referrals to other health care
  * providers.
  *
- * MedRight assists in all cases where a prescription has been issued by the
- * doctor. It can also be very useful to those who just wish to keep track of
+ * As such, MedRight assists in all cases where a prescription has been issued by the
+ * doctor; as well as being very useful to those who just wish to keep track of
  * their own, particular vitamin/supplement regimen.
  */
 package org.redbrick.medright;
@@ -40,18 +40,18 @@ package org.redbrick.medright;
  import javax.swing.*;
  */
 public class MedRight {
-    
-    /*
-    Create a new Schedule object and print out the default state
-    */
+
     public static void main(String[] args) {
+        /*
+        Create a new Schedule object and dump the default state
+        */
         String state;
         Schedule newSchedule = new Schedule();
         state = newSchedule.getState();
         System.out.println(state);
         
         /*
-        Use get and set methods and recheck state...
+        Use set methods and recheck state...
         */
         System.out.println(); //Add in a couple of blank lines between outputs
         System.out.println();        
@@ -62,5 +62,19 @@ public class MedRight {
         newSchedule.setFriday(true);
         state = newSchedule.getState();
         System.out.println(state);
+       
+        /*
+        Use get methods to check individual field states
+        */
+        System.out.println(); //Add in a couple of blank lines between outputs
+        System.out.println();  
+        System.out.println(newSchedule.isAm());
+        System.out.println(newSchedule.isBedtime());
+        System.out.println(newSchedule.isMonday());
+        System.out.println(newSchedule.isTuesday());
+        System.out.println(newSchedule.isWednesday());
+        System.out.println(newSchedule.isFriday());
+        
+    
     }
 }
