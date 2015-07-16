@@ -43,15 +43,27 @@ public class MedRight {
 
     public static void main(String[] args) {
         /*
-        Create a new Schedule object and dump the default state
+        Create a new Schedule object and dump the default state:
+        
+        Define a string variable to hold the default state
         */
         String state;
+        /*
+        Instantiate a Schedule object
+        */
         Schedule newSchedule = new Schedule();
+       /*
+        Assighn the return value of the .getState() method to the string 
+        variable state.
+        */
         state = newSchedule.getState();
+        /*
+        Print out the default state
+        */
         System.out.println(state);
         
         /*
-        Use set methods and recheck state...
+        Use set methods to change individual values and recheck state...
         */
         System.out.println(); //Add in a couple of blank lines between outputs
         System.out.println();        
@@ -60,9 +72,15 @@ public class MedRight {
         newSchedule.setMonday(true);
         newSchedule.setWednesday(true);
         newSchedule.setFriday(true);
+        /*
+        Re-run the .getState() method to update the value of the string variable 
+        state
+        */
         state = newSchedule.getState();
+        /*
+        Print updated state
+        */
         System.out.println(state);
-       
         /*
         Use get methods to check individual field states
         */
