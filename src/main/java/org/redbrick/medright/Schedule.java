@@ -72,7 +72,7 @@ public class Schedule {
         ","+midAft+","+afternoon+","+evening+","+bedtime;   
     }    
     
-    // Define "get and set" for each field
+    // Define getters and setters for each field
     
     /**
      * @return - uuid
