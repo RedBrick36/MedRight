@@ -24,7 +24,7 @@
  * Within the scope of this application, a treatment is defined as: Medical care
  * given by a doctor, to a patient, for an illness or injury. Because of the 
  * nature of the way the program was built, it also encompasses Fitness 
- * Treatments - mostly comprised of supplements.
+ * Treatments - mostly comprised of supplements and exercise schedules.
  *
  * Medical care can range from prescriptions for pills/liquids, to
  * vitamin/mineral supplements, to topical applications (such as ointments,

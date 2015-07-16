@@ -58,9 +58,20 @@ public class MedRightStartGUI extends javax.swing.JFrame {
         version = new javax.swing.JLabel();
         creator = new javax.swing.JLabel();
         jbAddNewSchedule = new javax.swing.JButton();
-        jbQuit = new javax.swing.JButton();
-        jbHelp = new javax.swing.JButton();
-        jbPrint = new javax.swing.JButton();
+        menuBar = new javax.swing.JMenuBar();
+        fileMenu = new javax.swing.JMenu();
+        openMenuItem = new javax.swing.JMenuItem();
+        saveMenuItem = new javax.swing.JMenuItem();
+        saveAsMenuItem = new javax.swing.JMenuItem();
+        exitMenuItem = new javax.swing.JMenuItem();
+        editMenu = new javax.swing.JMenu();
+        cutMenuItem = new javax.swing.JMenuItem();
+        copyMenuItem = new javax.swing.JMenuItem();
+        pasteMenuItem = new javax.swing.JMenuItem();
+        deleteMenuItem = new javax.swing.JMenuItem();
+        helpMenu = new javax.swing.JMenu();
+        contentsMenuItem = new javax.swing.JMenuItem();
+        aboutMenuItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("MedRight© Regiment Tracker");
@@ -170,7 +181,7 @@ public class MedRightStartGUI extends javax.swing.JFrame {
         );
         liquidsLayout.setVerticalGroup(
             liquidsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(liquidsScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 347, Short.MAX_VALUE)
+            .add(liquidsScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 366, Short.MAX_VALUE)
         );
 
         MainPane.addTab("Liquids", liquids);
@@ -212,7 +223,7 @@ public class MedRightStartGUI extends javax.swing.JFrame {
         );
         topicalsLayout.setVerticalGroup(
             topicalsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(topicalsScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 347, Short.MAX_VALUE)
+            .add(topicalsScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 366, Short.MAX_VALUE)
         );
 
         MainPane.addTab("Topicals", topicals);
@@ -227,21 +238,19 @@ public class MedRightStartGUI extends javax.swing.JFrame {
         );
         calendarLayout.setVerticalGroup(
             calendarLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 347, Short.MAX_VALUE)
+            .add(0, 366, Short.MAX_VALUE)
         );
 
         MainPane.addTab("Calendar", calendar);
 
         iteminfo.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("root");
-        javax.swing.tree.DefaultMutableTreeNode treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Treatments");
-        javax.swing.tree.DefaultMutableTreeNode treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Pills");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Liquids");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Topicals");
-        treeNode2.add(treeNode3);
+        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Treatments");
+        javax.swing.tree.DefaultMutableTreeNode treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Pills");
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Liquids");
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Topicals");
         treeNode1.add(treeNode2);
         treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Fitness");
         treeNode1.add(treeNode2);
@@ -262,7 +271,7 @@ public class MedRightStartGUI extends javax.swing.JFrame {
         );
         iteminfoLayout.setVerticalGroup(
             iteminfoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(iteminfoScrollPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 347, Short.MAX_VALUE)
+            .add(iteminfoScrollPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 366, Short.MAX_VALUE)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, iteminfoScrollPane)
         );
 
@@ -472,49 +481,95 @@ public class MedRightStartGUI extends javax.swing.JFrame {
             }
         });
 
-        jbQuit.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        jbQuit.setForeground(new java.awt.Color(255, 51, 0));
-        jbQuit.setText("  Quit  ");
-        jbQuit.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jbQuit.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jbQuit.setIconTextGap(6);
-        jbQuit.setMargin(new java.awt.Insets(4, 14, 4, 14));
-        jbQuit.setMaximumSize(new java.awt.Dimension(45, 25));
-        jbQuit.setMinimumSize(new java.awt.Dimension(45, 25));
-        jbQuit.setPreferredSize(new java.awt.Dimension(45, 25));
-        jbQuit.setSize(new java.awt.Dimension(79, 25));
-        jbQuit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbQuitActionPerformed(evt);
-            }
-        });
+        menuBar.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
 
-        jbHelp.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jbHelp.setForeground(new java.awt.Color(102, 102, 255));
-        jbHelp.setText("  Help  ");
-        jbHelp.setToolTipText("");
-        jbHelp.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jbHelp.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jbHelp.setIconTextGap(6);
-        jbHelp.setMargin(new java.awt.Insets(4, 14, 4, 14));
-        jbHelp.setMaximumSize(new java.awt.Dimension(51, 25));
-        jbHelp.setMinimumSize(new java.awt.Dimension(51, 25));
-        jbHelp.setPreferredSize(new java.awt.Dimension(51, 25));
-        jbHelp.setSize(new java.awt.Dimension(79, 25));
-        jbHelp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbHelpActionPerformed(evt);
-            }
-        });
+        fileMenu.setMnemonic('f');
+        fileMenu.setText("File");
+        fileMenu.setAlignmentX(2.5F);
+        fileMenu.setFont(new java.awt.Font("Dialog", 0, 13)); // NOI18N
+        fileMenu.setIconTextGap(6);
+        fileMenu.setMargin(new java.awt.Insets(4, 4, 4, 4));
 
-        jbPrint.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jbPrint.setText("  Print  ");
-        jbPrint.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jbPrint.addActionListener(new java.awt.event.ActionListener() {
+        openMenuItem.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        openMenuItem.setMnemonic('o');
+        openMenuItem.setText("Open");
+        fileMenu.add(openMenuItem);
+
+        saveMenuItem.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        saveMenuItem.setMnemonic('s');
+        saveMenuItem.setText("Save");
+        fileMenu.add(saveMenuItem);
+
+        saveAsMenuItem.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        saveAsMenuItem.setMnemonic('a');
+        saveAsMenuItem.setText("Save As ...");
+        saveAsMenuItem.setDisplayedMnemonicIndex(5);
+        fileMenu.add(saveAsMenuItem);
+
+        exitMenuItem.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        exitMenuItem.setMnemonic('x');
+        exitMenuItem.setText("Exit");
+        exitMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbPrintActionPerformed(evt);
+                exitMenuItemActionPerformed(evt);
             }
         });
+        fileMenu.add(exitMenuItem);
+
+        menuBar.add(fileMenu);
+
+        editMenu.setMnemonic('e');
+        editMenu.setText("Edit");
+        editMenu.setAlignmentX(1.5F);
+        editMenu.setFont(new java.awt.Font("Dialog", 0, 13)); // NOI18N
+        editMenu.setIconTextGap(6);
+
+        cutMenuItem.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        cutMenuItem.setMnemonic('t');
+        cutMenuItem.setText("Cut");
+        editMenu.add(cutMenuItem);
+
+        copyMenuItem.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        copyMenuItem.setMnemonic('y');
+        copyMenuItem.setText("Copy");
+        copyMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                copyMenuItemActionPerformed(evt);
+            }
+        });
+        editMenu.add(copyMenuItem);
+
+        pasteMenuItem.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        pasteMenuItem.setMnemonic('p');
+        pasteMenuItem.setText("Paste");
+        editMenu.add(pasteMenuItem);
+
+        deleteMenuItem.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        deleteMenuItem.setMnemonic('d');
+        deleteMenuItem.setText("Delete");
+        editMenu.add(deleteMenuItem);
+
+        menuBar.add(editMenu);
+
+        helpMenu.setMnemonic('h');
+        helpMenu.setText("Help");
+        helpMenu.setAlignmentX(1.5F);
+        helpMenu.setFont(new java.awt.Font("Dialog", 0, 13)); // NOI18N
+        helpMenu.setIconTextGap(6);
+
+        contentsMenuItem.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        contentsMenuItem.setMnemonic('c');
+        contentsMenuItem.setText("Contents");
+        helpMenu.add(contentsMenuItem);
+
+        aboutMenuItem.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        aboutMenuItem.setMnemonic('a');
+        aboutMenuItem.setText("About");
+        helpMenu.add(aboutMenuItem);
+
+        menuBar.add(helpMenu);
+
+        setJMenuBar(menuBar);
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -522,46 +577,35 @@ public class MedRightStartGUI extends javax.swing.JFrame {
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
                 .addContainerGap()
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(layout.createSequentialGroup()
-                        .add(MainPane, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .add(layout.createSequentialGroup()
-                        .add(banner, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 315, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .add(jbPrint)
-                        .add(18, 18, 18)
-                        .add(jbHelp, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(18, 18, 18)
-                        .add(jbQuit, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(35, 35, 35))))
-            .add(layout.createSequentialGroup()
-                .add(37, 37, 37)
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(creator)
-                    .add(version))
+                .add(banner, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 294, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .add(jbAddNewSchedule, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(54, 54, 54))
+                .add(104, 104, 104))
+            .add(layout.createSequentialGroup()
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .add(MainPane, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(layout.createSequentialGroup()
+                        .add(35, 35, 35)
+                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(creator)
+                            .add(version))))
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-                .add(6, 6, 6)
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                .addContainerGap()
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
                     .add(banner, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 47, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jbHelp, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jbQuit, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jbPrint))
-                .add(18, 18, 18)
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(layout.createSequentialGroup()
-                        .add(version, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(creator))
                     .add(jbAddNewSchedule, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 30, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 40, Short.MAX_VALUE)
-                .add(MainPane, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 379, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(version, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(creator)
+                .add(24, 24, 24)
+                .add(MainPane)
                 .add(20, 20, 20))
         );
 
@@ -600,17 +644,13 @@ public class MedRightStartGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jbAddNewScheduleActionPerformed
 
-    private void jbPrintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbPrintActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbPrintActionPerformed
+    private void exitMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitMenuItemActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_exitMenuItemActionPerformed
 
-    private void jbHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbHelpActionPerformed
+    private void copyMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_copyMenuItemActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jbHelpActionPerformed
-
-    private void jbQuitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbQuitActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbQuitActionPerformed
+    }//GEN-LAST:event_copyMenuItemActionPerformed
 
     /**
      * @param args the command line arguments
@@ -654,24 +694,35 @@ public class MedRightStartGUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTabbedPane MainPane;
+    private javax.swing.JMenuItem aboutMenuItem;
     private javax.swing.JLabel banner;
     private javax.swing.JPanel calendar;
+    private javax.swing.JMenuItem contentsMenuItem;
+    private javax.swing.JMenuItem copyMenuItem;
     private javax.swing.JLabel creator;
+    private javax.swing.JMenuItem cutMenuItem;
+    private javax.swing.JMenuItem deleteMenuItem;
+    private javax.swing.JMenu editMenu;
     private javax.persistence.EntityManager entityMedRight;
+    private javax.swing.JMenuItem exitMenuItem;
+    private javax.swing.JMenu fileMenu;
+    private javax.swing.JMenu helpMenu;
     private javax.swing.JPanel iteminfo;
     private javax.swing.JTree iteminfoJTree;
     private javax.swing.JScrollPane iteminfoScrollPane;
     private javax.swing.JScrollPane iteminfoScrollPanel;
     private javax.swing.JButton jbAddNewSchedule;
-    private javax.swing.JButton jbHelp;
-    private javax.swing.JButton jbPrint;
-    private javax.swing.JButton jbQuit;
     private javax.swing.JPanel liquids;
     private javax.swing.JScrollPane liquidsScrollPane;
     private javax.swing.JTable liquidsTable;
+    private javax.swing.JMenuBar menuBar;
+    private javax.swing.JMenuItem openMenuItem;
+    private javax.swing.JMenuItem pasteMenuItem;
     private javax.swing.JScrollPane pillScrollPane;
     private javax.swing.JTable pillTable;
     private javax.swing.JPanel pills;
+    private javax.swing.JMenuItem saveAsMenuItem;
+    private javax.swing.JMenuItem saveMenuItem;
     private javax.swing.JPanel schedule;
     private javax.swing.JLabel scheduleLable1;
     private javax.swing.JScrollPane scheduleScrollPane;
