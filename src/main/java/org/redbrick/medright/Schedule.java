@@ -7,9 +7,8 @@ package org.redbrick.medright;
 public class Schedule {
     
     /**
-     * Define and initialize the field set for the class
+     * Define the field set for the class
      */
-
     protected String uuid;
     protected String type;
     protected String name;
@@ -34,7 +33,7 @@ public class Schedule {
     protected boolean bedtime;
 
     /**
-     * Default Constructor
+     * Default Constructor 
      */
     public Schedule()
     {
@@ -42,7 +41,7 @@ public class Schedule {
     type = "";
     name = "";
     condition = "";
-    dose = 0;
+    dose = 0.0;
     doseMeasure = "";
     reminder = false;
     calendarEvent = false;
@@ -61,6 +60,20 @@ public class Schedule {
     evening = false;
     bedtime = false;    
     }
+    /**
+     * Return the state of the object as a comma delimited string
+     * for writing to database file
+     * @return 
+     */
+    public String getState() {
+        return uuid+","+type+","+name+","+condition+","+dose+","+doseMeasure+","
+        +reminder+","+calendarEvent+","+monday+","+tuesday+","+wednesday+","
+        +thursday+","+friday+","+saturday+","+sunday+","+am+","+midAM+","+noon+
+        ","+midAft+","+afternoon+","+evening+","+bedtime;   
+    }    
+    
+    // Define "get and set" for each field
+    
     /**
      * @return - uuid
      */
