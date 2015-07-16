@@ -10,50 +10,57 @@ public class Schedule {
      * Define and initialize the field set for the class
      */
 
-    protected String uuid = "";
-
-    protected String type = "";
-
-    protected String name = "";
-
-    protected String medCondition = "";
-
+    protected String uuid;
+    protected String type;
+    protected String name;
+    protected String condition;
     protected double dose;
+    protected String doseMeasure;
+    protected boolean reminder;
+    protected boolean calendarEvent;
+    protected boolean monday;
+    protected boolean tuesday;
+    protected boolean wednesday;
+    protected boolean thursday;
+    protected boolean friday;
+    protected boolean saturday;
+    protected boolean sunday;
+    protected boolean am;
+    protected boolean midAM;
+    protected boolean noon;
+    protected boolean midAft;
+    protected boolean afternoon;
+    protected boolean evening;
+    protected boolean bedtime;
 
-    protected String doseMeasure = "";
-
-    protected boolean reminder = false;
-
-    protected boolean calendarEvent = false;
-
-    protected boolean monday = false;
-
-    protected boolean tuesday = false;
-
-    protected boolean wednesday = false;
-
-    protected boolean thursday = false;
-
-    protected boolean friday = false;
-
-    protected boolean saturday = false;
-
-    protected boolean sunday = false;
-
-    protected boolean am = false;
-
-    protected boolean midAM = false;
-
-    protected boolean noon = false;
-
-    protected boolean midAft = false;
-
-    protected boolean afternoon = false;
-
-    protected boolean evening = false;
-
-    protected boolean bedtime = false;
-
+    /**
+     * Default Constructor
+     */
+    public Schedule()
+    {
+    uuid = "";
+    type = "";
+    name = "";
+    condition = "";
+    dose = 0;
+    doseMeasure = "";
+    reminder = false;
+    calendarEvent = false;
+    monday = false;
+    tuesday = false;
+    wednesday = false;
+    thursday = false;
+    friday = false;
+    saturday = false;
+    sunday = false;
+    am = false;
+    midAM = false;
+    noon = false;
+    midAft = false;
+    afternoon = false;
+    evening = false;
+    bedtime = false;    
+    }
     /**
      * @return - uuid
      */
@@ -97,17 +104,17 @@ public class Schedule {
     }
 
     /**
-     * @return - medCondition
+     * @return - condition
      */
-    public String getMedCondition() {
-        return medCondition;
+    public String getCondition() {
+        return condition;
     }
 
     /**
-     * @param medCondition - medCondition to set
+     * @param condition - condition to set
      */
-    public void setMedCondition(String medCondition) {
-        this.medCondition = medCondition;
+    public void setCondition(String condition) {
+        this.condition = condition;
     }
 
     /**
