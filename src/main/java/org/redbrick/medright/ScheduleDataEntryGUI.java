@@ -68,7 +68,7 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
         jlScheduleCreator.setText("Schedule Creator");
         jlScheduleCreator.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jcbSchedType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select  --", "Pill", "Liquid", "Topical", "Fitness", "Other" }));
+        jcbSchedType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select  --", "Pill", "Liquid", "Topical", "Fitness" }));
         jcbSchedType.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbSchedTypeActionPerformed(evt);

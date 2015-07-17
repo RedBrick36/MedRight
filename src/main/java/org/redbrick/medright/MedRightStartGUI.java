@@ -28,10 +28,10 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     private void initComponents() {
 
         entityMedRight = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory(null).createEntityManager();
-        MainPane = new javax.swing.JTabbedPane();
-        pills = new javax.swing.JPanel();
         pillScrollPane = new javax.swing.JScrollPane();
         pillTable = new javax.swing.JTable();
+        MainPane = new javax.swing.JTabbedPane();
+        pills = new javax.swing.JPanel();
         liquids = new javax.swing.JPanel();
         liquidsScrollPane = new javax.swing.JScrollPane();
         liquidsTable = new javax.swing.JTable();
@@ -73,21 +73,6 @@ public class MedRightStartGUI extends javax.swing.JFrame {
         contentsMenuItem = new javax.swing.JMenuItem();
         aboutMenuItem = new javax.swing.JMenuItem();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("MedRight© Regiment Tracker");
-        setBounds(new java.awt.Rectangle(0, 23, 761, 540));
-        setMaximumSize(new java.awt.Dimension(761, 540));
-        setMinimumSize(new java.awt.Dimension(761, 540));
-        setName("mainframe"); // NOI18N
-        setPreferredSize(new java.awt.Dimension(761, 500));
-        setSize(new java.awt.Dimension(761, 500));
-
-        MainPane.setForeground(new java.awt.Color(204, 255, 204));
-        MainPane.setToolTipText("");
-
-        pills.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        pills.setToolTipText("");
-
         pillTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -128,17 +113,30 @@ public class MedRightStartGUI extends javax.swing.JFrame {
         pillTable.setShowGrid(true);
         pillScrollPane.setViewportView(pillTable);
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("MedRight© Regiment Tracker");
+        setBounds(new java.awt.Rectangle(0, 23, 761, 540));
+        setMaximumSize(new java.awt.Dimension(761, 540));
+        setMinimumSize(new java.awt.Dimension(761, 540));
+        setName("mainframe"); // NOI18N
+        setPreferredSize(new java.awt.Dimension(761, 500));
+        setSize(new java.awt.Dimension(761, 500));
+
+        MainPane.setForeground(new java.awt.Color(204, 255, 204));
+        MainPane.setToolTipText("");
+
+        pills.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        pills.setToolTipText("");
+
         org.jdesktop.layout.GroupLayout pillsLayout = new org.jdesktop.layout.GroupLayout(pills);
         pills.setLayout(pillsLayout);
         pillsLayout.setHorizontalGroup(
             pillsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(pillScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 726, Short.MAX_VALUE)
+            .add(0, 726, Short.MAX_VALUE)
         );
         pillsLayout.setVerticalGroup(
             pillsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(pillsLayout.createSequentialGroup()
-                .add(pillScrollPane, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 340, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(0, 0, Short.MAX_VALUE))
+            .add(0, 366, Short.MAX_VALUE)
         );
 
         MainPane.addTab("Pills", pills);

@@ -4,6 +4,7 @@ package org.redbrick.medright;
  *
  * @author RedBrick
  */
+
 public class Schedule {
     
     /**
@@ -31,7 +32,10 @@ public class Schedule {
     private boolean afternoon;
     private boolean evening;
     private boolean bedtime;
-
+    private byte pillOffset;
+    private byte liquidOffset;
+    private byte topicalOffset;
+    
     /**
      * Default Constructor 
      */
@@ -69,9 +73,56 @@ public class Schedule {
         return uuid+","+type+","+name+","+condition+","+dose+","+doseMeasure+","
         +reminder+","+calendarEvent+","+monday+","+tuesday+","+wednesday+","
         +thursday+","+friday+","+saturday+","+sunday+","+am+","+midAM+","+noon+
-        ","+midAft+","+afternoon+","+evening+","+bedtime;   
-    }    
+        ","+midAft+","+afternoon+","+evening+","+bedtime;
+    }
+        
+    /* Need to fix....
+    public byte getOffsets() {
+        return pillOffset + liquidOffset + topicalOffset;
+    }
+    */
     
+    /**
+     * @return the pillOffset
+     */
+    protected byte getPillOffset() {
+        return pillOffset;
+    }
+
+    /**
+     * @param pillOffset the pillOffset to set
+     */
+    protected void setPillOffset(byte pillOffset) {
+        this.pillOffset = pillOffset;
+    }
+
+    /**
+     * @return the liquidOffset
+     */
+    protected byte getLiquidOffset() {
+        return liquidOffset;
+    }
+
+    /**
+     * @param liquidOffset the liquidOffset to set
+     */
+    protected void setLiquidOffset(byte liquidOffset) {
+        this.liquidOffset = liquidOffset;
+    }
+
+    /**
+     * @return the topicalOffset
+     */
+    protected byte getTopicalOffset() {
+        return topicalOffset;
+    }
+
+    /**
+     * @param topicalOffset the topicalOffset to set
+     */
+    protected void setTopicalOffset(byte topicalOffset) {
+        this.topicalOffset = topicalOffset;
+    }
     // Define getter and setter pairs for each field
     
     /**
