@@ -10,7 +10,7 @@ public class Schedule {
     /**
      * Define the field-set for the class
      */
-    private String uuid;
+    private int uuid;
     private String type;
     private String name;
     private String condition;
@@ -32,16 +32,13 @@ public class Schedule {
     private boolean afternoon;
     private boolean evening;
     private boolean bedtime;
-    private byte pillOffset;
-    private byte liquidOffset;
-    private byte topicalOffset;
     
     /**
      * Default Constructor 
      */
     public Schedule()
     {
-    uuid = "";
+    uuid = 0;
     type = "";
     name = "";
     condition = "";
@@ -75,67 +72,20 @@ public class Schedule {
         +thursday+","+friday+","+saturday+","+sunday+","+am+","+midAM+","+noon+
         ","+midAft+","+afternoon+","+evening+","+bedtime;
     }
-        
-    /* Need to fix....
-    public byte getOffsets() {
-        return pillOffset + liquidOffset + topicalOffset;
-    }
-    */
     
-    /**
-     * @return the pillOffset
-     */
-    protected byte getPillOffset() {
-        return pillOffset;
-    }
-
-    /**
-     * @param pillOffset the pillOffset to set
-     */
-    protected void setPillOffset(byte pillOffset) {
-        this.pillOffset = pillOffset;
-    }
-
-    /**
-     * @return the liquidOffset
-     */
-    protected byte getLiquidOffset() {
-        return liquidOffset;
-    }
-
-    /**
-     * @param liquidOffset the liquidOffset to set
-     */
-    protected void setLiquidOffset(byte liquidOffset) {
-        this.liquidOffset = liquidOffset;
-    }
-
-    /**
-     * @return the topicalOffset
-     */
-    protected byte getTopicalOffset() {
-        return topicalOffset;
-    }
-
-    /**
-     * @param topicalOffset the topicalOffset to set
-     */
-    protected void setTopicalOffset(byte topicalOffset) {
-        this.topicalOffset = topicalOffset;
-    }
     // Define getter and setter pairs for each field
     
     /**
      * @return - uuid
      */
-    public String getUuid() {
+    public int getUuid() {
         return uuid;
     }
 
     /**
      * @param uuid - uuid to set
      */
-    public void setUuid(String uuid) {
+    public void setUuid(int uuid) {
         this.uuid = uuid;
     }
 
