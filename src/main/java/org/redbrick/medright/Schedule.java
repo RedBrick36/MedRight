@@ -1,16 +1,59 @@
 package org.redbrick.medright;
 
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
+
 /**
  *
  * @author RedBrick
  */
 
-public class Schedule {
+class Schedule {
     
     /**
      * Define the field-set for the class
      */
     private int uuid;
+    private String string;
+
+    /**
+     * Get the value of string
+     *
+     * @return the value of string
+     */
+    public String getString() {
+        return string;
+    }
+
+    /**
+     * Set the value of string
+     *
+     * @param string new value of string
+     */
+    public void setString(String string) {
+        this.string = string;
+    }
+
+    private transient final PropertyChangeSupport propertyChangeSupport = new PropertyChangeSupport(this);
+
+    /**
+     * Add PropertyChangeListener.
+     *
+     * @param listener
+     */
+    public void addPropertyChangeListener(PropertyChangeListener listener) {
+        propertyChangeSupport.addPropertyChangeListener(listener);
+    }
+
+    /**
+     * Remove PropertyChangeListener.
+     *
+     * @param listener
+     */
+    public void removePropertyChangeListener(PropertyChangeListener listener) {
+        propertyChangeSupport.removePropertyChangeListener(listener);
+    }
+
     private String type;
     private String name;
     private String condition;

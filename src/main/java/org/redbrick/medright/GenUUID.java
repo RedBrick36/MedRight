@@ -34,6 +34,11 @@ class GenUUID {
     private int lO = 0;
     private int tO = 0;
     private int fO = 0;
+    // Declare variables for assigning values to array elements by type
+    private int p = 0;
+    private int l = 100;
+    private int t = 200;
+    private int f = 300;
     // Declare variable for returning a unique uuid
     private int uuid;
     // Declare variable for switching to appropriate array based upon passed value
@@ -43,7 +48,7 @@ class GenUUID {
     /*
     Constructor
     */
-    public GenUUID (String type) {
+    public GenUUID () {
      
     /* Declare arrays for each type 
     Pill array elements will be assigned values 0 - 29
@@ -59,24 +64,25 @@ class GenUUID {
     /*
     Initialize each array with a specific sequence of digits based upon their type
     int o is for the Offset and int v is for the Value
-    */    
+    */  
+        
         for (int o = 0; o <= 29; o++) {
-            for (int v = 0; v <= 29; v++)
-            this.pillCounter[o] = v;
+            this.pillCounter[o] = p;
+            p++;
         }
-        for (int o = 0; o <= 14; o++) {
-            for (int v = 100; v <= 114; v++)
-            this.liquidCounter[o] = v;
+        for (int o = 0; o <= 14; o++) {           
+            this.liquidCounter[o] = l;
+            l++;
         }
         for (int o = 0; o <= 9; o++) {
-            for (int v = 200; v <= 209; v++)
-            this.topicalCounter[o] = v;
+            this.topicalCounter[o] = t;
+            t++;
         }
-         for (int o = 0; o <= 19; o++){   
-            for (int v = 300; v <= 319; v++)
-            this.fitnessCounter[o] = v;
+         for (int o = 0; o <= 19; o++){
+            this.fitnessCounter[o] = f;
+            f++;
         }
-        
+
     // Set the pointer value to proper array indexer value
         if ("Pill".equals(type)) {
             pltf = pO;
@@ -114,5 +120,13 @@ class GenUUID {
         }       
         return uuid;
      }
+// Setter and Getter for type field
+     
+    public String getType() {
+        return type;
+    }
 
+    public void setType(String type) {
+        this.type = type;
+    }
 }
