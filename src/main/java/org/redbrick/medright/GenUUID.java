@@ -8,9 +8,18 @@ package org.redbrick.medright;
 /**
  *
  * @author RedBrick
+ * 
+ * This class is created to provide a systematic way of assigning a unique
+ * identifier for each schedule entered. Since using the Name variable in the 
+ * Schedule objects could become unwieldy -- especially with medicinal names --
+ * a unique integer identifier is a better choice. The unique identifier is
+ * tied to the type of schedule (pill, liquid, topical or fitness) that the user
+ * desires to create. The arrays hold values consistent with the type of schedule
+ * being entered; with each being assigned a specific block of integers.
+ * 
  */
 
-public class GenUUID {
+class GenUUID {
 
     /* Declare arrays for keeping track of how many of each type has been entered
     and assigning a uuid based upon the offset within that array
@@ -36,36 +45,21 @@ public class GenUUID {
     */
     public GenUUID (String type) {
      
-        /* Declare arrays for each type 
-        Pill array elements will be assigned values 0 - 29
-        Liquid array elements will be assigned values 100 - 114
-        Topical array elements will be assigned values 200 - 209
-        Fitness array elements will be assigned values 300 - 319
-        */
+    /* Declare arrays for each type 
+    Pill array elements will be assigned values 0 - 29
+    Liquid array elements will be assigned values 100 - 114
+    Topical array elements will be assigned values 200 - 209
+    Fitness array elements will be assigned values 300 - 319
+    */
         this.pillCounter = new int[30];
         this.liquidCounter = new int[15];
         this.topicalCounter = new int[10];
         this.fitnessCounter = new int[20];
-        
-        // Set a pointer to proper array indexer
-        if ("Pill".equals(type)) {
-            pltf = pO;
-        } 
-        if ("Liquid".equals(type)) {
-            pltf = lO;
-        }
-        if ("Topical".equals(type)) {
-            pltf = tO;
-        }
-        if ("Fitness".equals(type)) {
-            pltf = fO;
-        }   
-    }
+      
     /*
     Initialize each array with a specific sequence of digits based upon their type
     int o is for the Offset and int v is for the Value
     */    
-     public void initArrays() {
         for (int o = 0; o <= 29; o++) {
             for (int v = 0; v <= 29; v++)
             this.pillCounter[o] = v;
@@ -82,6 +76,20 @@ public class GenUUID {
             for (int v = 300; v <= 319; v++)
             this.fitnessCounter[o] = v;
         }
+        
+    // Set the pointer value to proper array indexer value
+        if ("Pill".equals(type)) {
+            pltf = pO;
+        } 
+        if ("Liquid".equals(type)) {
+            pltf = lO;
+        }
+        if ("Topical".equals(type)) {
+            pltf = tO;
+        }
+        if ("Fitness".equals(type)) {
+            pltf = fO;
+        } 
      }
     /* Return a uuid from a given offset on the appropriate array based upon 
      type
