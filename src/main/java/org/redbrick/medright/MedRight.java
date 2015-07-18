@@ -69,7 +69,7 @@ public class MedRight {
         System.out.println();
         /* Testing interreaction between the objects by
            setting Type and UUID to local object from what was passed into 
-           and out of GenUUID object: From ScheduleDataEntryGUI simulated calls...
+           GenUUID object: Simulated as coming from ScheduleDataEntryGUI
         */
         newUUID.setType("Liquid"); // Coming from GUI type combo box 
         newSchedule.setType(newUUID.getType()); // Xfer to local schedule obj
@@ -84,37 +84,6 @@ public class MedRight {
         newSchedule.setUuid(newUUID.genUuid()); // Set local uuid from method call to .genUuid
         state = newSchedule.getState(); // Update state variable
         System.out.println(state); // Verify results so far...
-        
-//        /*
-//         Use set methods to change individual values and recheck state...
-//         */
-//        System.out.println(); //Add in a couple of blank lines between outputs
-//        System.out.println();
-//        newSchedule.setAm(true);
-//        newSchedule.setBedtime(true);
-//        newSchedule.setMonday(true);
-//        newSchedule.setWednesday(true);
-//        newSchedule.setFriday(true);
-//        /*
-//         Re-run the .getState() method to update the value of the string variable 
-//         state
-//         */
-//        state = newSchedule.getState();
-//        /*
-//         Print updated state
-//         */
-//        System.out.println(state);
-//        /*
-//         Use get methods to check individual field states
-//         */
-//        System.out.println(); //Add in a couple of blank lines between outputs
-//        System.out.println();
-//        System.out.println(newSchedule.isAm());
-//        System.out.println(newSchedule.isBedtime());
-//        System.out.println(newSchedule.isMonday());
-//        System.out.println(newSchedule.isTuesday()); // This should return false
-//        System.out.println(newSchedule.isWednesday());
-//        System.out.println(newSchedule.isFriday());
         
     
     }

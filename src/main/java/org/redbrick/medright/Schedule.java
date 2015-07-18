@@ -62,7 +62,7 @@ public Schedule() {
     }
     /**
      * Return the state of the object as a comma delimited string
-     * for writing to database file
+     * for writing to database file later
      * @return 
      */
     public String getState() {
