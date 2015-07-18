@@ -71,14 +71,19 @@ public class MedRight {
            setting Type and UUID to local object from what was passed into 
            and out of GenUUID object: From ScheduleDataEntryGUI simulated calls...
         */
-        newUUID.setType("Pill"); // Coming from GUI type combo box 
+        newUUID.setType("Liquid"); // Coming from GUI type combo box 
         newSchedule.setType(newUUID.getType()); // Xfer to local schedule obj
-        state = newSchedule.getState();
+        state = newSchedule.getState(); // Update state variable
         System.out.println(state); // Verify results so far...
         newSchedule.setUuid(newUUID.genUuid()); // Set local uuid from method call to .genUuid
-        state = newSchedule.getState();
+        state = newSchedule.getState(); // Update state variable
         System.out.println(state); // Verify results so far...
-        
+        System.out.println(); //Add in a couple of blank lines between outputs
+        System.out.println();
+        // Second call on GenUUID for a liquid
+        newSchedule.setUuid(newUUID.genUuid()); // Set local uuid from method call to .genUuid
+        state = newSchedule.getState(); // Update state variable
+        System.out.println(state); // Verify results so far...
         
 //        /*
 //         Use set methods to change individual values and recheck state...

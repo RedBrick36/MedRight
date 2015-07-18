@@ -83,38 +83,40 @@ class GenUUID {
             f++;
         }
 
-    // Set the pointer value to proper array indexer value
-        if ("Pill".equals(type)) {
-            pltf = pO;
-        } 
-        if ("Liquid".equals(type)) {
-            pltf = lO;
-        }
-        if ("Topical".equals(type)) {
-            pltf = tO;
-        }
-        if ("Fitness".equals(type)) {
-            pltf = fO;
-        } 
-     }
+    }    // Set the pointer value to proper array indexer value
+       
+
     /* Return a uuid from a given offset on the appropriate array based upon 
      type
      */ 
      public int genUuid() {
-     
+         
         if ("Pill".equals(type)) {
+            pltf = pO;
+            }
+        else if ("Liquid".equals(type)) {
+            pltf = lO;
+            }
+        else if ("Topical".equals(type)) {
+            pltf = tO; 
+            }
+        else if ("Fitness".equals(type)) {
+            pltf = fO;
+            }
+     
+        if (type.equals("Pill")) {
             uuid = this.pillCounter[pltf];
             pO++;
         }
-        else if ("Liquid".equals(type)) {
+        else if (type.equals("Liquid")) {
             uuid = this.liquidCounter[pltf];
             lO++;
         }
-        else if ("Topical".equals(type)) {
+        else if (type.equals("Topical")) {
             uuid = this.topicalCounter[pltf];
             tO++;
         }
-        else if ("Fitness".equals(type)){
+        else if (type.equals("Fitness")){
             uuid = this.fitnessCounter[pltf];
             fO++;
         }       
