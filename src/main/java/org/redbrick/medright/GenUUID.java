@@ -9,15 +9,16 @@ package org.redbrick.medright;
  *
  * @author RedBrick
  */
+
 public class GenUUID {
 
     /* Declare arrays for keeping track of how many of each type has been entered
     and assigning a uuid based upon the offset within that array
     */    
-    private int[] pillCounter;
-    private int[] liquidCounter;
-    private int[] topicalCounter;
-    private int[] fitnessCounter;
+    private final int[] pillCounter;
+    private final int[] liquidCounter;
+    private final int[] topicalCounter;
+    private final int[] fitnessCounter;
     
     // Declare variables for indexing the elements of the arrays   
     private int pO = 0;
@@ -28,27 +29,25 @@ public class GenUUID {
     private int uuid;
     // Declare variable for switching to appropriate array based upon passed value
     private String type;
-    // Declare pointer variable to point to the appropriate array based on type
+    // Declare pointer variable; to point to the appropriate array based on type
     private int pltf;
-    private int o;
-    
     /*
     Constructor
     */
     public GenUUID (String type) {
      
         /* Declare arrays for each type 
-        Pill elements will be assigned values 0 - 29
-        Liquid elements will be assigned values 100 - 114
-        Topical elements will be assigned values 200 - 209
-        Fitness elements will be assigned values 300 - 319
+        Pill array elements will be assigned values 0 - 29
+        Liquid array elements will be assigned values 100 - 114
+        Topical array elements will be assigned values 200 - 209
+        Fitness array elements will be assigned values 300 - 319
         */
         this.pillCounter = new int[30];
         this.liquidCounter = new int[15];
         this.topicalCounter = new int[10];
         this.fitnessCounter = new int[20];
         
-        // Set pointer to proper array indexer
+        // Set a pointer to proper array indexer
         if ("Pill".equals(type)) {
             pltf = pO;
         } 
@@ -62,9 +61,9 @@ public class GenUUID {
             pltf = fO;
         }   
     }
-
     /*
-    Initialize the arrays with sequential digits up to their maximum size    
+    Initialize each array with a specific sequence of digits based upon their type
+    int o is for the Offset and int v is for the Value
     */    
      public void initArrays() {
         for (int o = 0; o <= 29; o++) {
@@ -75,19 +74,19 @@ public class GenUUID {
             for (int v = 100; v <= 114; v++)
             this.liquidCounter[o] = v;
         }
-        for (o = 0; o <= 9; o++) {
+        for (int o = 0; o <= 9; o++) {
             for (int v = 200; v <= 209; v++)
             this.topicalCounter[o] = v;
-            }
-         for (o = 0; o <= 19; o++){   
+        }
+         for (int o = 0; o <= 19; o++){   
             for (int v = 300; v <= 319; v++)
             this.fitnessCounter[o] = v;
-            }
+        }
      }
     /* Return a uuid from a given offset on the appropriate array based upon 
-     type */
-    
-     public int getUuid() {
+     type
+     */ 
+     public int genUuid() {
      
         if ("Pill".equals(type)) {
             uuid = this.pillCounter[pltf];
@@ -104,7 +103,7 @@ public class GenUUID {
         else if ("Fitness".equals(type)){
             uuid = this.fitnessCounter[pltf];
             fO++;
-        }
+        }       
         return uuid;
      }
 
