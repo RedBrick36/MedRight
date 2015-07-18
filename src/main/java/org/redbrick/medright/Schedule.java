@@ -31,8 +31,7 @@ class Schedule {
     private boolean midAft;
     private boolean afternoon;
     private boolean evening;
-    private boolean bedtime;
-    
+    private boolean bedtime;    
     /**
      * Constructor 
      */
