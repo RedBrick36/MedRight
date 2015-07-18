@@ -21,7 +21,8 @@ package org.redbrick.medright;
 
 class GenUUID {
 
-    /* Declare arrays for keeping track of how many of each type has been entered
+    /* 
+    Declare arrays for keeping track of how many of each type has been entered
     and assigning a uuid based upon the offset within that array
     */    
     private final int[] pillCounter;
@@ -34,27 +35,39 @@ class GenUUID {
     private int lO = 0;
     private int tO = 0;
     private int fO = 0;
+    
     // Declare variables for assigning values to array elements by type
     private int p = 0;
     private int l = 100;
     private int t = 200;
     private int f = 300;
+    
     // Declare variable for returning a unique uuid
     private int uuid;
-    // Declare variable for switching to appropriate array based upon passed value
+    /* 
+    Declare variable to be used for switching to appropriate array based 
+    upon the value set in the method call.
+    */
     private String type;
-    // Declare pointer variable; to point to the appropriate array based on type
+    /* 
+    Declare pointer variable; which will point to the appropriate array 
+    based on the value of the type variable above.
+    */
     private int pltf;
     /*
     Constructor
     */
     public GenUUID () {
      
-    /* Declare arrays for each type 
+    /* 
+    Declare an array for each schedule object type selectable in the GUI 
     Pill array elements will be assigned values 0 - 29
     Liquid array elements will be assigned values 100 - 114
     Topical array elements will be assigned values 200 - 209
     Fitness array elements will be assigned values 300 - 319
+            
+    The size of the array limits how many entries of each type the user can enter
+    The numbers chosen here should be plenty large enough for any one person.
     */
         this.pillCounter = new int[30];
         this.liquidCounter = new int[15];
@@ -63,7 +76,9 @@ class GenUUID {
       
     /*
     Initialize each array with a specific sequence of digits based upon their type
-    int o is for the Offset and int v is for the Value
+    int o is used to control the iterations and the value variables (p,l,t,f) are
+    defined as starting at a specified numerical range to assist in sorting
+    at a later point.
     */  
         
         for (int o = 0; o <= 29; o++) {
@@ -83,12 +98,11 @@ class GenUUID {
             f++;
         }
 
-    }    // Set the pointer value to proper array indexer value
-       
-
-    /* Return a uuid from a given offset on the appropriate array based upon 
-     type
-     */ 
+    }
+    /* 
+    The goal of this next section is two-fold:
+    1.  Start by setting the pointer to the appropriate array
+    */
      public int genUuid() {
          
         if ("Pill".equals(type)) {
@@ -103,7 +117,14 @@ class GenUUID {
         else if ("Fitness".equals(type)) {
             pltf = fO;
             }
-     
+    /* 
+    2. Assign uuid the value within the array that is at the current 
+    index/offset for that particular array. Each time a new schedule object 
+    is instantiated, it will pull its uuid from this object. The indexer
+    (pO,lO,tO,fO) is incremented as a part of the process, so that the 
+    next time the same type is passed in for a uuid, it will pull the value from 
+    the next element in its associated array.
+    */ 
         if (type.equals("Pill")) {
             uuid = this.pillCounter[pltf];
             pO++;
