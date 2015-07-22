@@ -40,6 +40,6 @@ package org.redbrick.medright;
 public class MedRight {
 
     public static void main(String[] args) {
-    
+ // test   
     }
 }
