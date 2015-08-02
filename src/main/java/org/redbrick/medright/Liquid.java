@@ -5,10 +5,6 @@ package org.redbrick.medright;
  */
 // As used in MedRight, a liquid is defined as something you take internally -- not externally (a topical)
 
-/* As an object of this class is instantiated it will have the listed variables available.
-Almost all of these variables will be initialized through a GUI; the remainder by calling the methods outlined within
- the object
-*/
 
 public class Liquid {
 
