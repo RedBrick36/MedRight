@@ -28,7 +28,7 @@
  *
  * Medical care can range from prescriptions for pills/liquids, to
  * vitamin/mineral supplements, to topical applications (such as ointments,
- * lotion's and creams, etc.), as well as referrals to other health care
+ * lotions and creams, etc.), as well as referrals to other health care
  * providers.
  *
  * As such, MedRight assists in all cases where a prescription has been issued by the

@@ -1,4 +1,4 @@
-package org.redbrick.test;
+package org.redbrick.medright;
 
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
@@ -72,7 +72,7 @@ public class UserScheduleSync {
        * we need to use modulus to return just the remainder after
        * dividing by 60.
        */
-      untilMins = untilMins % 60;
+      untilMins %= 60;
       /*
        * If eventTimeCheck was initialized to 0 due to a match then we
        * can break out of the loop and pop up the dialog box

@@ -9,10 +9,10 @@ public class ClockSync {
    * Initial sync of loops to minutes on device clock; so that the sleep
    * timers trip events at exactly 00 seconds of each minute.
    */
-  static byte z = 0;
-  static byte localSecs = 0;
-  static byte syncSecs = 0;
-  static byte checkSync = 1;
+  private static byte z = 0;
+  private static byte localSecs = 0;
+  private static byte syncSecs = 0;
+  private static byte checkSync = 1;
    
 public static boolean syncClocks() {
   while (checkSync != 0) {

@@ -1,4 +1,4 @@
-package org.redbrick.test;
+package org.redbrick.medright;
 
 public class TimerTest {
 

@@ -1,4 +1,4 @@
-package org.redbrick.test;
+package org.redbrick.medright;
 
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 /*
  * 
  */
-public class DefaultSyncSchedule {
+public class DefaultScheduleSync {
 
 	// add argument passing for eventHour and quarter later....
 	public static void startSync() throws InterruptedException {

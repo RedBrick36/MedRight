@@ -105,42 +105,48 @@ class GenUUID {
     */
      public int genUuid() {
          
-        if ("Pill".equals(type)) {
-            pltf = pO;
+        if (null != type) {
+            switch (type) {
+                case "Pill":
+                    pltf = pO;
+                    break;
+                case "Liquid":
+                    pltf = lO;
+                    break;
+                case "Topical":
+                    pltf = tO;
+                    break;
+                case "Fitness":
+                    pltf = fO;
+                    break;
             }
-        else if ("Liquid".equals(type)) {
-            pltf = lO;
-            }
-        else if ("Topical".equals(type)) {
-            pltf = tO; 
-            }
-        else if ("Fitness".equals(type)) {
-            pltf = fO;
-            }
-    /* 
-    2. Assign uuid the value within the array that is at the current 
-    index/offset for that particular array. Each time a new schedule object 
-    is instantiated, it will pull its uuid from this object. The indexer
-    (pO,lO,tO,fO) is incremented as a part of the process, so that the 
-    next time the same type is passed in for a uuid, it will pull the value from 
-    the next element in its associated array.
-    */ 
-        if (type.equals("Pill")) {
-            uuid = this.pillCounter[pltf];
-            pO++;
         }
-        else if (type.equals("Liquid")) {
-            uuid = this.liquidCounter[pltf];
-            lO++;
+        /*
+        2. Assign uuid the value within the array that is at the current
+        index/offset for that particular array. Each time a new schedule object
+        is instantiated, it will pull its uuid from this object. The indexer
+        (pO,lO,tO,fO) is incremented as a part of the process, so that the
+        next time the same type is passed in for a uuid, it will pull the value from
+        the next element in its associated array.
+         */
+        switch (type) {
+            case "Pill":
+                uuid = this.pillCounter[pltf];
+                pO++;
+                break;
+            case "Liquid":
+                uuid = this.liquidCounter[pltf];
+                lO++;
+                break;
+            case "Topical":
+                uuid = this.topicalCounter[pltf];
+                tO++;
+                break;
+            case "Fitness":
+                uuid = this.fitnessCounter[pltf];
+                fO++;
+                break;
         }
-        else if (type.equals("Topical")) {
-            uuid = this.topicalCounter[pltf];
-            tO++;
-        }
-        else if (type.equals("Fitness")){
-            uuid = this.fitnessCounter[pltf];
-            fO++;
-        }       
         return uuid;
      }
 // Setter and Getter for type field
