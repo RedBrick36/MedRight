@@ -54,33 +54,31 @@ public class Liquid {
     boolean calendarEvents;
 
     // Methods TODO
-    public void totalNumberOfDosagesAvailable(){
-
-        Calculate totalNumberOfDosagesAvailable;
-    }
-    public void numberOfDaysTillAllDosagesConsumed(){
-
-        Calculate numberOfDaysTillAllDosagesConsumed;
-    }
-    public void avgNumberOfDaysBetweenOrderAndDelivery(){
-
-        Calculate avgNumberOfDaysBetweenOrderAndDelivery;
-    }
-    public void nextOrderDate(){
-
-        Calculate nextOrderDate;
-    }
-    public void calendarReminders(){
-
-        Create calendarReminders;
-    }
-    public void displayNotifications(){
-
-        create displayNotificatons;
-    }
-    public void PullAndStoreMedicationInfoFromReliableSourceAndMakeAvailableInGUI(){
+//    public void totalNumberOfDosagesAvailable(){
+//
+//        Calculate totalNumberOfDosagesAvailable;
+//    }
+//    public void numberOfDaysTillAllDosagesConsumed(){
+//
+//        Calculate numberOfDaysTillAllDosagesConsumed;
+//    }
+//    public void avgNumberOfDaysBetweenOrderAndDelivery(){
+//
+//        Calculate avgNumberOfDaysBetweenOrderAndDelivery;
+//    }
+//    public void nextOrderDate(){
+//
+//        Calculate nextOrderDate;
+//    }
+//    public void calendarReminders(){
+//
+//        Create calendarReminders;
+//    }
+//    public void displayNotifications(){
+//
+//        create displayNotificatons;
+//    }
+//    public void PullAndStoreMedicationInfoFromReliableSourceAndMakeAvailableInGUI(){
 
         //TODO Decide on method and sources for inclusion here...
     }
-
-}
