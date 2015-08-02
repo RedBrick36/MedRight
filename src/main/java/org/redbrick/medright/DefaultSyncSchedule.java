@@ -1,4 +1,4 @@
-package org.redbrick.test;
+package org.redbrick.medright;
 
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;

@@ -1,25 +1,25 @@
-package org.redbrick.test;
+package org.redbrick.medright;
 
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
 import javax.swing.JOptionPane;
 
-public class EventTimeSync {
+class EventTimeSync {
     // Declare event time variables
     private static byte eventHours = 0;
     private static byte eventMins = 0;
     private static byte eventTimeCheck = 1;
-    private static byte c = 1;
+    private static final byte c = 1;
     // Declare local time variables for comparison
-    private static byte localMins = 0;
-    private static byte localHourFilter = 0;
-    private static byte localHour = 0;
+    private static final byte localMins = 0;
+    private static final byte localHourFilter = 0;
+    private static final byte localHour = 0;
     // Declare comparison results variables
     private static long untilHours = 0;
     private static long untilMins = 0;
     
  
-    public static void startSync(byte[] userHour, byte[] userMins) throws InterruptedException {
+    public static void startSync(byte userHour, byte userMins) throws InterruptedException {
       
       eventHours = userHour;
       eventMins = userMins;
@@ -108,8 +108,7 @@ public class EventTimeSync {
              */                
          }
       }
-   }
- }
+}
 
 
 
