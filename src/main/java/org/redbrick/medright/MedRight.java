@@ -8,7 +8,7 @@
  * 
  * MedRight will assist in keeping track of medicinal regiments; both for
  * keeping the medicinal schedule as prescribed, as well as re-ordering those
- * medications/supplements required by the regimen.
+ * Mediations/supplements required by the regimen.
  *
  * MedRight has been designed with ease-of-use and an uncluttered user interface 
  * as the top priorities. As a result, each pane of the GUI is limited to only 
@@ -28,7 +28,7 @@
  *
  * Medical care can range from prescriptions for pills/liquids, to
  * vitamin/mineral supplements, to topical applications (such as ointments,
- * lotions and creams, etc.), as well as referrals to other health care
+ * lotion's and creams, etc.), as well as referrals to other health care
  * providers.
  *
  * As such, MedRight assists in all cases where a prescription has been issued by the
@@ -36,55 +36,10 @@
  * their own, particular vitamin/supplement regimen.
  */
 package org.redbrick.medright;
-/*
- import java.util.*;
- import java.text.*;
- import javax.swing.*;
- */
+
 public class MedRight {
 
     public static void main(String[] args) {
-        /*
-        Create a new Schedule object and dump the default state:
-        
-        Define string variables to hold the default state and type
-        */
-        String state;
-        String type;
-        /*
-        Instantiate a Schedule object
-        */
-        Schedule newSchedule = new Schedule();
-        GenUUID newUUID = new GenUUID();
-       /*
-        Assighn the return value of the .getState() method to the string 
-        variable state.
-        */
-        state = newSchedule.getState();
-        /*
-        Print out the default state
-        */
-        System.out.println(state);
-        System.out.println(); //Add in a couple of blank lines between outputs
-        System.out.println();
-        /* Testing interreaction between the objects by
-           setting Type and UUID to local object from what was passed into 
-           GenUUID object: Simulated as coming from ScheduleDataEntryGUI
-        */
-        newUUID.setType("Liquid"); // Coming from GUI type combo box 
-        newSchedule.setType(newUUID.getType()); // Xfer to local schedule obj
-        state = newSchedule.getState(); // Update state variable
-        System.out.println(state); // Verify results so far...
-        newSchedule.setUuid(newUUID.genUuid()); // Set local uuid from method call to .genUuid
-        state = newSchedule.getState(); // Update state variable
-        System.out.println(state); // Verify results so far...
-        System.out.println(); //Add in a couple of blank lines between outputs
-        System.out.println();
-        // Second call on GenUUID for a liquid
-        newSchedule.setUuid(newUUID.genUuid()); // Set local uuid from method call to .genUuid
-        state = newSchedule.getState(); // Update state variable
-        System.out.println(state); // Verify results so far...
-        
-    
+ // test   
     }
 }
