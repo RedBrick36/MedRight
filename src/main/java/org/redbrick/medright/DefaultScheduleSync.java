@@ -100,7 +100,7 @@ public class DefaultScheduleSync {
 				case 17:
 				case 19:
 				case 22:
-					localHour = localHour + 1;
+					localHour += 1;
 					break;
 				}
 				/*
@@ -192,7 +192,7 @@ public class DefaultScheduleSync {
 				 * we need to use modulus to return just the remainder after
 				 * dividing by 60.
 				 */
-				untilMins = untilMins % 60;
+				untilMins %= 60;
 				/*
 				 * If eventTimeCheck was initialized to 0 due to a match then we
 				 * can break out of the loop and pop up the dialog box
