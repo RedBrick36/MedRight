@@ -12,8 +12,26 @@ package org.redbrick.medright;
  * 
  * @author RedBrick
  */
+
+
 public class EventTracker {
- 
   
+private static final byte userHour = 0;
+private static final byte userMins = 0;  
+ 
+public static void nextEvent() throws InterruptedException {
+  
+  /*
+   * Code to retrieve values from a database sorted on a EventTime key,
+   * determine next event based upon current time, and pass the arguments
+   * to the startSync method in the EventTimeSync class.
+   */
+  
+ 
+  EventTimeSync.startSync ( userHour, userMins );
+  
+  
+  
+  }  
   
 }
