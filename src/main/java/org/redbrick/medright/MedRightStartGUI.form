@@ -182,7 +182,7 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="title" type="java.lang.String" value="MedRight&#xa9; Regiment Tracker"/>
+    <Property name="title" type="java.lang.String" value="MedRight&#xa9; Treatment Tracker"/>
     <Property name="bounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
       <Rectangle value="[0, 23, 761, 540]"/>
     </Property>
@@ -225,7 +225,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="MainPane" min="-2" max="-2" attributes="0"/>
+                      <Component id="Treatments" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
@@ -252,14 +252,14 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="creator" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-              <Component id="MainPane" max="32767" attributes="0"/>
+              <Component id="Treatments" max="32767" attributes="0"/>
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JTabbedPane" name="MainPane">
+    <Container class="javax.swing.JTabbedPane" name="Treatments">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="cc" green="ff" red="cc" type="rgb"/>
@@ -312,13 +312,11 @@
                 <Component class="javax.swing.JTable" name="pillsTable">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="6" rowCount="30">
-                        <Column editable="true" title="Title 1" type="java.lang.Object"/>
-                        <Column editable="true" title="Title 2" type="java.lang.Object"/>
-                        <Column editable="true" title="Title 3" type="java.lang.Object"/>
-                        <Column editable="true" title="Title 4" type="java.lang.Object"/>
-                        <Column editable="true" title="Title 5" type="java.lang.Object"/>
-                        <Column editable="true" title="Title 6" type="java.lang.Object"/>
+                      <Table columnCount="4" rowCount="30">
+                        <Column editable="false" title="Name" type="java.lang.String"/>
+                        <Column editable="false" title="Dose" type="java.lang.Double"/>
+                        <Column editable="false" title="Measure" type="java.lang.String"/>
+                        <Column editable="false" title="Condition" type="java.lang.String"/>
                       </Table>
                     </Property>
                   </Properties>
@@ -367,13 +365,65 @@
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="4" rowCount="10">
-                        <Column editable="false" title="Name" type="java.lang.Object"/>
-                        <Column editable="false" title="Size" type="java.lang.Object"/>
-                        <Column editable="false" title="Dose" type="java.lang.Object"/>
-                        <Column editable="false" title="Condition" type="java.lang.Object"/>
+                        <Column editable="false" title="Name" type="java.lang.String"/>
+                        <Column editable="false" title="Dose" type="java.lang.Double"/>
+                        <Column editable="false" title="Measure" type="java.lang.String"/>
+                        <Column editable="false" title="Condition" type="java.lang.String"/>
                       </Table>
                     </Property>
                     <Property name="autoResizeMode" type="int" value="4"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="injections">
+          <Properties>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+                <BevelBorder/>
+              </Border>
+            </Property>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Injections">
+                <Property name="tabTitle" type="java.lang.String" value="Injections"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="injectionsScrollPane1" alignment="0" pref="726" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="injectionsScrollPane1" alignment="0" pref="392" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JScrollPane" name="injectionsScrollPane1">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTable" name="injectionsTable">
+                  <Properties>
+                    <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                      <Table columnCount="4" rowCount="10">
+                        <Column editable="false" title="Name" type="java.lang.String"/>
+                        <Column editable="false" title="Dose" type="java.lang.Double"/>
+                        <Column editable="false" title="Measure" type="java.lang.String"/>
+                        <Column editable="false" title="Condition" type="java.lang.String"/>
+                      </Table>
+                    </Property>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -399,17 +449,17 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="topicalsScrollPane" alignment="0" pref="726" max="32767" attributes="0"/>
+                  <Component id="topicalsScrollPanel" alignment="0" pref="726" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="topicalsScrollPane" alignment="0" pref="392" max="32767" attributes="0"/>
+                  <Component id="topicalsScrollPanel" alignment="0" pref="392" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Container class="javax.swing.JScrollPane" name="topicalsScrollPane">
+            <Container class="javax.swing.JScrollPane" name="topicalsScrollPanel">
               <AuxValues>
                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
               </AuxValues>
@@ -419,10 +469,11 @@
                 <Component class="javax.swing.JTable" name="topicalsTable">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="3" rowCount="10">
-                        <Column editable="false" title="Name" type="java.lang.Object"/>
-                        <Column editable="false" title="Container Size" type="java.lang.Object"/>
-                        <Column editable="false" title="Treats Condition" type="java.lang.Object"/>
+                      <Table columnCount="4" rowCount="10">
+                        <Column editable="false" title="Name" type="java.lang.String"/>
+                        <Column editable="false" title="Dose" type="java.lang.Double"/>
+                        <Column editable="false" title="Measure" type="java.lang.String"/>
+                        <Column editable="false" title="Condition" type="java.lang.String"/>
                       </Table>
                     </Property>
                   </Properties>
@@ -431,7 +482,7 @@
             </Container>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="calendar">
+        <Container class="javax.swing.JPanel" name="fitness">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
@@ -441,8 +492,8 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Calendar">
-                <Property name="tabTitle" type="java.lang.String" value="Calendar"/>
+              <JTabbedPaneConstraints tabName="Fitness">
+                <Property name="tabTitle" type="java.lang.String" value="Fitness"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -450,15 +501,38 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="726" max="32767" attributes="0"/>
+                  <Component id="fitnessScrollPanel" alignment="0" pref="726" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="392" max="32767" attributes="0"/>
+                  <Component id="fitnessScrollPanel" alignment="0" pref="392" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JScrollPane" name="fitnessScrollPanel">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTable" name="fitnessTable">
+                  <Properties>
+                    <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                      <Table columnCount="4" rowCount="10">
+                        <Column editable="false" title="Name" type="java.lang.String"/>
+                        <Column editable="false" title="Dose" type="java.lang.Double"/>
+                        <Column editable="false" title="Measure" type="java.lang.String"/>
+                        <Column editable="false" title="Condition" type="java.lang.String"/>
+                      </Table>
+                    </Property>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="iteminfo">
           <Properties>
@@ -504,7 +578,7 @@
                 <Component class="javax.swing.JTree" name="iteminfoJTree">
                   <Properties>
                     <Property name="model" type="javax.swing.tree.TreeModel" editor="org.netbeans.modules.form.editors2.TreeModelEditor">
-                      <TreeModel code="Treatments&#xa; Pills&#xa;&#xa; Liquids&#xa;&#xa; Topicals        &#xa;&#xa; Fitness&#xa;"/>
+                      <TreeModel code="Treatments&#xa; Pills&#xa;&#xa; Liquids&#xa;&#xa; Injections&#xa;&#xa; Topicals        &#xa;&#xa; Fitness&#xa;"/>
                     </Property>
                     <Property name="autoscrolls" type="boolean" value="true"/>
                     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -578,8 +652,8 @@
                       <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                       <Component id="scheduleLable1" min="-2" pref="14" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="scheduleScrollPane" min="-2" pref="275" max="-2" attributes="0"/>
-                      <EmptySpace pref="29" max="32767" attributes="0"/>
+                      <Component id="scheduleScrollPane" pref="314" max="32767" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="toggleTookAM" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                           <Component id="toggleTookAM2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
@@ -590,7 +664,7 @@
                           <Component id="toggleTookAM7" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                           <Component id="toggleTookAM8" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -607,15 +681,15 @@
                   <Properties>
                     <Property name="autoCreateRowSorter" type="boolean" value="true"/>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="8" rowCount="16">
-                        <Column editable="false" title="A.M." type="java.lang.Object"/>
-                        <Column editable="false" title="Mid Morning" type="java.lang.Object"/>
-                        <Column editable="false" title="Noon" type="java.lang.Object"/>
-                        <Column editable="false" title="Mid Afternoon" type="java.lang.Object"/>
-                        <Column editable="false" title="Afternoon" type="java.lang.Object"/>
-                        <Column editable="false" title="Evening" type="java.lang.Object"/>
-                        <Column editable="false" title="Bedtime" type="java.lang.Object"/>
-                        <Column editable="false" title="Middle of Night" type="java.lang.Object"/>
+                      <Table columnCount="8" rowCount="20">
+                        <Column editable="false" title="A.M." type="java.lang.String"/>
+                        <Column editable="false" title="Mid Morning" type="java.lang.String"/>
+                        <Column editable="false" title="Noon" type="java.lang.String"/>
+                        <Column editable="false" title="Mid Afternoon" type="java.lang.String"/>
+                        <Column editable="false" title="Afternoon" type="java.lang.String"/>
+                        <Column editable="false" title="Evening" type="java.lang.String"/>
+                        <Column editable="false" title="Bedtime" type="java.lang.String"/>
+                        <Column editable="false" title="Middle of Night" type="java.lang.String"/>
                       </Table>
                     </Property>
                     <Property name="autoResizeMode" type="int" value="4"/>
@@ -853,7 +927,7 @@
           <Font name="Dialog" size="18" style="0"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="MedRight&#xa9; Schedule Tracker"/>
+        <Property name="text" type="java.lang.String" value="MedRight&#xa9; Treatement Tracker"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
             <BevelBorder/>
