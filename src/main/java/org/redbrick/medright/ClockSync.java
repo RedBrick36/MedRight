@@ -6,7 +6,7 @@ import java.time.temporal.ChronoUnit;
 public class ClockSync {
 
   /*
-   * Initial sync of loops to minutes on device clock; so that the sleep
+   * Initial sync of app's while loops to minutes on device clock; we need the thread sleep
    * timers trip events at exactly 00 seconds of each minute.
    */
   private static final byte z = 0;

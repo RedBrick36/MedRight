@@ -19,10 +19,10 @@ class EventTimeSync {
     private static long untilMins = 0;
     
  
-    public static void startSync(byte userHour, byte userMins) throws InterruptedException {
+    public static void startSync(byte eh, byte em) throws InterruptedException {
       
-      eventHours = userHour;
-      eventMins = userMins;
+      eventHours = eh;
+      eventMins = em;
      
       // Call for sync between device clock and loops
       ClockSync.syncClocks();
