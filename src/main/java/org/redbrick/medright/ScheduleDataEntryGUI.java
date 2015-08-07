@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.redbrick.medright.holding;
+package org.redbrick.medright;
 import java.util.*;
 import javax.swing.*;
 /**
@@ -74,7 +74,7 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
     jlScheduleCreator.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
     jcbSchedType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select  --", "Pill", "Liquid", "Injection", "Topical", "Fitness" }));
-    jcbSchedType.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 102), 1, true));
+    jcbSchedType.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 204), 1, true));
     jcbSchedType.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         jcbSchedTypeActionPerformed(evt);
@@ -186,14 +186,14 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
     jlName.setText(" Name of Medication, Treatment or Supplement");
 
     jlCondition.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-    jlCondition.setText("Condition/Reason");
+    jlCondition.setText("Condition");
 
     jlDose.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-    jlDose.setText("  Amount  ");
+    jlDose.setText("Dose");
 
     jcbSize.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
     jcbSize.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select --", "Grams", "Milligrams", "Milliliters", "CC's", "Ounces", "Teaspoons", "Tablespoons", "Cups", "Application", " " }));
-    jcbSize.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 102), 1, true));
+    jcbSize.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 204), 1, true));
     jcbSize.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         jcbSizeActionPerformed(evt);
@@ -208,7 +208,7 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
     });
 
     Next.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-    Next.setForeground(new java.awt.Color(255, 153, 153));
+    Next.setForeground(new java.awt.Color(153, 204, 255));
     Next.setText("  New  ");
     Next.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
     Next.addActionListener(new java.awt.event.ActionListener() {
@@ -228,7 +228,7 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
     });
 
     Help.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-    Help.setForeground(new java.awt.Color(0, 255, 255));
+    Help.setForeground(new java.awt.Color(153, 204, 255));
     Help.setText("  Help  ");
     Help.setToolTipText("");
     Help.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -287,12 +287,12 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
 
     jCheckBox1.setText("Middle of Night");
 
-    jCheckBox2.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
-    jCheckBox2.setForeground(new java.awt.Color(102, 102, 255));
+    jCheckBox2.setFont(new java.awt.Font("Bodoni 72 Smallcaps", 1, 18)); // NOI18N
+    jCheckBox2.setForeground(new java.awt.Color(153, 204, 255));
     jCheckBox2.setText("All Days");
 
-    jCheckBox3.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
-    jCheckBox3.setForeground(new java.awt.Color(102, 102, 255));
+    jCheckBox3.setFont(new java.awt.Font("Bodoni 72 Smallcaps", 1, 18)); // NOI18N
+    jCheckBox3.setForeground(new java.awt.Color(153, 204, 255));
     jCheckBox3.setText("All Times");
 
     javax.swing.GroupLayout SchedCreateLayout = new javax.swing.GroupLayout(SchedCreate);
@@ -305,7 +305,7 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
           .addGroup(SchedCreateLayout.createSequentialGroup()
             .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
               .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SchedCreateLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 9, Short.MAX_VALUE)
                 .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                   .addComponent(jCheckBox1)
                   .addGroup(SchedCreateLayout.createSequentialGroup()
@@ -354,17 +354,23 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
                       .addGroup(SchedCreateLayout.createSequentialGroup()
                         .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                           .addComponent(jftfDose, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                          .addComponent(jlDose))
+                          .addGroup(SchedCreateLayout.createSequentialGroup()
+                            .addGap(29, 29, 29)
+                            .addComponent(jlDose)))
                         .addGap(10, 10, 10)
                         .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                          .addComponent(jlMeasure)
-                          .addComponent(jcbSize, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                          .addComponent(jcbSize, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SchedCreateLayout.createSequentialGroup()
+                            .addComponent(jlMeasure)
+                            .addGap(14, 14, 14)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                          .addComponent(jlCondition)
-                          .addComponent(jftfCondition, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                          .addComponent(jftfCondition, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                          .addGroup(SchedCreateLayout.createSequentialGroup()
+                            .addGap(27, 27, 27)
+                            .addComponent(jlCondition))))
                       .addComponent(Help))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                       .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SchedCreateLayout.createSequentialGroup()
                         .addComponent(Save)

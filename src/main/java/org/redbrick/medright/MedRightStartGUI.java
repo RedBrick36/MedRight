@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.redbrick.medright.holding;
+package org.redbrick.medright;
 
 /**
  *
@@ -46,10 +46,6 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     fitness = new javax.swing.JPanel();
     fitnessScrollPanel = new javax.swing.JScrollPane();
     fitnessTable = new javax.swing.JTable();
-    iteminfo = new javax.swing.JPanel();
-    iteminfoScrollPanel = new javax.swing.JScrollPane();
-    iteminfoJTree = new javax.swing.JTree();
-    iteminfoScrollPane = new javax.swing.JScrollPane();
     schedule = new javax.swing.JPanel();
     scheduleScrollPane = new javax.swing.JScrollPane();
     scheduleTable = new javax.swing.JTable();
@@ -62,6 +58,10 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     toggleTookAM6 = new javax.swing.JToggleButton();
     toggleTookAM7 = new javax.swing.JToggleButton();
     toggleTookAM8 = new javax.swing.JToggleButton();
+    iteminfo = new javax.swing.JPanel();
+    iteminfoScrollPanel = new javax.swing.JScrollPane();
+    iteminfoJTree = new javax.swing.JTree();
+    iteminfoScrollPane = new javax.swing.JScrollPane();
     banner = new javax.swing.JLabel();
     version = new javax.swing.JLabel();
     creator = new javax.swing.JLabel();
@@ -402,50 +402,12 @@ public class MedRightStartGUI extends javax.swing.JFrame {
 
     Treatments.addTab("Fitness", fitness);
 
-    iteminfo.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-    javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Treatments");
-    javax.swing.tree.DefaultMutableTreeNode treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Pills");
-    treeNode1.add(treeNode2);
-    treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Liquids");
-    treeNode1.add(treeNode2);
-    treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Injections");
-    treeNode1.add(treeNode2);
-    treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Topicals");
-    treeNode1.add(treeNode2);
-    treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Fitness");
-    treeNode1.add(treeNode2);
-    iteminfoJTree.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
-    iteminfoJTree.setAutoscrolls(true);
-    iteminfoJTree.setMinimumSize(new java.awt.Dimension(78, 72));
-    iteminfoJTree.setSize(new java.awt.Dimension(78, 72));
-    iteminfoScrollPanel.setViewportView(iteminfoJTree);
-
-    org.jdesktop.layout.GroupLayout iteminfoLayout = new org.jdesktop.layout.GroupLayout(iteminfo);
-    iteminfo.setLayout(iteminfoLayout);
-    iteminfoLayout.setHorizontalGroup(
-      iteminfoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-      .add(iteminfoLayout.createSequentialGroup()
-        .add(iteminfoScrollPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 115, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-        .add(iteminfoScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 605, Short.MAX_VALUE))
-    );
-    iteminfoLayout.setVerticalGroup(
-      iteminfoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-      .add(iteminfoScrollPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 392, Short.MAX_VALUE)
-      .add(org.jdesktop.layout.GroupLayout.TRAILING, iteminfoScrollPane)
-    );
-
-    Treatments.addTab("Item Info", iteminfo);
-
     schedule.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
     schedule.setPreferredSize(new java.awt.Dimension(722, 340));
 
     scheduleTable.setAutoCreateRowSorter(true);
     scheduleTable.setModel(new javax.swing.table.DefaultTableModel(
       new Object [][] {
-        {null, null, null, null, null, null, null, null},
-        {null, null, null, null, null, null, null, null},
         {null, null, null, null, null, null, null, null},
         {null, null, null, null, null, null, null, null},
         {null, null, null, null, null, null, null, null},
@@ -518,7 +480,7 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     });
 
     toggleTookAM3.setForeground(new java.awt.Color(0, 255, 255));
-    toggleTookAM3.setText("Took Noon");
+    toggleTookAM3.setText(" Took Noon ");
     toggleTookAM3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
     toggleTookAM3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
     toggleTookAM3.setMaximumSize(new java.awt.Dimension(45, 18));
@@ -531,7 +493,7 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     });
 
     toggleTookAM4.setForeground(new java.awt.Color(0, 255, 255));
-    toggleTookAM4.setText("Took MidAft");
+    toggleTookAM4.setText(" Took MidAft ");
     toggleTookAM4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
     toggleTookAM4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
     toggleTookAM4.setMaximumSize(new java.awt.Dimension(45, 18));
@@ -570,7 +532,7 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     });
 
     toggleTookAM7.setForeground(new java.awt.Color(0, 255, 255));
-    toggleTookAM7.setText("Took Bedtime");
+    toggleTookAM7.setText(" Took Bedtime ");
     toggleTookAM7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
     toggleTookAM7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
     toggleTookAM7.setMaximumSize(new java.awt.Dimension(45, 18));
@@ -583,11 +545,11 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     });
 
     toggleTookAM8.setForeground(new java.awt.Color(0, 255, 255));
+    toggleTookAM8.setText("  Took Night ");
     toggleTookAM8.setAutoscrolls(true);
     toggleTookAM8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
     toggleTookAM8.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
     toggleTookAM8.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-    toggleTookAM8.setLabel("Took Middle\n   Of Night");
     toggleTookAM8.setMaximumSize(new java.awt.Dimension(45, 18));
     toggleTookAM8.setMinimumSize(new java.awt.Dimension(45, 18));
     toggleTookAM8.setPreferredSize(new java.awt.Dimension(45, 18));
@@ -605,24 +567,26 @@ public class MedRightStartGUI extends javax.swing.JFrame {
       .add(scheduleLayout.createSequentialGroup()
         .addContainerGap()
         .add(scheduleLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-          .add(scheduleLable1)
+          .add(scheduleLayout.createSequentialGroup()
+            .add(scheduleLable1)
+            .addContainerGap(458, Short.MAX_VALUE))
           .add(scheduleLayout.createSequentialGroup()
             .add(toggleTookAM, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 70, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
             .add(18, 18, 18)
             .add(toggleTookAM2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 70, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
             .add(18, 18, 18)
             .add(toggleTookAM3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 70, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-            .add(20, 20, 20)
-            .add(toggleTookAM4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 70, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+            .add(18, 18, 18)
+            .add(toggleTookAM4, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .add(18, 18, 18)
             .add(toggleTookAM5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 70, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
             .add(18, 18, 18)
             .add(toggleTookAM6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 70, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-            .add(toggleTookAM7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 80, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-            .add(toggleTookAM8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 80, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-        .addContainerGap(18, Short.MAX_VALUE))
+            .add(toggleTookAM7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 86, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+            .add(toggleTookAM8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 81, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+            .add(7, 7, 7))))
     );
     scheduleLayout.setVerticalGroup(
       scheduleLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -647,6 +611,42 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     toggleTookAM8.getAccessibleContext().setAccessibleName("TookMON"); // NOI18N
 
     Treatments.addTab("Todays Schedule", schedule);
+
+    iteminfo.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+    javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Treatments");
+    javax.swing.tree.DefaultMutableTreeNode treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Pills");
+    treeNode1.add(treeNode2);
+    treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Liquids");
+    treeNode1.add(treeNode2);
+    treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Injections");
+    treeNode1.add(treeNode2);
+    treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Topicals");
+    treeNode1.add(treeNode2);
+    treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Fitness");
+    treeNode1.add(treeNode2);
+    iteminfoJTree.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+    iteminfoJTree.setAutoscrolls(true);
+    iteminfoJTree.setMinimumSize(new java.awt.Dimension(78, 72));
+    iteminfoJTree.setSize(new java.awt.Dimension(78, 72));
+    iteminfoScrollPanel.setViewportView(iteminfoJTree);
+
+    org.jdesktop.layout.GroupLayout iteminfoLayout = new org.jdesktop.layout.GroupLayout(iteminfo);
+    iteminfo.setLayout(iteminfoLayout);
+    iteminfoLayout.setHorizontalGroup(
+      iteminfoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+      .add(iteminfoLayout.createSequentialGroup()
+        .add(iteminfoScrollPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 115, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+        .add(iteminfoScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 605, Short.MAX_VALUE))
+    );
+    iteminfoLayout.setVerticalGroup(
+      iteminfoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+      .add(iteminfoScrollPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 392, Short.MAX_VALUE)
+      .add(org.jdesktop.layout.GroupLayout.TRAILING, iteminfoScrollPane)
+    );
+
+    Treatments.addTab("Treatment Info", iteminfo);
 
     banner.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
     banner.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -768,12 +768,6 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     layout.setHorizontalGroup(
       layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
       .add(layout.createSequentialGroup()
-        .addContainerGap()
-        .add(banner, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 294, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        .add(jbAddNewSchedule, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-        .add(104, 104, 104))
-      .add(layout.createSequentialGroup()
         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
           .add(layout.createSequentialGroup()
             .addContainerGap()
@@ -784,12 +778,18 @@ public class MedRightStartGUI extends javax.swing.JFrame {
               .add(creator)
               .add(version))))
         .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+      .add(layout.createSequentialGroup()
+        .addContainerGap()
+        .add(banner, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 294, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        .add(jbAddNewSchedule, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+        .add(30, 30, 30))
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
       .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
         .addContainerGap()
-        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
           .add(banner, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 47, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
           .add(jbAddNewSchedule, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 30, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
