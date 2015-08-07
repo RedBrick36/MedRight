@@ -9,6 +9,6 @@ package org.redbrick.medright;
  * CRUD application for the Treatment Database
  * @author RedBrick
  */
-public class EditTreatmentDB {
+public class CRUDTreatmentDB {
   
 }
