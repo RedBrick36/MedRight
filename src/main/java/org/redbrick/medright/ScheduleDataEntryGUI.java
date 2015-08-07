@@ -63,6 +63,8 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
     Done = new javax.swing.JButton();
     jLabel1 = new javax.swing.JLabel();
     jCheckBox1 = new javax.swing.JCheckBox();
+    jCheckBox2 = new javax.swing.JCheckBox();
+    jCheckBox3 = new javax.swing.JCheckBox();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -72,6 +74,7 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
     jlScheduleCreator.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
     jcbSchedType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select  --", "Pill", "Liquid", "Injection", "Topical", "Fitness" }));
+    jcbSchedType.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 102), 1, true));
     jcbSchedType.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         jcbSchedTypeActionPerformed(evt);
@@ -79,7 +82,7 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
     });
 
     jlSchedType.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-    jlSchedType.setText("Schedule Type");
+    jlSchedType.setText("Treatment Type");
 
     Monday.setText("Monday");
     Monday.addActionListener(new java.awt.event.ActionListener() {
@@ -190,6 +193,7 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
 
     jcbSize.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
     jcbSize.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select --", "Grams", "Milligrams", "Milliliters", "CC's", "Ounces", "Teaspoons", "Tablespoons", "Cups", "Application", " " }));
+    jcbSize.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 102), 1, true));
     jcbSize.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         jcbSizeActionPerformed(evt);
@@ -204,6 +208,7 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
     });
 
     Next.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+    Next.setForeground(new java.awt.Color(255, 153, 153));
     Next.setText("  New  ");
     Next.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
     Next.addActionListener(new java.awt.event.ActionListener() {
@@ -213,6 +218,7 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
     });
 
     Save.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+    Save.setForeground(new java.awt.Color(51, 204, 0));
     Save.setText("  Save  ");
     Save.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
     Save.addActionListener(new java.awt.event.ActionListener() {
@@ -222,6 +228,7 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
     });
 
     Help.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+    Help.setForeground(new java.awt.Color(0, 255, 255));
     Help.setText("  Help  ");
     Help.setToolTipText("");
     Help.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -267,6 +274,7 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
     jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "00", "15", "30", "45", "60" }));
 
     Done.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+    Done.setForeground(new java.awt.Color(204, 0, 0));
     Done.setText("  Exit  ");
     Done.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
     Done.addActionListener(new java.awt.event.ActionListener() {
@@ -278,6 +286,14 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
     jLabel1.setText("Reminder Lead Time Min's");
 
     jCheckBox1.setText("Middle of Night");
+
+    jCheckBox2.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
+    jCheckBox2.setForeground(new java.awt.Color(102, 102, 255));
+    jCheckBox2.setText("All Days");
+
+    jCheckBox3.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
+    jCheckBox3.setForeground(new java.awt.Color(102, 102, 255));
+    jCheckBox3.setText("All Times");
 
     javax.swing.GroupLayout SchedCreateLayout = new javax.swing.GroupLayout(SchedCreate);
     SchedCreate.setLayout(SchedCreateLayout);
@@ -306,11 +322,17 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
                       .addGroup(SchedCreateLayout.createSequentialGroup()
                         .addComponent(Tuesday)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Wednesday)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Thursday)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Friday))))
+                        .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                          .addGroup(SchedCreateLayout.createSequentialGroup()
+                            .addComponent(jCheckBox2)
+                            .addGap(18, 18, 18)
+                            .addComponent(jCheckBox3))
+                          .addGroup(SchedCreateLayout.createSequentialGroup()
+                            .addComponent(Wednesday)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(Thursday)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(Friday))))))
                   .addGroup(SchedCreateLayout.createSequentialGroup()
                     .addComponent(AM)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -372,7 +394,10 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
     SchedCreateLayout.setVerticalGroup(
       SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(SchedCreateLayout.createSequentialGroup()
-        .addComponent(jlScheduleCreator, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+          .addComponent(jlScheduleCreator, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jCheckBox2)
+          .addComponent(jCheckBox3))
         .addGap(30, 30, 30)
         .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
           .addComponent(jcbSchedType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -605,6 +630,8 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
   private javax.swing.JCheckBox Tuesday;
   private javax.swing.JCheckBox Wednesday;
   private javax.swing.JCheckBox jCheckBox1;
+  private javax.swing.JCheckBox jCheckBox2;
+  private javax.swing.JCheckBox jCheckBox3;
   private javax.swing.JComboBox jComboBox1;
   private javax.swing.JLabel jLabel1;
   private javax.swing.JComboBox jcbSchedType;

@@ -491,7 +491,7 @@ public class MedRightStartGUI extends javax.swing.JFrame {
 
     scheduleLable1.setText("Treatments that are on your schedule for today.");
 
-    toggleTookAM.setForeground(new java.awt.Color(153, 153, 255));
+    toggleTookAM.setForeground(new java.awt.Color(0, 255, 255));
     toggleTookAM.setText("Took AM");
     toggleTookAM.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
     toggleTookAM.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -504,7 +504,7 @@ public class MedRightStartGUI extends javax.swing.JFrame {
       }
     });
 
-    toggleTookAM2.setForeground(new java.awt.Color(153, 153, 255));
+    toggleTookAM2.setForeground(new java.awt.Color(0, 255, 255));
     toggleTookAM2.setText("Took MM");
     toggleTookAM2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
     toggleTookAM2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -517,7 +517,7 @@ public class MedRightStartGUI extends javax.swing.JFrame {
       }
     });
 
-    toggleTookAM3.setForeground(new java.awt.Color(153, 153, 255));
+    toggleTookAM3.setForeground(new java.awt.Color(0, 255, 255));
     toggleTookAM3.setText("Took Noon");
     toggleTookAM3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
     toggleTookAM3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -530,7 +530,7 @@ public class MedRightStartGUI extends javax.swing.JFrame {
       }
     });
 
-    toggleTookAM4.setForeground(new java.awt.Color(153, 153, 255));
+    toggleTookAM4.setForeground(new java.awt.Color(0, 255, 255));
     toggleTookAM4.setText("Took MidAft");
     toggleTookAM4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
     toggleTookAM4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -543,7 +543,7 @@ public class MedRightStartGUI extends javax.swing.JFrame {
       }
     });
 
-    toggleTookAM5.setForeground(new java.awt.Color(153, 153, 255));
+    toggleTookAM5.setForeground(new java.awt.Color(0, 255, 255));
     toggleTookAM5.setText("Took Aft");
     toggleTookAM5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
     toggleTookAM5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -556,7 +556,7 @@ public class MedRightStartGUI extends javax.swing.JFrame {
       }
     });
 
-    toggleTookAM6.setForeground(new java.awt.Color(153, 153, 255));
+    toggleTookAM6.setForeground(new java.awt.Color(0, 255, 255));
     toggleTookAM6.setText("Took Eve");
     toggleTookAM6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
     toggleTookAM6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -569,7 +569,7 @@ public class MedRightStartGUI extends javax.swing.JFrame {
       }
     });
 
-    toggleTookAM7.setForeground(new java.awt.Color(153, 153, 255));
+    toggleTookAM7.setForeground(new java.awt.Color(0, 255, 255));
     toggleTookAM7.setText("Took Bedtime");
     toggleTookAM7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
     toggleTookAM7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -582,7 +582,7 @@ public class MedRightStartGUI extends javax.swing.JFrame {
       }
     });
 
-    toggleTookAM8.setForeground(new java.awt.Color(153, 153, 255));
+    toggleTookAM8.setForeground(new java.awt.Color(0, 255, 255));
     toggleTookAM8.setAutoscrolls(true);
     toggleTookAM8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
     toggleTookAM8.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -658,7 +658,7 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     creator.setText("RedBrick.Org, 2015");
 
     jbAddNewSchedule.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-    jbAddNewSchedule.setForeground(new java.awt.Color(204, 255, 204));
+    jbAddNewSchedule.setForeground(new java.awt.Color(51, 255, 51));
     jbAddNewSchedule.setText("  Add New Schedule  ");
     jbAddNewSchedule.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
     jbAddNewSchedule.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);

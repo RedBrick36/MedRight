@@ -707,7 +707,7 @@
             <Component class="javax.swing.JToggleButton" name="toggleTookAM">
               <Properties>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="99" red="99" type="rgb"/>
+                  <Color blue="ff" green="ff" red="0" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Took AM"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -733,7 +733,7 @@
             <Component class="javax.swing.JToggleButton" name="toggleTookAM2">
               <Properties>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="99" red="99" type="rgb"/>
+                  <Color blue="ff" green="ff" red="0" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Took MM"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -759,7 +759,7 @@
             <Component class="javax.swing.JToggleButton" name="toggleTookAM3">
               <Properties>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="99" red="99" type="rgb"/>
+                  <Color blue="ff" green="ff" red="0" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Took Noon"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -785,7 +785,7 @@
             <Component class="javax.swing.JToggleButton" name="toggleTookAM4">
               <Properties>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="99" red="99" type="rgb"/>
+                  <Color blue="ff" green="ff" red="0" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Took MidAft"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -811,7 +811,7 @@
             <Component class="javax.swing.JToggleButton" name="toggleTookAM5">
               <Properties>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="99" red="99" type="rgb"/>
+                  <Color blue="ff" green="ff" red="0" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Took Aft"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -837,7 +837,7 @@
             <Component class="javax.swing.JToggleButton" name="toggleTookAM6">
               <Properties>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="99" red="99" type="rgb"/>
+                  <Color blue="ff" green="ff" red="0" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Took Eve"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -863,7 +863,7 @@
             <Component class="javax.swing.JToggleButton" name="toggleTookAM7">
               <Properties>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="99" red="99" type="rgb"/>
+                  <Color blue="ff" green="ff" red="0" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Took Bedtime"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -889,7 +889,7 @@
             <Component class="javax.swing.JToggleButton" name="toggleTookAM8">
               <Properties>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="99" red="99" type="rgb"/>
+                  <Color blue="ff" green="ff" red="0" type="rgb"/>
                 </Property>
                 <Property name="autoscrolls" type="boolean" value="true"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -951,7 +951,7 @@
           <Font name="Dialog" size="14" style="0"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="cc" green="ff" red="cc" type="rgb"/>
+          <Color blue="33" green="ff" red="33" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="  Add New Schedule  "/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
