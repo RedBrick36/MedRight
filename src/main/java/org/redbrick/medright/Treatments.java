@@ -5,7 +5,7 @@ package org.redbrick.medright;
  * @author RedBrick
  */
 
-class Schedule {
+class Treatments {
     
     /**
      * Define the field-set for the class
@@ -35,7 +35,7 @@ class Schedule {
     /**
      * Constructor 
      */
-public Schedule() {
+public Treatments() {
     uuid = 0;
     type = "";
     name = "";

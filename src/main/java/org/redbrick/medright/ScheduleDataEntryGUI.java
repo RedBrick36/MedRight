@@ -68,7 +68,7 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
 
     jlScheduleCreator.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
     jlScheduleCreator.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-    jlScheduleCreator.setText("Schedule Creator");
+    jlScheduleCreator.setText("Treatment Schedule Creator");
     jlScheduleCreator.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
     jcbSchedType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select  --", "Pill", "Liquid", "Injection", "Topical", "Fitness" }));
@@ -288,7 +288,6 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
         .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
           .addGroup(SchedCreateLayout.createSequentialGroup()
             .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(jlScheduleCreator, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
               .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SchedCreateLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -341,11 +340,9 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                           .addComponent(jlCondition)
-                          .addComponent(jftfCondition, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE))
-                      .addGroup(SchedCreateLayout.createSequentialGroup()
-                        .addComponent(Help)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                          .addComponent(jftfCondition, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                      .addComponent(Help))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
                     .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                       .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SchedCreateLayout.createSequentialGroup()
                         .addComponent(Save)
@@ -363,7 +360,10 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
                   .addGroup(SchedCreateLayout.createSequentialGroup()
                     .addComponent(jftfName, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(13, 13, 13)))
+                .addGap(13, 13, 13))
+              .addGroup(SchedCreateLayout.createSequentialGroup()
+                .addComponent(jlScheduleCreator, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE)))
             .addContainerGap(12, Short.MAX_VALUE))
           .addGroup(SchedCreateLayout.createSequentialGroup()
             .addComponent(jlName)
@@ -420,13 +420,12 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
               .addComponent(Save)
               .addComponent(Next)
               .addComponent(Help)
-              .addComponent(Done))
-            .addGap(14, 14, 14))
+              .addComponent(Done)))
           .addGroup(SchedCreateLayout.createSequentialGroup()
             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        .addContainerGap(14, Short.MAX_VALUE))
     );
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
