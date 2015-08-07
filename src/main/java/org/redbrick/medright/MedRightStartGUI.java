@@ -64,27 +64,25 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     jProgressBar1 = new javax.swing.JProgressBar();
     Actions = new javax.swing.JPanel();
     jPasswordField1 = new javax.swing.JPasswordField();
-    jLabel1 = new javax.swing.JLabel();
+    PWNotice = new javax.swing.JLabel();
+    configureTime = new javax.swing.JButton();
+    crud = new javax.swing.JButton();
+    submit = new javax.swing.JButton();
+    enterPassword = new javax.swing.JLabel();
+    jButton1 = new javax.swing.JButton();
     jButton2 = new javax.swing.JButton();
     jButton3 = new javax.swing.JButton();
-    jButton4 = new javax.swing.JButton();
+    jLabel1 = new javax.swing.JLabel();
     jLabel2 = new javax.swing.JLabel();
+    jLabel3 = new javax.swing.JLabel();
     banner = new javax.swing.JLabel();
     version = new javax.swing.JLabel();
     creator = new javax.swing.JLabel();
     jbAddNewSchedule = new javax.swing.JButton();
-    jFormattedTextField1 = new javax.swing.JFormattedTextField();
+    orgAndYear = new javax.swing.JFormattedTextField();
     menuBar = new javax.swing.JMenuBar();
     fileMenu = new javax.swing.JMenu();
-    openMenuItem = new javax.swing.JMenuItem();
-    saveMenuItem = new javax.swing.JMenuItem();
-    saveAsMenuItem = new javax.swing.JMenuItem();
     exitMenuItem = new javax.swing.JMenuItem();
-    editMenu = new javax.swing.JMenu();
-    cutMenuItem = new javax.swing.JMenuItem();
-    copyMenuItem = new javax.swing.JMenuItem();
-    pasteMenuItem = new javax.swing.JMenuItem();
-    deleteMenuItem = new javax.swing.JMenuItem();
     helpMenu = new javax.swing.JMenu();
     contentsMenuItem = new javax.swing.JMenuItem();
     aboutMenuItem = new javax.swing.JMenuItem();
@@ -200,9 +198,9 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     pills.setLayout(pillsLayout);
     pillsLayout.setHorizontalGroup(
       pillsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-      .add(0, 748, Short.MAX_VALUE)
+      .add(0, 916, Short.MAX_VALUE)
       .add(pillsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(pillsPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 748, Short.MAX_VALUE))
+        .add(pillsPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 916, Short.MAX_VALUE))
     );
     pillsLayout.setVerticalGroup(
       pillsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -254,7 +252,7 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     liquids.setLayout(liquidsLayout);
     liquidsLayout.setHorizontalGroup(
       liquidsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-      .add(liquidsScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 748, Short.MAX_VALUE)
+      .add(liquidsScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 916, Short.MAX_VALUE)
     );
     liquidsLayout.setVerticalGroup(
       liquidsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -303,7 +301,7 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     injections.setLayout(injectionsLayout);
     injectionsLayout.setHorizontalGroup(
       injectionsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-      .add(injectionsScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 748, Short.MAX_VALUE)
+      .add(injectionsScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 916, Short.MAX_VALUE)
     );
     injectionsLayout.setVerticalGroup(
       injectionsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -352,7 +350,7 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     topicals.setLayout(topicalsLayout);
     topicalsLayout.setHorizontalGroup(
       topicalsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-      .add(topicalsScrollPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 748, Short.MAX_VALUE)
+      .add(topicalsScrollPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 916, Short.MAX_VALUE)
     );
     topicalsLayout.setVerticalGroup(
       topicalsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -401,7 +399,7 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     fitness.setLayout(fitnessLayout);
     fitnessLayout.setHorizontalGroup(
       fitnessLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-      .add(fitnessScrollPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 748, Short.MAX_VALUE)
+      .add(fitnessScrollPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 916, Short.MAX_VALUE)
     );
     fitnessLayout.setVerticalGroup(
       fitnessLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -436,7 +434,7 @@ public class MedRightStartGUI extends javax.swing.JFrame {
       .add(iteminfoLayout.createSequentialGroup()
         .add(iteminfoScrollPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 115, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-        .add(iteminfoScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 627, Short.MAX_VALUE))
+        .add(iteminfoScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 795, Short.MAX_VALUE))
     );
     iteminfoLayout.setVerticalGroup(
       iteminfoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -658,67 +656,115 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     jPasswordField1.setFont(new java.awt.Font("Dialog", 0, 13)); // NOI18N
     jPasswordField1.setText("jPasswordField1");
     jPasswordField1.setAutoscrolls(false);
-
-    jLabel1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-    jLabel1.setText("  You must enter your password to unlock the tools on this page.  ");
-
-    jButton2.setText("  Configure Time Frames  ");
-    jButton2.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-
-    jButton3.setText("  Edit the Treatments Database  ");
-    jButton3.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-
-    jButton4.setForeground(new java.awt.Color(153, 255, 153));
-    jButton4.setText("  Submit  ");
-    jButton4.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-    jButton4.addActionListener(new java.awt.event.ActionListener() {
+    jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton4ActionPerformed(evt);
+        jPasswordField1ActionPerformed(evt);
       }
     });
 
-    jLabel2.setFont(new java.awt.Font("Dialog", 0, 13)); // NOI18N
-    jLabel2.setText(" Please Enter Your Password:");
+    PWNotice.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+    PWNotice.setText("  You must enter your password to unlock the tools on this page.  ");
+
+    configureTime.setForeground(new java.awt.Color(255, 51, 0));
+    configureTime.setText("  Configure Time Frames  ");
+    configureTime.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+    crud.setForeground(new java.awt.Color(255, 51, 0));
+    crud.setText("  Edit the Treatments Database  ");
+    crud.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+    submit.setForeground(new java.awt.Color(153, 255, 153));
+    submit.setText("  Submit  ");
+    submit.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+    submit.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        submitActionPerformed(evt);
+      }
+    });
+
+    enterPassword.setFont(new java.awt.Font("Dialog", 0, 13)); // NOI18N
+    enterPassword.setText(" Please Enter Your Password:");
+
+    jButton1.setForeground(new java.awt.Color(255, 51, 0));
+    jButton1.setText("  Backup Database  ");
+    jButton1.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+    jButton2.setForeground(new java.awt.Color(255, 51, 0));
+    jButton2.setText("  Restore Database  ");
+    jButton2.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+    jButton3.setForeground(new java.awt.Color(255, 51, 0));
+    jButton3.setText("  Delete All Data  ");
+    jButton3.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+
+    jLabel1.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
+    jLabel1.setText("  Warning! Delete All Data is NOT Reversible!  ");
+
+    jLabel2.setText("Buttons will turn GREEN when unlocked by correct password entry ");
+
+    jLabel3.setText("Double click in the Password field and hit Delete to clear it ");
 
     org.jdesktop.layout.GroupLayout ActionsLayout = new org.jdesktop.layout.GroupLayout(Actions);
     Actions.setLayout(ActionsLayout);
     ActionsLayout.setHorizontalGroup(
       ActionsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-      .add(org.jdesktop.layout.GroupLayout.TRAILING, ActionsLayout.createSequentialGroup()
-        .addContainerGap(82, Short.MAX_VALUE)
-        .add(jLabel1)
-        .add(85, 85, 85))
       .add(ActionsLayout.createSequentialGroup()
+        .add(89, 89, 89)
         .add(ActionsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-          .add(ActionsLayout.createSequentialGroup()
-            .add(189, 189, 189)
+          .add(org.jdesktop.layout.GroupLayout.TRAILING, ActionsLayout.createSequentialGroup()
             .add(jLabel2)
-            .add(6, 6, 6)
-            .add(jPasswordField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 100, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+            .add(179, 179, 179))
+          .add(org.jdesktop.layout.GroupLayout.TRAILING, ActionsLayout.createSequentialGroup()
+            .add(crud)
             .add(18, 18, 18)
-            .add(jButton4))
-          .add(ActionsLayout.createSequentialGroup()
-            .add(207, 207, 207)
-            .add(jButton2)
-            .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-            .add(jButton3)))
-        .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .add(ActionsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+              .add(ActionsLayout.createSequentialGroup()
+                .add(configureTime)
+                .add(18, 18, 18)
+                .add(jButton1)
+                .add(18, 18, 18)
+                .add(jButton2)
+                .add(18, 18, 18)
+                .add(jButton3))
+              .add(ActionsLayout.createSequentialGroup()
+                .add(enterPassword)
+                .add(6, 6, 6)
+                .add(jPasswordField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 100, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(submit))
+              .add(ActionsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                .add(jLabel3)
+                .add(jLabel1)))))
+        .addContainerGap(114, Short.MAX_VALUE))
+      .add(org.jdesktop.layout.GroupLayout.TRAILING, ActionsLayout.createSequentialGroup()
+        .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        .add(PWNotice)
+        .add(154, 154, 154))
     );
     ActionsLayout.setVerticalGroup(
       ActionsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
       .add(ActionsLayout.createSequentialGroup()
         .addContainerGap()
-        .add(jLabel1)
-        .add(18, 18, 18)
+        .add(PWNotice)
+        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
         .add(ActionsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
           .add(jPasswordField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 18, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-          .add(jLabel2)
-          .add(jButton4))
-        .add(18, 18, 18)
-        .add(ActionsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+          .add(enterPassword)
+          .add(submit))
+        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+        .add(jLabel3)
+        .add(31, 31, 31)
+        .add(jLabel1)
+        .add(57, 57, 57)
+        .add(ActionsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.CENTER)
+          .add(crud)
+          .add(configureTime)
+          .add(jButton1)
           .add(jButton2)
           .add(jButton3))
-        .addContainerGap(282, Short.MAX_VALUE))
+        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+        .add(jLabel2)
+        .addContainerGap(161, Short.MAX_VALUE))
     );
 
     Treatments.addTab("Tools", Actions);
@@ -748,15 +794,15 @@ public class MedRightStartGUI extends javax.swing.JFrame {
       }
     });
 
-    jFormattedTextField1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(204, 255, 204), null));
-    jFormattedTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-    jFormattedTextField1.setText("You have     Hours and     Minutes until your next treatment... ");
-    jFormattedTextField1.setFocusable(false);
-    jFormattedTextField1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-    jFormattedTextField1.setOpaque(false);
-    jFormattedTextField1.addActionListener(new java.awt.event.ActionListener() {
+    orgAndYear.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(204, 255, 204), null));
+    orgAndYear.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+    orgAndYear.setText("You have     Hours and     Minutes until your next treatment... ");
+    orgAndYear.setFocusable(false);
+    orgAndYear.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+    orgAndYear.setOpaque(false);
+    orgAndYear.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jFormattedTextField1ActionPerformed(evt);
+        orgAndYearActionPerformed(evt);
       }
     });
 
@@ -769,22 +815,6 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     fileMenu.setIconTextGap(6);
     fileMenu.setMargin(new java.awt.Insets(4, 4, 4, 4));
 
-    openMenuItem.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-    openMenuItem.setMnemonic('o');
-    openMenuItem.setText("Open");
-    fileMenu.add(openMenuItem);
-
-    saveMenuItem.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-    saveMenuItem.setMnemonic('s');
-    saveMenuItem.setText("Save");
-    fileMenu.add(saveMenuItem);
-
-    saveAsMenuItem.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-    saveAsMenuItem.setMnemonic('a');
-    saveAsMenuItem.setText("Save As ...");
-    saveAsMenuItem.setDisplayedMnemonicIndex(5);
-    fileMenu.add(saveAsMenuItem);
-
     exitMenuItem.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
     exitMenuItem.setMnemonic('x');
     exitMenuItem.setText("Exit");
@@ -796,39 +826,6 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     fileMenu.add(exitMenuItem);
 
     menuBar.add(fileMenu);
-
-    editMenu.setMnemonic('e');
-    editMenu.setText("Edit");
-    editMenu.setAlignmentX(1.5F);
-    editMenu.setFont(new java.awt.Font("Dialog", 0, 13)); // NOI18N
-    editMenu.setIconTextGap(6);
-
-    cutMenuItem.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-    cutMenuItem.setMnemonic('t');
-    cutMenuItem.setText("Cut");
-    editMenu.add(cutMenuItem);
-
-    copyMenuItem.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-    copyMenuItem.setMnemonic('y');
-    copyMenuItem.setText("Copy");
-    copyMenuItem.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        copyMenuItemActionPerformed(evt);
-      }
-    });
-    editMenu.add(copyMenuItem);
-
-    pasteMenuItem.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-    pasteMenuItem.setMnemonic('p');
-    pasteMenuItem.setText("Paste");
-    editMenu.add(pasteMenuItem);
-
-    deleteMenuItem.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-    deleteMenuItem.setMnemonic('d');
-    deleteMenuItem.setText("Delete");
-    editMenu.add(deleteMenuItem);
-
-    menuBar.add(editMenu);
 
     helpMenu.setMnemonic('h');
     helpMenu.setText("Help");
@@ -865,7 +862,7 @@ public class MedRightStartGUI extends javax.swing.JFrame {
               .add(layout.createSequentialGroup()
                 .add(creator)
                 .add(28, 28, 28)
-                .add(jFormattedTextField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 458, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(orgAndYear, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 458, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
               .add(version))))
         .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
       .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
@@ -887,11 +884,16 @@ public class MedRightStartGUI extends javax.swing.JFrame {
         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
           .add(creator)
-          .add(jFormattedTextField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+          .add(orgAndYear, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         .add(22, 22, 22)
         .add(Treatments)
         .add(20, 20, 20))
     );
+
+    Treatments.getAccessibleContext().setAccessibleName("treatmentsJTabbedPane");
+
+    getAccessibleContext().setAccessibleName("medrightMainGUI");
+    getAccessibleContext().setAccessibleDescription("");
 
     pack();
   }// </editor-fold>//GEN-END:initComponents
@@ -932,21 +934,21 @@ public class MedRightStartGUI extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_exitMenuItemActionPerformed
 
-    private void copyMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_copyMenuItemActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_copyMenuItemActionPerformed
-
     private void toggleTookAM8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleTookAM8ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_toggleTookAM8ActionPerformed
 
-  private void jFormattedTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField1ActionPerformed
+  private void orgAndYearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orgAndYearActionPerformed
     // TODO add your handling code here:
-  }//GEN-LAST:event_jFormattedTextField1ActionPerformed
+  }//GEN-LAST:event_orgAndYearActionPerformed
 
-  private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+  private void submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitActionPerformed
     // TODO add your handling code here:
-  }//GEN-LAST:event_jButton4ActionPerformed
+  }//GEN-LAST:event_submitActionPerformed
+
+  private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+    // TODO add your handling code here:
+  }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -990,15 +992,15 @@ public class MedRightStartGUI extends javax.swing.JFrame {
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
   private javax.swing.JPanel Actions;
+  private javax.swing.JLabel PWNotice;
   private javax.swing.JTabbedPane Treatments;
   private javax.swing.JMenuItem aboutMenuItem;
   private javax.swing.JLabel banner;
+  private javax.swing.JButton configureTime;
   private javax.swing.JMenuItem contentsMenuItem;
-  private javax.swing.JMenuItem copyMenuItem;
   private javax.swing.JLabel creator;
-  private javax.swing.JMenuItem cutMenuItem;
-  private javax.swing.JMenuItem deleteMenuItem;
-  private javax.swing.JMenu editMenu;
+  private javax.swing.JButton crud;
+  private javax.swing.JLabel enterPassword;
   private javax.persistence.EntityManager entityMedRight;
   private javax.swing.JMenuItem exitMenuItem;
   private javax.swing.JMenu fileMenu;
@@ -1013,12 +1015,12 @@ public class MedRightStartGUI extends javax.swing.JFrame {
   private javax.swing.JTree iteminfoJTree;
   private javax.swing.JScrollPane iteminfoScrollPane;
   private javax.swing.JScrollPane iteminfoScrollPanel;
+  private javax.swing.JButton jButton1;
   private javax.swing.JButton jButton2;
   private javax.swing.JButton jButton3;
-  private javax.swing.JButton jButton4;
-  private javax.swing.JFormattedTextField jFormattedTextField1;
   private javax.swing.JLabel jLabel1;
   private javax.swing.JLabel jLabel2;
+  private javax.swing.JLabel jLabel3;
   private javax.swing.JPasswordField jPasswordField1;
   private javax.swing.JProgressBar jProgressBar1;
   private javax.swing.JButton jbAddNewSchedule;
@@ -1026,18 +1028,16 @@ public class MedRightStartGUI extends javax.swing.JFrame {
   private javax.swing.JScrollPane liquidsScrollPane;
   private javax.swing.JTable liquidsTable;
   private javax.swing.JMenuBar menuBar;
-  private javax.swing.JMenuItem openMenuItem;
-  private javax.swing.JMenuItem pasteMenuItem;
+  private javax.swing.JFormattedTextField orgAndYear;
   private javax.swing.JScrollPane pillScrollPane;
   private javax.swing.JTable pillTable;
   private javax.swing.JPanel pills;
   private javax.swing.JScrollPane pillsPane;
   private javax.swing.JTable pillsTable;
-  private javax.swing.JMenuItem saveAsMenuItem;
-  private javax.swing.JMenuItem saveMenuItem;
   private javax.swing.JPanel schedule;
   private javax.swing.JScrollPane scheduleScrollPane;
   private javax.swing.JTable scheduleTable;
+  private javax.swing.JButton submit;
   private javax.swing.JToggleButton toggleTookAM;
   private javax.swing.JToggleButton toggleTookAM2;
   private javax.swing.JToggleButton toggleTookAM3;
