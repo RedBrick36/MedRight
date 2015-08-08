@@ -76,7 +76,7 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
     jlScheduleCreator.setText("Treatment Schedule Creator");
     jlScheduleCreator.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-    jcbSchedType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select  --", "Pill", "Liquid", "Injection", "Topical", "Fitness" }));
+    jcbSchedType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select  --", "Pill", "Liquid", "Injection", "Topical", "Supplement" }));
     jcbSchedType.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 204), 1, true));
     jcbSchedType.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -637,7 +637,7 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Metal".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

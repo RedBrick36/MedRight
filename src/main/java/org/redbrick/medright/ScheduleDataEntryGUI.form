@@ -279,7 +279,7 @@
                 <StringItem index="2" value="Liquid"/>
                 <StringItem index="3" value="Injection"/>
                 <StringItem index="4" value="Topical"/>
-                <StringItem index="5" value="Fitness"/>
+                <StringItem index="5" value="Supplement"/>
               </StringArray>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
