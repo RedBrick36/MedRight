@@ -67,16 +67,17 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
     allTimes = new javax.swing.JCheckBox();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-    setUndecorated(true);
+    setTitle("Treatement Schedule Creator");
+    setResizable(false);
 
     SchedCreate.setName("Treatment Schedule Creator"); // NOI18N
 
     jlScheduleCreator.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
     jlScheduleCreator.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
     jlScheduleCreator.setText("Treatment Schedule Creator");
-    jlScheduleCreator.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+    jlScheduleCreator.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
 
-    jcbSchedType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select  --", "Pill", "Liquid", "Injection", "Topical", "Supplement" }));
+    jcbSchedType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select  --", "Pill", "Liquid", "Injection", "Topical", "Supplements" }));
     jcbSchedType.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 204), 1, true));
     jcbSchedType.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -195,7 +196,7 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
     jlDose.setText("Dose");
 
     jcbSize.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-    jcbSize.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select --", "Grams", "Milligrams", "Milliliters", "CC's", "Ounces", "Teaspoons", "Tablespoons", "Cups", "Application", " " }));
+    jcbSize.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select --", "Grams", "Milligrams", "Milliliters", "CC's", "Ounces", "Teaspoons", "Tablespoons", "Cups", "Application" }));
     jcbSize.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 204), 1, true));
     jcbSize.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -213,6 +214,8 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
     Next.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
     Next.setText("  New  ");
     Next.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+    Next.setMaximumSize(new java.awt.Dimension(51, 25));
+    Next.setMinimumSize(new java.awt.Dimension(51, 25));
     Next.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         NextActionPerformed(evt);
@@ -222,6 +225,8 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
     Save.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
     Save.setText("  Save  ");
     Save.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+    Save.setMaximumSize(new java.awt.Dimension(51, 25));
+    Save.setMinimumSize(new java.awt.Dimension(51, 25));
     Save.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         SaveActionPerformed(evt);
@@ -235,6 +240,8 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
     Help.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
     Help.setIconTextGap(5);
     Help.setMargin(new java.awt.Insets(3, 14, 3, 14));
+    Help.setMaximumSize(new java.awt.Dimension(51, 25));
+    Help.setMinimumSize(new java.awt.Dimension(51, 25));
     Help.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         HelpActionPerformed(evt);
@@ -276,6 +283,8 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
     Done.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
     Done.setText("  Exit  ");
     Done.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+    Done.setMaximumSize(new java.awt.Dimension(51, 25));
+    Done.setMinimumSize(new java.awt.Dimension(51, 25));
     Done.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         DoneActionPerformed(evt);
@@ -312,7 +321,7 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
           .addGroup(SchedCreateLayout.createSequentialGroup()
             .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
               .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SchedCreateLayout.createSequentialGroup()
-                .addGap(0, 9, Short.MAX_VALUE)
+                .addGap(0, 13, Short.MAX_VALUE)
                 .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                   .addComponent(MidOfNight)
                   .addGroup(SchedCreateLayout.createSequentialGroup()
@@ -354,8 +363,17 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
                     .addComponent(Evening)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                     .addComponent(Bedtime))))
-              .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SchedCreateLayout.createSequentialGroup()
-                .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+              .addGroup(SchedCreateLayout.createSequentialGroup()
+                .addComponent(jlScheduleCreator, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+              .addGroup(SchedCreateLayout.createSequentialGroup()
+                .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                  .addGroup(SchedCreateLayout.createSequentialGroup()
+                    .addComponent(Help, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Save, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(Done, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                   .addGroup(SchedCreateLayout.createSequentialGroup()
                     .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                       .addGroup(SchedCreateLayout.createSequentialGroup()
@@ -364,41 +382,36 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
                           .addGroup(SchedCreateLayout.createSequentialGroup()
                             .addGap(29, 29, 29)
                             .addComponent(jlDose)))
-                        .addGap(10, 10, 10)
                         .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                          .addComponent(jcbSize, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SchedCreateLayout.createSequentialGroup()
-                            .addComponent(jlMeasure)
-                            .addGap(14, 14, 14)))
-                        .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                          .addComponent(jftfCondition, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                           .addGroup(SchedCreateLayout.createSequentialGroup()
-                            .addGap(27, 27, 27)
+                            .addGap(26, 26, 26)
+                            .addComponent(jlMeasure))
+                          .addGroup(SchedCreateLayout.createSequentialGroup()
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jcbSize, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                          .addGroup(SchedCreateLayout.createSequentialGroup()
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jftfCondition, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                          .addGroup(SchedCreateLayout.createSequentialGroup()
+                            .addGap(42, 42, 42)
                             .addComponent(jlCondition))))
-                      .addComponent(Help))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                      .addComponent(jftfName, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                  .addComponent(Next, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                       .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SchedCreateLayout.createSequentialGroup()
-                        .addComponent(Save)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Done)
-                        .addGap(12, 12, 12)
-                        .addComponent(Next))
-                      .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SchedCreateLayout.createSequentialGroup()
-                        .addComponent(Reminders)
-                        .addGap(22, 22, 22))
-                      .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SchedCreateLayout.createSequentialGroup()
                         .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(42, 42, 42))
-                      .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)))
-                  .addGroup(SchedCreateLayout.createSequentialGroup()
-                    .addComponent(jftfName, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(13, 13, 13))
-              .addGroup(SchedCreateLayout.createSequentialGroup()
-                .addComponent(jlScheduleCreator, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE)))
-            .addContainerGap(12, Short.MAX_VALUE))
+                        .addGap(53, 53, 53))
+                      .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addGroup(SchedCreateLayout.createSequentialGroup()
+                      .addGap(8, 8, 8)
+                      .addComponent(Reminders)
+                      .addGap(14, 14, 14))))
+                .addGap(13, 13, 13)))
+            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
           .addGroup(SchedCreateLayout.createSequentialGroup()
             .addComponent(jlName)
             .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
@@ -406,11 +419,14 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
     SchedCreateLayout.setVerticalGroup(
       SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(SchedCreateLayout.createSequentialGroup()
-        .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(jlScheduleCreator, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(allDays)
-          .addComponent(allTimes))
-        .addGap(30, 30, 30)
+        .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+            .addComponent(allDays)
+            .addComponent(allTimes))
+          .addGroup(SchedCreateLayout.createSequentialGroup()
+            .addGap(2, 2, 2)
+            .addComponent(jlScheduleCreator, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        .addGap(18, 18, 18)
         .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
           .addComponent(jcbSchedType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addComponent(Monday)
@@ -434,51 +450,51 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
           .addComponent(Bedtime))
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
         .addComponent(MidOfNight)
-        .addGap(13, 13, 13)
+        .addGap(18, 18, 18)
         .addComponent(jlName)
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-        .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(jftfName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(Reminders))
         .addGap(6, 6, 6)
-        .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
           .addGroup(SchedCreateLayout.createSequentialGroup()
+            .addComponent(Reminders)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(5, 5, 5)
+            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+          .addGroup(SchedCreateLayout.createSequentialGroup()
+            .addComponent(jftfName, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(7, 7, 7)
             .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
               .addComponent(jlDose, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
               .addComponent(jlCondition)
               .addComponent(jlMeasure))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-              .addComponent(jftfDose, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(jftfCondition, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(jcbSize, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGap(30, 30, 30)
-            .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-              .addComponent(Save)
-              .addComponent(Next)
-              .addComponent(Help)
-              .addComponent(Done)))
-          .addGroup(SchedCreateLayout.createSequentialGroup()
-            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        .addContainerGap(14, Short.MAX_VALUE))
+              .addComponent(jftfDose, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(jftfCondition, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(jcbSize, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+        .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+          .addComponent(Next, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+          .addComponent(Done, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+          .addComponent(Save, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+          .addComponent(Help, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addContainerGap())
     );
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
     getContentPane().setLayout(layout);
     layout.setHorizontalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        .addComponent(SchedCreate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+      .addGroup(layout.createSequentialGroup()
+        .addContainerGap()
+        .addComponent(SchedCreate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         .addGap(9, 9, 9))
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(layout.createSequentialGroup()
         .addGap(14, 14, 14)
-        .addComponent(SchedCreate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addComponent(SchedCreate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
     );
 
     pack();

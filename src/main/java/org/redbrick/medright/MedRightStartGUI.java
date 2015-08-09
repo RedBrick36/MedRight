@@ -43,9 +43,9 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     topicals = new javax.swing.JPanel();
     topicalsScrollPanel = new javax.swing.JScrollPane();
     topicalsTable = new javax.swing.JTable();
-    fitness = new javax.swing.JPanel();
-    fitnessScrollPanel = new javax.swing.JScrollPane();
-    fitnessTable = new javax.swing.JTable();
+    supplements = new javax.swing.JPanel();
+    supplementsScrollPanel = new javax.swing.JScrollPane();
+    SupplementsTable = new javax.swing.JTable();
     iteminfo = new javax.swing.JPanel();
     iteminfoScrollPanel = new javax.swing.JScrollPane();
     iteminfoJTree = new javax.swing.JTree();
@@ -64,7 +64,6 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     jProgressBar1 = new javax.swing.JProgressBar();
     Actions = new javax.swing.JPanel();
     jPasswordField1 = new javax.swing.JPasswordField();
-    PWNotice = new javax.swing.JLabel();
     configureTime = new javax.swing.JButton();
     crud = new javax.swing.JButton();
     submit = new javax.swing.JButton();
@@ -79,7 +78,8 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     version = new javax.swing.JLabel();
     creator = new javax.swing.JLabel();
     jbAddNewSchedule = new javax.swing.JButton();
-    orgAndYear = new javax.swing.JFormattedTextField();
+    jScrollPane1 = new javax.swing.JScrollPane();
+    jTextArea1 = new javax.swing.JTextArea();
     menuBar = new javax.swing.JMenuBar();
     fileMenu = new javax.swing.JMenu();
     exitMenuItem = new javax.swing.JMenuItem();
@@ -198,15 +198,15 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     pills.setLayout(pillsLayout);
     pillsLayout.setHorizontalGroup(
       pillsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-      .add(0, 916, Short.MAX_VALUE)
+      .add(0, 1016, Short.MAX_VALUE)
       .add(pillsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(pillsPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 916, Short.MAX_VALUE))
+        .add(pillsPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 1016, Short.MAX_VALUE))
     );
     pillsLayout.setVerticalGroup(
       pillsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-      .add(0, 396, Short.MAX_VALUE)
+      .add(0, 406, Short.MAX_VALUE)
       .add(pillsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-        .add(pillsPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 396, Short.MAX_VALUE))
+        .add(pillsPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 406, Short.MAX_VALUE))
     );
 
     Treatments.addTab("Pills", pills);
@@ -215,6 +215,16 @@ public class MedRightStartGUI extends javax.swing.JFrame {
 
     liquidsTable.setModel(new javax.swing.table.DefaultTableModel(
       new Object [][] {
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
         {null, null, null, null},
         {null, null, null, null},
         {null, null, null, null},
@@ -252,11 +262,11 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     liquids.setLayout(liquidsLayout);
     liquidsLayout.setHorizontalGroup(
       liquidsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-      .add(liquidsScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 916, Short.MAX_VALUE)
+      .add(liquidsScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 1016, Short.MAX_VALUE)
     );
     liquidsLayout.setVerticalGroup(
       liquidsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-      .add(liquidsScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 396, Short.MAX_VALUE)
+      .add(liquidsScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 406, Short.MAX_VALUE)
     );
 
     Treatments.addTab("Liquids", liquids);
@@ -265,6 +275,16 @@ public class MedRightStartGUI extends javax.swing.JFrame {
 
     injectionsTable.setModel(new javax.swing.table.DefaultTableModel(
       new Object [][] {
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
         {null, null, null, null},
         {null, null, null, null},
         {null, null, null, null},
@@ -301,11 +321,11 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     injections.setLayout(injectionsLayout);
     injectionsLayout.setHorizontalGroup(
       injectionsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-      .add(injectionsScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 916, Short.MAX_VALUE)
+      .add(injectionsScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 1016, Short.MAX_VALUE)
     );
     injectionsLayout.setVerticalGroup(
       injectionsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-      .add(injectionsScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 396, Short.MAX_VALUE)
+      .add(injectionsScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 406, Short.MAX_VALUE)
     );
 
     Treatments.addTab("Injections", injections);
@@ -314,6 +334,16 @@ public class MedRightStartGUI extends javax.swing.JFrame {
 
     topicalsTable.setModel(new javax.swing.table.DefaultTableModel(
       new Object [][] {
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
         {null, null, null, null},
         {null, null, null, null},
         {null, null, null, null},
@@ -350,19 +380,29 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     topicals.setLayout(topicalsLayout);
     topicalsLayout.setHorizontalGroup(
       topicalsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-      .add(topicalsScrollPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 916, Short.MAX_VALUE)
+      .add(topicalsScrollPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 1016, Short.MAX_VALUE)
     );
     topicalsLayout.setVerticalGroup(
       topicalsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-      .add(topicalsScrollPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 396, Short.MAX_VALUE)
+      .add(topicalsScrollPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 406, Short.MAX_VALUE)
     );
 
     Treatments.addTab("Topicals", topicals);
 
-    fitness.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+    supplements.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-    fitnessTable.setModel(new javax.swing.table.DefaultTableModel(
+    SupplementsTable.setModel(new javax.swing.table.DefaultTableModel(
       new Object [][] {
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
         {null, null, null, null},
         {null, null, null, null},
         {null, null, null, null},
@@ -393,20 +433,20 @@ public class MedRightStartGUI extends javax.swing.JFrame {
         return canEdit [columnIndex];
       }
     });
-    fitnessScrollPanel.setViewportView(fitnessTable);
+    supplementsScrollPanel.setViewportView(SupplementsTable);
 
-    org.jdesktop.layout.GroupLayout fitnessLayout = new org.jdesktop.layout.GroupLayout(fitness);
-    fitness.setLayout(fitnessLayout);
-    fitnessLayout.setHorizontalGroup(
-      fitnessLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-      .add(fitnessScrollPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 916, Short.MAX_VALUE)
+    org.jdesktop.layout.GroupLayout supplementsLayout = new org.jdesktop.layout.GroupLayout(supplements);
+    supplements.setLayout(supplementsLayout);
+    supplementsLayout.setHorizontalGroup(
+      supplementsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+      .add(supplementsScrollPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 1016, Short.MAX_VALUE)
     );
-    fitnessLayout.setVerticalGroup(
-      fitnessLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-      .add(fitnessScrollPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 396, Short.MAX_VALUE)
+    supplementsLayout.setVerticalGroup(
+      supplementsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+      .add(supplementsScrollPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 406, Short.MAX_VALUE)
     );
 
-    Treatments.addTab("Fitness", fitness);
+    Treatments.addTab("Supplements", supplements);
 
     iteminfo.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -434,11 +474,11 @@ public class MedRightStartGUI extends javax.swing.JFrame {
       .add(iteminfoLayout.createSequentialGroup()
         .add(iteminfoScrollPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 115, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-        .add(iteminfoScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 795, Short.MAX_VALUE))
+        .add(iteminfoScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 895, Short.MAX_VALUE))
     );
     iteminfoLayout.setVerticalGroup(
       iteminfoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-      .add(iteminfoScrollPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 396, Short.MAX_VALUE)
+      .add(iteminfoScrollPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 406, Short.MAX_VALUE)
       .add(org.jdesktop.layout.GroupLayout.TRAILING, iteminfoScrollPane)
     );
 
@@ -450,6 +490,8 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     scheduleTable.setAutoCreateRowSorter(true);
     scheduleTable.setModel(new javax.swing.table.DefaultTableModel(
       new Object [][] {
+        {null, null, null, null, null, null, null, null},
+        {null, null, null, null, null, null, null, null},
         {null, null, null, null, null, null, null, null},
         {null, null, null, null, null, null, null, null},
         {null, null, null, null, null, null, null, null},
@@ -493,9 +535,8 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     scheduleTable.setEnabled(false);
     scheduleScrollPane.setViewportView(scheduleTable);
 
-    toggleTookAM.setForeground(new java.awt.Color(0, 255, 255));
     toggleTookAM.setText("Took AM");
-    toggleTookAM.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+    toggleTookAM.setBorder(new javax.swing.border.MatteBorder(null));
     toggleTookAM.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
     toggleTookAM.setMaximumSize(new java.awt.Dimension(45, 18));
     toggleTookAM.setMinimumSize(new java.awt.Dimension(45, 18));
@@ -506,9 +547,8 @@ public class MedRightStartGUI extends javax.swing.JFrame {
       }
     });
 
-    toggleTookAM2.setForeground(new java.awt.Color(0, 255, 255));
     toggleTookAM2.setText("Took MM");
-    toggleTookAM2.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+    toggleTookAM2.setBorder(new javax.swing.border.MatteBorder(null));
     toggleTookAM2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
     toggleTookAM2.setMaximumSize(new java.awt.Dimension(45, 18));
     toggleTookAM2.setMinimumSize(new java.awt.Dimension(45, 18));
@@ -519,9 +559,8 @@ public class MedRightStartGUI extends javax.swing.JFrame {
       }
     });
 
-    toggleTookAM3.setForeground(new java.awt.Color(0, 255, 255));
     toggleTookAM3.setText(" Took Noon ");
-    toggleTookAM3.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+    toggleTookAM3.setBorder(new javax.swing.border.MatteBorder(null));
     toggleTookAM3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
     toggleTookAM3.setMaximumSize(new java.awt.Dimension(45, 18));
     toggleTookAM3.setMinimumSize(new java.awt.Dimension(45, 18));
@@ -532,9 +571,8 @@ public class MedRightStartGUI extends javax.swing.JFrame {
       }
     });
 
-    toggleTookAM4.setForeground(new java.awt.Color(0, 255, 255));
     toggleTookAM4.setText(" Took MidAft ");
-    toggleTookAM4.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+    toggleTookAM4.setBorder(new javax.swing.border.MatteBorder(null));
     toggleTookAM4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
     toggleTookAM4.setMaximumSize(new java.awt.Dimension(45, 18));
     toggleTookAM4.setMinimumSize(new java.awt.Dimension(45, 18));
@@ -545,9 +583,8 @@ public class MedRightStartGUI extends javax.swing.JFrame {
       }
     });
 
-    toggleTookAM5.setForeground(new java.awt.Color(0, 255, 255));
     toggleTookAM5.setText("Took Aft");
-    toggleTookAM5.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+    toggleTookAM5.setBorder(new javax.swing.border.MatteBorder(null));
     toggleTookAM5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
     toggleTookAM5.setMaximumSize(new java.awt.Dimension(45, 18));
     toggleTookAM5.setMinimumSize(new java.awt.Dimension(45, 18));
@@ -558,9 +595,8 @@ public class MedRightStartGUI extends javax.swing.JFrame {
       }
     });
 
-    toggleTookAM6.setForeground(new java.awt.Color(0, 255, 255));
     toggleTookAM6.setText("Took Eve");
-    toggleTookAM6.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+    toggleTookAM6.setBorder(new javax.swing.border.MatteBorder(null));
     toggleTookAM6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
     toggleTookAM6.setMaximumSize(new java.awt.Dimension(45, 18));
     toggleTookAM6.setMinimumSize(new java.awt.Dimension(45, 18));
@@ -571,9 +607,8 @@ public class MedRightStartGUI extends javax.swing.JFrame {
       }
     });
 
-    toggleTookAM7.setForeground(new java.awt.Color(0, 255, 255));
     toggleTookAM7.setText(" Took Bedtime ");
-    toggleTookAM7.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+    toggleTookAM7.setBorder(new javax.swing.border.MatteBorder(null));
     toggleTookAM7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
     toggleTookAM7.setMaximumSize(new java.awt.Dimension(45, 18));
     toggleTookAM7.setMinimumSize(new java.awt.Dimension(45, 18));
@@ -584,10 +619,9 @@ public class MedRightStartGUI extends javax.swing.JFrame {
       }
     });
 
-    toggleTookAM8.setForeground(new java.awt.Color(0, 255, 255));
     toggleTookAM8.setText("  Took Night ");
     toggleTookAM8.setAutoscrolls(true);
-    toggleTookAM8.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+    toggleTookAM8.setBorder(new javax.swing.border.MatteBorder(null));
     toggleTookAM8.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
     toggleTookAM8.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
     toggleTookAM8.setMaximumSize(new java.awt.Dimension(45, 18));
@@ -603,35 +637,38 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     schedule.setLayout(scheduleLayout);
     scheduleLayout.setHorizontalGroup(
       scheduleLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-      .add(scheduleScrollPane)
+      .add(scheduleScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 1016, Short.MAX_VALUE)
       .add(scheduleLayout.createSequentialGroup()
         .addContainerGap()
         .add(scheduleLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
           .add(scheduleLayout.createSequentialGroup()
+            .add(jProgressBar1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addContainerGap())
+          .add(scheduleLayout.createSequentialGroup()
+            .add(12, 12, 12)
             .add(toggleTookAM, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 70, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 50, Short.MAX_VALUE)
+            .add(56, 56, 56)
             .add(toggleTookAM2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 70, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-            .add(41, 41, 41)
+            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .add(toggleTookAM3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 76, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-            .add(34, 34, 34)
-            .add(toggleTookAM4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 86, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-            .add(34, 34, 34)
-            .add(toggleTookAM5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 70, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
             .add(45, 45, 45)
+            .add(toggleTookAM4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 86, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+            .add(55, 55, 55)
+            .add(toggleTookAM5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 70, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+            .add(54, 54, 54)
             .add(toggleTookAM6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 70, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-            .add(41, 41, 41)
+            .add(51, 51, 51)
             .add(toggleTookAM7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 86, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-            .add(38, 38, 38)
-            .add(toggleTookAM8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 81, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-          .add(org.jdesktop.layout.GroupLayout.TRAILING, jProgressBar1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        .addContainerGap())
+            .add(39, 39, 39)
+            .add(toggleTookAM8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 81, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+            .add(25, 25, 25))))
     );
     scheduleLayout.setVerticalGroup(
       scheduleLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
       .add(scheduleLayout.createSequentialGroup()
         .add(jProgressBar1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
         .add(13, 13, 13)
-        .add(scheduleScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 318, Short.MAX_VALUE)
+        .add(scheduleScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 328, Short.MAX_VALUE)
         .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
         .add(scheduleLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
           .add(toggleTookAM, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
@@ -651,7 +688,7 @@ public class MedRightStartGUI extends javax.swing.JFrame {
 
     Actions.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-    jPasswordField1.setFont(new java.awt.Font("Dialog", 0, 13)); // NOI18N
+    jPasswordField1.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
     jPasswordField1.setText("jPasswordField1");
     jPasswordField1.setAutoscrolls(false);
     jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
@@ -660,18 +697,16 @@ public class MedRightStartGUI extends javax.swing.JFrame {
       }
     });
 
-    PWNotice.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-    PWNotice.setText("  You must enter your password to unlock the tools on this page.  ");
-
+    configureTime.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
     configureTime.setForeground(new java.awt.Color(255, 51, 0));
     configureTime.setText("  Configure Time Frames  ");
-    configureTime.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+    configureTime.setBorder(new javax.swing.border.MatteBorder(null));
 
+    crud.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
     crud.setForeground(new java.awt.Color(255, 51, 0));
-    crud.setText("  Edit the Treatments Database  ");
-    crud.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+    crud.setText("  Edit the Database  ");
+    crud.setBorder(new javax.swing.border.MatteBorder(null));
 
-    submit.setForeground(new java.awt.Color(153, 255, 153));
     submit.setText("  Submit  ");
     submit.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
     submit.addActionListener(new java.awt.event.ActionListener() {
@@ -680,22 +715,25 @@ public class MedRightStartGUI extends javax.swing.JFrame {
       }
     });
 
-    enterPassword.setFont(new java.awt.Font("Dialog", 0, 13)); // NOI18N
-    enterPassword.setText(" Please Enter Your Password:");
+    enterPassword.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
+    enterPassword.setText(" Please Enter Your Password to Unlock These Tools");
 
+    jButton1.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
     jButton1.setForeground(new java.awt.Color(255, 51, 0));
     jButton1.setText("  Backup Database  ");
-    jButton1.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+    jButton1.setBorder(new javax.swing.border.MatteBorder(null));
 
+    jButton2.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
     jButton2.setForeground(new java.awt.Color(255, 51, 0));
     jButton2.setText("  Restore Database  ");
-    jButton2.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+    jButton2.setBorder(new javax.swing.border.MatteBorder(null));
 
+    jButton3.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
     jButton3.setForeground(new java.awt.Color(255, 51, 0));
     jButton3.setText("  Delete All Data  ");
-    jButton3.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+    jButton3.setBorder(new javax.swing.border.MatteBorder(null));
 
-    jLabel1.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
+    jLabel1.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
     jLabel1.setText("  Warning! Delete All Data is NOT Reversible!  ");
 
     jLabel2.setText("Buttons will turn GREEN when unlocked by correct password entry ");
@@ -707,66 +745,66 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     ActionsLayout.setHorizontalGroup(
       ActionsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
       .add(ActionsLayout.createSequentialGroup()
-        .add(89, 89, 89)
+        .addContainerGap(308, Short.MAX_VALUE)
         .add(ActionsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
           .add(org.jdesktop.layout.GroupLayout.TRAILING, ActionsLayout.createSequentialGroup()
-            .add(jLabel2)
-            .add(179, 179, 179))
-          .add(org.jdesktop.layout.GroupLayout.TRAILING, ActionsLayout.createSequentialGroup()
-            .add(crud)
-            .add(18, 18, 18)
             .add(ActionsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-              .add(ActionsLayout.createSequentialGroup()
-                .add(configureTime)
-                .add(18, 18, 18)
+              .add(org.jdesktop.layout.GroupLayout.TRAILING, jLabel1)
+              .add(org.jdesktop.layout.GroupLayout.TRAILING, ActionsLayout.createSequentialGroup()
+                .add(jLabel3)
+                .add(75, 75, 75))
+              .add(org.jdesktop.layout.GroupLayout.TRAILING, ActionsLayout.createSequentialGroup()
+                .add(jLabel2)
+                .add(34, 34, 34)))
+            .add(255, 255, 255))
+          .add(org.jdesktop.layout.GroupLayout.TRAILING, ActionsLayout.createSequentialGroup()
+            .add(jPasswordField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+            .add(18, 18, 18)
+            .add(submit)
+            .add(386, 386, 386))
+          .add(org.jdesktop.layout.GroupLayout.TRAILING, ActionsLayout.createSequentialGroup()
+            .add(enterPassword)
+            .add(315, 315, 315))
+          .add(org.jdesktop.layout.GroupLayout.TRAILING, ActionsLayout.createSequentialGroup()
+            .add(ActionsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+              .add(org.jdesktop.layout.GroupLayout.TRAILING, ActionsLayout.createSequentialGroup()
                 .add(jButton1)
                 .add(18, 18, 18)
                 .add(jButton2)
                 .add(18, 18, 18)
                 .add(jButton3))
-              .add(ActionsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                .add(jLabel1)
-                .add(ActionsLayout.createSequentialGroup()
-                  .add(enterPassword)
-                  .add(6, 6, 6)
-                  .add(jPasswordField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 100, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                  .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                  .add(submit))))))
-        .addContainerGap(114, Short.MAX_VALUE))
-      .add(org.jdesktop.layout.GroupLayout.TRAILING, ActionsLayout.createSequentialGroup()
-        .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        .add(ActionsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-          .add(org.jdesktop.layout.GroupLayout.TRAILING, ActionsLayout.createSequentialGroup()
-            .add(PWNotice)
-            .add(154, 154, 154))
-          .add(org.jdesktop.layout.GroupLayout.TRAILING, ActionsLayout.createSequentialGroup()
-            .add(jLabel3)
-            .add(302, 302, 302))))
+              .add(org.jdesktop.layout.GroupLayout.TRAILING, ActionsLayout.createSequentialGroup()
+                .add(configureTime)
+                .add(18, 18, 18)
+                .add(crud)
+                .add(60, 60, 60)))
+            .add(221, 221, 221))))
     );
     ActionsLayout.setVerticalGroup(
       ActionsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
       .add(ActionsLayout.createSequentialGroup()
-        .addContainerGap()
-        .add(PWNotice)
-        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+        .add(54, 54, 54)
+        .add(enterPassword)
+        .add(18, 18, 18)
         .add(ActionsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-          .add(jPasswordField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 18, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-          .add(enterPassword)
+          .add(jPasswordField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 23, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
           .add(submit))
-        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
         .add(jLabel3)
-        .add(41, 41, 41)
+        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 22, Short.MAX_VALUE)
         .add(jLabel1)
-        .add(47, 47, 47)
-        .add(ActionsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.CENTER)
-          .add(crud)
+        .add(30, 30, 30)
+        .add(ActionsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
           .add(configureTime)
+          .add(crud))
+        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+        .add(ActionsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.CENTER)
           .add(jButton1)
           .add(jButton2)
           .add(jButton3))
-        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+        .add(18, 18, 18)
         .add(jLabel2)
-        .addContainerGap(161, Short.MAX_VALUE))
+        .add(105, 105, 105))
     );
 
     Treatments.addTab("Tools", Actions);
@@ -781,9 +819,8 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     creator.setText("RedBrick.Org, 2015");
 
     jbAddNewSchedule.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-    jbAddNewSchedule.setForeground(new java.awt.Color(51, 255, 51));
     jbAddNewSchedule.setText("  Add New Schedule  ");
-    jbAddNewSchedule.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+    jbAddNewSchedule.setBorder(new javax.swing.border.MatteBorder(null));
     jbAddNewSchedule.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
     jbAddNewSchedule.setIconTextGap(6);
     jbAddNewSchedule.setMargin(new java.awt.Insets(4, 14, 4, 14));
@@ -796,17 +833,15 @@ public class MedRightStartGUI extends javax.swing.JFrame {
       }
     });
 
-    orgAndYear.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(204, 255, 204), null));
-    orgAndYear.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-    orgAndYear.setText("You have      Hours and      Minutes until your next treatment... ");
-    orgAndYear.setFocusable(false);
-    orgAndYear.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-    orgAndYear.setOpaque(false);
-    orgAndYear.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        orgAndYearActionPerformed(evt);
-      }
-    });
+    jTextArea1.setColumns(1);
+    jTextArea1.setRows(1);
+    jTextArea1.setAutoscrolls(false);
+    jTextArea1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Time Until Next Treatment", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 1, 18))); // NOI18N
+    jTextArea1.setBounds(new java.awt.Rectangle(0, 0, 232, 60));
+    jTextArea1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+    jTextArea1.setFocusable(false);
+    jTextArea1.setMinimumSize(new java.awt.Dimension(232, 60));
+    jScrollPane1.setViewportView(jTextArea1);
 
     menuBar.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
 
@@ -854,40 +889,42 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     layout.setHorizontalGroup(
       layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
       .add(layout.createSequentialGroup()
+        .addContainerGap()
+        .add(Treatments, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 1027, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+        .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+      .add(layout.createSequentialGroup()
         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
           .add(layout.createSequentialGroup()
-            .addContainerGap()
-            .add(Treatments, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-          .add(layout.createSequentialGroup()
             .add(35, 35, 35)
-            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-              .add(layout.createSequentialGroup()
-                .add(creator)
-                .add(97, 97, 97)
-                .add(orgAndYear, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 458, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-              .add(version))))
-        .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-      .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-        .addContainerGap()
-        .add(banner, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 294, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+            .add(version)
+            .add(37, 37, 37)
+            .add(creator))
+          .add(layout.createSequentialGroup()
+            .addContainerGap()
+            .add(banner, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 294, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 274, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+        .add(136, 136, 136)
         .add(jbAddNewSchedule, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 156, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-        .add(30, 30, 30))
+        .add(67, 67, 67))
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
       .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
         .addContainerGap()
-        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-          .add(banner, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 47, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-          .add(jbAddNewSchedule, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 30, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-        .add(version, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-          .add(creator)
-          .add(orgAndYear, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-        .add(22, 22, 22)
+        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+          .add(layout.createSequentialGroup()
+            .add(jbAddNewSchedule, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 30, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+            .add(14, 14, 14))
+          .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(layout.createSequentialGroup()
+              .add(banner, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 47, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+              .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+              .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                .add(version, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 15, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(creator)))
+            .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 84, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+        .add(18, 18, 18)
         .add(Treatments)
         .add(20, 20, 20))
     );
@@ -940,10 +977,6 @@ public class MedRightStartGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_toggleTookAM8ActionPerformed
 
-  private void orgAndYearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orgAndYearActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_orgAndYearActionPerformed
-
   private void submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitActionPerformed
     // TODO add your handling code here:
   }//GEN-LAST:event_submitActionPerformed
@@ -963,7 +996,7 @@ public class MedRightStartGUI extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Dark Metal".equals(info.getName())) {
+                if ("Metal".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -994,7 +1027,7 @@ public class MedRightStartGUI extends javax.swing.JFrame {
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
   private javax.swing.JPanel Actions;
-  private javax.swing.JLabel PWNotice;
+  private javax.swing.JTable SupplementsTable;
   private javax.swing.JTabbedPane Treatments;
   private javax.swing.JMenuItem aboutMenuItem;
   private javax.swing.JLabel banner;
@@ -1006,9 +1039,6 @@ public class MedRightStartGUI extends javax.swing.JFrame {
   private javax.persistence.EntityManager entityMedRight;
   private javax.swing.JMenuItem exitMenuItem;
   private javax.swing.JMenu fileMenu;
-  private javax.swing.JPanel fitness;
-  private javax.swing.JScrollPane fitnessScrollPanel;
-  private javax.swing.JTable fitnessTable;
   private javax.swing.JMenu helpMenu;
   private javax.swing.JPanel injections;
   private javax.swing.JScrollPane injectionsScrollPane1;
@@ -1025,12 +1055,13 @@ public class MedRightStartGUI extends javax.swing.JFrame {
   private javax.swing.JLabel jLabel3;
   private javax.swing.JPasswordField jPasswordField1;
   private javax.swing.JProgressBar jProgressBar1;
+  private javax.swing.JScrollPane jScrollPane1;
+  private javax.swing.JTextArea jTextArea1;
   private javax.swing.JButton jbAddNewSchedule;
   private javax.swing.JPanel liquids;
   private javax.swing.JScrollPane liquidsScrollPane;
   private javax.swing.JTable liquidsTable;
   private javax.swing.JMenuBar menuBar;
-  private javax.swing.JFormattedTextField orgAndYear;
   private javax.swing.JScrollPane pillScrollPane;
   private javax.swing.JTable pillTable;
   private javax.swing.JPanel pills;
@@ -1040,6 +1071,8 @@ public class MedRightStartGUI extends javax.swing.JFrame {
   private javax.swing.JScrollPane scheduleScrollPane;
   private javax.swing.JTable scheduleTable;
   private javax.swing.JButton submit;
+  private javax.swing.JPanel supplements;
+  private javax.swing.JScrollPane supplementsScrollPanel;
   private javax.swing.JToggleButton toggleTookAM;
   private javax.swing.JToggleButton toggleTookAM2;
   private javax.swing.JToggleButton toggleTookAM3;

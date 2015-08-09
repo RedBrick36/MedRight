@@ -43,7 +43,6 @@ public Treatments() {
     dose = 0.0;
     doseMeasure = "";
     reminder = false;
-    calendarEvent = false;
     monday = false;
     tuesday = false;
     wednesday = false;
@@ -66,7 +65,7 @@ public Treatments() {
      */
     public String getState() {
         return uuid+","+type+","+name+","+condition+","+dose+","+doseMeasure+","
-        +reminder+","+calendarEvent+","+monday+","+tuesday+","+wednesday+","
+        +reminder+","+monday+","+tuesday+","+wednesday+","
         +thursday+","+friday+","+saturday+","+sunday+","+am+","+midAM+","+noon+
         ","+midAft+","+afternoon+","+evening+","+bedtime;
     }
@@ -169,20 +168,6 @@ public Treatments() {
      */
     public void setReminder(boolean reminder) {
         this.reminder = reminder;
-    }
-
-    /**
-     * @return - calendarEvent
-     */
-    public boolean isCalendarEvent() {
-        return calendarEvent;
-    }
-
-    /**
-     * @param calendarEvent - calendarEvent to set
-     */
-    public void setCalendarEvent(boolean calendarEvent) {
-        this.calendarEvent = calendarEvent;
     }
 
     /**
