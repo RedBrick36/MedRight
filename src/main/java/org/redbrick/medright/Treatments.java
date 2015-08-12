@@ -17,7 +17,9 @@ class Treatments {
     private double dose;
     private String doseMeasure;
     private boolean reminder;
-    private boolean calendarEvent;
+    private boolean allDays;
+    private boolean allTimes;
+    private boolean asNeeded;
     private boolean monday;
     private boolean tuesday;
     private boolean wednesday;
@@ -43,6 +45,9 @@ public Treatments() {
     dose = 0.0;
     doseMeasure = "";
     reminder = false;
+    allDays = false;
+    allTimes = false;
+    asNeeded = false;
     monday = false;
     tuesday = false;
     wednesday = false;

@@ -59,12 +59,13 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
     jftfDose = new javax.swing.JFormattedTextField();
     jftfCondition = new javax.swing.JFormattedTextField();
     jlMeasure = new javax.swing.JLabel();
-    jComboBox1 = new javax.swing.JComboBox();
+    leadTime = new javax.swing.JComboBox();
     Done = new javax.swing.JButton();
     jLabel1 = new javax.swing.JLabel();
     MidOfNight = new javax.swing.JCheckBox();
     allDays = new javax.swing.JCheckBox();
     allTimes = new javax.swing.JCheckBox();
+    asNeeded = new javax.swing.JCheckBox();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
     setTitle("Treatement Schedule Creator");
@@ -248,7 +249,6 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
       }
     });
 
-    jftfName.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
     jftfName.setMinimumSize(new java.awt.Dimension(4, 21));
     jftfName.setPreferredSize(new java.awt.Dimension(4, 21));
     jftfName.addActionListener(new java.awt.event.ActionListener() {
@@ -257,7 +257,6 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
       }
     });
 
-    jftfDose.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
     jftfDose.setMinimumSize(new java.awt.Dimension(4, 21));
     jftfDose.setPreferredSize(new java.awt.Dimension(4, 21));
     jftfDose.addActionListener(new java.awt.event.ActionListener() {
@@ -266,7 +265,6 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
       }
     });
 
-    jftfCondition.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
     jftfCondition.setMinimumSize(new java.awt.Dimension(4, 21));
     jftfCondition.setPreferredSize(new java.awt.Dimension(4, 21));
     jftfCondition.addActionListener(new java.awt.event.ActionListener() {
@@ -278,7 +276,7 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
     jlMeasure.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
     jlMeasure.setText("  Measure  ");
 
-    jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "00", "15", "30", "45", "60" }));
+    leadTime.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "00", "15", "30", "45", "60" }));
 
     Done.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
     Done.setText("  Exit  ");
@@ -296,7 +294,8 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
     MidOfNight.setText("Middle of Night");
 
     allDays.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-    allDays.setText("All Days");
+    allDays.setText(" All Days ");
+    allDays.setBorder(null);
     allDays.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         allDaysActionPerformed(evt);
@@ -304,10 +303,20 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
     });
 
     allTimes.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-    allTimes.setText("All Times");
+    allTimes.setText(" All Times ");
+    allTimes.setBorder(null);
     allTimes.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         allTimesActionPerformed(evt);
+      }
+    });
+
+    asNeeded.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+    asNeeded.setText(" As Needed ");
+    asNeeded.setBorder(null);
+    asNeeded.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        asNeededActionPerformed(evt);
       }
     });
 
@@ -321,34 +330,9 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
           .addGroup(SchedCreateLayout.createSequentialGroup()
             .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
               .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SchedCreateLayout.createSequentialGroup()
-                .addGap(0, 13, Short.MAX_VALUE)
+                .addGap(0, 9, Short.MAX_VALUE)
                 .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                   .addComponent(MidOfNight)
-                  .addGroup(SchedCreateLayout.createSequentialGroup()
-                    .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                      .addComponent(jlSchedType)
-                      .addComponent(jcbSchedType, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(51, 51, 51)
-                    .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                      .addComponent(Saturday)
-                      .addComponent(Monday))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                      .addComponent(Sunday)
-                      .addGroup(SchedCreateLayout.createSequentialGroup()
-                        .addComponent(Tuesday)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                          .addGroup(SchedCreateLayout.createSequentialGroup()
-                            .addComponent(allDays)
-                            .addGap(18, 18, 18)
-                            .addComponent(allTimes))
-                          .addGroup(SchedCreateLayout.createSequentialGroup()
-                            .addComponent(Wednesday)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(Thursday)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(Friday))))))
                   .addGroup(SchedCreateLayout.createSequentialGroup()
                     .addComponent(AM)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -362,7 +346,33 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                     .addComponent(Evening)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addComponent(Bedtime))))
+                    .addComponent(Bedtime))
+                  .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                      .addGroup(SchedCreateLayout.createSequentialGroup()
+                        .addComponent(allDays)
+                        .addGap(18, 18, 18)
+                        .addComponent(allTimes))
+                      .addComponent(asNeeded))
+                    .addGroup(SchedCreateLayout.createSequentialGroup()
+                      .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jlSchedType)
+                        .addComponent(jcbSchedType, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                      .addGap(51, 51, 51)
+                      .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Saturday)
+                        .addComponent(Monday))
+                      .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                      .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Sunday)
+                        .addGroup(SchedCreateLayout.createSequentialGroup()
+                          .addComponent(Tuesday)
+                          .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                          .addComponent(Wednesday)
+                          .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                          .addComponent(Thursday)
+                          .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                          .addComponent(Friday)))))))
               .addGroup(SchedCreateLayout.createSequentialGroup()
                 .addComponent(jlScheduleCreator, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -403,7 +413,7 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
                   .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                       .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SchedCreateLayout.createSequentialGroup()
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(leadTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(53, 53, 53))
                       .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addGroup(SchedCreateLayout.createSequentialGroup()
@@ -411,7 +421,7 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
                       .addComponent(Reminders)
                       .addGap(14, 14, 14))))
                 .addGap(13, 13, 13)))
-            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addContainerGap(12, Short.MAX_VALUE))
           .addGroup(SchedCreateLayout.createSequentialGroup()
             .addComponent(jlName)
             .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
@@ -420,13 +430,18 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
       SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(SchedCreateLayout.createSequentialGroup()
         .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-            .addComponent(allDays)
-            .addComponent(allTimes))
           .addGroup(SchedCreateLayout.createSequentialGroup()
             .addGap(2, 2, 2)
-            .addComponent(jlScheduleCreator, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        .addGap(18, 18, 18)
+            .addComponent(jlScheduleCreator, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(26, 26, 26))
+          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SchedCreateLayout.createSequentialGroup()
+            .addContainerGap()
+            .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+              .addComponent(allDays)
+              .addComponent(allTimes))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(asNeeded)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
         .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
           .addComponent(jcbSchedType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addComponent(Monday)
@@ -459,7 +474,7 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGap(5, 5, 5)
-            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(leadTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
           .addGroup(SchedCreateLayout.createSequentialGroup()
             .addComponent(jftfName, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGap(7, 7, 7)
@@ -642,6 +657,19 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
     }           
   }//GEN-LAST:event_allTimesActionPerformed
 
+  private void asNeededActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asNeededActionPerformed
+    if (asNeeded.isSelected ()){
+      Reminders.setSelected (false);
+      Reminders.setEnabled (false);
+      leadTime.setEnabled (false);      
+    }
+    else {
+      Reminders.setSelected (false);
+      Reminders.setEnabled (true);
+      leadTime.setEnabled (true);
+    }
+  }//GEN-LAST:event_asNeededActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -706,7 +734,7 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
   private javax.swing.JCheckBox Wednesday;
   private javax.swing.JCheckBox allDays;
   private javax.swing.JCheckBox allTimes;
-  private javax.swing.JComboBox jComboBox1;
+  private javax.swing.JCheckBox asNeeded;
   private javax.swing.JLabel jLabel1;
   private javax.swing.JComboBox jcbSchedType;
   private javax.swing.JComboBox jcbSize;
@@ -719,5 +747,6 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
   private javax.swing.JLabel jlName;
   private javax.swing.JLabel jlSchedType;
   private javax.swing.JLabel jlScheduleCreator;
+  private javax.swing.JComboBox leadTime;
   // End of variables declaration//GEN-END:variables
 }
