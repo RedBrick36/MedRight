@@ -28,19 +28,22 @@ class GenUUID {
     private final int[] pillCounter;
     private final int[] liquidCounter;
     private final int[] topicalCounter;
-    private final int[] fitnessCounter;
+    private final int[] injectionCounter;
+    private final int[] supplementsCounter;
     
     // Declare variables for indexing the elements of the arrays   
     private int pO = 0;
     private int lO = 0;
     private int tO = 0;
-    private int fO = 0;
+    private int iO  = 0;
+    private int sO = 0;
     
     // Declare variables for assigning values to array elements by type
     private int p = 0;
     private int l = 100;
     private int t = 200;
-    private int f = 300;
+    private int i = 300;
+    private int s = 400;
     
     // Declare variable for returning a unique uuid
     private int uuid;
@@ -64,7 +67,8 @@ class GenUUID {
     Pill array elements will be assigned values 0 - 29
     Liquid array elements will be assigned values 100 - 114
     Topical array elements will be assigned values 200 - 209
-    Fitness array elements will be assigned values 300 - 319
+    Injection array elements will be assigned values 300 - 305
+    Supplement array elements will be assigned values 400 - 419
             
     The size of the array limits how many entries of each type the user can enter
     The numbers chosen here should be plenty large enough for any one person.
@@ -72,7 +76,8 @@ class GenUUID {
         this.pillCounter = new int[30];
         this.liquidCounter = new int[15];
         this.topicalCounter = new int[10];
-        this.fitnessCounter = new int[20];
+        this.injectionCounter = new int[6];
+        this.supplementsCounter = new int[20];
       
     /*
     Initialize each array with a specific sequence of digits based upon their type
@@ -93,11 +98,23 @@ class GenUUID {
             this.topicalCounter[o] = t;
             t++;
         }
+        for (int o = 0; o <= 5; o++) {
+            this.injectionCounter[o] = i;
+            i++;
+        }
          for (int o = 0; o <= 19; o++){
-            this.fitnessCounter[o] = f;
-            f++;
+            this.supplementsCounter[o] = s;
+            s++;
         }
 
+    }
+    // Setter and Getter for type field    
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
     /* 
     The goal of this next section is two-fold:
@@ -116,8 +133,11 @@ class GenUUID {
                 case "Topical":
                     pltf = tO;
                     break;
-                case "Fitness":
-                    pltf = fO;
+                case "Injection":
+                    pltf = iO;
+                    break;
+                case "Supplement":
+                    pltf = sO;
                     break;
             }
         }
@@ -125,7 +145,7 @@ class GenUUID {
         2. Assign uuid the value within the array that is at the current
         index/offset for that particular array. Each time a new schedule object
         is instantiated, it will pull its uuid from this object. The indexer
-        (pO,lO,tO,fO) is incremented as a part of the process, so that the
+        (pO,lO,tO,iO, sO) is incremented as a part of the process, so that the
         next time the same type is passed in for a uuid, it will pull the value from
         the next element in its associated array.
          */
@@ -142,20 +162,11 @@ class GenUUID {
                 uuid = this.topicalCounter[pltf];
                 tO++;
                 break;
-            case "Fitness":
-                uuid = this.fitnessCounter[pltf];
-                fO++;
+            case "Supplement":
+                uuid = this.supplementsCounter[pltf];
+                sO++;
                 break;
         }
         return uuid;
      }
-// Setter and Getter for type field
-     
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
 }
