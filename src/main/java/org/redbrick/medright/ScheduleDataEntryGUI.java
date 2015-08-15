@@ -683,11 +683,58 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
       leadTime.setEnabled (false);
       allTimes.setSelected(false);
       allDays.setSelected ( false);
+      AM.setEnabled (false);
+      MidMorn.setEnabled (false);
+      Noon.setEnabled (false);
+      MidAft.setEnabled (false);
+      Afternoon.setEnabled (false);
+      Evening.setEnabled (false);
+      Bedtime.setEnabled (false);
+      MidOfNight.setEnabled (false);
+      Monday.setEnabled (false);
+      Tuesday.setEnabled (false);
+      Wednesday.setEnabled (false);
+      Thursday.setEnabled (false);
+      Friday.setEnabled (false);
+      Saturday.setEnabled (false);
+      Sunday.setEnabled (false);
+      AM.setSelected (false);
+      MidMorn.setSelected (false);
+      Noon.setSelected (false);
+      MidAft.setSelected (false);
+      Afternoon.setSelected (false);
+      Evening.setSelected (false);
+      Bedtime.setSelected (false);
+      MidOfNight.setSelected (false);
+      Monday.setSelected (false);
+      Tuesday.setSelected (false);
+      Wednesday.setSelected (false);
+      Thursday.setSelected (false);
+      Friday.setSelected (false);
+      Saturday.setSelected (false);
+      Sunday.setSelected (false);
+      
+      
     }
     else {
       Reminders.setSelected (false);
       Reminders.setEnabled (true);
       leadTime.setEnabled (true);
+            AM.setEnabled (true);
+      MidMorn.setEnabled (true);
+      Noon.setEnabled (true);
+      MidAft.setEnabled (true);
+      Afternoon.setEnabled (true);
+      Evening.setEnabled (true);
+      Bedtime.setEnabled (true);
+      MidOfNight.setEnabled (true);
+      Monday.setEnabled (true);
+      Tuesday.setEnabled (true);
+      Wednesday.setEnabled (true);
+      Thursday.setEnabled (true);
+      Friday.setEnabled (true);
+      Saturday.setEnabled (true);
+      Sunday.setEnabled (true);
     }
   }//GEN-LAST:event_asNeededActionPerformed
 

@@ -871,11 +871,11 @@ public class MedRightStartGUI extends javax.swing.JFrame {
       }
     });
 
-    jTextArea1.setColumns(1);
+    jTextArea1.setColumns(2);
+    jTextArea1.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
     jTextArea1.setRows(1);
     jTextArea1.setAutoscrolls(false);
     jTextArea1.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), javax.swing.BorderFactory.createTitledBorder(null, "Time to Next Treatment", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.ABOVE_TOP, new java.awt.Font("Dialog", 1, 18)))); // NOI18N
-    jTextArea1.setBounds(new java.awt.Rectangle(0, 0, 232, 60));
     jTextArea1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
     jTextArea1.setFocusable(false);
     jTextArea1.setMinimumSize(new java.awt.Dimension(232, 60));
