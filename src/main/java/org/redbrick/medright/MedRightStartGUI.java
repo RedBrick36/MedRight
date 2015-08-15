@@ -743,7 +743,7 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     jTextArea2.setForeground(new java.awt.Color(0, 153, 0));
     jTextArea2.setLineWrap(true);
     jTextArea2.setRows(3);
-    jTextArea2.setText("  Buttons will unlock and turn GREEN\n    when the correct password has                        been entered.");
+    jTextArea2.setText("  Buttons will unlock and turn GREEN\n    when the correct password has                           been entered.");
     jTextArea2.setWrapStyleWord(true);
     jTextArea2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
     jTextArea2.setCaretColor(new java.awt.Color(51, 255, 51));
@@ -757,7 +757,7 @@ public class MedRightStartGUI extends javax.swing.JFrame {
     jTextArea3.setColumns(20);
     jTextArea3.setLineWrap(true);
     jTextArea3.setRows(3);
-    jTextArea3.setText("        Your can double-click in the              Password Box and hit Delete to                          clear it.");
+    jTextArea3.setText("        Your can double-click in the              Password Box and hit Delete to                                 clear it.");
     jTextArea3.setWrapStyleWord(true);
     jTextArea3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
     jTextArea3.setFocusable(false);
@@ -801,11 +801,12 @@ public class MedRightStartGUI extends javax.swing.JFrame {
                       .add(jPasswordField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 140, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                       .add(ActionsLayout.createSequentialGroup()
                         .add(39, 39, 39)
-                        .add(submit))))
-                  .add(ActionsLayout.createSequentialGroup()
-                    .add(110, 110, 110)
-                    .add(jScrollPane3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 120, Short.MAX_VALUE)
+                        .add(submit)))
+                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 164, Short.MAX_VALUE))
+                  .add(org.jdesktop.layout.GroupLayout.TRAILING, ActionsLayout.createSequentialGroup()
+                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(jScrollPane3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(129, 129, 129)))
                 .add(jScrollPane4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 179, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))))
         .add(104, 104, 104))
     );
@@ -839,7 +840,7 @@ public class MedRightStartGUI extends javax.swing.JFrame {
         .add(jButton4)
         .add(18, 18, 18)
         .add(jScrollPane2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-        .addContainerGap(153, Short.MAX_VALUE))
+        .addContainerGap(156, Short.MAX_VALUE))
     );
 
     Treatments.addTab("Tools", Actions);
