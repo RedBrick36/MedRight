@@ -701,12 +701,11 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Metal".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
+      UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
+//      for ( javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels () ) {
+//        if ("Metal".equals ( info.getName () ) ) {
+//          javax.swing.UIManager.setLookAndFeel ( info.getClassName () );
+//          break;
         }
         catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(ScheduleDataEntryGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);

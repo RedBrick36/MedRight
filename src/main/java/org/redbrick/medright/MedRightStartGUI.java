@@ -5,6 +5,8 @@
  */
 package org.redbrick.medright;
 
+import javax.swing.UIManager;
+
 /**
  *
  * @author RedBrick
@@ -1030,13 +1032,12 @@ public class MedRightStartGUI extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Metal".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
+    try {
+      UIManager.setLookAndFeel ("javax.swing.plaf.metal.MetalLookAndFeel");
+//      for ( javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels () ) {
+//        if ("Metal".equals ( info.getName () ) ) {
+//          javax.swing.UIManager.setLookAndFeel ( info.getClassName () );
+//          break;
         }
         catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(MedRightStartGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);

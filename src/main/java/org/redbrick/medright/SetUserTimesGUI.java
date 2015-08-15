@@ -5,6 +5,9 @@
  */
 package org.redbrick.medright;
 
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+
 /**
  *
  * @author RedBrick
@@ -268,7 +271,7 @@ public class SetUserTimesGUI extends javax.swing.JFrame {
   /**
    * @param args the command line arguments
    */
-  public static void main (String args[]) {
+  public static void main (String args[]) throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
     /*
      * Set the Nimbus look and feel
      */
@@ -278,12 +281,11 @@ public class SetUserTimesGUI extends javax.swing.JFrame {
      * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
      */
     try {
-      for ( javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels () ) {
-        if ("Metal".equals ( info.getName () ) ) {
-          javax.swing.UIManager.setLookAndFeel ( info.getClassName () );
-          break;
-        }
-      }
+      UIManager.setLookAndFeel ("javax.swing.plaf.metal.MetalLookAndFeel");
+//      for ( javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels () ) {
+//        if ("Metal".equals ( info.getName () ) ) {
+//          javax.swing.UIManager.setLookAndFeel ( info.getClassName () );
+//          break;
     } catch ( ClassNotFoundException ex ) {
       java.util.logging.Logger.getLogger (SetUserTimesGUI.class.getName () ).log ( java.util.logging.Level.SEVERE, null, ex );
     } catch ( InstantiationException ex ) {
