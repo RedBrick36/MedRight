@@ -1,7 +1,7 @@
 ----------------------------------------------------------------
-Wed Aug 19 07:16:25 CDT 2015:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-014f-45e3-90fd-000006d35c18 
-on database directory /Users/RedBrick/NetBeansProjects/MedRight/MedRight/treatments with class loader sun.misc.Launcher$AppClassLoader@28d93b30 
+Wed Aug 19 15:56:21 CDT 2015:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-014f-47bf-9435-000006d42190 
+on database directory /Users/RedBrick/NetBeansProjects/MedRight/MedRight/TestDB with class loader sun.misc.Launcher$AppClassLoader@28d93b30 
 Loaded from file:/Users/RedBrick/.m2/repository/org/apache/derby/derby/10.10.2.0/derby-10.10.2.0.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_45-b14

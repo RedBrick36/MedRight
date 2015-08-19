@@ -49,24 +49,19 @@ public class MedRight {
   public static Connection createDatabaseConnection() throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 
 	try {
-    Class.forName("org.apache.derby.jdbc.EmbeddedDriver").newInstance ();
+    Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
       System.out.println("Successfully located and instantiated Driver...");
     }
     catch (ClassNotFoundException err) {
       System.out.println ("Driver not found: " + err.getMessage ());
-    }
-    catch (InstantiationException err) {
-      System.out.println ("Could not instantiate driver: " + err.getMessage ());
-    }
-    catch (IllegalAccessException err) {
-      System.out.println ("Could not acess driver: " + err.getMessage());
-    }    
+    }   
     try {
-	con = DriverManager.getConnection("jdbc:derby:treatments;create=true");
+	con = DriverManager.getConnection("jdbc:derby:TestDB;create=true;user=app;password=app");
     System.out.println ("Successfully connected to DB...");
     }
     catch (Exception err) {
             System.out.println("Could not connect to DB: " + err.getMessage ());
+            err.printStackTrace ();
     }
     return con;
     }
@@ -86,18 +81,18 @@ public class MedRight {
       }      
       try {
         statement = connection.createStatement ();
-        resultSet = statement.executeQuery ("Select * from treatments");
+        resultSet = statement.executeQuery ("select * from APP.TESTSCHED");
           while (resultSet.next ()) {
             System.out.println(resultSet.getString (1) + ", " + resultSet.getString (2) + ", " + resultSet.getString (3));
             }
           }
       catch (SQLException err){
-        System.out.println("SQL Execution Error: " + err.getMessage());
+        System.out.println("Error executing SQL: " + err.getMessage());
       }
       catch (Exception err){
         System.out.println("Other Error: " + err.getMessage());
       }      
       
-}
+} 
 }
 
