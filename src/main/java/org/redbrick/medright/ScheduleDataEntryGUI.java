@@ -195,7 +195,7 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
     jlDose.setText("Dose");
 
     jcbMeasure.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-    jcbMeasure.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select --", "Grams", "Milligrams", "Micrograms", "I.U.", "USP", "Milliliters", "CC's", "Ounces", "Teaspoons", "Tablespoons", "Cups", "Application" }));
+    jcbMeasure.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select --", "Grams", "Milligrams", "Micrograms", "I.U.", "USP", "Milliliters", "CC's", "Ounces", "Teaspoons", "Tablespoons", "Cups", "Tablet(s)", "Application" }));
     jcbMeasure.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 204), 1, true));
     jcbMeasure.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {

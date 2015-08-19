@@ -37,9 +37,67 @@
  */
 package org.redbrick.medright;
 
-public class MedRight {
+import java.sql.*;
 
-    public static void main(String[] args) {
- // test   
+public class MedRight {
+  
+  private static Connection con;
+  private static Statement statement;
+  private static ResultSet resultSet;
+  private static Connection connection;
+    
+  public static Connection createDatabaseConnection() throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+
+	try {
+    Class.forName("org.apache.derby.jdbc.EmbeddedDriver").newInstance ();
+      System.out.println("Successfully located and instantiated Driver...");
     }
+    catch (ClassNotFoundException err) {
+      System.out.println ("Driver not found: " + err.getMessage ());
+    }
+    catch (InstantiationException err) {
+      System.out.println ("Could not instantiate driver: " + err.getMessage ());
+    }
+    catch (IllegalAccessException err) {
+      System.out.println ("Could not acess driver: " + err.getMessage());
+    }    
+    try {
+	con = DriverManager.getConnection("jdbc:derby:treatments;create=true");
+    System.out.println ("Successfully connected to DB...");
+    }
+    catch (Exception err) {
+            System.out.println("Could not connect to DB: " + err.getMessage ());
+    }
+    return con;
+    }
+
+    public static void main(String[] args) throws SQLException, InstantiationException, ClassNotFoundException, IllegalAccessException {
+      try {
+      connection = createDatabaseConnection();
+      } 
+      catch (InstantiationException err) {
+        System.out.println("Connection Object Creation Error: " + err.getMessage()); 
+      }
+      catch (ClassNotFoundException err) {
+        System.out.println("Class Error: " + err.getMessage()); 
+      }
+      catch (IllegalAccessException err) {
+        System.out.println("Access Error: " + err.getMessage()); 
+      }      
+      try {
+        statement = connection.createStatement ();
+        resultSet = statement.executeQuery ("Select * from treatments");
+          while (resultSet.next ()) {
+            System.out.println(resultSet.getString (1) + ", " + resultSet.getString (2) + ", " + resultSet.getString (3));
+            }
+          }
+      catch (SQLException err){
+        System.out.println("SQL Execution Error: " + err.getMessage());
+      }
+      catch (Exception err){
+        System.out.println("Other Error: " + err.getMessage());
+      }      
+      
 }
+}
+
