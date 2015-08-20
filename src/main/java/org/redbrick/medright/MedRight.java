@@ -44,7 +44,10 @@ public class MedRight {
   private static Connection con;
   private static Statement statement;
   private static ResultSet resultSet;
+  private static ResultSet rs;
   private static Connection connection;
+  private static DatabaseMetaData dbmd;
+  private static boolean success;
     
   public static Connection createDatabaseConnection() throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 
@@ -52,16 +55,15 @@ public class MedRight {
     Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
       System.out.println("Successfully located and instantiated Driver...");
     }
-    catch (ClassNotFoundException err) {
+    catch (Exception err) {
       System.out.println ("Driver not found: " + err.getMessage ());
     }   
     try {
-	con = DriverManager.getConnection("jdbc:derby:TestDB;create=true;user=app;password=app");
+	con = DriverManager.getConnection("jdbc:derby:/Users/RedBrick/NetBeansProjects/MedRight/treatments;create=true;user=app;password=root");
     System.out.println ("Successfully connected to DB...");
     }
     catch (Exception err) {
             System.out.println("Could not connect to DB: " + err.getMessage ());
-            err.printStackTrace ();
     }
     return con;
     }
@@ -78,21 +80,32 @@ public class MedRight {
       }
       catch (IllegalAccessException err) {
         System.out.println("Access Error: " + err.getMessage()); 
-      }      
-      try {
-        statement = connection.createStatement ();
-        resultSet = statement.executeQuery ("select * from APP.TESTSCHED");
-          while (resultSet.next ()) {
-            System.out.println(resultSet.getString (1) + ", " + resultSet.getString (2) + ", " + resultSet.getString (3));
-            }
-          }
+      }
+      try { 
+        dbmd = connection.getMetaData ();
+        rs = dbmd.getTables (null, "APPS", "TREATMENTS", null);
+         if (!rs.next()) {
+           System.out.println("Table already exists -- skipping creation of TREATMENTS table"); 
+         } 
+         else {
+           System.out.println("Table does not already exist. Creating it now."); 
+           statement = connection.createStatement ();
+           success = statement.execute ("CREATE TABLE TREATMENTS (uuid INTEGER default 0 primary key, type VARCHAR(10), name VARCHAR(40), condition VARCHAR(45), dose DOUBLE default 0, measure VARCHAR(11), reminder BOOLEAN default false, monday BOOLEAN default false, tuesday BOOLEAN default false, wednesday BOOLEAN default false, thursday BOOLEAN default false, friday BOOLEAN default false, saturday BOOLEAN default false, sunday BOOLEAN default false, am BOOLEAN default false, midam BOOLEAN default false, noon BOOLEAN default false, midaft BOOLEAN default false, afternoon BOOLEAN default false, evening BOOLEAN default false, bedtime BOOLEAN default false, midofnight BOOLEAN default false, allDays BOOLEAN default false, allTimes BOOLEAN default false, asNeeded BOOLEAN default false, leadTime INTEGER default 0, otf VARCHAR(20))");
+           statement.closeOnCompletion ();
+           System.out.println ("Table Treatments was created ");
+         }
+      statement = connection.createStatement ();
+      resultSet = statement.executeQuery ("SELECT COUNT (*) from APP.TREATMENTS");
+      /*
+       * TODO: Develop code to read and print out all rows of table's contents'.
+       */
+      }
       catch (SQLException err){
         System.out.println("Error executing SQL: " + err.getMessage());
       }
       catch (Exception err){
         System.out.println("Other Error: " + err.getMessage());
-      }      
-      
-} 
+      }        
+  } 
 }
 
