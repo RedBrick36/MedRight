@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package org.redbrick.medright;
-import java.util.*;
+
 import javax.swing.*;
 /**
  *
@@ -771,6 +771,7 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new ScheduleDataEntryGUI().setVisible(true);
             }

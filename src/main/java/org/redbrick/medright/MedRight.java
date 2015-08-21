@@ -38,7 +38,6 @@
 package org.redbrick.medright;
 
 import java.sql.*;
-import javax.swing.JOptionPane;
 
 public class MedRight {
   

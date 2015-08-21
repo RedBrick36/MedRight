@@ -10,6 +10,7 @@ package org.redbrick.medright;
  * @author RedBrick
  */
 public class DBaseEditor extends javax.swing.JFrame {
+  private static final long serialVersionUID = 1L;
 
   /**
    * Creates new form DBaseEditor

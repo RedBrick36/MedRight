@@ -11,7 +11,6 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -24,7 +23,6 @@ public class Login {
   private static Connection connection;
   private static DatabaseMetaData dbmd;
   private static boolean success;
-  private static Connection Connection;
 
     
   public static Connection createDatabaseConnection() throws ClassNotFoundException, InstantiationException, IllegalAccessException {
@@ -75,7 +73,6 @@ public class Login {
          catch (SQLException err) {
                  System.out.println("SQL Error: " +err.getMessage());
                  }
-      JOptionPane.showMessageDialog(null, "Connected!");
       return connection;
       
       }

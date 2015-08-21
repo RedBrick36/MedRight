@@ -19,6 +19,7 @@ import javax.swing.JPanel;
  * @author RedBrick
  */
 public class MedRightDBaseEditorGUI extends JPanel {
+  private static final long serialVersionUID = 1L;
   
   public MedRightDBaseEditorGUI () {
     initComponents ();
@@ -809,6 +810,7 @@ public class MedRightDBaseEditorGUI extends JPanel {
      * Create and display the form
      */
     EventQueue.invokeLater ( new Runnable () {
+      @Override
       public void run () {
         JFrame frame = new JFrame ();
         frame.setContentPane ( new MedRightDBaseEditorGUI () );

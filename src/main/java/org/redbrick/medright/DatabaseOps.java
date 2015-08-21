@@ -19,34 +19,6 @@ public class DatabaseOps {
   private static Connection connection;
   private static int rowsAffected;
 
-  public static Connection createDatabaseConnection () throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-    try {
-      Class.forName ( "org.apache.derby.jdbc.EmbeddedDriver" );
-      System.out.println ( "Successfully located and instantiated Driver..." );
-    } catch ( Exception err ) {
-      System.out.println ( "Driver not found: " + err.getMessage () );
-    }
-    try {
-      con = DriverManager.getConnection ( "jdbc:derby:/Users/RedBrick/NetBeansProjects/MedRight/treatments;create=true;user=app;password=root" );
-      System.out.println ( "Successfully connected to DB..." );
-    } catch ( Exception err ) {
-      System.out.println ( "Could not connect to DB: " + err.getMessage () );
-    }
-    return con;
-  }
-
-  public static void main (String[] args) throws SQLException, InstantiationException, ClassNotFoundException, IllegalAccessException {
-    try {
-      connection = createDatabaseConnection ();
-    } catch ( InstantiationException err ) {
-      System.out.println ( "Connection Object Creation Error: " + err.getMessage () );
-    } catch ( ClassNotFoundException err ) {
-      System.out.println ( "Class Error: " + err.getMessage () );
-    } catch ( IllegalAccessException err ) {
-      System.out.println ( "Access Error: " + err.getMessage () );
-    }
-  }
-
   public static boolean backupDatabase () throws SQLException {
 
     try {
