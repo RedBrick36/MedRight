@@ -111,7 +111,7 @@
                                           <Component id="saturdayField" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
                                           <Component id="sundayField" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="62" max="32767" attributes="0"/>
+                                      <EmptySpace pref="57" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="afternoonLabel" min="-2" max="-2" attributes="0"/>
                                           <Component id="amLabel" min="-2" max="-2" attributes="0"/>
@@ -583,7 +583,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="otfLabel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Otf:"/>
+        <Property name="text" type="java.lang.String" value="Other Times:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="uuidField">

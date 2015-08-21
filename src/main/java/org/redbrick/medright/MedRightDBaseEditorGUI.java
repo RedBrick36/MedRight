@@ -250,7 +250,7 @@ public class MedRightDBaseEditorGUI extends JPanel {
 
     leadtimeLabel.setText("Leadtime:");
 
-    otfLabel.setText("Otf:");
+    otfLabel.setText("Other Times:");
 
     org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, masterTable, org.jdesktop.beansbinding.ELProperty.create("${selectedElement.uuid}"), uuidField, org.jdesktop.beansbinding.BeanProperty.create("text"));
     binding.setSourceUnreadableValue("null");
@@ -488,7 +488,7 @@ public class MedRightDBaseEditorGUI extends JPanel {
                       .add(fridayField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 300, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                       .add(saturdayField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 300, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                       .add(sundayField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 300, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 62, Short.MAX_VALUE)
+                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 57, Short.MAX_VALUE)
                     .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                       .add(afternoonLabel)
                       .add(amLabel)
