@@ -96,9 +96,6 @@ public class MedRight {
            System.out.println ("Table Treatments was created ");
          }
          statement = connection.createStatement ();
-         rowsAffected = statement.executeUpdate ("INSERT INTO APP.TREATMENTS " + "VALUES (000, 'Pill', 'Linsinopril', 'Blood Pressure', 20.0, 'Milligrams', true, true, true, true, true, true, true, true, true, false, false, false, false, false, true, false, true, false, false, 0, '--')");
-         statement.closeOnCompletion ();
-         statement = connection.createStatement ();
          resultSet = statement.executeQuery ("SELECT * from APP.TREATMENTS");
           while (resultSet.next ()) {      
             int uuid = resultSet.getInt(1);
@@ -137,7 +134,8 @@ public class MedRight {
       }
       catch (Exception err){
         System.out.println("Other Error: " + err.getMessage());
-      }        
+      }
+      connection.close ();      
   } 
 }
 
