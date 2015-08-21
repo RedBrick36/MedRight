@@ -4,42 +4,42 @@ package org.redbrick.medright;
  *
  * @author RedBrick
  */
-
 public class Treatment {
-    
-    /**
-     * Define the field-set for the class
-     */
-    protected int uuid;
-    protected String type;
-    protected String name;
-    protected String condition;
-    protected double dose;
-    protected String doseMeasure;
-    protected boolean reminder;
-    protected boolean monday;
-    protected boolean tuesday;
-    protected boolean wednesday;
-    protected boolean thursday;
-    protected boolean friday;
-    protected boolean saturday;
-    protected boolean sunday;
-    protected boolean am;
-    protected boolean midAM;
-    protected boolean noon;
-    protected boolean midAft;
-    protected boolean afternoon;
-    protected boolean evening;
-    protected boolean bedtime;
-    protected boolean AllDays;
-    protected boolean AllTimes;
-    protected boolean AsNeeded;
-    protected int LeadTime;
-    protected String otf;
-    /**
-     * Constructor 
-     */
-public Treatment() {
+
+  /**
+   * Define the field-set for the class
+   */
+  protected int uuid;
+  protected String type;
+  protected String name;
+  protected String condition;
+  protected double dose;
+  protected String doseMeasure;
+  protected boolean reminder;
+  protected boolean monday;
+  protected boolean tuesday;
+  protected boolean wednesday;
+  protected boolean thursday;
+  protected boolean friday;
+  protected boolean saturday;
+  protected boolean sunday;
+  protected boolean am;
+  protected boolean midAM;
+  protected boolean noon;
+  protected boolean midAft;
+  protected boolean afternoon;
+  protected boolean evening;
+  protected boolean bedtime;
+  protected boolean AllDays;
+  protected boolean AllTimes;
+  protected boolean AsNeeded;
+  protected int LeadTime;
+  protected String otf;
+
+  /**
+   * Constructor
+   */
+  public Treatment () {
     uuid = 0;
     type = "";
     name = "";
@@ -66,15 +66,17 @@ public Treatment() {
     AsNeeded = false;
     LeadTime = 00;
     otf = "";
-    }
-    /**
-     * Return the state of the object as a comma delimited string
-     * for writing to database file later
-     * @return 
-     */
-    public String getStringState() {
-        return getUuid ()+", "+getType ()+", "+getName ()+", "+getCondition ()+", "+getDose ()+", "+getDoseMeasure ()+", "+isReminder ()+", "+isMonday ()+", "+isTuesday ()+", "+isWednesday ()+", "+isThursday ()+", "+isFriday ()+", "+isSaturday ()+", "+isSunday ()+", "+isAm ()+", "+isMidAM ()+", "+isNoon ()+", "+isMidAft ()+", "+isAfternoon ()+", "+isEvening ()+", "+isBedtime ()+", "+isAllDays ()+", "+isAllTimes ()+", "+isAsNeeded ()+", "+getLeadTime ()+", "+getotf ();
-    }
+  }
+
+  /**
+   * Return the state of the object as a comma delimited string
+   * for writing to database file later
+   *
+   * @return
+   */
+  public String getStringState () {
+    return getUuid () + ", " + getType () + ", " + getName () + ", " + getCondition () + ", " + getDose () + ", " + getDoseMeasure () + ", " + isReminder () + ", " + isMonday () + ", " + isTuesday () + ", " + isWednesday () + ", " + isThursday () + ", " + isFriday () + ", " + isSaturday () + ", " + isSunday () + ", " + isAm () + ", " + isMidAM () + ", " + isNoon () + ", " + isMidAft () + ", " + isAfternoon () + ", " + isEvening () + ", " + isBedtime () + ", " + isAllDays () + ", " + isAllTimes () + ", " + isAsNeeded () + ", " + getLeadTime () + ", " + getotf ();
+  }
 
   /**
    * @return the uuid
@@ -411,34 +413,33 @@ public Treatment() {
   protected void setAsNeeded (boolean asNeeded) {
     this.AsNeeded = asNeeded;
   }
-  
+
   /**
    * @return the leadTime
    */
   protected int getLeadTime () {
     return LeadTime;
   }
-  
+
   /**
    * @param LeadTime the LeadTime to set
    */
   protected void setLeadTime (int LeadTime) {
     this.LeadTime = LeadTime;
   }
-  
-   /**
-   * 
+
+  /**
+   *
    * @return otf
    */
   protected String getotf () {
     return otf;
   }
-  
-    /**
+
+  /**
    * @param otf the otf to set
    */
   protected void setotf (String otf) {
     this.otf = otf;
   }
 }
-

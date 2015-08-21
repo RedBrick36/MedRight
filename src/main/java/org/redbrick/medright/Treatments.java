@@ -23,7 +23,7 @@ import javax.persistence.Transient;
  */
 @Entity
 @Table (name = "TREATMENTS", catalog = "", schema = "APP")
-@NamedQueries ({ 
+@NamedQueries ({
   @NamedQuery (name = "Treatments.findAll", query = "SELECT t FROM Treatments t"),
   @NamedQuery (name = "Treatments.findByUuid", query = "SELECT t FROM Treatments t WHERE t.uuid = :uuid"),
   @NamedQuery (name = "Treatments.findByType", query = "SELECT t FROM Treatments t WHERE t.type = :type"),
@@ -53,6 +53,7 @@ import javax.persistence.Transient;
   @NamedQuery (name = "Treatments.findByLeadtime", query = "SELECT t FROM Treatments t WHERE t.leadtime = :leadtime"),
   @NamedQuery (name = "Treatments.findByOtf", query = "SELECT t FROM Treatments t WHERE t.otf = :otf") })
 public class Treatments implements Serializable {
+
   @Transient
   private PropertyChangeSupport changeSupport = new PropertyChangeSupport ( this );
   private static final long serialVersionUID = 1L;
@@ -423,5 +424,5 @@ public class Treatments implements Serializable {
   public void removePropertyChangeListener (PropertyChangeListener listener) {
     changeSupport.removePropertyChangeListener ( listener );
   }
-  
+
 }

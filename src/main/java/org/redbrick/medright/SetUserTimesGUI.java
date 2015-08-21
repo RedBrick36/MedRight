@@ -13,6 +13,7 @@ import javax.swing.UnsupportedLookAndFeelException;
  * @author RedBrick
  */
 public class SetUserTimesGUI extends javax.swing.JFrame {
+
   private static final long serialVersionUID = 1L;
 
   /**
@@ -276,30 +277,30 @@ public class SetUserTimesGUI extends javax.swing.JFrame {
     /*
      * Set the Nimbus look and feel
      */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+    //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /*
      * If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
      * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
      */
     try {
-      UIManager.setLookAndFeel ("javax.swing.plaf.metal.MetalLookAndFeel");
+      UIManager.setLookAndFeel ( "javax.swing.plaf.metal.MetalLookAndFeel" );
 //      for ( javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels () ) {
 //        if ("Metal".equals ( info.getName () ) ) {
 //          javax.swing.UIManager.setLookAndFeel ( info.getClassName () );
 //          break;
     } catch ( ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex ) {
-      java.util.logging.Logger.getLogger (SetUserTimesGUI.class.getName () ).log ( java.util.logging.Level.SEVERE, null, ex );
+      java.util.logging.Logger.getLogger ( SetUserTimesGUI.class.getName () ).log ( java.util.logging.Level.SEVERE, null, ex );
     }
     //</editor-fold>
     //</editor-fold>
-    
+
         //</editor-fold>
-        //</editor-fold>
+    //</editor-fold>
 
     /*
      * Create and display the form
      */
-    java.awt.EventQueue.invokeLater (new Runnable () {
+    java.awt.EventQueue.invokeLater ( new Runnable () {
       @Override
       public void run () {
         new SetUserTimesGUI ().setVisible ( true );

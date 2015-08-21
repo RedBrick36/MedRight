@@ -13,23 +13,23 @@ public class ClockSync {
   private static byte localSecs = 0;
   private static byte syncSecs = 0;
   private static byte checkSync = 1;
-   
-public static boolean syncClocks() {
-  while (checkSync != 0) {
-    LocalTime sync = LocalTime.now();
-    LocalTime localSync = sync.truncatedTo(ChronoUnit.SECONDS);
-    localSecs = (byte) localSync.getSecond();
 
-    LocalTime syncCheck = LocalTime.of(z, z, z);
-    LocalTime localSecsCheck = syncCheck.truncatedTo(ChronoUnit.SECONDS);
-    syncSecs = (byte) localSecsCheck.getSecond();
+  public static boolean syncClocks () {
+    while ( checkSync != 0 ) {
+      LocalTime sync = LocalTime.now ();
+      LocalTime localSync = sync.truncatedTo ( ChronoUnit.SECONDS );
+      localSecs = (byte) localSync.getSecond ();
 
-    if (localSecs == syncSecs) {
-      checkSync = 0;
-    } else {
-      checkSync = 1;
+      LocalTime syncCheck = LocalTime.of ( z, z, z );
+      LocalTime localSecsCheck = syncCheck.truncatedTo ( ChronoUnit.SECONDS );
+      syncSecs = (byte) localSecsCheck.getSecond ();
+
+      if ( localSecs == syncSecs ) {
+        checkSync = 0;
+      } else {
+        checkSync = 1;
+      }
     }
+    return true;
   }
-  return true;
- }
 }

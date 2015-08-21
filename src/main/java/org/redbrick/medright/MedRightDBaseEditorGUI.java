@@ -19,8 +19,9 @@ import javax.swing.JPanel;
  * @author RedBrick
  */
 public class MedRightDBaseEditorGUI extends JPanel {
+
   private static final long serialVersionUID = 1L;
-  
+
   public MedRightDBaseEditorGUI () {
     initComponents ();
     if ( !Beans.isDesignTime () ) {
@@ -662,18 +663,16 @@ public class MedRightDBaseEditorGUI extends JPanel {
     }
   }// </editor-fold>//GEN-END:initComponents
 
-  
-
   @SuppressWarnings ("unchecked")
     private void refreshButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshButtonActionPerformed
-      entityManager.getTransaction ().rollback ();
-      entityManager.getTransaction ().begin ();
-      java.util.Collection data = query.getResultList ();
-      for ( Object entity : data ) {
-        entityManager.refresh ( entity );
-      }
-      list.clear ();
-      list.addAll ( data );
+    entityManager.getTransaction ().rollback ();
+    entityManager.getTransaction ().begin ();
+    java.util.Collection data = query.getResultList ();
+    for ( Object entity : data ) {
+      entityManager.refresh ( entity );
+    }
+    list.clear ();
+    list.addAll ( data );
     }//GEN-LAST:event_refreshButtonActionPerformed
 
     private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
@@ -695,7 +694,7 @@ public class MedRightDBaseEditorGUI extends JPanel {
       masterTable.setRowSelectionInterval ( row, row );
       masterTable.scrollRectToVisible ( masterTable.getCellRect ( row, 0, true ) );
     }//GEN-LAST:event_newButtonActionPerformed
-  
+
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
       try {
         entityManager.getTransaction ().commit ();
@@ -783,7 +782,7 @@ public class MedRightDBaseEditorGUI extends JPanel {
     /*
      * Set the Nimbus look and feel
      */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+    //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /*
      * If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
      * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
@@ -804,7 +803,7 @@ public class MedRightDBaseEditorGUI extends JPanel {
     } catch ( javax.swing.UnsupportedLookAndFeelException ex ) {
       java.util.logging.Logger.getLogger ( MedRightDBaseEditorGUI.class.getName () ).log ( java.util.logging.Level.SEVERE, null, ex );
     }
-        //</editor-fold>
+    //</editor-fold>
 
     /*
      * Create and display the form
@@ -820,5 +819,5 @@ public class MedRightDBaseEditorGUI extends JPanel {
       }
     } );
   }
-  
+
 }
