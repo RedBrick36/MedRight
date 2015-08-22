@@ -67,22 +67,17 @@ public class MedRight {
     if ( confDisplayContents == JOptionPane.YES_OPTION ) {
       StateOfTheDB.getStateOfDatabase ( connection );
     }
-    int confBackup = JOptionPane.showConfirmDialog ( null, "Would you like to Backup the Database?     ", "Backup Database", JOptionPane.YES_NO_OPTION );
-    if ( confBackup == JOptionPane.YES_OPTION ) {
-      DatabaseOps.backupDatabase (connection);
-    }
     int confCheck = JOptionPane.showConfirmDialog ( null, "Would you like to Check the Database?     ", "Check Database", JOptionPane.YES_NO_OPTION );
     if ( confCheck == JOptionPane.YES_OPTION ) {
-      DatabaseOps.runDbaseChecks (connection);
+      DatabaseOps.runDbaseChecks ( connection );
     }
-    int confOptimize = JOptionPane.showConfirmDialog ( null, "Would you like to Optimize the Database?     ", "Optimize Database", JOptionPane.YES_NO_OPTION );
-    if ( confOptimize == JOptionPane.YES_OPTION ) {
-      DatabaseOps.runDbaseOptimize (connection);
+    int confBackup = JOptionPane.showConfirmDialog ( null, "Would you like to Backup the Database?     ", "Backup Database", JOptionPane.YES_NO_OPTION );
+    if ( confBackup == JOptionPane.YES_OPTION ) {
+      DatabaseOps.backupDatabase ( connection );
     }
-    int confRepair = JOptionPane.showConfirmDialog ( null, "Would you like to Repair the Database?     ", "Repair Database", JOptionPane.YES_NO_OPTION );
-    if ( confRepair == JOptionPane.YES_OPTION ) {
-      DatabaseOps.runDbaseRepair (connection);
-    }    
-    connection.close ();
+    int confBackupTable = JOptionPane.showConfirmDialog ( null, "Would you like to Backup just the Database Table?     ", "Backup Database Table", JOptionPane.YES_NO_OPTION );
+    if ( confBackupTable == JOptionPane.YES_OPTION ) {
+      DatabaseOps.backupDatabaseTable ( connection );
+    }
   }
 }

@@ -5,6 +5,7 @@
  */
 package org.redbrick.medright;
 
+import java.awt.HeadlessException;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
@@ -37,14 +38,13 @@ public class Login {
     try {
       Class.forName ( "org.apache.derby.jdbc.EmbeddedDriver" );
       JOptionPane.showMessageDialog ( null, "Successfully located and instantiated Embedded Driver...    " );
-    } catch ( Exception err ) {
+    } catch ( ClassNotFoundException | HeadlessException err ) {
       JOptionPane.showMessageDialog ( null, err );
     }
     try {
       con = DriverManager.getConnection ( "jdbc:derby:/Users/RedBrick/NetBeansProjects/MedRight/treatments;create=true;user=app;password=root" );
       JOptionPane.showMessageDialog ( null, "Successfully connected to DB...    " );
-    } catch ( Exception err ) {
-      //JOptionPane.showMessageDialog ( null, err );
+    } catch ( SQLException | HeadlessException err ) {
       System.out.println ( "" + err.getMessage());
     }
     return con;
