@@ -44,7 +44,8 @@ public class Login {
       con = DriverManager.getConnection ( "jdbc:derby:/Users/RedBrick/NetBeansProjects/MedRight/treatments;create=true;user=app;password=root" );
       JOptionPane.showMessageDialog ( null, "Successfully connected to DB...    " );
     } catch ( Exception err ) {
-      JOptionPane.showMessageDialog ( null, err );
+      //JOptionPane.showMessageDialog ( null, err );
+      System.out.println ( "" + err.getMessage());
     }
     return con;
   }
