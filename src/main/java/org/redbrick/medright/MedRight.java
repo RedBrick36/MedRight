@@ -63,9 +63,26 @@ public class MedRight {
     } catch ( SQLException | InstantiationException | ClassNotFoundException | IllegalAccessException err ) {
       JOptionPane.showMessageDialog ( null, "Error Logging In to System    " );
     }
-    int reply = JOptionPane.showConfirmDialog ( null, "Would you like to display the State of the Database to the output console?     ", "State of the Database", JOptionPane.YES_NO_OPTION );
-    if ( reply == JOptionPane.YES_OPTION ) {
+    int confDisplayContents = JOptionPane.showConfirmDialog ( null, "Would you like to display the State of the Database to the output console?     ", "State of the Database", JOptionPane.YES_NO_OPTION );
+    if ( confDisplayContents == JOptionPane.YES_OPTION ) {
       StateOfTheDB.getStateOfDatabase ( connection );
     }
+    int confBackup = JOptionPane.showConfirmDialog ( null, "Would you like to Backup the Database?     ", "Backup Database", JOptionPane.YES_NO_OPTION );
+    if ( confBackup == JOptionPane.YES_OPTION ) {
+      DatabaseOps.backupDatabase (connection);
+    }
+    int confCheck = JOptionPane.showConfirmDialog ( null, "Would you like to Check the Database?     ", "Check Database", JOptionPane.YES_NO_OPTION );
+    if ( confCheck == JOptionPane.YES_OPTION ) {
+      DatabaseOps.runDbaseChecks (connection);
+    }
+    int confOptimize = JOptionPane.showConfirmDialog ( null, "Would you like to Optimize the Database?     ", "Optimize Database", JOptionPane.YES_NO_OPTION );
+    if ( confOptimize == JOptionPane.YES_OPTION ) {
+      DatabaseOps.runDbaseOptimize (connection);
+    }
+    int confRepair = JOptionPane.showConfirmDialog ( null, "Would you like to Repair the Database?     ", "Repair Database", JOptionPane.YES_NO_OPTION );
+    if ( confRepair == JOptionPane.YES_OPTION ) {
+      DatabaseOps.runDbaseRepair (connection);
+    }    
+    connection.close ();
   }
 }
