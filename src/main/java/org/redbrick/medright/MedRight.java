@@ -38,46 +38,18 @@
 package org.redbrick.medright;
 
 import java.sql.*;
-import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
 public class MedRight {
 
-  private static Connection connection;
-  private static boolean success;
+  private Connection connection;
+  private boolean success;
 
   public static void main (String[] args) throws SQLException, InstantiationException, ClassNotFoundException, IllegalAccessException {
     try {
       UIManager.setLookAndFeel ( "javax.swing.plaf.metal.MetalLookAndFeel" );
     } catch ( ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex ) {
       java.util.logging.Logger.getLogger ( SetUserTimesGUI.class.getName () ).log ( java.util.logging.Level.SEVERE, null, ex );
-    }
-    try {
-      connection = Login.createDatabaseConnection ();
-      success = Login.createTableIfNecessary ();
-      if ( !success ) {
-        JOptionPane.showMessageDialog ( null, "Database Table already exist. Skipping creation of TREATMENTS table.     " );
-      } else {
-        JOptionPane.showMessageDialog ( null, "Created new blank database table.    " );
-      }
-    } catch ( SQLException | InstantiationException | ClassNotFoundException | IllegalAccessException err ) {
-      JOptionPane.showMessageDialog ( null, "Error Logging In to System    " );
-    }
-    int confDisplayContents = JOptionPane.showConfirmDialog ( null, "Would you like to display the State of the Database to the output console?     ", "State of the Database", JOptionPane.YES_NO_OPTION );
-    if ( confDisplayContents == JOptionPane.YES_OPTION ) {
-      StateOfTheDB.getStateOfDatabase ( connection );
-    }
-    int confCheck = JOptionPane.showConfirmDialog ( null, "Would you like to Check the Database?     ", "Check Database", JOptionPane.YES_NO_OPTION );
-    if ( confCheck == JOptionPane.YES_OPTION ) {
-      DatabaseOps.runDbaseChecks ( connection );
-    }
-    int confBackup = JOptionPane.showConfirmDialog ( null, "Would you like to Backup the Database?     ", "Backup Database", JOptionPane.YES_NO_OPTION );
-    if ( confBackup == JOptionPane.YES_OPTION ) {
-      DatabaseOps.backupDatabase ( connection );
-    }
-    int confBackupTable = JOptionPane.showConfirmDialog ( null, "Would you like to Backup just the Database Table?     ", "Backup Database Table", JOptionPane.YES_NO_OPTION );
-    if ( confBackupTable == JOptionPane.YES_OPTION ) {
-      DatabaseOps.backupDatabaseTable ( connection );
     }
   }
 }

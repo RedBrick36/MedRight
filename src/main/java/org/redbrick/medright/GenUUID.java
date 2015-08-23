@@ -109,7 +109,6 @@ class GenUUID {
   }
 
   // Setter and Getter for type field    
-
   public String getType () {
     return type;
   }

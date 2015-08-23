@@ -8,7 +8,6 @@ package org.redbrick.medright;
 import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.*;
 
 /**
  *
@@ -18,9 +17,8 @@ public class SecurityCheck extends javax.swing.JFrame {
 
   private static final long serialVersionUID = 1L;
   private String[] args;
-  private final boolean success;
 
-  private Connection connection = null;
+  private final Connection connection = null;
 
   /**
    * Creates new form SecurityCheck
@@ -32,8 +30,7 @@ public class SecurityCheck extends javax.swing.JFrame {
    */
   public SecurityCheck () throws ClassNotFoundException, InstantiationException, IllegalAccessException, SQLException {
     initComponents ();
-    connection = Login.createDatabaseConnection ();
-    success = Login.createTableIfNecessary ();
+
   }
 
   /**
@@ -46,103 +43,105 @@ public class SecurityCheck extends javax.swing.JFrame {
   // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
   private void initComponents() {
 
+    UserName = new javax.swing.JLabel();
+    Password = new javax.swing.JLabel();
+    jTextFieldUserName = new javax.swing.JTextField();
+    jPasswordField = new javax.swing.JPasswordField();
+    btnSubmit = new javax.swing.JButton();
+    jLabel1 = new javax.swing.JLabel();
     menuBar = new javax.swing.JMenuBar();
-    fileMenu = new javax.swing.JMenu();
-    openMenuItem = new javax.swing.JMenuItem();
-    saveMenuItem = new javax.swing.JMenuItem();
-    saveAsMenuItem = new javax.swing.JMenuItem();
-    exitMenuItem = new javax.swing.JMenuItem();
-    editMenu = new javax.swing.JMenu();
-    cutMenuItem = new javax.swing.JMenuItem();
-    copyMenuItem = new javax.swing.JMenuItem();
-    pasteMenuItem = new javax.swing.JMenuItem();
-    deleteMenuItem = new javax.swing.JMenuItem();
-    helpMenu = new javax.swing.JMenu();
-    contentsMenuItem = new javax.swing.JMenuItem();
-    aboutMenuItem = new javax.swing.JMenuItem();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-    fileMenu.setMnemonic('f');
-    fileMenu.setText("File");
+    UserName.setFont(new java.awt.Font("Dialog", 0, 13)); // NOI18N
+    UserName.setText("UserName");
 
-    openMenuItem.setMnemonic('o');
-    openMenuItem.setText("Open");
-    fileMenu.add(openMenuItem);
+    Password.setFont(new java.awt.Font("Dialog", 0, 13)); // NOI18N
+    Password.setText("Password");
 
-    saveMenuItem.setMnemonic('s');
-    saveMenuItem.setText("Save");
-    fileMenu.add(saveMenuItem);
-
-    saveAsMenuItem.setMnemonic('a');
-    saveAsMenuItem.setText("Save As ...");
-    saveAsMenuItem.setDisplayedMnemonicIndex(5);
-    fileMenu.add(saveAsMenuItem);
-
-    exitMenuItem.setMnemonic('x');
-    exitMenuItem.setText("Exit");
-    exitMenuItem.addActionListener(new java.awt.event.ActionListener() {
+    jTextFieldUserName.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+    jTextFieldUserName.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        exitMenuItemActionPerformed(evt);
+        jTextFieldUserNameActionPerformed(evt);
       }
     });
-    fileMenu.add(exitMenuItem);
 
-    menuBar.add(fileMenu);
+    jPasswordField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+    jPasswordField.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jPasswordFieldActionPerformed(evt);
+      }
+    });
 
-    editMenu.setMnemonic('e');
-    editMenu.setText("Edit");
+    btnSubmit.setText("Submit");
+    btnSubmit.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+    btnSubmit.addMouseListener(new java.awt.event.MouseAdapter() {
+      public void mouseClicked(java.awt.event.MouseEvent evt) {
+        btnSubmitMouseClicked(evt);
+      }
+    });
 
-    cutMenuItem.setMnemonic('t');
-    cutMenuItem.setText("Cut");
-    editMenu.add(cutMenuItem);
+    jLabel1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+    jLabel1.setText("Please Enter Your Username and Password");
 
-    copyMenuItem.setMnemonic('y');
-    copyMenuItem.setText("Copy");
-    editMenu.add(copyMenuItem);
-
-    pasteMenuItem.setMnemonic('p');
-    pasteMenuItem.setText("Paste");
-    editMenu.add(pasteMenuItem);
-
-    deleteMenuItem.setMnemonic('d');
-    deleteMenuItem.setText("Delete");
-    editMenu.add(deleteMenuItem);
-
-    menuBar.add(editMenu);
-
-    helpMenu.setMnemonic('h');
-    helpMenu.setText("Help");
-
-    contentsMenuItem.setMnemonic('c');
-    contentsMenuItem.setText("Contents");
-    helpMenu.add(contentsMenuItem);
-
-    aboutMenuItem.setMnemonic('a');
-    aboutMenuItem.setText("About");
-    helpMenu.add(aboutMenuItem);
-
-    menuBar.add(helpMenu);
-
+    menuBar.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Login", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 18))); // NOI18N
     setJMenuBar(menuBar);
 
     org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
     getContentPane().setLayout(layout);
     layout.setHorizontalGroup(
       layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-      .add(0, 400, Short.MAX_VALUE)
+      .add(layout.createSequentialGroup()
+        .addContainerGap(57, Short.MAX_VALUE)
+        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+          .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
+            .add(btnSubmit, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 68, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+            .add(147, 147, 147))
+          .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
+            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+              .add(UserName)
+              .add(Password))
+            .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+              .add(jTextFieldUserName, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 100, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+              .add(jPasswordField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 100, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+            .add(129, 129, 129))
+          .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
+            .add(jLabel1)
+            .add(39, 39, 39))))
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-      .add(0, 279, Short.MAX_VALUE)
+      .add(layout.createSequentialGroup()
+        .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        .add(jLabel1)
+        .add(18, 18, 18)
+        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+          .add(jTextFieldUserName, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+          .add(UserName, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 30, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+          .add(jPasswordField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+          .add(Password, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 30, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+        .add(25, 25, 25)
+        .add(btnSubmit, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 28, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+        .add(26, 26, 26))
     );
 
     pack();
   }// </editor-fold>//GEN-END:initComponents
 
-    private void exitMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitMenuItemActionPerformed
-      System.exit ( 0 );
-    }//GEN-LAST:event_exitMenuItemActionPerformed
+  private void btnSubmitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSubmitMouseClicked
+    
+  }//GEN-LAST:event_btnSubmitMouseClicked
+
+  private void jTextFieldUserNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldUserNameActionPerformed
+    // TODO add your handling code here:
+  }//GEN-LAST:event_jTextFieldUserNameActionPerformed
+
+  private void jPasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordFieldActionPerformed
+    // TODO add your handling code here:
+  }//GEN-LAST:event_jPasswordFieldActionPerformed
 
   /**
    * @param args the command line arguments
@@ -182,13 +181,7 @@ public class SecurityCheck extends javax.swing.JFrame {
       public void run () {
         try {
           new SecurityCheck ().setVisible ( true );
-        } catch ( ClassNotFoundException ex ) {
-          Logger.getLogger ( SecurityCheck.class.getName () ).log ( Level.SEVERE, null, ex );
-        } catch ( InstantiationException ex ) {
-          Logger.getLogger ( SecurityCheck.class.getName () ).log ( Level.SEVERE, null, ex );
-        } catch ( IllegalAccessException ex ) {
-          Logger.getLogger ( SecurityCheck.class.getName () ).log ( Level.SEVERE, null, ex );
-        } catch ( SQLException ex ) {
+        } catch ( ClassNotFoundException | InstantiationException | IllegalAccessException | SQLException ex ) {
           Logger.getLogger ( SecurityCheck.class.getName () ).log ( Level.SEVERE, null, ex );
         }
       }
@@ -196,20 +189,13 @@ public class SecurityCheck extends javax.swing.JFrame {
   }
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
-  private javax.swing.JMenuItem aboutMenuItem;
-  private javax.swing.JMenuItem contentsMenuItem;
-  private javax.swing.JMenuItem copyMenuItem;
-  private javax.swing.JMenuItem cutMenuItem;
-  private javax.swing.JMenuItem deleteMenuItem;
-  private javax.swing.JMenu editMenu;
-  private javax.swing.JMenuItem exitMenuItem;
-  private javax.swing.JMenu fileMenu;
-  private javax.swing.JMenu helpMenu;
+  private javax.swing.JLabel Password;
+  private javax.swing.JLabel UserName;
+  private javax.swing.JButton btnSubmit;
+  private javax.swing.JLabel jLabel1;
+  private javax.swing.JPasswordField jPasswordField;
+  private javax.swing.JTextField jTextFieldUserName;
   private javax.swing.JMenuBar menuBar;
-  private javax.swing.JMenuItem openMenuItem;
-  private javax.swing.JMenuItem pasteMenuItem;
-  private javax.swing.JMenuItem saveAsMenuItem;
-  private javax.swing.JMenuItem saveMenuItem;
   // End of variables declaration//GEN-END:variables
 
 }

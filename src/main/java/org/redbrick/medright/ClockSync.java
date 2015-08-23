@@ -7,14 +7,18 @@ public class ClockSync {
 
   /*
    * Initial sync of app's while loops to minutes on device clock; we need the thread sleep
-   * timers trip events at exactly 00 seconds of each minute.
+   * timer to trip events at exactly 00 seconds of each minute.
    */
-  private static final byte z = 0;
-  private static byte localSecs = 0;
-  private static byte syncSecs = 0;
-  private static byte checkSync = 1;
+  public ClockSync () {
+    
+  }
+  protected boolean startSync () {
+    byte z = 0;
+    byte localSecs;
+    byte syncSecs;
+    byte checkSync = 1;
 
-  public static boolean syncClocks () {
+    try {
     while ( checkSync != 0 ) {
       LocalTime sync = LocalTime.now ();
       LocalTime localSync = sync.truncatedTo ( ChronoUnit.SECONDS );
@@ -30,6 +34,9 @@ public class ClockSync {
         checkSync = 1;
       }
     }
+    } catch (Exception err){
+           System.out.println ("Error While Syncing Clocks: " + err.getMessage ());
+        }
     return true;
   }
 }

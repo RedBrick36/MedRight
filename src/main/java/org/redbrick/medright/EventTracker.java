@@ -23,8 +23,12 @@ public class EventTracker {
      * Code to retrieve values from a database sorted on a EventTime key,
      * determine next event based upon current time, and pass the arguments
      * to the startSync method in the EventTimeSync class.
+     * Then we can pass arguments to the EventTimeSync() method.
      */
-    EventTimeSync.startSync ( userHour, userMins );
+    EventTimeSync ets = new EventTimeSync ();
+    byte eh = 0;
+    byte em = 0;
+    boolean status = ets.startSync ( eh, em );
 
   }
 

@@ -13,9 +13,17 @@ import java.nio.file.Paths;
 import java.sql.*;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
-import java.time.temporal.TemporalUnit;
+import java.awt.HeadlessException;
+import java.sql.Connection;
+import java.sql.DatabaseMetaData;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import javax.swing.UIManager;
 
 /**
  *
@@ -23,58 +31,102 @@ import java.util.logging.Logger;
  */
 public class DatabaseOps {
 
-  private static int rowsAffected;
-  private static boolean status;
-  private static boolean success;
+ 
+  private boolean status;
   private static Connection con;
-  private static Statement statement;
-  private static CallableStatement freeze;
-  private static CallableStatement backup;
-  private static CallableStatement unfreeze;
-  private static CallableStatement checkDB;
+  private Statement statement;
+  private CallableStatement freeze;
+  private CallableStatement backup;
+  private CallableStatement unfreeze;
+  private CallableStatement checkDB;
+  private CallableStatement cs;
+  private Path currentPath = null;
+  private Path newPath = null;
+  private LocalDateTime now;
+  private String filetime;
+  private static ResultSet rs;
+  private static DatabaseMetaData dbmd;
 
-  private static Connection connection;
-  private static Path currentPath = null;
-  private static Path newPath = null;
-  private static LocalDateTime now;
-  private static TemporalUnit minutes;
-  private static String filetime;
+  public DatabaseOps () {
 
-  public static boolean runDbaseChecks (Connection connection) throws SQLException {
+  }
+
+  public Connection createDatabaseConnection () throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+
     try {
-      // statement = connection.createStatement ();
-      checkDB = connection.prepareCall ( "VALUES SYSCS_UTIL.SYSCS_CHECK_TABLE('APP', 'TREATMENTS')" );
+      UIManager.setLookAndFeel ( "javax.swing.plaf.metal.MetalLookAndFeel" );
+    } catch ( ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex ) {
+      java.util.logging.Logger.getLogger ( SetUserTimesGUI.class.getName () ).log ( java.util.logging.Level.SEVERE, null, ex );
+    }
+    try {
+      Class.forName ( "org.apache.derby.jdbc.EmbeddedDriver" );
+      JOptionPane.showMessageDialog ( null, "Successfully located and instantiated Embedded Driver...    " );
+    } catch ( ClassNotFoundException | HeadlessException err ) {
+      JOptionPane.showMessageDialog ( null, err );
+    }
+    try {
+      con = DriverManager.getConnection ( "jdbc:derby:/Users/RedBrick/NetBeansProjects/MedRight/treatments;create=true;user=app;password=root" );
+      JOptionPane.showMessageDialog ( null, "Successfully connected to DB...    " );
+    } catch ( SQLException | HeadlessException err ) {
+      System.out.println ( "" + err.getMessage () );
+    }
+    return con;
+  }
+
+  public boolean createTableIfNecessary (Connection con) throws SQLException, InstantiationException, ClassNotFoundException, IllegalAccessException {
+    try {
+      dbmd = con.getMetaData ();
+      rs = dbmd.getTables ( null, "APPS", "TREATMENTS", null );
+      if ( !rs.next () ) {
+        System.out.println ( "Table already exists -- skipping creation of TREATMENTS table     " );
+      } else {
+        System.out.println ( "Table does not already exist. Creating it now.     " );
+        cs = con.prepareCall ( "CREATE TABLE TREATMENTS (uuid INTEGER default 0 primary key, type VARCHAR(10), name VARCHAR(40), condition VARCHAR(45), dose DOUBLE default 0, measure VARCHAR(11), reminder BOOLEAN default false, monday BOOLEAN default false, tuesday BOOLEAN default false, wednesday BOOLEAN default false, thursday BOOLEAN default false, friday BOOLEAN default false, saturday BOOLEAN default false, sunday BOOLEAN default false, am BOOLEAN default false, midam BOOLEAN default false, noon BOOLEAN default false, midaft BOOLEAN default false, afternoon BOOLEAN default false, evening BOOLEAN default false, bedtime BOOLEAN default false, midofnight BOOLEAN default false, allDays BOOLEAN default false, allTimes BOOLEAN default false, asNeeded BOOLEAN default false, leadTime INTEGER default 0, otf VARCHAR(20))" );
+        cs.execute ();
+        cs.close ();
+        rs.close();
+      }
+    } catch ( SQLException err ) {
+      JOptionPane.showMessageDialog ( null, err );
+    }
+    return true;
+  }
+
+  public boolean runDbaseChecks (Connection con) throws SQLException {
+
+    try {
+      checkDB = con.prepareCall ( "VALUES SYSCS_UTIL.SYSCS_CHECK_TABLE('APP', 'TREATMENTS')" );
       checkDB.execute ();
       checkDB.close ();
       System.out.println ( "Table Treatements checked Successfully." );
     } catch ( SQLException err ) {
       System.out.println ( "SQL Error: " + err.getMessage () );
     }
-    return success;
+    return true;
   }
 
-  public static boolean backupDatabase (Connection connection) throws SQLException {
+  public boolean backupDatabase (Connection con) throws SQLException {
 
     try {
-      freeze = connection.prepareCall ( "CALL SYSCS_UTIL.SYSCS_FREEZE_DATABASE()" );
+      freeze = con.prepareCall ( "CALL SYSCS_UTIL.SYSCS_FREEZE_DATABASE()" );
       freeze.execute ();
       freeze.close ();
 
-      backup = connection.prepareCall ( "CALL SYSCS_UTIL.SYSCS_BACKUP_DATABASE(?)" );
+      backup = con.prepareCall ( "CALL SYSCS_UTIL.SYSCS_BACKUP_DATABASE(?)" );
       backup.setString ( 1, "./DBaseBackups" );
       backup.execute ();
       backup.close ();
 
-      unfreeze = connection.prepareCall ( "CALL SYSCS_UTIL.SYSCS_UNFREEZE_DATABASE()" );
+      unfreeze = con.prepareCall ( "CALL SYSCS_UTIL.SYSCS_UNFREEZE_DATABASE()" );
       unfreeze.execute ();
       unfreeze.close ();
     } catch ( Exception err ) {
-      System.out.println ( "Error backing up database " + err.getMessage () + err.getCause () );
+      System.out.println ( "Error backing up database " + err.getMessage () );
     }
-    return status;
+    return true;
   }
 
-  public static boolean backupDatabaseTable (Connection connection) throws SQLException {
+  public boolean backupDatabaseTables (Connection con) throws SQLException {
     try {
       status = false;
       currentPath = Paths.get ( "backup.db" );
@@ -92,7 +144,7 @@ public class DatabaseOps {
           Logger.getLogger ( DatabaseOps.class.getName () ).log ( Level.SEVERE, null, ex );
         }
       } else {
-        statement = connection.createStatement ();
+        statement = con.createStatement ();
         status = statement.execute ( "CALL SYSCS_UTIL.SYSCS_EXPORT_TABLE(null,'TREATMENTS','./backup.db',null,null,null)" );
         System.out.println ( "Database Table Backed Up Successfully." );
       }
@@ -102,11 +154,11 @@ public class DatabaseOps {
     statement.closeOnCompletion ();
     return status;
   }
-
-  public static boolean restoreDatabaseTable (Connection connection) throws SQLException {
+  
+  public boolean restoreDatabaseTable (Connection con) throws SQLException {
 
     try {
-      statement = connection.createStatement ();
+      statement = con.createStatement ();
       status = statement.execute ( "CALL SYSCS_UTIL.SYSCS_IMPORT_TABLE (null,'TREATMENTS','./backup.db',null,null,null,0)" );
       System.out.println ( "Database Table Restored Successfully." );
     } catch ( SQLException err ) {
@@ -116,10 +168,11 @@ public class DatabaseOps {
     return status;
   }
 
-  public static boolean clearDatabaseTable (Connection connection) throws SQLException {
+  public boolean clearDatabaseTable (Connection con) throws SQLException {
 
     try {
-      statement = connection.createStatement ();
+      int rowsAffected;
+      statement = con.createStatement ();
       rowsAffected = statement.executeUpdate ( "DELETE FROM TREATMENTS" );
       System.out.println ( "Database Table Treatements Cleared Successfully." );
 
@@ -129,5 +182,55 @@ public class DatabaseOps {
     statement.closeOnCompletion ();
     return status;
   }
+  public static void getStateOfDatabase (Connection con) throws SQLException {
 
+    try {
+      UIManager.setLookAndFeel ( "javax.swing.plaf.metal.MetalLookAndFeel" );
+    } catch ( ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex ) {
+      java.util.logging.Logger.getLogger ( SetUserTimesGUI.class.getName () ).log ( java.util.logging.Level.SEVERE, null, ex );
+    }
+    CallableStatement state;
+    try {
+      state = con.prepareCall ( "SELECT * from APP.TREATMENTS" );
+      state.execute ();
+      dbmd = con.getMetaData ();
+      rs = dbmd.getTables ( null, "APPS", "TREATMENTS", null );
+      while ( rs.next () ) {
+        int uuid = rs.getInt ( 1 );
+        String type = rs.getString ( 2 );
+        String name = rs.getString ( 3 );
+        String condition = rs.getString ( 4 );
+        double dose = rs.getDouble ( 5 );
+        String measure = rs.getString ( 6 );
+        boolean reminder = rs.getBoolean ( 7 );
+        boolean monday = rs.getBoolean ( 8 );
+        boolean tuesday = rs.getBoolean ( 9 );
+        boolean wednesday = rs.getBoolean ( 10 );
+        boolean thursday = rs.getBoolean ( 11 );
+        boolean friday = rs.getBoolean ( 12 );
+        boolean saturday = rs.getBoolean ( 13 );
+        boolean sunday = rs.getBoolean ( 14 );
+        boolean am = rs.getBoolean ( 15 );
+        boolean midam = rs.getBoolean ( 16 );
+        boolean noon = rs.getBoolean ( 17 );
+        boolean midaft = rs.getBoolean ( 18 );
+        boolean afternoon = rs.getBoolean ( 19 );
+        boolean evening = rs.getBoolean ( 20 );
+        boolean bedtime = rs.getBoolean ( 21 );
+        boolean midofnight = rs.getBoolean ( 22 );
+        boolean allDays = rs.getBoolean ( 23 );
+        boolean allTimes = rs.getBoolean ( 24 );
+        boolean asNeeded = rs.getBoolean ( 25 );
+        int leadTime = rs.getInt ( 26 );
+        String otf = rs.getString ( 27 );
+        System.out.println ( uuid + ", " + type + ", " + name + ", " + condition + ", " + dose + ", " + measure + ", " + reminder + ", " + monday + ", " + tuesday + ", " + wednesday + ", " + thursday + ", " + friday + ", " + saturday + ", " + sunday + ", " + am + ", " + midam + ", " + noon + ", " + midaft + ", " + afternoon + ", " + evening + ", " + bedtime + ", " + midofnight + ", " + allDays + ", " + allTimes + ", " + asNeeded + ", " + leadTime + ", " + otf + ", " );
+        state.close ();
+        rs.close ();
+      }
+    } catch ( SQLException err ) {
+      System.out.println ( "Error executing SQL: " + err.getMessage () );
+    } catch ( Exception err ) {
+      System.out.println ( "Other Error: " + err.getMessage () );
+    }
+  }  
 }
