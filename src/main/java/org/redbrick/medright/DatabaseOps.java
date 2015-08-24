@@ -34,7 +34,8 @@ import static javax.swing.UIManager.setLookAndFeel;
 public class DatabaseOps {
 
 private static Connection con;
-private static String login;
+private static String Login;
+private static String whichdb;
 private static DatabaseMetaData md;
 private static ResultSet rs;
 private static CallableStatement statement;
@@ -242,7 +243,8 @@ public static boolean clearDatabaseTable (Connection con) throws
 
 /**
  *
- * @param name
+ * @param whichdb
+ *
  *
  * @return
  *
@@ -250,15 +252,17 @@ public static boolean clearDatabaseTable (Connection con) throws
  * @throws InstantiationException
  * @throws IllegalAccessException
  */
-public static Connection createDatabaseConnection (String name) throws
+public static Connection createDatabaseConnection (String whichdb) throws
     ClassNotFoundException, InstantiationException,
     IllegalAccessException {
-
-  if ( name == login ) {
-    name = "jdbc:derby:/Users/RedBrick/NetBeansProjects/MedRight/login;create=true;user=root;password=root";
-  }
-  else if ( name == treatments ) {
-    name = "jdbc:derby:/Users/RedBrick/NetBeansProjects/MedRight/treatments;create=true;user=app;password=root";
+  name = whichdb;
+  switch ( name ) {
+    case "Login":
+      name = "jdbc:derby:/Users/RedBrick/NetBeansProjects/MedRight/Login;create=true;user=root;password=root";
+      break;
+    case "treatments":
+      name = "jdbc:derby:/Users/RedBrick/NetBeansProjects/MedRight/treatments;create=true;user=app;password=root";
+      break;
   }
   try {
     UIManager.setLookAndFeel (
@@ -272,7 +276,7 @@ public static Connection createDatabaseConnection (String name) throws
              ex);
   }
   try {
-    forName ("org.apache.derby.jdbc.EmbeddedDriver");
+    Class.forName ("org.apache.derby.jdbc.EmbeddedDriver");
     showMessageDialog (null,
                        "Successfully located and instantiated Embedded Driver...    ");
   }
@@ -282,13 +286,13 @@ public static Connection createDatabaseConnection (String name) throws
                        err);
   }
   try {
-    con = getConnection (name);
+    con = DriverManager.getConnection (name);
     showMessageDialog (null,
                        "Successfully connected to DB...    ");
   }
   catch ( SQLException |
           HeadlessException err ) {
-    System.out.println ("Headless Exception: " + err.getMessage ());
+    System.out.println ("SQL or Headless Exception: " + err.getMessage ());
   }
   return con;
 }

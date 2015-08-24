@@ -154,18 +154,18 @@ public SecurityCheck () throws ClassNotFoundException,
   }//GEN-LAST:event_jPasswordFieldActionPerformed
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
-  String login = "login";
+  String Login = "Login";
 
   try {
-    this.conn = DatabaseOps.
-        createDatabaseConnection (login);
+    conn = DatabaseOps.
+        createDatabaseConnection (Login);
     String query = "SELECT * FROM LOGIN where UserName =? and Password=?";
-    this.ps = this.conn.prepareStatement (query);
-    this.ps.setString (1, this.jTextFieldUserName.getText ());
-    this.jPasswordField.selectAll ();
-    this.ps.setString (2, this.jPasswordField.getSelectedText ());
-    this.rs = this.ps.executeQuery ();
-    if ( this.rs.next () ) {
+    ps = conn.prepareStatement (query);
+    ps.setString (1, jTextFieldUserName.getText ());
+    jPasswordField.selectAll ();
+    ps.setString (2, jPasswordField.getSelectedText ());
+    rs = ps.executeQuery ();
+    if ( rs.next () ) {
       Welcome w = new Welcome ();
       w.setVisible (true);
     }
