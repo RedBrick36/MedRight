@@ -5,8 +5,7 @@
  */
 package org.redbrick.medright;
 
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.*;
 
 /**
  *
@@ -20,7 +19,7 @@ public class SetUserTimesGUI extends javax.swing.JFrame {
    * Creates new form UserTimes
    */
   public SetUserTimesGUI () {
-    initComponents ();
+    this.initComponents ();
   }
 
   /**
@@ -267,46 +266,63 @@ public class SetUserTimesGUI extends javax.swing.JFrame {
   }// </editor-fold>//GEN-END:initComponents
 
   private void AfternoonHourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AfternoonHourActionPerformed
-    // TODO add your handling code here:
+        // TODO add your handling code here:
   }//GEN-LAST:event_AfternoonHourActionPerformed
 
-  /**
-   * @param args the command line arguments
-   */
-  public static void main (String args[]) throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
-    /*
-     * Set the Nimbus look and feel
+    /**
+     * @param args the command line arguments
+     *
+     * @throws java.lang.ClassNotFoundException
+     * @throws java.lang.InstantiationException
+     * @throws java.lang.IllegalAccessException
+     * @throws javax.swing.UnsupportedLookAndFeelException
      */
-    //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+    public static void main (String args[]) throws
+            ClassNotFoundException, InstantiationException,
+            IllegalAccessException, UnsupportedLookAndFeelException {
         /*
-     * If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-     * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-     */
-    try {
-      UIManager.setLookAndFeel ( "javax.swing.plaf.metal.MetalLookAndFeel" );
+         * Set the Nimbus look and feel
+         */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /*
+         * If Nimbus (introduced in Java SE 6) is not available, stay
+         * with the default look and feel.
+         * For details see
+         * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
+         */
+        try {
+            UIManager.setLookAndFeel (
+                    "javax.swing.plaf.metal.MetalLookAndFeel");
 //      for ( javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels () ) {
 //        if ("Metal".equals ( info.getName () ) ) {
 //          javax.swing.UIManager.setLookAndFeel ( info.getClassName () );
 //          break;
-    } catch ( ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex ) {
-      java.util.logging.Logger.getLogger ( SetUserTimesGUI.class.getName () ).log ( java.util.logging.Level.SEVERE, null, ex );
-    }
+        }
+        catch ( ClassNotFoundException | InstantiationException |
+                IllegalAccessException |
+                javax.swing.UnsupportedLookAndFeelException ex ) {
+            java.util.logging.Logger.getLogger (SetUserTimesGUI.class.
+                    getName ()).
+                    log (java.util.logging.Level.SEVERE,
+                         null,
+                         ex);
+        }
     //</editor-fold>
-    //</editor-fold>
+        //</editor-fold>
 
         //</editor-fold>
-    //</editor-fold>
+        //</editor-fold>
 
-    /*
-     * Create and display the form
-     */
-    java.awt.EventQueue.invokeLater ( new Runnable () {
-      @Override
-      public void run () {
-        new SetUserTimesGUI ().setVisible ( true );
-      }
-    } );
-  }
+        /*
+         * Create and display the form
+         */
+        java.awt.EventQueue.invokeLater (new Runnable () {
+            @Override
+            public void run () {
+                new SetUserTimesGUI ().setVisible (true);
+            }
+        });
+    }
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
   private javax.swing.JComboBox AMHour;

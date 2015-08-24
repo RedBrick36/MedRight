@@ -5,7 +5,7 @@
  */
 package org.redbrick.medright;
 
-import javax.swing.UIManager;
+import javax.swing.*;
 
 /**
  *
@@ -19,7 +19,7 @@ public class MedRightStartGUI extends javax.swing.JFrame {
    * Creates new form MedRightTopLevel
    */
   public MedRightStartGUI () {
-    initComponents ();
+    this.initComponents ();
   }
 
   /**
@@ -978,93 +978,116 @@ public class MedRightStartGUI extends javax.swing.JFrame {
   }// </editor-fold>//GEN-END:initComponents
 
     private void toggleTookAMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleTookAMActionPerformed
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_toggleTookAMActionPerformed
 
     private void toggleTookAM2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleTookAM2ActionPerformed
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_toggleTookAM2ActionPerformed
 
     private void toggleTookAM3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleTookAM3ActionPerformed
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_toggleTookAM3ActionPerformed
 
     private void toggleTookAM4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleTookAM4ActionPerformed
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_toggleTookAM4ActionPerformed
 
     private void toggleTookAM5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleTookAM5ActionPerformed
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_toggleTookAM5ActionPerformed
 
     private void toggleTookAM6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleTookAM6ActionPerformed
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_toggleTookAM6ActionPerformed
 
     private void toggleTookAM7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleTookAM7ActionPerformed
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_toggleTookAM7ActionPerformed
 
     private void jbAddNewScheduleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAddNewScheduleActionPerformed
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_jbAddNewScheduleActionPerformed
 
     private void exitMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitMenuItemActionPerformed
-      System.exit ( 0 );
+        System.exit (0);
     }//GEN-LAST:event_exitMenuItemActionPerformed
 
     private void toggleTookAM8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleTookAM8ActionPerformed
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_toggleTookAM8ActionPerformed
 
   private void submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitActionPerformed
-    // TODO add your handling code here:
+        // TODO add your handling code here:
   }//GEN-LAST:event_submitActionPerformed
 
   private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
-    // TODO add your handling code here:
+        // TODO add your handling code here:
   }//GEN-LAST:event_jPasswordField1ActionPerformed
 
-  /**
-   * @param args the command line arguments
-   */
-  public static void main (String args[]) {
-    /*
-     * Set the Nimbus look and feel
+    /**
+     * @param args the command line arguments
      */
+    public static void main (String args[]) {
+        /*
+         * Set the Nimbus look and feel
+         */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /*
-     * If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-     * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-     */
-    try {
-      UIManager.setLookAndFeel ( "javax.swing.plaf.metal.MetalLookAndFeel" );
+         * If Nimbus (introduced in Java SE 6) is not available, stay
+         * with the default look and feel.
+         * For details see
+         * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
+         */
+        try {
+            UIManager.setLookAndFeel (
+                    "javax.swing.plaf.metal.MetalLookAndFeel");
 //      for ( javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels () ) {
 //        if ("Metal".equals ( info.getName () ) ) {
 //          javax.swing.UIManager.setLookAndFeel ( info.getClassName () );
 //          break;
-    } catch ( ClassNotFoundException ex ) {
-      java.util.logging.Logger.getLogger ( MedRightStartGUI.class.getName () ).log ( java.util.logging.Level.SEVERE, null, ex );
-    } catch ( InstantiationException ex ) {
-      java.util.logging.Logger.getLogger ( MedRightStartGUI.class.getName () ).log ( java.util.logging.Level.SEVERE, null, ex );
-    } catch ( IllegalAccessException ex ) {
-      java.util.logging.Logger.getLogger ( MedRightStartGUI.class.getName () ).log ( java.util.logging.Level.SEVERE, null, ex );
-    } catch ( javax.swing.UnsupportedLookAndFeelException ex ) {
-      java.util.logging.Logger.getLogger ( MedRightStartGUI.class.getName () ).log ( java.util.logging.Level.SEVERE, null, ex );
-    }
+        }
+        catch ( ClassNotFoundException ex ) {
+            java.util.logging.Logger.getLogger (
+                    MedRightStartGUI.class.getName ()).
+                    log (java.util.logging.Level.SEVERE,
+                         null,
+                         ex);
+        }
+        catch ( InstantiationException ex ) {
+            java.util.logging.Logger.getLogger (
+                    MedRightStartGUI.class.getName ()).
+                    log (java.util.logging.Level.SEVERE,
+                         null,
+                         ex);
+        }
+        catch ( IllegalAccessException ex ) {
+            java.util.logging.Logger.getLogger (
+                    MedRightStartGUI.class.getName ()).
+                    log (java.util.logging.Level.SEVERE,
+                         null,
+                         ex);
+        }
+        catch ( javax.swing.UnsupportedLookAndFeelException ex ) {
+            java.util.logging.Logger.getLogger (
+                    MedRightStartGUI.class.getName ()).
+                    log (java.util.logging.Level.SEVERE,
+                         null,
+                         ex);
+        }
         //</editor-fold>
-    //</editor-fold>
+        //</editor-fold>
 
-    /*
-     * Create and display the form
-     */
-    java.awt.EventQueue.invokeLater ( new Runnable () {
-      @Override
-      public void run () {
-        new MedRightStartGUI ().setVisible ( true );
-      }
-    } );
-  }
+        /*
+         * Create and display the form
+         */
+        java.awt.EventQueue.invokeLater (new Runnable () {
+            @Override
+            public void run () {
+                new MedRightStartGUI ().setVisible (true);
+            }
+        });
+    }
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
   private javax.swing.JPanel Actions;

@@ -6,50 +6,72 @@
  *
  * @author RedBrick
  *
- * MedRight will assist in keeping track of medicinal regiments; both for
- * keeping the medicinal schedule as prescribed, as well as re-ordering those
+ * MedRight will assist in keeping track of medicinal regiments; both
+ * for
+ * keeping the medicinal schedule as prescribed, as well as
+ * re-ordering those
  * Mediations/supplements required by the regimen.
  *
- * MedRight has been designed with ease-of-use and an uncluttered user interface
- * as the top priorities. As a result, each pane of the GUI is limited to only
+ * MedRight has been designed with ease-of-use and an uncluttered user
+ * interface
+ * as the top priorities. As a result, each pane of the GUI is limited
+ * to only
  * displaying what is absolutely necessary for the current operation.
  *
  * This in no way limits its functionality or usefulness.
- * On the contrary, providing a "bare-bones", uncluttered and easy-to-use
+ * On the contrary, providing a "bare-bones", uncluttered and
+ * easy-to-use
  * interface reduces errors and provides a clean display of associated
- * information. The underlying structure of the application maintains every
- * aspect of the regimen as a whole and provides user prompts in a focused and
+ * information. The underlying structure of the application maintains
+ * every
+ * aspect of the regimen as a whole and provides user prompts in a
+ * focused and
  * timely fashion designed toward compliance with the regimen.
  *
- * Within the scope of this application, a treatment is defined as: Medical care
- * given by a doctor, to a patient, for an illness or injury. Because of the
- * nature of the way the program was built, it also encompasses Fitness
- * Treatments - mostly comprised of supplements and exercise schedules.
+ * Within the scope of this application, a treatment is defined as:
+ * Medical care
+ * given by a doctor, to a patient, for an illness or injury. Because
+ * of the
+ * nature of the way the program was built, it also encompasses
+ * Fitness
+ * Treatments - mostly comprised of supplements and exercise
+ * schedules.
  *
  * Medical care can range from prescriptions for pills/liquids, to
- * vitamin/mineral supplements, to topical applications (such as ointments,
- * lotions and creams, etc.), as well as referrals to other health care
+ * vitamin/mineral supplements, to topical applications (such as
+ * ointments,
+ * lotions and creams, etc.), as well as referrals to other health
+ * care
  * providers.
  *
- * As such, MedRight assists in all cases where a prescription has been issued by the
- * doctor; as well as being very useful to those who just wish to keep track of
+ * As such, MedRight assists in all cases where a prescription has
+ * been issued by the
+ * doctor; as well as being very useful to those who just wish to keep
+ * track of
  * their own, particular vitamin/supplement regimen.
  */
 package org.redbrick.medright;
 
 import java.sql.*;
-import javax.swing.UIManager;
+import javax.swing.*;
 
 public class MedRight {
 
-  private Connection connection;
-  private boolean success;
-
-  public static void main (String[] args) throws SQLException, InstantiationException, ClassNotFoundException, IllegalAccessException {
-    try {
-      UIManager.setLookAndFeel ( "javax.swing.plaf.metal.MetalLookAndFeel" );
-    } catch ( ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex ) {
-      java.util.logging.Logger.getLogger ( SetUserTimesGUI.class.getName () ).log ( java.util.logging.Level.SEVERE, null, ex );
+    public static void main (String[] args) throws
+            SQLException, InstantiationException,
+            ClassNotFoundException, IllegalAccessException {
+        try {
+            UIManager.setLookAndFeel (
+                    "javax.swing.plaf.metal.MetalLookAndFeel");
+        }
+        catch ( ClassNotFoundException | InstantiationException |
+                IllegalAccessException |
+                javax.swing.UnsupportedLookAndFeelException ex ) {
+            java.util.logging.Logger.getLogger (SetUserTimesGUI.class.
+                    getName ()).
+                    log (java.util.logging.Level.SEVERE,
+                         null,
+                         ex);
+        }
     }
-  }
 }

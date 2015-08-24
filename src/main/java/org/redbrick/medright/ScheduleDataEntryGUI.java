@@ -19,7 +19,7 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
    * Creates new form ScheduleDataEntry
    */
   public ScheduleDataEntryGUI () {
-    initComponents ();
+    this.initComponents ();
   }
 
   /**
@@ -524,259 +524,280 @@ public class ScheduleDataEntryGUI extends javax.swing.JFrame {
   }// </editor-fold>//GEN-END:initComponents
 
     private void RemindersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RemindersActionPerformed
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_RemindersActionPerformed
 
     private void TuesdayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TuesdayActionPerformed
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_TuesdayActionPerformed
 
     private void MondayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MondayActionPerformed
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_MondayActionPerformed
 
     private void WednesdayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WednesdayActionPerformed
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_WednesdayActionPerformed
 
     private void ThursdayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ThursdayActionPerformed
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_ThursdayActionPerformed
 
     private void FridayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FridayActionPerformed
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_FridayActionPerformed
 
     private void SaturdayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaturdayActionPerformed
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_SaturdayActionPerformed
 
     private void SundayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SundayActionPerformed
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_SundayActionPerformed
 
     private void AMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AMActionPerformed
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_AMActionPerformed
 
     private void MidMornActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MidMornActionPerformed
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_MidMornActionPerformed
 
     private void NoonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NoonActionPerformed
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_NoonActionPerformed
 
     private void MidAftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MidAftActionPerformed
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_MidAftActionPerformed
 
     private void AfternoonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AfternoonActionPerformed
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_AfternoonActionPerformed
 
     private void EveningActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EveningActionPerformed
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_EveningActionPerformed
 
     private void BedtimeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BedtimeActionPerformed
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_BedtimeActionPerformed
 
     private void HelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HelpActionPerformed
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_HelpActionPerformed
 
     private void SaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveActionPerformed
         // TODO add your handling code here:
       /*
-       * This is the main code for the entire GUI
-       * For each schedule we will use an instance of the Treatment class to assign all values via
-       * listeners. Once the user presses Save or New the state of the instance will be pulled
-       * and used to construct a sql command. Once the command has been sent the object will be
-       * destroyed and another created.
-       *
-       * INSERT INTO example:
-       *
-       * INSERT INTO treatments (uuid, `type`, `name`, dose, measure, reminder, monday, tuesday,
-       * wednesday, thursday, friday, saturday, sunday, am, midam, noon, midaft, afternoon, evening,
-       * bedtime, midofnight, allDays, allTimes, asNecessary, leadTime) VALUES (102, 'pill',
-       * 'linsinopril', 20.0, 'milligrams', 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0,
-       * 00)
-       *
-       *
-       */
+         * This is the main code for the entire GUI
+         * For each schedule we will use an instance of the Treatment
+         * class to assign all values via
+         * listeners. Once the user presses Save or New the state of
+         * the instance will be pulled
+         * and used to construct a sql command. Once the command has
+         * been sent the object will be
+         * destroyed and another created.
+         *
+         * INSERT INTO example:
+         *
+         * INSERT INTO treatments (uuid, `type`, `name`, dose,
+         * measure, reminder, monday, tuesday,
+         * wednesday, thursday, friday, saturday, sunday, am, midam,
+         * noon, midaft, afternoon, evening,
+         * bedtime, midofnight, allDays, allTimes, asNecessary,
+         * leadTime) VALUES (102, 'pill',
+         * 'linsinopril', 20.0, 'milligrams', 1, 1, 1, 1, 1, 1, 1, 1,
+         * 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0,
+         * 00)
+         *
+         *
+         */
     }//GEN-LAST:event_SaveActionPerformed
 
     private void DoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoneActionPerformed
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_DoneActionPerformed
 
     private void NextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextActionPerformed
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_NextActionPerformed
 
     private void jftfNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jftfNameActionPerformed
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_jftfNameActionPerformed
 
     private void jftfDoseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jftfDoseActionPerformed
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_jftfDoseActionPerformed
 
     private void jftfConditionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jftfConditionActionPerformed
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_jftfConditionActionPerformed
 
     private void jcbSchedTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbSchedTypeActionPerformed
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_jcbSchedTypeActionPerformed
 
     private void jcbMeasureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbMeasureActionPerformed
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_jcbMeasureActionPerformed
 
   private void allDaysActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_allDaysActionPerformed
-    if ( allDays.isSelected () ) {
-      Monday.setSelected ( true );
-      Tuesday.setSelected ( true );
-      Wednesday.setSelected ( true );
-      Thursday.setSelected ( true );
-      Friday.setSelected ( true );
-      Saturday.setSelected ( true );
-      Sunday.setSelected ( true );
-    } else {
-      Monday.setSelected ( false );
-      Tuesday.setSelected ( false );
-      Wednesday.setSelected ( false );
-      Thursday.setSelected ( false );
-      Friday.setSelected ( false );
-      Saturday.setSelected ( false );
-      Sunday.setSelected ( false );
+        if ( this.allDays.isSelected () ) {
+            this.Monday.setSelected (true);
+            this.Tuesday.setSelected (true);
+            this.Wednesday.setSelected (true);
+            this.Thursday.setSelected (true);
+            this.Friday.setSelected (true);
+            this.Saturday.setSelected (true);
+            this.Sunday.setSelected (true);
+        }
+        else {
+            this.Monday.setSelected (false);
+            this.Tuesday.setSelected (false);
+            this.Wednesday.setSelected (false);
+            this.Thursday.setSelected (false);
+            this.Friday.setSelected (false);
+            this.Saturday.setSelected (false);
+            this.Sunday.setSelected (false);
 
-    }
+        }
   }//GEN-LAST:event_allDaysActionPerformed
 
   private void allTimesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_allTimesActionPerformed
-    if ( allTimes.isSelected () ) {
-      AM.setSelected ( true );
-      MidMorn.setSelected ( true );
-      Noon.setSelected ( true );
-      MidAft.setSelected ( true );
-      Afternoon.setSelected ( true );
-      Evening.setSelected ( true );
-      Bedtime.setSelected ( true );
-      MidOfNight.setSelected ( true );
-    } else {
-      AM.setSelected ( false );
-      MidMorn.setSelected ( false );
-      Noon.setSelected ( false );
-      MidAft.setSelected ( false );
-      Afternoon.setSelected ( false );
-      Evening.setSelected ( false );
-      Bedtime.setSelected ( false );
-      MidOfNight.setSelected ( false );
-    }
+        if ( this.allTimes.isSelected () ) {
+            this.AM.setSelected (true);
+            this.MidMorn.setSelected (true);
+            this.Noon.setSelected (true);
+            this.MidAft.setSelected (true);
+            this.Afternoon.setSelected (true);
+            this.Evening.setSelected (true);
+            this.Bedtime.setSelected (true);
+            this.MidOfNight.setSelected (true);
+        }
+        else {
+            this.AM.setSelected (false);
+            this.MidMorn.setSelected (false);
+            this.Noon.setSelected (false);
+            this.MidAft.setSelected (false);
+            this.Afternoon.setSelected (false);
+            this.Evening.setSelected (false);
+            this.Bedtime.setSelected (false);
+            this.MidOfNight.setSelected (false);
+        }
   }//GEN-LAST:event_allTimesActionPerformed
 
   private void asNeededActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asNeededActionPerformed
-    if ( asNeeded.isSelected () ) {
-      Reminders.setSelected ( false );
-      Reminders.setEnabled ( false );
-      leadTime.setEnabled ( false );
-      allTimes.setSelected ( false );
-      allDays.setSelected ( false );
-      AM.setEnabled ( false );
-      MidMorn.setEnabled ( false );
-      Noon.setEnabled ( false );
-      MidAft.setEnabled ( false );
-      Afternoon.setEnabled ( false );
-      Evening.setEnabled ( false );
-      Bedtime.setEnabled ( false );
-      MidOfNight.setEnabled ( false );
-      Monday.setEnabled ( false );
-      Tuesday.setEnabled ( false );
-      Wednesday.setEnabled ( false );
-      Thursday.setEnabled ( false );
-      Friday.setEnabled ( false );
-      Saturday.setEnabled ( false );
-      Sunday.setEnabled ( false );
-      AM.setSelected ( false );
-      MidMorn.setSelected ( false );
-      Noon.setSelected ( false );
-      MidAft.setSelected ( false );
-      Afternoon.setSelected ( false );
-      Evening.setSelected ( false );
-      Bedtime.setSelected ( false );
-      MidOfNight.setSelected ( false );
-      Monday.setSelected ( false );
-      Tuesday.setSelected ( false );
-      Wednesday.setSelected ( false );
-      Thursday.setSelected ( false );
-      Friday.setSelected ( false );
-      Saturday.setSelected ( false );
-      Sunday.setSelected ( false );
+        if ( this.asNeeded.isSelected () ) {
+            this.Reminders.setSelected (false);
+            this.Reminders.setEnabled (false);
+            this.leadTime.setEnabled (false);
+            this.allTimes.setSelected (false);
+            this.allDays.setSelected (false);
+            this.AM.setEnabled (false);
+            this.MidMorn.setEnabled (false);
+            this.Noon.setEnabled (false);
+            this.MidAft.setEnabled (false);
+            this.Afternoon.setEnabled (false);
+            this.Evening.setEnabled (false);
+            this.Bedtime.setEnabled (false);
+            this.MidOfNight.setEnabled (false);
+            this.Monday.setEnabled (false);
+            this.Tuesday.setEnabled (false);
+            this.Wednesday.setEnabled (false);
+            this.Thursday.setEnabled (false);
+            this.Friday.setEnabled (false);
+            this.Saturday.setEnabled (false);
+            this.Sunday.setEnabled (false);
+            this.AM.setSelected (false);
+            this.MidMorn.setSelected (false);
+            this.Noon.setSelected (false);
+            this.MidAft.setSelected (false);
+            this.Afternoon.setSelected (false);
+            this.Evening.setSelected (false);
+            this.Bedtime.setSelected (false);
+            this.MidOfNight.setSelected (false);
+            this.Monday.setSelected (false);
+            this.Tuesday.setSelected (false);
+            this.Wednesday.setSelected (false);
+            this.Thursday.setSelected (false);
+            this.Friday.setSelected (false);
+            this.Saturday.setSelected (false);
+            this.Sunday.setSelected (false);
 
-    } else {
-      Reminders.setSelected ( false );
-      Reminders.setEnabled ( true );
-      leadTime.setEnabled ( true );
-      AM.setEnabled ( true );
-      MidMorn.setEnabled ( true );
-      Noon.setEnabled ( true );
-      MidAft.setEnabled ( true );
-      Afternoon.setEnabled ( true );
-      Evening.setEnabled ( true );
-      Bedtime.setEnabled ( true );
-      MidOfNight.setEnabled ( true );
-      Monday.setEnabled ( true );
-      Tuesday.setEnabled ( true );
-      Wednesday.setEnabled ( true );
-      Thursday.setEnabled ( true );
-      Friday.setEnabled ( true );
-      Saturday.setEnabled ( true );
-      Sunday.setEnabled ( true );
-    }
+        }
+        else {
+            this.Reminders.setSelected (false);
+            this.Reminders.setEnabled (true);
+            this.leadTime.setEnabled (true);
+            this.AM.setEnabled (true);
+            this.MidMorn.setEnabled (true);
+            this.Noon.setEnabled (true);
+            this.MidAft.setEnabled (true);
+            this.Afternoon.setEnabled (true);
+            this.Evening.setEnabled (true);
+            this.Bedtime.setEnabled (true);
+            this.MidOfNight.setEnabled (true);
+            this.Monday.setEnabled (true);
+            this.Tuesday.setEnabled (true);
+            this.Wednesday.setEnabled (true);
+            this.Thursday.setEnabled (true);
+            this.Friday.setEnabled (true);
+            this.Saturday.setEnabled (true);
+            this.Sunday.setEnabled (true);
+        }
   }//GEN-LAST:event_asNeededActionPerformed
 
-  /**
-   * @param args the command line arguments
-   */
-  public static void main (String args[]) {
-    /*
-     * Set the Nimbus look and feel
+    /**
+     * @param args the command line arguments
      */
+    public static void main (String args[]) {
+        /*
+         * Set the Nimbus look and feel
+         */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /*
-     * If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-     * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-     */
-    try {
-      for ( javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels () ) {
-        if ( "Metal".equals ( info.getName () ) ) {
-          javax.swing.UIManager.setLookAndFeel ( info.getClassName () );
-          break;
+         * If Nimbus (introduced in Java SE 6) is not available, stay
+         * with the default look and feel.
+         * For details see
+         * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
+         */
+        try {
+            for ( javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.
+                    getInstalledLookAndFeels () ) {
+                if ( "Metal".equals (info.getName ()) ) {
+                    javax.swing.UIManager.setLookAndFeel (info.
+                            getClassName ());
+                    break;
+                }
+            }
         }
-      }
-    } catch ( ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex ) {
-      java.util.logging.Logger.getLogger ( ScheduleDataEntryGUI.class.getName () ).log ( java.util.logging.Level.SEVERE, null, ex );
-    }
+        catch ( ClassNotFoundException | InstantiationException |
+                IllegalAccessException |
+                javax.swing.UnsupportedLookAndFeelException ex ) {
+            java.util.logging.Logger.getLogger (
+                    ScheduleDataEntryGUI.class.getName ()).
+                    log (java.util.logging.Level.SEVERE,
+                         null,
+                         ex);
+        }
       //</editor-fold>
-    //</editor-fold>
+        //</editor-fold>
 
         //</editor-fold>
-    //</editor-fold>
+        //</editor-fold>
 
-    /*
-     * Create and display the form
-     */
-    java.awt.EventQueue.invokeLater ( new Runnable () {
-      @Override
-      public void run () {
-        new ScheduleDataEntryGUI ().setVisible ( true );
-      }
-    } );
-  }
+        /*
+         * Create and display the form
+         */
+        java.awt.EventQueue.invokeLater (new Runnable () {
+            @Override
+            public void run () {
+                new ScheduleDataEntryGUI ().setVisible (true);
+            }
+        });
+    }
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
   private javax.swing.JCheckBox AM;

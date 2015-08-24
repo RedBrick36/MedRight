@@ -5,14 +5,12 @@
  */
 package org.redbrick.medright;
 
-import java.awt.EventQueue;
-import java.beans.Beans;
-import java.util.ArrayList;
-
+import java.awt.*;
+import java.beans.*;
+import java.util.*;
 import java.util.List;
-import javax.persistence.RollbackException;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.persistence.*;
+import javax.swing.*;
 
 /**
  *
@@ -23,9 +21,9 @@ public class MedRightDBaseEditorGUI extends JPanel {
   private static final long serialVersionUID = 1L;
 
   public MedRightDBaseEditorGUI () {
-    initComponents ();
+    this.initComponents ();
     if ( !Beans.isDesignTime () ) {
-      entityManager.getTransaction ().begin ();
+      this.entityManager.getTransaction ().begin ();
     }
   }
 
@@ -663,54 +661,68 @@ public class MedRightDBaseEditorGUI extends JPanel {
     }
   }// </editor-fold>//GEN-END:initComponents
 
-  @SuppressWarnings ("unchecked")
+    @SuppressWarnings ("unchecked")
     private void refreshButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshButtonActionPerformed
-    entityManager.getTransaction ().rollback ();
-    entityManager.getTransaction ().begin ();
-    java.util.Collection data = query.getResultList ();
-    for ( Object entity : data ) {
-      entityManager.refresh ( entity );
-    }
-    list.clear ();
-    list.addAll ( data );
+        this.entityManager.getTransaction ().
+                rollback ();
+        this.entityManager.getTransaction ().
+                begin ();
+        java.util.Collection data;
+        data = this.query.getResultList ();
+        for ( Object entity : data ) {
+            this.entityManager.refresh (entity);
+        }
+        this.list.clear ();
+        this.list.addAll (data);
     }//GEN-LAST:event_refreshButtonActionPerformed
 
     private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
-      int[] selected = masterTable.getSelectedRows ();
-      List<org.redbrick.medright.Treatments> toRemove = new ArrayList<org.redbrick.medright.Treatments> ( selected.length );
-      for ( int idx = 0; idx < selected.length; idx++ ) {
-        org.redbrick.medright.Treatments t = list.get ( masterTable.convertRowIndexToModel ( selected[idx] ) );
-        toRemove.add ( t );
-        entityManager.remove ( t );
-      }
-      list.removeAll ( toRemove );
+        int[] selected = this.masterTable.getSelectedRows ();
+        List<org.redbrick.medright.Treatments> toRemove = new ArrayList<org.redbrick.medright.Treatments> (
+                selected.length);
+        for ( int idx = 0; idx < selected.length; idx++ ) {
+            org.redbrick.medright.Treatments t = this.list.get (
+                    this.masterTable.convertRowIndexToModel (
+                            selected[idx]));
+            toRemove.add (t);
+            this.entityManager.remove (t);
+        }
+        this.list.removeAll (toRemove);
     }//GEN-LAST:event_deleteButtonActionPerformed
 
     private void newButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newButtonActionPerformed
-      org.redbrick.medright.Treatments t = new org.redbrick.medright.Treatments ();
-      entityManager.persist ( t );
-      list.add ( t );
-      int row = list.size () - 1;
-      masterTable.setRowSelectionInterval ( row, row );
-      masterTable.scrollRectToVisible ( masterTable.getCellRect ( row, 0, true ) );
+        org.redbrick.medright.Treatments t = new org.redbrick.medright.Treatments ();
+        this.entityManager.persist (t);
+        this.list.add (t);
+        int row = this.list.size () - 1;
+        this.masterTable.setRowSelectionInterval (row,
+                                                  row);
+        this.masterTable.scrollRectToVisible (this.masterTable.
+                getCellRect (row,
+                             0,
+                             true));
     }//GEN-LAST:event_newButtonActionPerformed
 
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
-      try {
-        entityManager.getTransaction ().commit ();
-        entityManager.getTransaction ().begin ();
-      } catch ( RollbackException rex ) {
-        rex.printStackTrace ();
-        entityManager.getTransaction ().begin ();
-        List<org.redbrick.medright.Treatments> merged = new ArrayList<org.redbrick.medright.Treatments> ( list.size () );
-        for ( org.redbrick.medright.Treatments t : list ) {
-          merged.add ( entityManager.merge ( t ) );
+        try {
+            this.entityManager.getTransaction ().
+                    commit ();
+            this.entityManager.getTransaction ().
+                    begin ();
         }
-        list.clear ();
-        list.addAll ( merged );
-      }
+        catch ( RollbackException rex ) {
+            rex.printStackTrace ();
+            this.entityManager.getTransaction ().
+                    begin ();
+            List<org.redbrick.medright.Treatments> merged = new ArrayList<org.redbrick.medright.Treatments> (
+                    this.list.size ());
+            for ( org.redbrick.medright.Treatments t : this.list ) {
+                merged.add (this.entityManager.merge (t));
+            }
+            this.list.clear ();
+            this.list.addAll (merged);
+        }
     }//GEN-LAST:event_saveButtonActionPerformed
-
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
   private javax.swing.JTextField afternoonField;
@@ -778,46 +790,71 @@ public class MedRightDBaseEditorGUI extends JPanel {
   private javax.swing.JLabel wednesdayLabel;
   private org.jdesktop.beansbinding.BindingGroup bindingGroup;
   // End of variables declaration//GEN-END:variables
-  public static void main (String[] args) {
-    /*
-     * Set the Nimbus look and feel
-     */
-    //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /*
-     * If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-     * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-     */
-    try {
-      for ( javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels () ) {
-        if ( "Metal".equals ( info.getName () ) ) {
-          javax.swing.UIManager.setLookAndFeel ( info.getClassName () );
-          break;
-        }
-      }
-    } catch ( ClassNotFoundException ex ) {
-      java.util.logging.Logger.getLogger ( MedRightDBaseEditorGUI.class.getName () ).log ( java.util.logging.Level.SEVERE, null, ex );
-    } catch ( InstantiationException ex ) {
-      java.util.logging.Logger.getLogger ( MedRightDBaseEditorGUI.class.getName () ).log ( java.util.logging.Level.SEVERE, null, ex );
-    } catch ( IllegalAccessException ex ) {
-      java.util.logging.Logger.getLogger ( MedRightDBaseEditorGUI.class.getName () ).log ( java.util.logging.Level.SEVERE, null, ex );
-    } catch ( javax.swing.UnsupportedLookAndFeelException ex ) {
-      java.util.logging.Logger.getLogger ( MedRightDBaseEditorGUI.class.getName () ).log ( java.util.logging.Level.SEVERE, null, ex );
-    }
-    //</editor-fold>
 
-    /*
-     * Create and display the form
-     */
-    EventQueue.invokeLater ( new Runnable () {
-      @Override
-      public void run () {
-        JFrame frame = new JFrame ();
-        frame.setContentPane ( new MedRightDBaseEditorGUI () );
-        frame.setDefaultCloseOperation ( JFrame.EXIT_ON_CLOSE );
-        frame.pack ();
-        frame.setVisible ( true );
-      }
-    } );
-  }
+    public static void main (String[] args) {
+        /*
+         * Set the Nimbus look and feel
+         */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /*
+         * If Nimbus (introduced in Java SE 6) is not available, stay
+         * with the default look and feel.
+         * For details see
+         * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
+         */
+        try {
+            for ( javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.
+                    getInstalledLookAndFeels () ) {
+                if ( "Metal".equals (info.getName ()) ) {
+                    javax.swing.UIManager.setLookAndFeel (info.
+                            getClassName ());
+                    break;
+                }
+            }
+        }
+        catch ( ClassNotFoundException ex ) {
+            java.util.logging.Logger.getLogger (
+                    MedRightDBaseEditorGUI.class.getName ()).
+                    log (java.util.logging.Level.SEVERE,
+                         null,
+                         ex);
+        }
+        catch ( InstantiationException ex ) {
+            java.util.logging.Logger.getLogger (
+                    MedRightDBaseEditorGUI.class.getName ()).
+                    log (java.util.logging.Level.SEVERE,
+                         null,
+                         ex);
+        }
+        catch ( IllegalAccessException ex ) {
+            java.util.logging.Logger.getLogger (
+                    MedRightDBaseEditorGUI.class.getName ()).
+                    log (java.util.logging.Level.SEVERE,
+                         null,
+                         ex);
+        }
+        catch ( javax.swing.UnsupportedLookAndFeelException ex ) {
+            java.util.logging.Logger.getLogger (
+                    MedRightDBaseEditorGUI.class.getName ()).
+                    log (java.util.logging.Level.SEVERE,
+                         null,
+                         ex);
+        }
+        //</editor-fold>
+
+        /*
+         * Create and display the form
+         */
+        EventQueue.invokeLater (new Runnable () {
+            @Override
+            public void run () {
+                JFrame frame = new JFrame ();
+                frame.setContentPane (new MedRightDBaseEditorGUI ());
+                frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
+                frame.pack ();
+                frame.setVisible (true);
+            }
+        });
+    }
 
 }
