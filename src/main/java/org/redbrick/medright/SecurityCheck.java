@@ -6,9 +6,11 @@
 package org.redbrick.medright;
 
 import java.awt.*;
+import java.awt.event.*;
 import java.sql.*;
 import java.util.logging.*;
 import javax.swing.*;
+import static org.redbrick.medright.DatabaseOps.createDatabaseConnection;
 
 /**
  *
@@ -18,9 +20,12 @@ public class SecurityCheck
     extends javax.swing.JFrame {
 
 private static final long serialVersionUID = 1L;
-private Connection conn = null;
+private Connection conn;
+public Connection connection;
 private PreparedStatement ps = null;
 private ResultSet rs = null;
+private String check;
+private String access;
 
 /**
  * Creates new form SecurityCheck
@@ -35,6 +40,12 @@ public SecurityCheck () throws ClassNotFoundException,
     SQLException {
   initComponents ();
 
+}
+
+public void close () {
+
+  WindowEvent winClosingEvent = new WindowEvent (this, WindowEvent.WINDOW_CLOS­ING);
+  Toolkit.getDefaultToolkit ().getSystemEve­ntQueue ().postEvent (winClosingEvent);
 }
 
 /**
@@ -154,20 +165,25 @@ public SecurityCheck () throws ClassNotFoundException,
   }//GEN-LAST:event_jPasswordFieldActionPerformed
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
-  String Login = "Login";
 
   try {
-    conn = DatabaseOps.
-        createDatabaseConnection (Login);
-    String query = "SELECT * FROM LOGIN where UserName =? and Password=?";
-    ps = conn.prepareStatement (query);
-    ps.setString (1, jTextFieldUserName.getText ());
-    jPasswordField.selectAll ();
-    ps.setString (2, jPasswordField.getSelectedText ());
-    rs = ps.executeQuery ();
-    if ( rs.next () ) {
+    this.check = "login";
+    this.access = "treatments";
+    this.conn = createDatabaseConnection (this.check);
+    String query = "SELECT * FROM APP.USERS where UserName =? and Password=?";
+    this.ps = this.conn.prepareStatement (query);
+    this.ps.setString (1, this.jTextFieldUserName.getText ());
+    this.jPasswordField.selectAll ();
+    this.ps.setString (2, this.jPasswordField.getSelectedText ());
+    this.rs = this.ps.executeQuery ();
+    if ( this.rs.next () ) {
       Welcome w = new Welcome ();
+      w.setEnabled (true);
       w.setVisible (true);
+      MedRightStartGUI mrsgui = new MedRightStartGUI ();
+      mrsgui.setEnabled (true);
+      mrsgui.setVisible (true);
+      connection = createDatabaseConnection (this.access);
     }
     else {
       JOptionPane.showMessageDialog (null,
@@ -178,6 +194,12 @@ public SecurityCheck () throws ClassNotFoundException,
   }
   catch ( HeadlessException | ClassNotFoundException | IllegalAccessException | InstantiationException | SQLException err ) {
     JOptionPane.showMessageDialog (null, err);
+  }
+  try {
+    this.conn.close ();
+  }
+  catch ( SQLException ex ) {
+    Logger.getLogger (SecurityCheck.class.getName ()).log (Level.SEVERE, null, ex);
   }
     }//GEN-LAST:event_btnSubmitActionPerformed
 
@@ -203,11 +225,13 @@ public static void main (String args[]) {
         javax.swing.UIManager.setLookAndFeel (info.
             getClassName ());
         break;
+
       }
     }
   }
   catch ( ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex ) {
-    java.util.logging.Logger.getLogger (SecurityCheck.class.
+    java.util.logging.Logger.getLogger (SecurityCheck.class
+        .
         getName ()).
         log (java.util.logging.Level.SEVERE,
              null,
@@ -225,12 +249,14 @@ public static void main (String args[]) {
   public void run () {
     try {
       new SecurityCheck ().setVisible (true);
+
     }
     catch ( ClassNotFoundException |
             InstantiationException |
             IllegalAccessException |
             SQLException ex ) {
-      Logger.getLogger (SecurityCheck.class.getName ()).
+      Logger.getLogger (SecurityCheck.class
+          .getName ()).
           log (Level.SEVERE,
                null,
                ex);

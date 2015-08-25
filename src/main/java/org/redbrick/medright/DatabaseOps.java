@@ -50,7 +50,6 @@ private static Path newPath = null;
 private static String filetime;
 private static LocalDateTime now;
 private static boolean status;
-private static String name = null;
 
 /**
  *
@@ -255,10 +254,12 @@ public static boolean clearDatabaseTable (Connection con) throws
 public static Connection createDatabaseConnection (String whichdb) throws
     ClassNotFoundException, InstantiationException,
     IllegalAccessException {
-  name = whichdb;
+
+  String name = whichdb;
+
   switch ( name ) {
-    case "Login":
-      name = "jdbc:derby:/Users/RedBrick/NetBeansProjects/MedRight/Login;create=true;user=root;password=root";
+    case "login":
+      name = "jdbc:derby:/Users/RedBrick/NetBeansProjects/MedRight/login;create=true;user=root;password=root";
       break;
     case "treatments":
       name = "jdbc:derby:/Users/RedBrick/NetBeansProjects/MedRight/treatments;create=true;user=app;password=root";

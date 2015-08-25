@@ -38,7 +38,7 @@
         <dependency>
             <groupId>org.apache.derby</groupId>
             <artifactId>derby</artifactId>
-            <version>10.10.2.0</version>
+            <version>10.11.1.1</version>
             <type>jar</type>
         </dependency>
         <dependency>
@@ -47,10 +47,14 @@
             <version>1.2.1</version>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
-            <version>2.5.2</version>
-            <scope>provided</scope>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>5.0.0.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-jpamodelgen</artifactId>
+            <version>1.1.1.Final</version>
         </dependency>
     </dependencies>
     <build>
@@ -75,13 +79,13 @@
     <reporting>
         <plugins>
             <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-checkstyle-plugin</artifactId>
-            <version>2.16</version>
-            <configuration>
-              <configLocation>checkstyle.xml</configLocation>
-            </configuration>
-              </plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>2.16</version>
+                <configuration>
+                    <configLocation>checkstyle.xml</configLocation>
+                </configuration>
+            </plugin>
         </plugins>
     </reporting>
     <properties>
