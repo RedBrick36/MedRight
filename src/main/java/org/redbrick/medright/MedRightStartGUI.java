@@ -10,7 +10,6 @@ import java.awt.event.*;
 import java.sql.*;
 import java.util.logging.*;
 import javax.swing.*;
-import static org.redbrick.medright.DatabaseOps.createDatabaseConnection;
 
 /**
  *
@@ -19,7 +18,7 @@ import static org.redbrick.medright.DatabaseOps.createDatabaseConnection;
 public class MedRightStartGUI extends javax.swing.JFrame {
 
 private static final long serialVersionUID = 1L;
-private Connection conn;
+private final Connection conn;
 private Connection connection;
 private PreparedStatement ps;
 private ResultSet rs;
@@ -34,11 +33,11 @@ private String access = "treatements";
    * @throws java.lang.IllegalAccessException
  */
 public MedRightStartGUI () throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-  this.initComponents ();
-  this.conn = createDatabaseConnection (this.access);
+  initComponents ();
+  conn = DatabaseOps.createDatabaseConnection (access);
 }
 
-public void close () {
+public void closeMedStartGUI () {
 
   WindowEvent winClosingEvent = new WindowEvent (this, WindowEvent.WINDOW_CLOS­ING);
   Toolkit.getDefaultToolkit ().getSystemEve­ntQueue ().postEvent (winClosingEvent);

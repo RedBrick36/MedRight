@@ -7,25 +7,17 @@ package org.redbrick.medright;
 
 import java.awt.*;
 import java.io.*;
-import java.lang.*;
-import static java.lang.Class.forName;
-import java.nio.file.*;
 import static java.nio.file.Files.exists;
 import static java.nio.file.Files.move;
+import java.nio.file.*;
 import static java.nio.file.Paths.get;
 import static java.nio.file.StandardCopyOption.REPLACE_EXISTING;
 import java.sql.*;
-import static java.sql.DriverManager.getConnection;
 import java.time.*;
 import static java.time.LocalDateTime.now;
 import static java.time.temporal.ChronoUnit.MINUTES;
-import java.util.logging.*;
-import java.util.logging.Logger.*;
-import static java.util.logging.Logger.getLogger;
-import javax.swing.*;
 import static javax.swing.JOptionPane.showMessageDialog;
-import static javax.swing.UIManager.setLookAndFeel;
-// import static org.redbrick.medright.SetUserTimesGUI.
+import javax.swing.*;
 
 /**
  *
@@ -33,108 +25,23 @@ import static javax.swing.UIManager.setLookAndFeel;
  */
 public class DatabaseOps {
 
-private static Connection con;
-private static String Login;
-private static String whichdb;
-private static DatabaseMetaData md;
-private static ResultSet rs;
-private static CallableStatement statement;
+//private static String Login;
 private static CallableStatement backup;
 private static CallableStatement checkDB;
-private static String treatments;
-private static CallableStatement unfreeze;
-private static CallableStatement freeze;
+private static Connection con;
 private static CallableStatement cs;
 private static Path currentPath = null;
-private static Path newPath = null;
 private static String filetime;
+private static CallableStatement freeze;
+private static DatabaseMetaData md;
+private static Path newPath = null;
 private static LocalDateTime now;
+private static ResultSet rs;
+private static CallableStatement statement;
 private static boolean status;
-
-/**
- *
- * @param con
- *
- * @throws SQLException
- */
-public static void getStateOfDatabase (Connection con) throws
-    SQLException {
-  try {
-    UIManager.setLookAndFeel (
-        "javax.swing.plaf.metal.MetalLookAndFeel");
-  }
-  catch ( ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex ) {
-    java.util.logging.Logger.getLogger (
-        DatabaseOps.class.getName ()).
-        log (java.util.logging.Level.SEVERE,
-             null,
-             ex);
-  }
-  try {
-    statement = con.prepareCall (
-        "SELECT * from APP.TREATMENTS");
-    statement.execute ();
-    md = con.getMetaData ();
-    rs = md.getTables (null,
-                       "APPS",
-                       "TREATMENTS",
-                       null);
-    while ( rs.next () ) {
-      int uuid = rs.getInt (1);
-      String type = rs.getString (2);
-      String name = rs.getString (3);
-      String condition = rs.getString (4);
-      double dose = rs.getDouble (5);
-      String measure = rs.getString (6);
-      boolean reminder = rs.getBoolean (7);
-      boolean monday = rs.getBoolean (8);
-      boolean tuesday = rs.getBoolean (9);
-      boolean wednesday = rs.getBoolean (10);
-      boolean thursday = rs.getBoolean (11);
-      boolean friday = rs.getBoolean (12);
-      boolean saturday = rs.getBoolean (13);
-      boolean sunday = rs.getBoolean (14);
-      boolean am = rs.getBoolean (15);
-      boolean midam = rs.getBoolean (16);
-      boolean noon = rs.getBoolean (17);
-      boolean midaft = rs.getBoolean (18);
-      boolean afternoon = rs.getBoolean (19);
-      boolean evening = rs.getBoolean (20);
-      boolean bedtime = rs.getBoolean (21);
-      boolean midofnight = rs.getBoolean (22);
-      boolean allDays = rs.getBoolean (23);
-      boolean allTimes = rs.getBoolean (24);
-      boolean asNeeded = rs.getBoolean (25);
-      int leadTime = rs.getInt (26);
-      String otf = rs.getString (27);
-      System.out.println (uuid + ", " + type + ", " + name
-          + ", " + condition + ", " + dose
-          + ", "
-          + measure + ", " + reminder + ", "
-          + monday
-          + ", " + tuesday + ", " + wednesday
-          + ", "
-          + thursday + ", " + friday + ", "
-          + saturday
-          + ", " + sunday + ", " + am + ", "
-          + midam
-          + ", " + noon + ", " + midaft + ", "
-          + afternoon + ", " + evening + ", "
-          + bedtime
-          + ", " + midofnight + ", " + allDays
-          + ", "
-          + allTimes + ", " + asNeeded + ", "
-          + leadTime
-          + ", " + otf + ", ");
-      statement.close ();
-      rs.close ();
-    }
-  }
-  catch ( SQLException err ) {
-    System.out.println ("Error executing SQL: " + err.
-        getMessage ());
-  }
-}
+//private static String treatments;
+private static CallableStatement unfreeze;
+// private static String whichdb;
 
 /**
  *
@@ -252,8 +159,7 @@ public static boolean clearDatabaseTable (Connection con) throws
  * @throws IllegalAccessException
  */
 public static Connection createDatabaseConnection (String whichdb) throws
-    ClassNotFoundException, InstantiationException,
-    IllegalAccessException {
+    ClassNotFoundException, InstantiationException, IllegalAccessException {
 
   String name = whichdb;
 
@@ -265,21 +171,22 @@ public static Connection createDatabaseConnection (String whichdb) throws
       name = "jdbc:derby:/Users/RedBrick/NetBeansProjects/MedRight/treatments;create=true;user=app;password=root";
       break;
   }
-  try {
-    UIManager.setLookAndFeel (
-        "javax.swing.plaf.metal.MetalLookAndFeel");
-  }
-  catch ( ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex ) {
-    java.util.logging.Logger.getLogger (
-        MedRightStartGUI.class.getName ()).
-        log (java.util.logging.Level.SEVERE,
-             null,
-             ex);
-  }
+//  try {
+//    UIManager.setLookAndFeel (
+//        "javax.swing.plaf.metal.MetalLookAndFeel");
+//  }
+//  catch ( ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex ) {
+//    java.util.logging.Logger.getLogger (
+//        MedRightStartGUI.class.getName ()).
+//        log (java.util.logging.Level.SEVERE,
+//             null,
+//             ex);
+//  }
   try {
     Class.forName ("org.apache.derby.jdbc.EmbeddedDriver");
-    showMessageDialog (null,
-                       "Successfully located and instantiated Embedded Driver...    ");
+    //    showMessageDialog (null,
+    //"Successfully located and instantiated Embedded Driver...    "
+
   }
   catch ( ClassNotFoundException |
           HeadlessException err ) {
@@ -288,8 +195,8 @@ public static Connection createDatabaseConnection (String whichdb) throws
   }
   try {
     con = DriverManager.getConnection (name);
-    showMessageDialog (null,
-                       "Successfully connected to DB...    ");
+//    showMessageDialog (null,
+//                       "Successfully connected to DB...    ");
   }
   catch ( SQLException |
           HeadlessException err ) {
@@ -310,8 +217,7 @@ public static Connection createDatabaseConnection (String whichdb) throws
  * @throws IllegalAccessException
  */
 public static boolean createTableIfNecessary (Connection con) throws
-    SQLException, InstantiationException,
-    ClassNotFoundException, IllegalAccessException {
+    SQLException, InstantiationException, ClassNotFoundException, IllegalAccessException {
   try {
     md = con.getMetaData ();
     rs = md.getTables (null,
@@ -337,6 +243,91 @@ public static boolean createTableIfNecessary (Connection con) throws
                        err);
   }
   return true;
+}
+
+/**
+ *
+ * @param con
+ *
+ * @throws SQLException
+ */
+public static void getStateOfDatabase (Connection con) throws
+    SQLException {
+  try {
+    UIManager.setLookAndFeel (
+        "javax.swing.plaf.metal.MetalLookAndFeel");
+  }
+  catch ( ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex ) {
+    java.util.logging.Logger.getLogger (
+        DatabaseOps.class.getName ()).
+        log (java.util.logging.Level.SEVERE,
+             null,
+             ex);
+  }
+  try {
+    statement = con.prepareCall (
+        "SELECT * from APP.TREATMENTS");
+    statement.execute ();
+    md = con.getMetaData ();
+    rs = md.getTables (null,
+                       "APPS",
+                       "TREATMENTS",
+                       null);
+    while ( rs.next () ) {
+      int uuid = rs.getInt (1);
+      String type = rs.getString (2);
+      String name = rs.getString (3);
+      String condition = rs.getString (4);
+      double dose = rs.getDouble (5);
+      String measure = rs.getString (6);
+      boolean reminder = rs.getBoolean (7);
+      boolean monday = rs.getBoolean (8);
+      boolean tuesday = rs.getBoolean (9);
+      boolean wednesday = rs.getBoolean (10);
+      boolean thursday = rs.getBoolean (11);
+      boolean friday = rs.getBoolean (12);
+      boolean saturday = rs.getBoolean (13);
+      boolean sunday = rs.getBoolean (14);
+      boolean am = rs.getBoolean (15);
+      boolean midam = rs.getBoolean (16);
+      boolean noon = rs.getBoolean (17);
+      boolean midaft = rs.getBoolean (18);
+      boolean afternoon = rs.getBoolean (19);
+      boolean evening = rs.getBoolean (20);
+      boolean bedtime = rs.getBoolean (21);
+      boolean midofnight = rs.getBoolean (22);
+      boolean allDays = rs.getBoolean (23);
+      boolean allTimes = rs.getBoolean (24);
+      boolean asNeeded = rs.getBoolean (25);
+      int leadTime = rs.getInt (26);
+      String otf = rs.getString (27);
+      System.out.println (uuid + ", " + type + ", " + name
+          + ", " + condition + ", " + dose
+          + ", "
+          + measure + ", " + reminder + ", "
+          + monday
+          + ", " + tuesday + ", " + wednesday
+          + ", "
+          + thursday + ", " + friday + ", "
+          + saturday
+          + ", " + sunday + ", " + am + ", "
+          + midam
+          + ", " + noon + ", " + midaft + ", "
+          + afternoon + ", " + evening + ", "
+          + bedtime
+          + ", " + midofnight + ", " + allDays
+          + ", "
+          + allTimes + ", " + asNeeded + ", "
+          + leadTime
+          + ", " + otf + ", ");
+      statement.close ();
+      rs.close ();
+    }
+  }
+  catch ( SQLException err ) {
+    System.out.println ("Error executing SQL: " + err.
+        getMessage ());
+  }
 }
 
 /**
@@ -386,5 +377,8 @@ public static boolean runDbaseChecks (Connection con) throws
     System.out.println ("SQL Error: " + err.getMessage ());
   }
   return true;
+}
+
+private DatabaseOps () {
 }
 }

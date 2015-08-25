@@ -194,7 +194,9 @@ public void securityCheckClose () {
     if ( this.rs.next () ) {
       JOptionPane.showMessageDialog (null, "Authenticated!");
       this.conn.close ();
-      org.redbrick.medright.MedRightStartGUI.main (this.args);
+      MedRightStartGUI medgui;
+      medgui = new MedRightStartGUI ();
+      medgui.setVisible (true);
       this.dispose ();
     }
     else {
