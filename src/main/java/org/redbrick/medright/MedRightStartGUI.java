@@ -7,23 +7,27 @@ package org.redbrick.medright;
 
 import java.awt.*;
 import java.awt.event.*;
-import java.sql.*;
 import java.util.logging.*;
-import javax.swing.*;
+import javax.persistence.*;
 
 /**
  *
  * @author RedBrick
  */
+@Entity
 public class MedRightStartGUI extends javax.swing.JFrame {
 
 private static final long serialVersionUID = 1L;
-private final Connection conn;
-private Connection connection;
-private PreparedStatement ps;
-private ResultSet rs;
-private String check;
-private String access = "treatements";
+//private final Connection conn;
+//private Connection connection;
+//private PreparedStatement ps;
+//private ResultSet rs;
+//private String check;
+//private String access = "treatements";
+  @Id
+  @OneToOne (mappedBy = "MedRightStartGUI")
+  private MedRightStartGUI MedRightStartGUI;
+
 
 
 /**
@@ -33,8 +37,9 @@ private String access = "treatements";
    * @throws java.lang.IllegalAccessException
  */
 public MedRightStartGUI () throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-  initComponents ();
-  conn = DatabaseOps.createDatabaseConnection (access);
+  this.initComponents ();
+  // conn = DatabaseOps.createDatabaseConnection (access);
+
 }
 
 public void closeMedStartGUI () {
@@ -1063,12 +1068,12 @@ public static void main (String args[]) {
    * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
    */
   try {
-    UIManager.setLookAndFeel (
-        "javax.swing.plaf.metal.MetalLookAndFeel");
-//      for ( javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels () ) {
-//        if ("Metal".equals ( info.getName () ) ) {
-//          javax.swing.UIManager.setLookAndFeel ( info.getClassName () );
-//          break;
+    for ( javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels () ) {
+      if ( "Metal".equals (info.getName ()) ) {
+        javax.swing.UIManager.setLookAndFeel (info.getClassName ());
+        break;
+      }
+    }
   }
   catch ( ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex ) {
     java.util.logging.Logger.getLogger (
@@ -1095,6 +1100,7 @@ public static void main (String args[]) {
     catch ( ClassNotFoundException | InstantiationException | IllegalAccessException ex ) {
       Logger.getLogger (MedRightStartGUI.class.getName ()).log (Level.SEVERE, null, ex);
     }
+
   }
   });
 }
@@ -1163,4 +1169,12 @@ public static void main (String args[]) {
   private javax.swing.JTable topicalsTable;
   private javax.swing.JLabel version;
   // End of variables declaration//GEN-END:variables
+
+public MedRightStartGUI getMedRightStartGUI () {
+  return MedRightStartGUI;
+}
+
+public void setMedRightStartGUI (MedRightStartGUI MedRightStartGUI) {
+  this.MedRightStartGUI = MedRightStartGUI;
+}
 }

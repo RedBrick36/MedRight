@@ -1,8 +1,10 @@
 package org.redbrick.medright;
 
+import javax.annotation.Generated;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
+@Generated(value = "org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor")
 @StaticMetamodel(Treatments.class)
 public abstract class Treatments_ {
 

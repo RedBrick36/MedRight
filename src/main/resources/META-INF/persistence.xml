@@ -3,6 +3,7 @@
   <persistence-unit name="treatments;create=truePU" transaction-type="RESOURCE_LOCAL">
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
     <class>org.redbrick.medright.Treatments</class>
+    <class>org.redbrick.medright.MedRightStartGUI</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby:/Users/RedBrick/NetBeansProjects/MedRight/treatments;create=true"/>
       <property name="javax.persistence.jdbc.user" value="app"/>
@@ -14,6 +15,7 @@
   <persistence-unit name="login;create=truePU" transaction-type="RESOURCE_LOCAL">
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
     <class>org.redbrick.medright.Treatments</class>
+    <class>org.redbrick.medright.MedRightStartGUI</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby:/Users/RedBrick/NetBeansProjects/MedRight/login;create=true"/>
       <property name="javax.persistence.jdbc.user" value="root"/>
