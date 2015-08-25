@@ -20,7 +20,7 @@ public class Welcome extends javax.swing.JFrame {
     public Welcome () {
         initComponents ();
     }
-    public void close(){
+    public void welcomeClose(){
 
 WindowEvent winClosingEvent = new WindowEvent(this,WindowEvent.WINDOW_CLOS­ING);
 Toolkit.getDefaultToolkit().getSystemEve­ntQueue().postEvent(winClosingEvent);
@@ -106,7 +106,7 @@ Toolkit.getDefaultToolkit().getSystemEve­ntQueue().postEvent(winClosingEvent);
 
   private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
   // TODO add your handling code here:
-  this.dispose ();
+  welcomeClose ();
   }//GEN-LAST:event_jButton1ActionPerformed
 
 /**
