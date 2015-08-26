@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.persistence.EntityManager" name="entityManager">
+      <Properties>
+        <Property name="persistenceUnit" type="java.lang.String" value="treatments;create=truePU"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="false"/>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="2"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.persistence.Query" name="query">
+      <Properties>
+        <Property name="query" type="java.lang.String" value="SELECT t FROM Treatments t"/>
+        <Property name="entityManager" type="java.lang.Object" editor="org.netbeans.modules.form.j2ee.J2EEPropertyModifier$EMProperty$EntityManagerEditor">
+          <ComponentRef name="entityManager"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="false"/>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="2"/>
+      </AuxValues>
+    </Component>
+    <Component class="java.util.List" name="list">
+      <Properties>
+        <Property name="query" type="java.lang.Object" editor="org.netbeans.modules.form.j2ee.J2EEPropertyModifier$QueryBeanProperty$QueryEditor">
+          <ComponentRef name="query"/>
+        </Property>
+        <Property name="observable" type="boolean" value="true"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;org.redbrick.medright.Treatments&gt;"/>
+        <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="false"/>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="2"/>
+      </AuxValues>
+    </Component>
+  </NonVisualComponents>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="2"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="mondayLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="mondayField" min="-2" pref="300" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Component id="masterScrollPane" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="uuidLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="typeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="nameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="conditionLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="doseLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="measureLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="reminderLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="tuesdayLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="wednesdayLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="thursdayLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="fridayLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="saturdayLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="sundayLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="tuesdayField" min="-2" pref="300" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Component id="newButton" linkSize="1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="deleteButton" linkSize="1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="refreshButton" linkSize="1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="saveButton" linkSize="1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="typeField" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                          <Component id="nameField" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                          <Component id="conditionField" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                          <Component id="doseField" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                          <Component id="measureField" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                          <Component id="uuidField" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                          <Component id="reminderField" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                          <Component id="wednesdayField" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                          <Component id="thursdayField" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                          <Component id="fridayField" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                          <Component id="saturdayField" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                          <Component id="sundayField" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace pref="57" max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="afternoonLabel" min="-2" max="-2" attributes="0"/>
+                                          <Component id="amLabel" min="-2" max="-2" attributes="0"/>
+                                          <Component id="midamLabel" min="-2" max="-2" attributes="0"/>
+                                          <Component id="noonLabel" min="-2" max="-2" attributes="0"/>
+                                          <Component id="midaftLabel" min="-2" max="-2" attributes="0"/>
+                                          <Component id="eveningLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bedtimeLabel" min="-2" max="-2" attributes="0"/>
+                                          <Component id="midofnightLabel" min="-2" max="-2" attributes="0"/>
+                                          <Component id="alldaysLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="alltimesLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="asneededLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="leadtimeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="otfLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="otfField" min="-2" pref="300" max="-2" attributes="0"/>
+                                          <Component id="leadtimeField" min="-2" pref="300" max="-2" attributes="0"/>
+                                          <Component id="asneededField" min="-2" pref="300" max="-2" attributes="0"/>
+                                          <Component id="alltimesField" min="-2" pref="300" max="-2" attributes="0"/>
+                                          <Component id="alldaysField" min="-2" pref="300" max="-2" attributes="0"/>
+                                          <Component id="amField" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                          <Component id="midamField" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                          <Component id="noonField" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                          <Component id="midaftField" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                          <Component id="afternoonField" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                          <Component id="eveningField" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                          <Component id="bedtimeField" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                          <Component id="midofnightField" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="masterScrollPane" pref="210" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="uuidLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="uuidField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="typeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="typeField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="nameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="nameField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="conditionLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="conditionField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="doseLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="doseField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="measureLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="measureField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="reminderLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="reminderField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="amField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="amLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="midamField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="midamLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="noonField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="noonLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="midaftField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="midaftLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="afternoonField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="afternoonLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="eveningField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="eveningLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="bedtimeField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="bedtimeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="midofnightField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="midofnightLabel" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="mondayLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="mondayField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="tuesdayLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tuesdayField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="wednesdayLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="wednesdayField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="alldaysLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="alldaysField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="thursdayLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="thursdayField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="alltimesLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="alltimesField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="fridayLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="fridayField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="asneededLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="asneededField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="saturdayLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="saturdayField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="leadtimeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="leadtimeField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="sundayLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="sundayField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="otfLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="otfField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="saveButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="refreshButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="deleteButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="newButton" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JScrollPane" name="masterScrollPane">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
+        <Property name="verticalScrollBarPolicy" type="int" value="22"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Dialog" size="10" style="0"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="masterTable">
+          <Properties>
+            <Property name="autoCreateRowSorter" type="boolean" value="true"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                <CompoundBorder>
+                  <Border PropertyName="outside" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                  <Border PropertyName="inside" info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </CompoundBorder>
+              </Border>
+            </Property>
+            <Property name="autoscrolls" type="boolean" value="false"/>
+          </Properties>
+          <BindingProperties>
+            <BindingProperty name="elements" source="list" target="masterTable" targetPath="elements" updateStrategy="0" immediately="false">
+              <Subbinding sourcePath="${uuid}">
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="0"/>
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Integer.class"/>
+              </Subbinding>
+              <Subbinding sourcePath="${type}">
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="1"/>
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+              </Subbinding>
+              <Subbinding sourcePath="${name}">
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="2"/>
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+              </Subbinding>
+              <Subbinding sourcePath="${condition}">
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="3"/>
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+              </Subbinding>
+              <Subbinding sourcePath="${dose}">
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="4"/>
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Double.class"/>
+              </Subbinding>
+              <Subbinding sourcePath="${measure}">
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="5"/>
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+              </Subbinding>
+              <Subbinding sourcePath="${reminder}">
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="6"/>
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Boolean.class"/>
+              </Subbinding>
+              <Subbinding sourcePath="${monday}">
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="7"/>
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Boolean.class"/>
+              </Subbinding>
+              <Subbinding sourcePath="${tuesday}">
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="8"/>
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Boolean.class"/>
+              </Subbinding>
+              <Subbinding sourcePath="${wednesday}">
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="9"/>
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Boolean.class"/>
+              </Subbinding>
+              <Subbinding sourcePath="${thursday}">
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="10"/>
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Boolean.class"/>
+              </Subbinding>
+              <Subbinding sourcePath="${friday}">
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="11"/>
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Boolean.class"/>
+              </Subbinding>
+              <Subbinding sourcePath="${saturday}">
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="12"/>
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Boolean.class"/>
+              </Subbinding>
+              <Subbinding sourcePath="${sunday}">
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="13"/>
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Boolean.class"/>
+              </Subbinding>
+              <Subbinding sourcePath="${am}">
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="14"/>
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Boolean.class"/>
+              </Subbinding>
+              <Subbinding sourcePath="${midam}">
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="15"/>
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Boolean.class"/>
+              </Subbinding>
+              <Subbinding sourcePath="${noon}">
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="16"/>
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Boolean.class"/>
+              </Subbinding>
+              <Subbinding sourcePath="${midaft}">
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="17"/>
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Boolean.class"/>
+              </Subbinding>
+              <Subbinding sourcePath="${afternoon}">
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="18"/>
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Boolean.class"/>
+              </Subbinding>
+              <Subbinding sourcePath="${evening}">
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="19"/>
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Boolean.class"/>
+              </Subbinding>
+              <Subbinding sourcePath="${bedtime}">
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="20"/>
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Boolean.class"/>
+              </Subbinding>
+              <Subbinding sourcePath="${midofnight}">
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="21"/>
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Boolean.class"/>
+              </Subbinding>
+              <Subbinding sourcePath="${alldays}">
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="22"/>
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Boolean.class"/>
+              </Subbinding>
+              <Subbinding sourcePath="${alltimes}">
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="23"/>
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Boolean.class"/>
+              </Subbinding>
+              <Subbinding sourcePath="${asneeded}">
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="24"/>
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Boolean.class"/>
+              </Subbinding>
+              <Subbinding sourcePath="${leadtime}">
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="25"/>
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Integer.class"/>
+              </Subbinding>
+              <Subbinding sourcePath="${otf}">
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="26"/>
+                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
+              </Subbinding>
+            </BindingProperty>
+          </BindingProperties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="false"/>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="2"/>
+          </AuxValues>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JLabel" name="uuidLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Uuid:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="typeLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Type:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="nameLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Name:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="conditionLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Condition:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="doseLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Dose:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="measureLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Measure:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="reminderLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Reminder:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="mondayLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Monday:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="tuesdayLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tuesday:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="wednesdayLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Wednesday:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="thursdayLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Thursday:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="fridayLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Friday:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="saturdayLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Saturday:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="sundayLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Sunday:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="amLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Am:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="midamLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Midam:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="noonLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Noon:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="midaftLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Midaft:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="afternoonLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Afternoon:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="eveningLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Evening:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="bedtimeLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Bedtime:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="midofnightLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="MidOfNight:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="alldaysLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Alldays:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="alltimesLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Alltimes:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="asneededLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Asneeded:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="leadtimeLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Leadtime:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="otfLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Other Times:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="uuidField">
+      <BindingProperties>
+        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.uuid}" target="uuidField" targetPath="text" updateStrategy="0" immediately="false">
+          <Property name="incompletePathValue" type="java.lang.String" value="null"/>
+        </BindingProperty>
+        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="uuidField" targetPath="enabled" updateStrategy="1" immediately="false"/>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="typeField">
+      <BindingProperties>
+        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.type}" target="typeField" targetPath="text" updateStrategy="0" immediately="false">
+          <Property name="incompletePathValue" type="java.lang.String" value="null"/>
+        </BindingProperty>
+        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="typeField" targetPath="enabled" updateStrategy="1" immediately="false"/>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="nameField">
+      <BindingProperties>
+        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.name}" target="nameField" targetPath="text" updateStrategy="0" immediately="false">
+          <Property name="incompletePathValue" type="java.lang.String" value="null"/>
+        </BindingProperty>
+        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="nameField" targetPath="enabled" updateStrategy="1" immediately="false"/>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="conditionField">
+      <BindingProperties>
+        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.condition}" target="conditionField" targetPath="text" updateStrategy="0" immediately="false">
+          <Property name="incompletePathValue" type="java.lang.String" value="null"/>
+        </BindingProperty>
+        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="conditionField" targetPath="enabled" updateStrategy="1" immediately="false"/>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="doseField">
+      <BindingProperties>
+        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.dose}" target="doseField" targetPath="text" updateStrategy="0" immediately="false">
+          <Property name="incompletePathValue" type="java.lang.String" value="null"/>
+        </BindingProperty>
+        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="doseField" targetPath="enabled" updateStrategy="1" immediately="false"/>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="measureField">
+      <BindingProperties>
+        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.measure}" target="measureField" targetPath="text" updateStrategy="0" immediately="false">
+          <Property name="incompletePathValue" type="java.lang.String" value="null"/>
+        </BindingProperty>
+        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="measureField" targetPath="enabled" updateStrategy="1" immediately="false"/>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="reminderField">
+      <BindingProperties>
+        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.reminder}" target="reminderField" targetPath="text" updateStrategy="0" immediately="false">
+          <Property name="incompletePathValue" type="java.lang.String" value="null"/>
+        </BindingProperty>
+        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="reminderField" targetPath="enabled" updateStrategy="1" immediately="false"/>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="mondayField">
+      <BindingProperties>
+        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.monday}" target="mondayField" targetPath="text" updateStrategy="0" immediately="false">
+          <Property name="incompletePathValue" type="java.lang.String" value="null"/>
+        </BindingProperty>
+        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="mondayField" targetPath="enabled" updateStrategy="1" immediately="false"/>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="tuesdayField">
+      <BindingProperties>
+        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.tuesday}" target="tuesdayField" targetPath="text" updateStrategy="0" immediately="false">
+          <Property name="incompletePathValue" type="java.lang.String" value="null"/>
+        </BindingProperty>
+        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="tuesdayField" targetPath="enabled" updateStrategy="1" immediately="false"/>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="wednesdayField">
+      <BindingProperties>
+        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.wednesday}" target="wednesdayField" targetPath="text" updateStrategy="0" immediately="false">
+          <Property name="incompletePathValue" type="java.lang.String" value="null"/>
+        </BindingProperty>
+        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="wednesdayField" targetPath="enabled" updateStrategy="1" immediately="false"/>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="thursdayField">
+      <BindingProperties>
+        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.thursday}" target="thursdayField" targetPath="text" updateStrategy="0" immediately="false">
+          <Property name="incompletePathValue" type="java.lang.String" value="null"/>
+        </BindingProperty>
+        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="thursdayField" targetPath="enabled" updateStrategy="1" immediately="false"/>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="fridayField">
+      <BindingProperties>
+        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.friday}" target="fridayField" targetPath="text" updateStrategy="0" immediately="false">
+          <Property name="incompletePathValue" type="java.lang.String" value="null"/>
+        </BindingProperty>
+        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="fridayField" targetPath="enabled" updateStrategy="1" immediately="false"/>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="saturdayField">
+      <BindingProperties>
+        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.saturday}" target="saturdayField" targetPath="text" updateStrategy="0" immediately="false">
+          <Property name="incompletePathValue" type="java.lang.String" value="null"/>
+        </BindingProperty>
+        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="saturdayField" targetPath="enabled" updateStrategy="1" immediately="false"/>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="sundayField">
+      <BindingProperties>
+        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.sunday}" target="sundayField" targetPath="text" updateStrategy="0" immediately="false">
+          <Property name="incompletePathValue" type="java.lang.String" value="null"/>
+        </BindingProperty>
+        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="sundayField" targetPath="enabled" updateStrategy="1" immediately="false"/>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="amField">
+      <BindingProperties>
+        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.am}" target="amField" targetPath="text" updateStrategy="0" immediately="false">
+          <Property name="incompletePathValue" type="java.lang.String" value="null"/>
+        </BindingProperty>
+        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="amField" targetPath="enabled" updateStrategy="1" immediately="false"/>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="midamField">
+      <BindingProperties>
+        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.midam}" target="midamField" targetPath="text" updateStrategy="0" immediately="false">
+          <Property name="incompletePathValue" type="java.lang.String" value="null"/>
+        </BindingProperty>
+        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="midamField" targetPath="enabled" updateStrategy="1" immediately="false"/>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="noonField">
+      <BindingProperties>
+        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.noon}" target="noonField" targetPath="text" updateStrategy="0" immediately="false">
+          <Property name="incompletePathValue" type="java.lang.String" value="null"/>
+        </BindingProperty>
+        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="noonField" targetPath="enabled" updateStrategy="1" immediately="false"/>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="midaftField">
+      <BindingProperties>
+        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.midaft}" target="midaftField" targetPath="text" updateStrategy="0" immediately="false">
+          <Property name="incompletePathValue" type="java.lang.String" value="null"/>
+        </BindingProperty>
+        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="midaftField" targetPath="enabled" updateStrategy="1" immediately="false"/>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="afternoonField">
+      <BindingProperties>
+        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.afternoon}" target="afternoonField" targetPath="text" updateStrategy="0" immediately="false">
+          <Property name="incompletePathValue" type="java.lang.String" value="null"/>
+        </BindingProperty>
+        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="afternoonField" targetPath="enabled" updateStrategy="1" immediately="false"/>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="eveningField">
+      <BindingProperties>
+        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.evening}" target="eveningField" targetPath="text" updateStrategy="0" immediately="false">
+          <Property name="incompletePathValue" type="java.lang.String" value="null"/>
+        </BindingProperty>
+        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="eveningField" targetPath="enabled" updateStrategy="1" immediately="false"/>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="bedtimeField">
+      <BindingProperties>
+        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.bedtime}" target="bedtimeField" targetPath="text" updateStrategy="0" immediately="false">
+          <Property name="incompletePathValue" type="java.lang.String" value="null"/>
+        </BindingProperty>
+        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="bedtimeField" targetPath="enabled" updateStrategy="1" immediately="false"/>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="midofnightField">
+      <BindingProperties>
+        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.midofnight}" target="midofnightField" targetPath="text" updateStrategy="0" immediately="false">
+          <Property name="incompletePathValue" type="java.lang.String" value="null"/>
+        </BindingProperty>
+        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="midofnightField" targetPath="enabled" updateStrategy="1" immediately="false"/>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="alldaysField">
+      <BindingProperties>
+        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.alldays}" target="alldaysField" targetPath="text" updateStrategy="0" immediately="false">
+          <Property name="incompletePathValue" type="java.lang.String" value="null"/>
+        </BindingProperty>
+        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="alldaysField" targetPath="enabled" updateStrategy="1" immediately="false"/>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="alltimesField">
+      <BindingProperties>
+        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.alltimes}" target="alltimesField" targetPath="text" updateStrategy="0" immediately="false">
+          <Property name="incompletePathValue" type="java.lang.String" value="null"/>
+        </BindingProperty>
+        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="alltimesField" targetPath="enabled" updateStrategy="1" immediately="false"/>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="asneededField">
+      <BindingProperties>
+        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.asneeded}" target="asneededField" targetPath="text" updateStrategy="0" immediately="false">
+          <Property name="incompletePathValue" type="java.lang.String" value="null"/>
+        </BindingProperty>
+        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="asneededField" targetPath="enabled" updateStrategy="1" immediately="false"/>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="leadtimeField">
+      <BindingProperties>
+        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.leadtime}" target="leadtimeField" targetPath="text" updateStrategy="0" immediately="false">
+          <Property name="incompletePathValue" type="java.lang.String" value="null"/>
+        </BindingProperty>
+        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="leadtimeField" targetPath="enabled" updateStrategy="1" immediately="false"/>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="otfField">
+      <BindingProperties>
+        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.otf}" target="otfField" targetPath="text" updateStrategy="0" immediately="false">
+          <Property name="incompletePathValue" type="java.lang.String" value="null"/>
+        </BindingProperty>
+        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="otfField" targetPath="enabled" updateStrategy="1" immediately="false"/>
+      </BindingProperties>
+    </Component>
+    <Component class="javax.swing.JButton" name="saveButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Save"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="saveButtonActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="false"/>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="2"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="refreshButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Refresh"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="refreshButtonActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="false"/>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="2"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="newButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="New"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="newButtonActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="false"/>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="2"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="deleteButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Delete"/>
+      </Properties>
+      <BindingProperties>
+        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="deleteButton" targetPath="enabled" updateStrategy="1" immediately="false"/>
+      </BindingProperties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteButtonActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="false"/>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="2"/>
+      </AuxValues>
+    </Component>
+  </SubComponents>
+</Form>
