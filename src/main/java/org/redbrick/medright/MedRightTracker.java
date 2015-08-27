@@ -55,7 +55,7 @@ package org.redbrick.medright;
 import java.sql.*;
 import javax.swing.*;
 
-public class MedRight {
+public class MedRightTracker {
 
     public static void main (String[] args) throws
             SQLException, InstantiationException,

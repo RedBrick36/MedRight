@@ -20,12 +20,9 @@ public class SecurityCheck
     extends javax.swing.JFrame {
 
 private static final long serialVersionUID = 1L;
-private String[] args;
 private Connection conn;
-private Connection connection;
 private PreparedStatement ps;
 private ResultSet rs;
-private SecurityCheck sc;
 private String secCheck;
 
 /**
