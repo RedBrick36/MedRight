@@ -5,19 +5,13 @@
  */
 package org.redbrick.medright;
 
-import javax.persistence.*;
-
 /**
  *
  * @author RedBrick
  */
-@Entity
 public class TreatmentScheduleCreatorGUI extends javax.swing.JFrame {
 
   private static final long serialVersionUID = 1L;
-  @Id
-  @OneToOne (mappedBy = "SchedDataEntryGUI")
-  private TreatmentScheduleCreatorGUI SchedDataEntryGUI;
 
   /**
    * Creates new form ScheduleDataEntry
@@ -339,41 +333,35 @@ public class TreatmentScheduleCreatorGUI extends javax.swing.JFrame {
             .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
               .addGroup(SchedCreateLayout.createSequentialGroup()
                 .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addGroup(SchedCreateLayout.createSequentialGroup()
-                    .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                      .addComponent(jlName)
-                      .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jftfName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                  .addComponent(jlName)
+                  .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jftfName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(SchedCreateLayout.createSequentialGroup()
+                      .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jftfDose, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(SchedCreateLayout.createSequentialGroup()
-                          .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jftfDose, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(SchedCreateLayout.createSequentialGroup()
-                              .addGap(29, 29, 29)
-                              .addComponent(jlDose)))
-                          .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(SchedCreateLayout.createSequentialGroup()
-                              .addGap(26, 26, 26)
-                              .addComponent(jlMeasure))
-                            .addGroup(SchedCreateLayout.createSequentialGroup()
-                              .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                              .addComponent(jcbMeasure, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                          .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(SchedCreateLayout.createSequentialGroup()
-                              .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                              .addComponent(jftfCondition, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(SchedCreateLayout.createSequentialGroup()
-                              .addGap(42, 42, 42)
-                              .addComponent(jlCondition))))))
-                    .addGap(0, 48, Short.MAX_VALUE))
+                          .addGap(29, 29, 29)
+                          .addComponent(jlDose)))
+                      .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(SchedCreateLayout.createSequentialGroup()
+                          .addGap(26, 26, 26)
+                          .addComponent(jlMeasure))
+                        .addGroup(SchedCreateLayout.createSequentialGroup()
+                          .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                          .addComponent(jcbMeasure, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                      .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(SchedCreateLayout.createSequentialGroup()
+                          .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                          .addComponent(jftfCondition, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(SchedCreateLayout.createSequentialGroup()
+                          .addGap(42, 42, 42)
+                          .addComponent(jlCondition)))))
+                  .addComponent(jLabel2)
                   .addGroup(SchedCreateLayout.createSequentialGroup()
-                    .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                      .addComponent(jLabel2)
-                      .addGroup(SchedCreateLayout.createSequentialGroup()
-                        .addGap(5, 5, 5)
-                        .addComponent(OTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Help, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(12, 12, 12)
+                    .addGap(5, 5, 5)
+                    .addComponent(OTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                  .addComponent(Help, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 60, Short.MAX_VALUE)
                 .addGroup(SchedCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                   .addGroup(SchedCreateLayout.createSequentialGroup()
                     .addComponent(Save, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -845,12 +833,4 @@ public static void main (String args[]) {
   private javax.swing.JLabel jlSchedType;
   private javax.swing.JComboBox leadTime;
   // End of variables declaration//GEN-END:variables
-
-public TreatmentScheduleCreatorGUI getSchedDataEntryGUI () {
-  return this.SchedDataEntryGUI;
-}
-
-public void setSchedDataEntry (TreatmentScheduleCreatorGUI sde) {
-  this.SchedDataEntryGUI = sde;
-}
 }
