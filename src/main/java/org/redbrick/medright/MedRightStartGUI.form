@@ -157,9 +157,9 @@
                   </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="jScrollPane1" min="-2" pref="274" max="-2" attributes="0"/>
+              <Component id="TimeToNextSPanel" min="-2" pref="274" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="136" max="-2" attributes="0"/>
-              <Component id="jbAddNewSchedule" min="-2" pref="156" max="-2" attributes="0"/>
+              <Component id="btnAddNewSchedule" min="-2" pref="156" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -180,8 +180,8 @@
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jScrollPane1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jbAddNewSchedule" min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="TimeToNextSPanel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnAddNewSchedule" min="-2" pref="30" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                   </Group>
@@ -565,19 +565,19 @@
                               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                               <Component id="toggleTookAM" min="-2" pref="70" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-                              <Component id="toggleTookAM2" min="-2" pref="70" max="-2" attributes="0"/>
+                              <Component id="toggleTookMM" min="-2" pref="70" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                              <Component id="toggleTookAM3" min="-2" pref="85" max="-2" attributes="0"/>
+                              <Component id="toggleTookNoon" min="-2" pref="85" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                              <Component id="toggleTookAM4" min="-2" pref="95" max="-2" attributes="0"/>
+                              <Component id="toggleTookMidAft" min="-2" pref="95" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-                              <Component id="toggleTookAM5" min="-2" pref="70" max="-2" attributes="0"/>
+                              <Component id="toggleTookAft" min="-2" pref="70" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                              <Component id="toggleTookAM6" min="-2" pref="70" max="-2" attributes="0"/>
+                              <Component id="toggleTookEve" min="-2" pref="70" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="toggleTookAM7" min="-2" pref="102" max="-2" attributes="0"/>
+                              <Component id="toggleTookBedtime" min="-2" pref="102" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="toggleTookAM8" min="-2" pref="88" max="-2" attributes="0"/>
+                              <Component id="toggleTookNight" min="-2" pref="88" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -593,13 +593,13 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="toggleTookAM" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                          <Component id="toggleTookAM2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                          <Component id="toggleTookAM3" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                          <Component id="toggleTookAM4" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                          <Component id="toggleTookAM5" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                          <Component id="toggleTookAM6" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                          <Component id="toggleTookAM7" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                          <Component id="toggleTookAM8" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="toggleTookMM" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="toggleTookNoon" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="toggleTookMidAft" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="toggleTookAft" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="toggleTookEve" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="toggleTookBedtime" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="toggleTookNight" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                   </Group>
@@ -659,7 +659,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toggleTookAMActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JToggleButton" name="toggleTookAM2">
+            <Component class="javax.swing.JToggleButton" name="toggleTookMM">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Took MM"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -679,10 +679,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toggleTookAM2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toggleTookMMActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JToggleButton" name="toggleTookAM3">
+            <Component class="javax.swing.JToggleButton" name="toggleTookNoon">
               <Properties>
                 <Property name="text" type="java.lang.String" value=" Took Noon "/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -702,10 +702,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toggleTookAM3ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toggleTookNoonActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JToggleButton" name="toggleTookAM4">
+            <Component class="javax.swing.JToggleButton" name="toggleTookMidAft">
               <Properties>
                 <Property name="text" type="java.lang.String" value=" Took MidAft "/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -725,10 +725,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toggleTookAM4ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toggleTookMidAftActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JToggleButton" name="toggleTookAM5">
+            <Component class="javax.swing.JToggleButton" name="toggleTookAft">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Took Aft"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -748,10 +748,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toggleTookAM5ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toggleTookAftActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JToggleButton" name="toggleTookAM6">
+            <Component class="javax.swing.JToggleButton" name="toggleTookEve">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Took Eve"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -771,10 +771,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toggleTookAM6ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toggleTookEveActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JToggleButton" name="toggleTookAM7">
+            <Component class="javax.swing.JToggleButton" name="toggleTookBedtime">
               <Properties>
                 <Property name="text" type="java.lang.String" value=" Took Bedtime "/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -794,10 +794,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toggleTookAM7ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toggleTookBedtimeActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JToggleButton" name="toggleTookAM8">
+            <Component class="javax.swing.JToggleButton" name="toggleTookNight">
               <Properties>
                 <Property name="text" type="java.lang.String" value="  Took Night "/>
                 <Property name="autoscrolls" type="boolean" value="true"/>
@@ -822,14 +822,14 @@
                 <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="TookMON" noResource="true"/>
               </AccessibilityProperties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toggleTookAM8ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toggleTookNightActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JProgressBar" name="jProgressBar1">
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="Actions">
+        <Container class="javax.swing.JPanel" name="Tools">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
@@ -858,33 +858,28 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="crud" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="configureTime" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButton1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnCrud" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnConfigureTime" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnBackup" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                              <Component id="jButton4" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnChangePW" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnRestore" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace pref="76" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="jScrollPane2" min="-2" pref="210" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="457" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="jScrollPane4" min="-2" pref="219" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="346" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="jScrollPane2" min="-2" pref="210" max="-2" attributes="0"/>
+                                  <Component id="jScrollPane4" min="-2" pref="219" max="-2" attributes="0"/>
                               </Group>
+                              <EmptySpace min="-2" pref="448" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
-                                      <Component id="submit" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btnSubmit" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
@@ -903,7 +898,7 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="396" max="-2" attributes="0"/>
-                              <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnDeleteAllData" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
@@ -919,28 +914,28 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                              <Component id="configureTime" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnConfigureTime" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="crud" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnCrud" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnBackup" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnRestore" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnChangePW" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jScrollPane2" min="-2" pref="72" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                               <Component id="jPasswordField1" min="-2" pref="23" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="submit" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnSubmit" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                               <Component id="jScrollPane4" min="-2" pref="117" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                      <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnDeleteAllData" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="200" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -970,7 +965,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jPasswordField1ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="configureTime">
+            <Component class="javax.swing.JButton" name="btnConfigureTime">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="sansserif" size="16" style="0"/>
@@ -993,7 +988,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="crud">
+            <Component class="javax.swing.JButton" name="btnCrud">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="sansserif" size="16" style="0"/>
@@ -1016,7 +1011,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="submit">
+            <Component class="javax.swing.JButton" name="btnSubmit">
               <Properties>
                 <Property name="text" type="java.lang.String" value="  Submit  "/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1033,10 +1028,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="submitActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSubmitActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton1">
+            <Component class="javax.swing.JButton" name="btnBackup">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="sansserif" size="16" style="0"/>
@@ -1059,7 +1054,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton2">
+            <Component class="javax.swing.JButton" name="btnRestore">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="sansserif" size="16" style="0"/>
@@ -1082,7 +1077,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton3">
+            <Component class="javax.swing.JButton" name="btnDeleteAllData">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="sansserif" size="16" style="0"/>
@@ -1105,7 +1100,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton4">
+            <Component class="javax.swing.JButton" name="btnChangePW">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="sansserif" size="16" style="0"/>
@@ -1236,7 +1231,7 @@
         <Property name="text" type="java.lang.String" value="RedBrick.Org, 2015"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jbAddNewSchedule">
+    <Component class="javax.swing.JButton" name="btnAddNewSchedule">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Dialog" size="14" style="0"/>
@@ -1263,17 +1258,17 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbAddNewScheduleActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddNewScheduleActionPerformed"/>
       </Events>
     </Component>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+    <Container class="javax.swing.JScrollPane" name="TimeToNextSPanel">
       <AuxValues>
         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
       </AuxValues>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextArea" name="jTextArea1">
+        <Component class="javax.swing.JTextArea" name="TimeToNextTArea">
           <Properties>
             <Property name="columns" type="int" value="2"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">

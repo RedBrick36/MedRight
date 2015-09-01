@@ -16,13 +16,6 @@ import java.util.logging.*;
 public class MedRightStartGUI extends javax.swing.JFrame {
 
 private static final long serialVersionUID = 1L;
-//private final Connection conn;
-//private Connection connection;
-//private PreparedStatement ps;
-//private ResultSet rs;
-//private String check;
-//private String access = "treatements";
-// private String entityMedRightStartGUI;
 
 /**
  * Creates new form MedRightTopLevel
@@ -33,8 +26,7 @@ private static final long serialVersionUID = 1L;
  */
 public MedRightStartGUI () throws ClassNotFoundException, InstantiationException, IllegalAccessException {
   this.initComponents ();
-  // conn = DatabaseOps.createDatabaseConnection (access);
-  //  entityMedRightStartGUI = java.beans.Beans.isDesignTime() ? entityMedRightStartGUI : javax.persistence.Persistence.createEntityManagerFactory(entityMedRightStartGUI).createEntityManager();
+
 }
 
 public void closeMedStartGUI () {
@@ -46,7 +38,7 @@ public void closeMedStartGUI () {
   // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
   private void initComponents() {
 
-    entityMedRight = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory("treatments;create=truePU").createEntityManager();
+    entityMedRight = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory("org.redbrick_MedRight_jar_1.0-SNAPSHOTPU").createEntityManager();
     pillScrollPane = new javax.swing.JScrollPane();
     pillTable = new javax.swing.JTable();
     Treatments = new javax.swing.JTabbedPane();
@@ -73,23 +65,23 @@ public void closeMedStartGUI () {
     scheduleScrollPane = new javax.swing.JScrollPane();
     scheduleTable = new javax.swing.JTable();
     toggleTookAM = new javax.swing.JToggleButton();
-    toggleTookAM2 = new javax.swing.JToggleButton();
-    toggleTookAM3 = new javax.swing.JToggleButton();
-    toggleTookAM4 = new javax.swing.JToggleButton();
-    toggleTookAM5 = new javax.swing.JToggleButton();
-    toggleTookAM6 = new javax.swing.JToggleButton();
-    toggleTookAM7 = new javax.swing.JToggleButton();
-    toggleTookAM8 = new javax.swing.JToggleButton();
+    toggleTookMM = new javax.swing.JToggleButton();
+    toggleTookNoon = new javax.swing.JToggleButton();
+    toggleTookMidAft = new javax.swing.JToggleButton();
+    toggleTookAft = new javax.swing.JToggleButton();
+    toggleTookEve = new javax.swing.JToggleButton();
+    toggleTookBedtime = new javax.swing.JToggleButton();
+    toggleTookNight = new javax.swing.JToggleButton();
     jProgressBar1 = new javax.swing.JProgressBar();
-    Actions = new javax.swing.JPanel();
+    Tools = new javax.swing.JPanel();
     jPasswordField1 = new javax.swing.JPasswordField();
-    configureTime = new javax.swing.JButton();
-    crud = new javax.swing.JButton();
-    submit = new javax.swing.JButton();
-    jButton1 = new javax.swing.JButton();
-    jButton2 = new javax.swing.JButton();
-    jButton3 = new javax.swing.JButton();
-    jButton4 = new javax.swing.JButton();
+    btnConfigureTime = new javax.swing.JButton();
+    btnCrud = new javax.swing.JButton();
+    btnSubmit = new javax.swing.JButton();
+    btnBackup = new javax.swing.JButton();
+    btnRestore = new javax.swing.JButton();
+    btnDeleteAllData = new javax.swing.JButton();
+    btnChangePW = new javax.swing.JButton();
     jScrollPane2 = new javax.swing.JScrollPane();
     jTextArea2 = new javax.swing.JTextArea();
     jLabel2 = new javax.swing.JLabel();
@@ -98,9 +90,9 @@ public void closeMedStartGUI () {
     banner = new javax.swing.JLabel();
     version = new javax.swing.JLabel();
     creator = new javax.swing.JLabel();
-    jbAddNewSchedule = new javax.swing.JButton();
-    jScrollPane1 = new javax.swing.JScrollPane();
-    jTextArea1 = new javax.swing.JTextArea();
+    btnAddNewSchedule = new javax.swing.JButton();
+    TimeToNextSPanel = new javax.swing.JScrollPane();
+    TimeToNextTArea = new javax.swing.JTextArea();
     menuBar = new javax.swing.JMenuBar();
     fileMenu = new javax.swing.JMenu();
     exitMenuItem = new javax.swing.JMenuItem();
@@ -567,89 +559,89 @@ public void closeMedStartGUI () {
       }
     });
 
-    toggleTookAM2.setText("Took MM");
-    toggleTookAM2.setBorder(new javax.swing.border.MatteBorder(null));
-    toggleTookAM2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    toggleTookAM2.setMaximumSize(new java.awt.Dimension(45, 18));
-    toggleTookAM2.setMinimumSize(new java.awt.Dimension(45, 18));
-    toggleTookAM2.setPreferredSize(new java.awt.Dimension(45, 18));
-    toggleTookAM2.addActionListener(new java.awt.event.ActionListener() {
+    toggleTookMM.setText("Took MM");
+    toggleTookMM.setBorder(new javax.swing.border.MatteBorder(null));
+    toggleTookMM.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+    toggleTookMM.setMaximumSize(new java.awt.Dimension(45, 18));
+    toggleTookMM.setMinimumSize(new java.awt.Dimension(45, 18));
+    toggleTookMM.setPreferredSize(new java.awt.Dimension(45, 18));
+    toggleTookMM.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        toggleTookAM2ActionPerformed(evt);
+        toggleTookMMActionPerformed(evt);
       }
     });
 
-    toggleTookAM3.setText(" Took Noon ");
-    toggleTookAM3.setBorder(new javax.swing.border.MatteBorder(null));
-    toggleTookAM3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    toggleTookAM3.setMaximumSize(new java.awt.Dimension(45, 18));
-    toggleTookAM3.setMinimumSize(new java.awt.Dimension(45, 18));
-    toggleTookAM3.setPreferredSize(new java.awt.Dimension(45, 18));
-    toggleTookAM3.addActionListener(new java.awt.event.ActionListener() {
+    toggleTookNoon.setText(" Took Noon ");
+    toggleTookNoon.setBorder(new javax.swing.border.MatteBorder(null));
+    toggleTookNoon.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+    toggleTookNoon.setMaximumSize(new java.awt.Dimension(45, 18));
+    toggleTookNoon.setMinimumSize(new java.awt.Dimension(45, 18));
+    toggleTookNoon.setPreferredSize(new java.awt.Dimension(45, 18));
+    toggleTookNoon.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        toggleTookAM3ActionPerformed(evt);
+        toggleTookNoonActionPerformed(evt);
       }
     });
 
-    toggleTookAM4.setText(" Took MidAft ");
-    toggleTookAM4.setBorder(new javax.swing.border.MatteBorder(null));
-    toggleTookAM4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    toggleTookAM4.setMaximumSize(new java.awt.Dimension(45, 18));
-    toggleTookAM4.setMinimumSize(new java.awt.Dimension(45, 18));
-    toggleTookAM4.setPreferredSize(new java.awt.Dimension(45, 18));
-    toggleTookAM4.addActionListener(new java.awt.event.ActionListener() {
+    toggleTookMidAft.setText(" Took MidAft ");
+    toggleTookMidAft.setBorder(new javax.swing.border.MatteBorder(null));
+    toggleTookMidAft.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+    toggleTookMidAft.setMaximumSize(new java.awt.Dimension(45, 18));
+    toggleTookMidAft.setMinimumSize(new java.awt.Dimension(45, 18));
+    toggleTookMidAft.setPreferredSize(new java.awt.Dimension(45, 18));
+    toggleTookMidAft.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        toggleTookAM4ActionPerformed(evt);
+        toggleTookMidAftActionPerformed(evt);
       }
     });
 
-    toggleTookAM5.setText("Took Aft");
-    toggleTookAM5.setBorder(new javax.swing.border.MatteBorder(null));
-    toggleTookAM5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    toggleTookAM5.setMaximumSize(new java.awt.Dimension(45, 18));
-    toggleTookAM5.setMinimumSize(new java.awt.Dimension(45, 18));
-    toggleTookAM5.setPreferredSize(new java.awt.Dimension(45, 18));
-    toggleTookAM5.addActionListener(new java.awt.event.ActionListener() {
+    toggleTookAft.setText("Took Aft");
+    toggleTookAft.setBorder(new javax.swing.border.MatteBorder(null));
+    toggleTookAft.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+    toggleTookAft.setMaximumSize(new java.awt.Dimension(45, 18));
+    toggleTookAft.setMinimumSize(new java.awt.Dimension(45, 18));
+    toggleTookAft.setPreferredSize(new java.awt.Dimension(45, 18));
+    toggleTookAft.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        toggleTookAM5ActionPerformed(evt);
+        toggleTookAftActionPerformed(evt);
       }
     });
 
-    toggleTookAM6.setText("Took Eve");
-    toggleTookAM6.setBorder(new javax.swing.border.MatteBorder(null));
-    toggleTookAM6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    toggleTookAM6.setMaximumSize(new java.awt.Dimension(45, 18));
-    toggleTookAM6.setMinimumSize(new java.awt.Dimension(45, 18));
-    toggleTookAM6.setPreferredSize(new java.awt.Dimension(45, 18));
-    toggleTookAM6.addActionListener(new java.awt.event.ActionListener() {
+    toggleTookEve.setText("Took Eve");
+    toggleTookEve.setBorder(new javax.swing.border.MatteBorder(null));
+    toggleTookEve.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+    toggleTookEve.setMaximumSize(new java.awt.Dimension(45, 18));
+    toggleTookEve.setMinimumSize(new java.awt.Dimension(45, 18));
+    toggleTookEve.setPreferredSize(new java.awt.Dimension(45, 18));
+    toggleTookEve.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        toggleTookAM6ActionPerformed(evt);
+        toggleTookEveActionPerformed(evt);
       }
     });
 
-    toggleTookAM7.setText(" Took Bedtime ");
-    toggleTookAM7.setBorder(new javax.swing.border.MatteBorder(null));
-    toggleTookAM7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    toggleTookAM7.setMaximumSize(new java.awt.Dimension(45, 18));
-    toggleTookAM7.setMinimumSize(new java.awt.Dimension(45, 18));
-    toggleTookAM7.setPreferredSize(new java.awt.Dimension(45, 18));
-    toggleTookAM7.addActionListener(new java.awt.event.ActionListener() {
+    toggleTookBedtime.setText(" Took Bedtime ");
+    toggleTookBedtime.setBorder(new javax.swing.border.MatteBorder(null));
+    toggleTookBedtime.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+    toggleTookBedtime.setMaximumSize(new java.awt.Dimension(45, 18));
+    toggleTookBedtime.setMinimumSize(new java.awt.Dimension(45, 18));
+    toggleTookBedtime.setPreferredSize(new java.awt.Dimension(45, 18));
+    toggleTookBedtime.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        toggleTookAM7ActionPerformed(evt);
+        toggleTookBedtimeActionPerformed(evt);
       }
     });
 
-    toggleTookAM8.setText("  Took Night ");
-    toggleTookAM8.setAutoscrolls(true);
-    toggleTookAM8.setBorder(new javax.swing.border.MatteBorder(null));
-    toggleTookAM8.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-    toggleTookAM8.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-    toggleTookAM8.setMaximumSize(new java.awt.Dimension(45, 18));
-    toggleTookAM8.setMinimumSize(new java.awt.Dimension(45, 18));
-    toggleTookAM8.setPreferredSize(new java.awt.Dimension(45, 18));
-    toggleTookAM8.addActionListener(new java.awt.event.ActionListener() {
+    toggleTookNight.setText("  Took Night ");
+    toggleTookNight.setAutoscrolls(true);
+    toggleTookNight.setBorder(new javax.swing.border.MatteBorder(null));
+    toggleTookNight.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+    toggleTookNight.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+    toggleTookNight.setMaximumSize(new java.awt.Dimension(45, 18));
+    toggleTookNight.setMinimumSize(new java.awt.Dimension(45, 18));
+    toggleTookNight.setPreferredSize(new java.awt.Dimension(45, 18));
+    toggleTookNight.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        toggleTookAM8ActionPerformed(evt);
+        toggleTookNightActionPerformed(evt);
       }
     });
 
@@ -668,19 +660,19 @@ public void closeMedStartGUI () {
             .add(12, 12, 12)
             .add(toggleTookAM, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 70, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
             .add(56, 56, 56)
-            .add(toggleTookAM2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 70, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+            .add(toggleTookMM, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 70, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
             .add(47, 47, 47)
-            .add(toggleTookAM3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 85, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+            .add(toggleTookNoon, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 85, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
             .add(35, 35, 35)
-            .add(toggleTookAM4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 95, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+            .add(toggleTookMidAft, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 95, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
             .add(46, 46, 46)
-            .add(toggleTookAM5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 70, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+            .add(toggleTookAft, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 70, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
             .add(57, 57, 57)
-            .add(toggleTookAM6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 70, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+            .add(toggleTookEve, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 70, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
             .add(39, 39, 39)
-            .add(toggleTookAM7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 102, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+            .add(toggleTookBedtime, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 102, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
             .add(30, 30, 30)
-            .add(toggleTookAM8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 88, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+            .add(toggleTookNight, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 88, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
             .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
     );
     scheduleLayout.setVerticalGroup(
@@ -692,21 +684,21 @@ public void closeMedStartGUI () {
         .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
         .add(scheduleLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
           .add(toggleTookAM, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-          .add(toggleTookAM2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-          .add(toggleTookAM3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-          .add(toggleTookAM4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-          .add(toggleTookAM5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-          .add(toggleTookAM6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-          .add(toggleTookAM7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-          .add(toggleTookAM8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+          .add(toggleTookMM, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+          .add(toggleTookNoon, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+          .add(toggleTookMidAft, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+          .add(toggleTookAft, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+          .add(toggleTookEve, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+          .add(toggleTookBedtime, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+          .add(toggleTookNight, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         .add(14, 14, 14))
     );
 
-    toggleTookAM8.getAccessibleContext().setAccessibleName("TookMON"); // NOI18N
+    toggleTookNight.getAccessibleContext().setAccessibleName("TookMON"); // NOI18N
 
     Treatments.addTab("Todays Schedule", schedule);
 
-    Actions.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+    Tools.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
 
     jPasswordField1.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
     jPasswordField1.setAutoscrolls(false);
@@ -717,43 +709,43 @@ public void closeMedStartGUI () {
       }
     });
 
-    configureTime.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
-    configureTime.setForeground(new java.awt.Color(255, 51, 0));
-    configureTime.setText("  Configure Time Frames  ");
-    configureTime.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+    btnConfigureTime.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
+    btnConfigureTime.setForeground(new java.awt.Color(255, 51, 0));
+    btnConfigureTime.setText("  Configure Time Frames  ");
+    btnConfigureTime.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
 
-    crud.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
-    crud.setForeground(new java.awt.Color(255, 51, 0));
-    crud.setText("  Edit the Database  ");
-    crud.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+    btnCrud.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
+    btnCrud.setForeground(new java.awt.Color(255, 51, 0));
+    btnCrud.setText("  Edit the Database  ");
+    btnCrud.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
 
-    submit.setText("  Submit  ");
-    submit.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-    submit.addActionListener(new java.awt.event.ActionListener() {
+    btnSubmit.setText("  Submit  ");
+    btnSubmit.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+    btnSubmit.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        submitActionPerformed(evt);
+        btnSubmitActionPerformed(evt);
       }
     });
 
-    jButton1.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
-    jButton1.setForeground(new java.awt.Color(255, 51, 0));
-    jButton1.setText("  Backup Database  ");
-    jButton1.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+    btnBackup.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
+    btnBackup.setForeground(new java.awt.Color(255, 51, 0));
+    btnBackup.setText("  Backup Database  ");
+    btnBackup.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
 
-    jButton2.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
-    jButton2.setForeground(new java.awt.Color(255, 51, 0));
-    jButton2.setText("  Restore Database  ");
-    jButton2.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+    btnRestore.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
+    btnRestore.setForeground(new java.awt.Color(255, 51, 0));
+    btnRestore.setText("  Restore Database  ");
+    btnRestore.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
 
-    jButton3.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
-    jButton3.setForeground(new java.awt.Color(255, 51, 0));
-    jButton3.setText("  Delete All Data  ");
-    jButton3.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+    btnDeleteAllData.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
+    btnDeleteAllData.setForeground(new java.awt.Color(255, 51, 0));
+    btnDeleteAllData.setText("  Delete All Data  ");
+    btnDeleteAllData.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
 
-    jButton4.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
-    jButton4.setForeground(new java.awt.Color(255, 51, 0));
-    jButton4.setText(" Change Password  ");
-    jButton4.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+    btnChangePW.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
+    btnChangePW.setForeground(new java.awt.Color(255, 51, 0));
+    btnChangePW.setText(" Change Password  ");
+    btnChangePW.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
 
     jTextArea2.setBackground(new java.awt.Color(0, 0, 0));
     jTextArea2.setColumns(20);
@@ -781,80 +773,77 @@ public void closeMedStartGUI () {
     jTextArea4.setFocusable(false);
     jScrollPane4.setViewportView(jTextArea4);
 
-    org.jdesktop.layout.GroupLayout ActionsLayout = new org.jdesktop.layout.GroupLayout(Actions);
-    Actions.setLayout(ActionsLayout);
-    ActionsLayout.setHorizontalGroup(
-      ActionsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-      .add(ActionsLayout.createSequentialGroup()
+    org.jdesktop.layout.GroupLayout ToolsLayout = new org.jdesktop.layout.GroupLayout(Tools);
+    Tools.setLayout(ToolsLayout);
+    ToolsLayout.setHorizontalGroup(
+      ToolsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+      .add(ToolsLayout.createSequentialGroup()
         .add(68, 68, 68)
-        .add(ActionsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-          .add(org.jdesktop.layout.GroupLayout.LEADING, crud)
-          .add(configureTime)
-          .add(org.jdesktop.layout.GroupLayout.LEADING, jButton1)
-          .add(org.jdesktop.layout.GroupLayout.LEADING, ActionsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-            .add(jButton4)
-            .add(jButton2)))
-        .add(ActionsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-          .add(ActionsLayout.createSequentialGroup()
+        .add(ToolsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+          .add(org.jdesktop.layout.GroupLayout.LEADING, btnCrud)
+          .add(btnConfigureTime)
+          .add(org.jdesktop.layout.GroupLayout.LEADING, btnBackup)
+          .add(org.jdesktop.layout.GroupLayout.LEADING, ToolsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+            .add(btnChangePW)
+            .add(btnRestore)))
+        .add(ToolsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+          .add(ToolsLayout.createSequentialGroup()
             .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 76, Short.MAX_VALUE)
-            .add(ActionsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-              .add(ActionsLayout.createSequentialGroup()
-                .add(jScrollPane2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 210, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(457, 457, 457))
-              .add(ActionsLayout.createSequentialGroup()
-                .add(jScrollPane4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 219, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(346, 346, 346))))
-          .add(ActionsLayout.createSequentialGroup()
-            .add(ActionsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-              .add(ActionsLayout.createSequentialGroup()
+            .add(ToolsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+              .add(jScrollPane2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 210, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+              .add(jScrollPane4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 219, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+            .add(448, 448, 448))
+          .add(ToolsLayout.createSequentialGroup()
+            .add(ToolsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+              .add(ToolsLayout.createSequentialGroup()
                 .add(150, 150, 150)
-                .add(submit))
-              .add(ActionsLayout.createSequentialGroup()
+                .add(btnSubmit))
+              .add(ToolsLayout.createSequentialGroup()
                 .add(111, 111, 111)
                 .add(jPasswordField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 140, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
             .add(0, 0, Short.MAX_VALUE))))
-      .add(ActionsLayout.createSequentialGroup()
-        .add(ActionsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-          .add(ActionsLayout.createSequentialGroup()
+      .add(ToolsLayout.createSequentialGroup()
+        .add(ToolsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+          .add(ToolsLayout.createSequentialGroup()
             .add(213, 213, 213)
             .add(jLabel2))
-          .add(ActionsLayout.createSequentialGroup()
+          .add(ToolsLayout.createSequentialGroup()
             .add(396, 396, 396)
-            .add(jButton3)))
+            .add(btnDeleteAllData)))
         .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
     );
-    ActionsLayout.setVerticalGroup(
-      ActionsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-      .add(ActionsLayout.createSequentialGroup()
+    ToolsLayout.setVerticalGroup(
+      ToolsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+      .add(ToolsLayout.createSequentialGroup()
         .addContainerGap()
         .add(jLabel2)
         .add(18, 18, 18)
-        .add(ActionsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-          .add(ActionsLayout.createSequentialGroup()
+        .add(ToolsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+          .add(ToolsLayout.createSequentialGroup()
             .add(21, 21, 21)
-            .add(configureTime)
+            .add(btnConfigureTime)
             .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-            .add(crud)
+            .add(btnCrud)
             .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-            .add(jButton1)
+            .add(btnBackup)
             .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-            .add(jButton2)
+            .add(btnRestore)
             .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-            .add(jButton4))
-          .add(ActionsLayout.createSequentialGroup()
+            .add(btnChangePW))
+          .add(ToolsLayout.createSequentialGroup()
             .add(jScrollPane2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 72, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
             .add(20, 20, 20)
             .add(jPasswordField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 23, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-            .add(submit)
+            .add(btnSubmit)
             .add(16, 16, 16)
             .add(jScrollPane4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 117, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
         .add(24, 24, 24)
-        .add(jButton3)
+        .add(btnDeleteAllData)
         .add(200, 200, 200))
     );
 
-    Treatments.addTab("Tools", Actions);
+    Treatments.addTab("Tools", Tools);
 
     banner.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
     banner.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -865,30 +854,30 @@ public void closeMedStartGUI () {
 
     creator.setText("RedBrick.Org, 2015");
 
-    jbAddNewSchedule.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-    jbAddNewSchedule.setText("  Add New Schedule  ");
-    jbAddNewSchedule.setBorder(new javax.swing.border.MatteBorder(null));
-    jbAddNewSchedule.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    jbAddNewSchedule.setIconTextGap(6);
-    jbAddNewSchedule.setMargin(new java.awt.Insets(4, 14, 4, 14));
-    jbAddNewSchedule.setMaximumSize(new java.awt.Dimension(147, 25));
-    jbAddNewSchedule.setMinimumSize(new java.awt.Dimension(147, 25));
-    jbAddNewSchedule.setPreferredSize(new java.awt.Dimension(147, 25));
-    jbAddNewSchedule.addActionListener(new java.awt.event.ActionListener() {
+    btnAddNewSchedule.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+    btnAddNewSchedule.setText("  Add New Schedule  ");
+    btnAddNewSchedule.setBorder(new javax.swing.border.MatteBorder(null));
+    btnAddNewSchedule.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+    btnAddNewSchedule.setIconTextGap(6);
+    btnAddNewSchedule.setMargin(new java.awt.Insets(4, 14, 4, 14));
+    btnAddNewSchedule.setMaximumSize(new java.awt.Dimension(147, 25));
+    btnAddNewSchedule.setMinimumSize(new java.awt.Dimension(147, 25));
+    btnAddNewSchedule.setPreferredSize(new java.awt.Dimension(147, 25));
+    btnAddNewSchedule.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jbAddNewScheduleActionPerformed(evt);
+        btnAddNewScheduleActionPerformed(evt);
       }
     });
 
-    jTextArea1.setColumns(2);
-    jTextArea1.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-    jTextArea1.setRows(1);
-    jTextArea1.setAutoscrolls(false);
-    jTextArea1.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), javax.swing.BorderFactory.createTitledBorder(null, "Time to Next Treatment", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.ABOVE_TOP, new java.awt.Font("Dialog", 1, 18)))); // NOI18N
-    jTextArea1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-    jTextArea1.setFocusable(false);
-    jTextArea1.setMinimumSize(new java.awt.Dimension(232, 60));
-    jScrollPane1.setViewportView(jTextArea1);
+    TimeToNextTArea.setColumns(2);
+    TimeToNextTArea.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+    TimeToNextTArea.setRows(1);
+    TimeToNextTArea.setAutoscrolls(false);
+    TimeToNextTArea.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), javax.swing.BorderFactory.createTitledBorder(null, "Time to Next Treatment", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.ABOVE_TOP, new java.awt.Font("Dialog", 1, 18)))); // NOI18N
+    TimeToNextTArea.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+    TimeToNextTArea.setFocusable(false);
+    TimeToNextTArea.setMinimumSize(new java.awt.Dimension(232, 60));
+    TimeToNextSPanel.setViewportView(TimeToNextTArea);
 
     menuBar.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
 
@@ -950,9 +939,9 @@ public void closeMedStartGUI () {
             .addContainerGap()
             .add(banner, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 294, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 274, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+        .add(TimeToNextSPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 274, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
         .add(136, 136, 136)
-        .add(jbAddNewSchedule, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 156, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+        .add(btnAddNewSchedule, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 156, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
         .add(67, 67, 67))
     );
     layout.setVerticalGroup(
@@ -969,8 +958,8 @@ public void closeMedStartGUI () {
             .add(10, 10, 10))
           .add(layout.createSequentialGroup()
             .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-              .add(org.jdesktop.layout.GroupLayout.LEADING, jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-              .add(jbAddNewSchedule, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 30, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+              .add(org.jdesktop.layout.GroupLayout.LEADING, TimeToNextSPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+              .add(btnAddNewSchedule, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 30, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
             .add(14, 14, 14)))
         .add(Treatments)
         .add(20, 20, 20))
@@ -988,45 +977,45 @@ public void closeMedStartGUI () {
   // TODO add your handling code here:
     }//GEN-LAST:event_toggleTookAMActionPerformed
 
-    private void toggleTookAM2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleTookAM2ActionPerformed
+    private void toggleTookMMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleTookMMActionPerformed
   // TODO add your handling code here:
-    }//GEN-LAST:event_toggleTookAM2ActionPerformed
+    }//GEN-LAST:event_toggleTookMMActionPerformed
 
-    private void toggleTookAM3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleTookAM3ActionPerformed
+    private void toggleTookNoonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleTookNoonActionPerformed
   // TODO add your handling code here:
-    }//GEN-LAST:event_toggleTookAM3ActionPerformed
+    }//GEN-LAST:event_toggleTookNoonActionPerformed
 
-    private void toggleTookAM4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleTookAM4ActionPerformed
+    private void toggleTookMidAftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleTookMidAftActionPerformed
   // TODO add your handling code here:
-    }//GEN-LAST:event_toggleTookAM4ActionPerformed
+    }//GEN-LAST:event_toggleTookMidAftActionPerformed
 
-    private void toggleTookAM5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleTookAM5ActionPerformed
+    private void toggleTookAftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleTookAftActionPerformed
   // TODO add your handling code here:
-    }//GEN-LAST:event_toggleTookAM5ActionPerformed
+    }//GEN-LAST:event_toggleTookAftActionPerformed
 
-    private void toggleTookAM6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleTookAM6ActionPerformed
+    private void toggleTookEveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleTookEveActionPerformed
   // TODO add your handling code here:
-    }//GEN-LAST:event_toggleTookAM6ActionPerformed
+    }//GEN-LAST:event_toggleTookEveActionPerformed
 
-    private void toggleTookAM7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleTookAM7ActionPerformed
+    private void toggleTookBedtimeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleTookBedtimeActionPerformed
   // TODO add your handling code here:
-    }//GEN-LAST:event_toggleTookAM7ActionPerformed
+    }//GEN-LAST:event_toggleTookBedtimeActionPerformed
 
-    private void jbAddNewScheduleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAddNewScheduleActionPerformed
+    private void btnAddNewScheduleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddNewScheduleActionPerformed
   // TODO add your handling code here:
-    }//GEN-LAST:event_jbAddNewScheduleActionPerformed
+    }//GEN-LAST:event_btnAddNewScheduleActionPerformed
 
     private void exitMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitMenuItemActionPerformed
   System.exit (0);
     }//GEN-LAST:event_exitMenuItemActionPerformed
 
-    private void toggleTookAM8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleTookAM8ActionPerformed
+    private void toggleTookNightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleTookNightActionPerformed
   // TODO add your handling code here:
-    }//GEN-LAST:event_toggleTookAM8ActionPerformed
+    }//GEN-LAST:event_toggleTookNightActionPerformed
 
-  private void submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitActionPerformed
+  private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
   // TODO add your handling code here:
-  }//GEN-LAST:event_submitActionPerformed
+  }//GEN-LAST:event_btnSubmitActionPerformed
 
   private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
   // TODO add your handling code here:
@@ -1087,15 +1076,23 @@ public static void main (String args[]) {
   });
 }
   // Variables declaration - do not modify//GEN-BEGIN:variables
-  private javax.swing.JPanel Actions;
   private javax.swing.JTable SupplementsTable;
+  private javax.swing.JScrollPane TimeToNextSPanel;
+  private javax.swing.JTextArea TimeToNextTArea;
+  private javax.swing.JPanel Tools;
   private javax.swing.JTabbedPane Treatments;
   private javax.swing.JMenuItem aboutMenuItem;
   private javax.swing.JLabel banner;
-  private javax.swing.JButton configureTime;
+  private javax.swing.JButton btnAddNewSchedule;
+  private javax.swing.JButton btnBackup;
+  private javax.swing.JButton btnChangePW;
+  private javax.swing.JButton btnConfigureTime;
+  private javax.swing.JButton btnCrud;
+  private javax.swing.JButton btnDeleteAllData;
+  private javax.swing.JButton btnRestore;
+  private javax.swing.JButton btnSubmit;
   private javax.swing.JMenuItem contentsMenuItem;
   private javax.swing.JLabel creator;
-  private javax.swing.JButton crud;
   private javax.persistence.EntityManager entityMedRight;
   private javax.swing.JMenuItem exitMenuItem;
   private javax.swing.JMenu fileMenu;
@@ -1107,20 +1104,13 @@ public static void main (String args[]) {
   private javax.swing.JTree iteminfoJTree;
   private javax.swing.JScrollPane iteminfoScrollPane;
   private javax.swing.JScrollPane iteminfoScrollPanel;
-  private javax.swing.JButton jButton1;
-  private javax.swing.JButton jButton2;
-  private javax.swing.JButton jButton3;
-  private javax.swing.JButton jButton4;
   private javax.swing.JLabel jLabel2;
   private javax.swing.JPasswordField jPasswordField1;
   private javax.swing.JProgressBar jProgressBar1;
-  private javax.swing.JScrollPane jScrollPane1;
   private javax.swing.JScrollPane jScrollPane2;
   private javax.swing.JScrollPane jScrollPane4;
-  private javax.swing.JTextArea jTextArea1;
   private javax.swing.JTextArea jTextArea2;
   private javax.swing.JTextArea jTextArea4;
-  private javax.swing.JButton jbAddNewSchedule;
   private javax.swing.JPanel liquids;
   private javax.swing.JScrollPane liquidsScrollPane;
   private javax.swing.JTable liquidsTable;
@@ -1133,17 +1123,16 @@ public static void main (String args[]) {
   private javax.swing.JPanel schedule;
   private javax.swing.JScrollPane scheduleScrollPane;
   private javax.swing.JTable scheduleTable;
-  private javax.swing.JButton submit;
   private javax.swing.JPanel supplements;
   private javax.swing.JScrollPane supplementsScrollPanel;
   private javax.swing.JToggleButton toggleTookAM;
-  private javax.swing.JToggleButton toggleTookAM2;
-  private javax.swing.JToggleButton toggleTookAM3;
-  private javax.swing.JToggleButton toggleTookAM4;
-  private javax.swing.JToggleButton toggleTookAM5;
-  private javax.swing.JToggleButton toggleTookAM6;
-  private javax.swing.JToggleButton toggleTookAM7;
-  private javax.swing.JToggleButton toggleTookAM8;
+  private javax.swing.JToggleButton toggleTookAft;
+  private javax.swing.JToggleButton toggleTookBedtime;
+  private javax.swing.JToggleButton toggleTookEve;
+  private javax.swing.JToggleButton toggleTookMM;
+  private javax.swing.JToggleButton toggleTookMidAft;
+  private javax.swing.JToggleButton toggleTookNight;
+  private javax.swing.JToggleButton toggleTookNoon;
   private javax.swing.JPanel topicals;
   private javax.swing.JScrollPane topicalsScrollPanel;
   private javax.swing.JTable topicalsTable;

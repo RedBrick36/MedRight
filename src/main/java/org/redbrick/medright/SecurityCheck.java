@@ -10,7 +10,7 @@ import java.awt.event.*;
 import java.sql.*;
 import java.util.logging.*;
 import javax.swing.*;
-import static org.redbrick.medright.DatabaseOps.createDatabaseConnection;
+import static org.redbrick.medright.DatabaseOps.connectToDB;
 
 /**
  *
@@ -121,11 +121,6 @@ public void securityCheckClose () {
       .add(layout.createSequentialGroup()
         .add(48, 48, 48)
         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-          .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-              .add(btnSubmit, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 68, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-              .add(108, 108, 108))
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jLabel1))
           .add(layout.createSequentialGroup()
             .add(32, 32, 32)
             .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
@@ -135,25 +130,31 @@ public void securityCheckClose () {
             .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
               .add(jTextFieldUserName)
               .add(jPasswordField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-            .add(58, 58, 58)))
-        .addContainerGap(48, Short.MAX_VALUE))
+            .addContainerGap(106, Short.MAX_VALUE))
+          .add(layout.createSequentialGroup()
+            .add(jLabel1)
+            .addContainerGap(48, Short.MAX_VALUE))))
+      .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
+        .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        .add(btnSubmit, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 68, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+        .add(137, 137, 137))
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
       .add(layout.createSequentialGroup()
         .add(16, 16, 16)
         .add(jLabel1)
-        .add(25, 25, 25)
+        .add(18, 18, 18)
         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
           .add(jTextFieldUserName, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
           .add(UserName, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 30, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
           .add(jPasswordField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
           .add(Password, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 30, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-        .add(18, 18, 18)
+        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
         .add(btnSubmit, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 28, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-        .addContainerGap(16, Short.MAX_VALUE))
+        .addContainerGap(35, Short.MAX_VALUE))
     );
 
     getAccessibleContext().setAccessibleName("secCheckFrame");
@@ -163,7 +164,42 @@ public void securityCheckClose () {
   }// </editor-fold>//GEN-END:initComponents
 
   private void btnSubmitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSubmitMouseClicked
+  try {
+    this.secCheck = "login";
+    this.conn = connectToDB (this.secCheck);
+    String query = "SELECT * FROM APP.LOGIN where UserName =? and Password=?";
+    this.ps = this.conn.prepareStatement (query);
+    this.ps.setString (1, this.jTextFieldUserName.getText ());
+    this.jPasswordField.selectAll ();
+    this.ps.setString (2, this.jPasswordField.getSelectedText ());
+    this.rs = this.ps.executeQuery ();
+    if ( this.rs.next () ) {
+      JOptionPane.showMessageDialog (null, "Authenticated!");
+      this.conn.close ();
+      MedRightStartGUI medgui;
+      medgui = new MedRightStartGUI ();
+      medgui.setVisible (true);
+      this.dispose ();
+    }
+    else {
 
+      JOptionPane.showMessageDialog (null,
+                                     "Username or Password is Incorrecct ",
+                                     "Access Denied! ",
+                                     JOptionPane.ERROR_MESSAGE);
+    }
+  }
+  catch ( ClassNotFoundException |
+          InstantiationException |
+          IllegalAccessException |
+          SQLException ex ) {
+    Logger.getLogger (SecurityCheck.class
+        .getName ()).
+        log (Level.SEVERE,
+             null,
+             ex);
+
+  }
   }//GEN-LAST:event_btnSubmitMouseClicked
 
   private void jTextFieldUserNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldUserNameActionPerformed
@@ -178,11 +214,8 @@ public void securityCheckClose () {
 
   try {
     this.secCheck = "login";
-    this.conn = createDatabaseConnection (this.secCheck);
-    String query = "SELECT * FROM APP.USERS where UserName =? and Password=?";
-    String reset = "";
-    //   do {
-    //     try {
+    this.conn = connectToDB (this.secCheck);
+    String query = "SELECT * FROM APP.LOGIN where UserName =? and Password=?";
     this.ps = this.conn.prepareStatement (query);
     this.ps.setString (1, this.jTextFieldUserName.getText ());
     this.jPasswordField.selectAll ();
