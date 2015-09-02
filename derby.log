@@ -1,7 +1,7 @@
 ----------------------------------------------------------------
-Tue Sep 01 12:55:10 CDT 2015:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance a816c00e-014f-8a0c-5d83-00000733e080 
-on database directory /Users/RedBrick/NetBeansProjects/MedRight/MedRight/treatments with class loader sun.misc.Launcher$AppClassLoader@14dad5dc 
+Wed Sep 02 09:53:37 CDT 2015:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance a816c00e-014f-8e8c-8331-000006b022d8 
+on database directory /Users/RedBrick/NetBeansProjects/MedRight/treatments with class loader sun.misc.Launcher$AppClassLoader@28d93b30 
 Loaded from file:/Users/RedBrick/.m2/repository/org/apache/derby/derby/10.11.1.1/derby-10.11.1.1.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_45-b14
@@ -10,4 +10,9 @@ os.name=Mac OS X
 os.arch=x86_64
 os.version=10.10.5
 derby.system.home=null
+------------  Begin Error Message -------------
+
+System may be in a inconsistent state, missing file /Users/RedBrick/NetBeansProjects/MedRight/treatments/log/log1.dat
+------------  End Error Message -------------
+
 Database Class Loader started - derby.database.classpath=''
