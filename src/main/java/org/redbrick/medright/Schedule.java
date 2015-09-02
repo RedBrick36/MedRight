@@ -25,7 +25,7 @@ private static final long serialVersionUID = 1L;
 	// Continue setup of persistence by providing a unique, auto generated, id
 // for persistence use only.
 @Id
-@GeneratedValue (strategy = GenerationType.TABLE)
+@GeneratedValue (strategy = GenerationType.AUTO)
 private int id;
 @SuppressWarnings ("unused")
 private static final Logger LOG = Logger.getLogger (Schedule.class.getName ());
@@ -68,9 +68,9 @@ private boolean am;
  */
 private boolean bedtime;
 /**
- * Declares the condition for which the treatment is prescribed
+ * Declares the reason for which the treatment is prescribed
  */
-private String condition;
+private String reason;
 /**
  * Declares the volume of the dose in 2 decimal format
  */
@@ -194,7 +194,7 @@ public Schedule (String go) {
   this.uuid = 0;
   this.type = null;
   this.name = "";
-  this.condition = "";
+  this.reason = "";
   this.dose = 0.0;
   this.doseMeasure = "";
   this.reminder = false;
@@ -221,18 +221,18 @@ public Schedule (String go) {
 
 // Define all of the setters and getters for class fields
 /**
- * @return the condition
+ * @return the reason
  */
-String getCondition () {
-  return this.condition;
+String getReason () {
+  return this.reason;
 }
 
 /**
- * @param condition
- * the condition to set
+ * @param reason
+ * the reason to set
  */
-void setCondition (String condition) {
-  this.condition = condition;
+void setReason (String reason) {
+  this.reason = reason;
 }
 
 /**
@@ -618,7 +618,7 @@ public void setWednesday (boolean wednesday) {
  * @return
  */
 public String getStateOfTheObject () {
-  return this.getUuid () + ", " + this.getType () + ", " + this.getName () + ", " + this.getCondition () + ", "
+  return this.getUuid () + ", " + this.getType () + ", " + this.getName () + ", " + this.getReason () + ", "
       + this.getDose () + ", " + this.getDoseMeasure () + ", " + this.isReminder () + ", " + this.isMonday ()
       + ", " + this.isTuesday () + ", " + this.isWednesday () + ", " + this.isThursday () + ", "
       + this.isFriday () + ", " + this.isSaturday () + ", " + this.isSunday () + ", " + this.isAm () + ", "
