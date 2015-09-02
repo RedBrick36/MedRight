@@ -2,31 +2,15 @@ package org.redbrick.medright;
 
 import java.io.*;
 import java.util.logging.*;
-import javax.persistence.*;
 
 /**
  *
  * @author RedBrick
+ *
  */
-/**
- * This class provides the foundation for all other operations.
- * Providing
- * persistence to this class will allow each instance of this class to
- * either
- * insert into the scheduleDB database a row or to update/delete an
- * existing row
- * (representing a treatment object) in the database.
- */
-// Setting up the class as a persistence entity (Domain Class).
-@Entity
 public class Schedule implements Serializable {
 
 private static final long serialVersionUID = 1L;
-	// Continue setup of persistence by providing a unique, auto generated, id
-// for persistence use only.
-@Id
-@GeneratedValue (strategy = GenerationType.AUTO)
-private int id;
 @SuppressWarnings ("unused")
 private static final Logger LOG = Logger.getLogger (Schedule.class.getName ());
 /**
@@ -173,24 +157,12 @@ private int uuid;
  * Indicates that the treatment is to be taken on Wednesdays
  */
 private boolean wednesday;
-/**
- * Surrogate variable used to provide an empty constructor for
- * persistence.
- */
-@SuppressWarnings ("unused")
-private String surrogate = "";
-
-// Create empty constructor for use by persistence only
-public Schedule () {
-}
 
 /**
- * Application-called constructor for this class
+ * Constructor for this class
  *
- * @param go
  */
-public Schedule (String go) {
-  this.surrogate = go;
+public Schedule () {
   this.uuid = 0;
   this.type = null;
   this.name = "";
