@@ -54,22 +54,43 @@ private static String whichDB;
 public static boolean backupDatabase (Connection con) throws SQLException {
 
   try {
-    freeze = con.prepareCall ("CALL SYSCS_UTIL.SYSCS_FREEZE_DATABASE()");
-    freeze.execute ();
+    try {
+      freeze = con.prepareCall ("CALL SYSCS_UTIL.SYSCS_FREEZE_DATABASE()");
+      freeze.execute ();
+    }
+    catch ( SQLException err ) {
+      System.out.println ("Could not freeze Database " + err.getMessage ());
+      freeze.close ();
+    }
     freeze.close ();
-
-    backup = con.prepareCall ("CALL SYSCS_UTIL.SYSCS_BACKUP_DATABASE(?)");
-    backup.setString (1, "./DBaseBackups");
-    backup.execute ();
+    try {
+      backup = con.prepareCall ("CALL SYSCS_UTIL.SYSCS_BACKUP_DATABASE(?)");
+      backup.setString (1, "./DBaseBackups");
+      backup.execute ();
+    }
+    catch ( SQLException err ) {
+      System.out.println ("Could not Backup Database " + err.getMessage ());
+      backup.close ();
+    }
     backup.close ();
-
-    unfreeze = con.prepareCall ("CALL SYSCS_UTIL.SYSCS_UNFREEZE_DATABASE()");
-    unfreeze.execute ();
+    try {
+      unfreeze = con.prepareCall ("CALL SYSCS_UTIL.SYSCS_UNFREEZE_DATABASE()");
+      unfreeze.execute ();
+    }
+    catch ( SQLException err ) {
+      System.out.println ("Could not Unfreeze Database " + err.getMessage ());
+      unfreeze.close ();
+    }
     unfreeze.close ();
   }
   catch ( SQLException err ) {
-    System.out.println ("Error backing up database " + err.getMessage ());
+    System.out.println ("Error running Backup Process " + err.getMessage ());
+    freeze.close ();
+    backup.close ();
+    unfreeze.close ();
+    con.close ();
   }
+  con.close ();
   return true;
 }
 
@@ -82,7 +103,7 @@ public static boolean backupDatabase (Connection con) throws SQLException {
  * @throws SQLException
  * @throws IOException
  */
-public static boolean backupDatabaseTables (Connection con) throws SQLException, IOException {
+public static boolean backupDatabaseTable (Connection con) throws SQLException, IOException {
   try {
     status = false;
     currentPath = get ("backup.db");
@@ -101,12 +122,17 @@ public static boolean backupDatabaseTables (Connection con) throws SQLException,
           "CALL SYSCS_UTIL.SYSCS_EXPORT_TABLE(null,'TREATMENTS','./backup.db',null,null,null)");
       status = statement.execute ();
       statement.close ();
+      con.close ();
       System.out.println ("New Backup of Database Table was Successful.");
+
     }
   }
   catch ( IOException ex ) {
     java.util.logging.Logger.getLogger (DatabaseOps.class.getName ()).log (java.util.logging.Level.SEVERE, null,
                                                                            ex);
+    System.out.println ("IO Error! " + ex.getMessage ());
+    statement.close ();
+    con.close ();
   }
   return status;
 }
@@ -128,15 +154,17 @@ public static Boolean clearDatabaseTable (Connection con) throws SQLException {
   }
   catch ( SQLException err ) {
     System.out.println ("SQL Error: " + err.getMessage ());
+    statement.close ();
+    con.close ();
   }
   statement.close ();
+  con.close ();
   return status;
 }
 
 /**
  *
  * @param whichDB
- * @param whichdb
  *
  *
  * @return
@@ -144,9 +172,10 @@ public static Boolean clearDatabaseTable (Connection con) throws SQLException {
  * @throws ClassNotFoundException
  * @throws InstantiationException
  * @throws IllegalAccessException
+ * @throws HeadlessException
  */
 public static Connection connectToDB (String whichDB)
-    throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+    throws ClassNotFoundException, InstantiationException, IllegalAccessException, HeadlessException {
   if ( whichDB.equalsIgnoreCase ("login") ) {
     dbChoice = 1;
   }
@@ -215,10 +244,15 @@ public static boolean createTableIfNecessary (Connection con)
       cs.execute ();
       cs.close ();
       rs.close ();
+      con.close ();
     }
   }
   catch ( SQLException err ) {
     showMessageDialog (null, err);
+    cs.execute ();
+    cs.close ();
+    rs.close ();
+    con.close ();
   }
   return true;
 }
@@ -277,10 +311,15 @@ public static void getStateOfDatabase (Connection con) throws SQLException {
           + allDays + ", " + allTimes + ", " + asNeeded + ", " + leadTime + ", " + otf + ", ");
       statement.close ();
       rs.close ();
+      con.close ();
+
     }
   }
   catch ( SQLException err ) {
     System.out.println ("Error executing SQL: " + err.getMessage ());
+    statement.close ();
+    rs.close ();
+    con.close ();
   }
 }
 
@@ -315,13 +354,13 @@ public static boolean restoreDatabaseTable (Connection con) throws SQLException 
  *
  * @throws SQLException
  */
-public static boolean runDbaseChecks (Connection con) throws SQLException {
+public static boolean runDatabaseChecks (Connection con) throws SQLException {
 
   try {
-    checkDB = con.prepareCall ("VALUES SYSCS_UTIL.SYSCS_CHECK_TABLE('APP', 'USERS')");
+    checkDB = con.prepareCall ("VALUES SYSCS_UTIL.SYSCS_CHECK_TABLE('APP', 'TREATMENTS')");
     checkDB.execute ();
     checkDB.close ();
-    System.out.println ("Table Users checked Successfully.");
+    System.out.println ("Table Treatments checked Successfully.");
   }
   catch ( SQLException err ) {
     System.out.println ("SQL Error: " + err.getMessage ());
