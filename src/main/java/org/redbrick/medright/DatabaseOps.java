@@ -25,23 +25,22 @@ import javax.swing.*;
  */
 public class DatabaseOps {
 
+private static Connection con;
+private static CallableStatement unfreeze;
+private static CallableStatement freeze;
 private static CallableStatement backup;
 private static CallableStatement checkDB;
-private static Connection con;
-private static CallableStatement cs;
-private static Path currentPath = null;
-private static String filetime;
-private static CallableStatement freeze;
-private static String loginDB;
-private static DatabaseMetaData md;
-private static Path newPath = null;
-private static LocalDateTime now;
-private static ResultSet rs;
 private static CallableStatement statement;
+private static CallableStatement cs;
+private static ResultSet rs;
+private static DatabaseMetaData md;
+private static Path currentPath = null;
+private static Path newPath = null;
+private static String filetime;
+private static String loginDB;
+private static LocalDateTime now;
 private static boolean status;
-private static CallableStatement unfreeze;
 private static int dbChoice;
-private static String whichDB;
 
 /**
  *
