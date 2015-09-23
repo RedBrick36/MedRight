@@ -316,6 +316,8 @@ public static void getStateOfDatabase (Connection con) throws SQLException {
   }
   catch ( SQLException err ) {
     System.out.println ("Error executing SQL: " + err.getMessage ());
+
+//FIXME - find proper method to handle post exception closing
     statement.close ();
     rs.close ();
     con.close ();
@@ -337,6 +339,8 @@ public static boolean restoreDatabaseTable (Connection con) throws SQLException 
         "CALL SYSCS_UTIL.SYSCS_IMPORT_TABLE (null,'TREATMENTS','./backup.db',null,null,null,0)");
     status = statement.execute ();
     System.out.println ("Database Table Restored Successfully.");
+    statement.close ();
+    con.close ();
   }
   catch ( SQLException err ) {
     System.out.println ("SQL Error: " + err.getMessage ());
@@ -359,6 +363,7 @@ public static boolean runDatabaseChecks (Connection con) throws SQLException {
     checkDB = con.prepareCall ("VALUES SYSCS_UTIL.SYSCS_CHECK_TABLE('APP', 'TREATMENTS')");
     checkDB.execute ();
     checkDB.close ();
+    con.close ();
     System.out.println ("Table Treatments checked Successfully.");
   }
   catch ( SQLException err ) {
