@@ -10,7 +10,6 @@ import java.awt.event.*;
 import java.sql.*;
 import java.util.logging.*;
 import javax.swing.*;
-import static org.redbrick.medright.DatabaseOps.connectToDB;
 
 /**
  *
@@ -166,7 +165,7 @@ public void securityCheckClose () {
   private void btnSubmitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSubmitMouseClicked
   try {
     this.secCheck = "login";
-    this.conn = connectToDB (this.secCheck);
+    this.conn = DatabaseOps.connectToDB (this.secCheck);
     String query = "SELECT * FROM APP.LOGIN where UserName =? and Password=?";
     this.ps = this.conn.prepareStatement (query);
     this.ps.setString (1, this.jTextFieldUserName.getText ());
@@ -214,7 +213,7 @@ public void securityCheckClose () {
 
   try {
     this.secCheck = "login";
-    this.conn = connectToDB (this.secCheck);
+    this.conn = DatabaseOps.connectToDB (this.secCheck);
     String query = "SELECT * FROM APP.LOGIN where UserName =? and Password=?";
     this.ps = this.conn.prepareStatement (query);
     this.ps.setString (1, this.jTextFieldUserName.getText ());
