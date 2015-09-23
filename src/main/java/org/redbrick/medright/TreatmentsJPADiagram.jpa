@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jpa:entity-mappings status="GENERATED" jaxb-support="false" id="_144303166044643" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <jpa:entity jaxb-root-element="false" static-metamodel="false" abstract="false" class="Treatments" visibile="true" minimized="false" id="_144303166044646">
+        <jpa:attributes>
+            <jpa:id name="uuid" attribute-type="Integer" visibile="true" id="_144303166044747">
+                <jpa:column name="UUID" unique="false" nullable="false" insertable="true" updatable="true" table="TREATMENTS"/>
+            </jpa:id>
+            <jpa:basic name="type" optional="true" attribute-type="String" visibile="true" id="_144303166044848">
+                <jpa:column name="TYPE" unique="false" nullable="true" insertable="true" updatable="true" table="TREATMENTS" length="10"/>
+            </jpa:basic>
+            <jpa:basic name="name" optional="true" attribute-type="String" visibile="true" id="_144303166044849">
+                <jpa:column name="NAME" unique="false" nullable="true" insertable="true" updatable="true" table="TREATMENTS" length="40"/>
+            </jpa:basic>
+            <jpa:basic name="reason" optional="true" attribute-type="String" visibile="true" id="_144303166044850">
+                <jpa:column name="REASON" unique="false" nullable="true" insertable="true" updatable="true" table="TREATMENTS" length="45"/>
+            </jpa:basic>
+            <jpa:basic name="dose" optional="true" attribute-type="Double" visibile="true" id="_144303166044851">
+                <jpa:column name="DOSE" unique="false" nullable="true" insertable="true" updatable="true" table="TREATMENTS" precision="52"/>
+            </jpa:basic>
+            <jpa:basic name="measure" optional="true" attribute-type="String" visibile="true" id="_144303166044852">
+                <jpa:column name="MEASURE" unique="false" nullable="true" insertable="true" updatable="true" table="TREATMENTS" length="11"/>
+            </jpa:basic>
+            <jpa:basic name="reminder" optional="true" attribute-type="Boolean" visibile="true" id="_144303166044853">
+                <jpa:column name="REMINDER" unique="false" nullable="true" insertable="true" updatable="true" table="TREATMENTS"/>
+            </jpa:basic>
+            <jpa:basic name="monday" optional="true" attribute-type="Boolean" visibile="true" id="_144303166044854">
+                <jpa:column name="MONDAY" unique="false" nullable="true" insertable="true" updatable="true" table="TREATMENTS"/>
+            </jpa:basic>
+            <jpa:basic name="tuesday" optional="true" attribute-type="Boolean" visibile="true" id="_144303166044855">
+                <jpa:column name="TUESDAY" unique="false" nullable="true" insertable="true" updatable="true" table="TREATMENTS"/>
+            </jpa:basic>
+            <jpa:basic name="wednesday" optional="true" attribute-type="Boolean" visibile="true" id="_144303166044856">
+                <jpa:column name="WEDNESDAY" unique="false" nullable="true" insertable="true" updatable="true" table="TREATMENTS"/>
+            </jpa:basic>
+            <jpa:basic name="thursday" optional="true" attribute-type="Boolean" visibile="true" id="_144303166044857">
+                <jpa:column name="THURSDAY" unique="false" nullable="true" insertable="true" updatable="true" table="TREATMENTS"/>
+            </jpa:basic>
+            <jpa:basic name="friday" optional="true" attribute-type="Boolean" visibile="true" id="_144303166044858">
+                <jpa:column name="FRIDAY" unique="false" nullable="true" insertable="true" updatable="true" table="TREATMENTS"/>
+            </jpa:basic>
+            <jpa:basic name="saturday" optional="true" attribute-type="Boolean" visibile="true" id="_144303166044859">
+                <jpa:column name="SATURDAY" unique="false" nullable="true" insertable="true" updatable="true" table="TREATMENTS"/>
+            </jpa:basic>
+            <jpa:basic name="sunday" optional="true" attribute-type="Boolean" visibile="true" id="_144303166044860">
+                <jpa:column name="SUNDAY" unique="false" nullable="true" insertable="true" updatable="true" table="TREATMENTS"/>
+            </jpa:basic>
+            <jpa:basic name="am" optional="true" attribute-type="Boolean" visibile="true" id="_144303166044861">
+                <jpa:column name="AM" unique="false" nullable="true" insertable="true" updatable="true" table="TREATMENTS"/>
+            </jpa:basic>
+            <jpa:basic name="midam" optional="true" attribute-type="Boolean" visibile="true" id="_144303166044862">
+                <jpa:column name="MIDAM" unique="false" nullable="true" insertable="true" updatable="true" table="TREATMENTS"/>
+            </jpa:basic>
+            <jpa:basic name="noon" optional="true" attribute-type="Boolean" visibile="true" id="_144303166044863">
+                <jpa:column name="NOON" unique="false" nullable="true" insertable="true" updatable="true" table="TREATMENTS"/>
+            </jpa:basic>
+            <jpa:basic name="midaft" optional="true" attribute-type="Boolean" visibile="true" id="_144303166044864">
+                <jpa:column name="MIDAFT" unique="false" nullable="true" insertable="true" updatable="true" table="TREATMENTS"/>
+            </jpa:basic>
+            <jpa:basic name="afternoon" optional="true" attribute-type="Boolean" visibile="true" id="_144303166044865">
+                <jpa:column name="AFTERNOON" unique="false" nullable="true" insertable="true" updatable="true" table="TREATMENTS"/>
+            </jpa:basic>
+            <jpa:basic name="evening" optional="true" attribute-type="Boolean" visibile="true" id="_144303166044866">
+                <jpa:column name="EVENING" unique="false" nullable="true" insertable="true" updatable="true" table="TREATMENTS"/>
+            </jpa:basic>
+            <jpa:basic name="bedtime" optional="true" attribute-type="Boolean" visibile="true" id="_144303166044867">
+                <jpa:column name="BEDTIME" unique="false" nullable="true" insertable="true" updatable="true" table="TREATMENTS"/>
+            </jpa:basic>
+            <jpa:basic name="midofnight" optional="true" attribute-type="Boolean" visibile="true" id="_144303166044868">
+                <jpa:column name="MIDOFNIGHT" unique="false" nullable="true" insertable="true" updatable="true" table="TREATMENTS"/>
+            </jpa:basic>
+            <jpa:basic name="alldays" optional="true" attribute-type="Boolean" visibile="true" id="_144303166044869">
+                <jpa:column name="ALLDAYS" unique="false" nullable="true" insertable="true" updatable="true" table="TREATMENTS"/>
+            </jpa:basic>
+            <jpa:basic name="alltimes" optional="true" attribute-type="Boolean" visibile="true" id="_144303166044870">
+                <jpa:column name="ALLTIMES" unique="false" nullable="true" insertable="true" updatable="true" table="TREATMENTS"/>
+            </jpa:basic>
+            <jpa:basic name="asneeded" optional="true" attribute-type="Boolean" visibile="true" id="_144303166044871">
+                <jpa:column name="ASNEEDED" unique="false" nullable="true" insertable="true" updatable="true" table="TREATMENTS"/>
+            </jpa:basic>
+            <jpa:basic name="leadtime" optional="true" attribute-type="Integer" visibile="true" id="_144303166044872">
+                <jpa:column name="LEADTIME" unique="false" nullable="true" insertable="true" updatable="true" table="TREATMENTS"/>
+            </jpa:basic>
+            <jpa:basic name="otf" optional="true" attribute-type="String" visibile="true" id="_144303166044873">
+                <jpa:column name="OTF" unique="false" nullable="true" insertable="true" updatable="true" table="TREATMENTS" length="20"/>
+            </jpa:basic>
+        </jpa:attributes>
+        <jpa:table name="TREATMENTS"/>
+    </jpa:entity>
+    <jpa:diagram id="_144303166044644">
+        <plane elementRef="_144303166044643" id="_144303166044645_p"/>
+    </jpa:diagram>
+</jpa:entity-mappings>
