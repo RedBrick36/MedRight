@@ -163,42 +163,42 @@ public void securityCheckClose () {
   }// </editor-fold>//GEN-END:initComponents
 
   private void btnSubmitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSubmitMouseClicked
-  try {
-    this.secCheck = "login";
-    this.conn = DatabaseOps.connectToDB (this.secCheck);
-    String query = "SELECT * FROM APP.LOGIN where UserName =? and Password=?";
-    this.ps = this.conn.prepareStatement (query);
-    this.ps.setString (1, this.jTextFieldUserName.getText ());
-    this.jPasswordField.selectAll ();
-    this.ps.setString (2, this.jPasswordField.getSelectedText ());
-    this.rs = this.ps.executeQuery ();
-    if ( this.rs.next () ) {
-      JOptionPane.showMessageDialog (null, "Authenticated!");
-      this.conn.close ();
-      MedRightStartGUI medgui;
-      medgui = new MedRightStartGUI ();
-      medgui.setVisible (true);
-      this.dispose ();
-    }
-    else {
-
-      JOptionPane.showMessageDialog (null,
-                                     "Username or Password is Incorrecct ",
-                                     "Access Denied! ",
-                                     JOptionPane.ERROR_MESSAGE);
-    }
-  }
-  catch ( ClassNotFoundException |
-          InstantiationException |
-          IllegalAccessException |
-          SQLException ex ) {
-    Logger.getLogger (SecurityCheck.class
-        .getName ()).
-        log (Level.SEVERE,
-             null,
-             ex);
-
-  }
+//  try {
+//    this.secCheck = "login";
+//    this.conn = DatabaseOps.connectToDB (this.secCheck);
+//    String query = "SELECT * FROM APP.LOGIN where UserName =? and Password=?";
+//    this.ps = this.conn.prepareStatement (query);
+//    this.ps.setString (1, this.jTextFieldUserName.getText ());
+//    this.jPasswordField.selectAll ();
+//    this.ps.setString (2, this.jPasswordField.getSelectedText ());
+//    this.rs = this.ps.executeQuery ();
+//    if ( this.rs.next () ) {
+//      JOptionPane.showMessageDialog (null, "Authenticated!");
+//      this.conn.close ();
+//      MedRightStartGUI medgui;
+//      medgui = new MedRightStartGUI ();
+//      medgui.setVisible (true);
+//      this.dispose ();
+//    }
+//    else {
+//
+//      JOptionPane.showMessageDialog (null,
+//                                     "Username or Password is Incorrecct ",
+//                                     "Access Denied! ",
+//                                     JOptionPane.ERROR_MESSAGE);
+//    }
+//  }
+//  catch ( ClassNotFoundException |
+//          InstantiationException |
+//          IllegalAccessException |
+//          SQLException ex ) {
+//    Logger.getLogger (SecurityCheck.class
+//        .getName ()).
+//        log (Level.SEVERE,
+//             null,
+//             ex);
+//
+//  }
   }//GEN-LAST:event_btnSubmitMouseClicked
 
   private void jTextFieldUserNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldUserNameActionPerformed
@@ -211,42 +211,42 @@ public void securityCheckClose () {
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
 
-  try {
-    this.secCheck = "login";
-    this.conn = DatabaseOps.connectToDB (this.secCheck);
-    String query = "SELECT * FROM APP.LOGIN where UserName =? and Password=?";
-    this.ps = this.conn.prepareStatement (query);
-    this.ps.setString (1, this.jTextFieldUserName.getText ());
-    this.jPasswordField.selectAll ();
-    this.ps.setString (2, this.jPasswordField.getSelectedText ());
-    this.rs = this.ps.executeQuery ();
-    if ( this.rs.next () ) {
-      JOptionPane.showMessageDialog (null, "Authenticated!");
-      this.conn.close ();
-      MedRightStartGUI medgui;
-      medgui = new MedRightStartGUI ();
-      medgui.setVisible (true);
-      this.dispose ();
-    }
-    else {
-
-      JOptionPane.showMessageDialog (null,
-                                     "Username or Password is Incorrecct ",
-                                     "Access Denied! ",
-                                     JOptionPane.ERROR_MESSAGE);
-    }
-  }
-  catch ( ClassNotFoundException |
-          InstantiationException |
-          IllegalAccessException |
-          SQLException ex ) {
-    Logger.getLogger (SecurityCheck.class
-        .getName ()).
-        log (Level.SEVERE,
-             null,
-             ex);
-
-  }
+//  try {
+//    this.secCheck = "login";
+//    this.conn = DatabaseOps.connectToDB (this.secCheck);
+//    String query = "SELECT * FROM APP.LOGIN where UserName =? and Password=?";
+//    this.ps = this.conn.prepareStatement (query);
+//    this.ps.setString (1, this.jTextFieldUserName.getText ());
+//    this.jPasswordField.selectAll ();
+//    this.ps.setString (2, this.jPasswordField.getSelectedText ());
+//    this.rs = this.ps.executeQuery ();
+//    if ( this.rs.next () ) {
+//      JOptionPane.showMessageDialog (null, "Authenticated!");
+//      this.conn.close ();
+//      MedRightStartGUI medgui;
+//      medgui = new MedRightStartGUI ();
+//      medgui.setVisible (true);
+//      this.dispose ();
+//    }
+//    else {
+//
+//      JOptionPane.showMessageDialog (null,
+//                                     "Username or Password is Incorrecct ",
+//                                     "Access Denied! ",
+//                                     JOptionPane.ERROR_MESSAGE);
+//    }
+//  }
+//  catch ( ClassNotFoundException |
+//          InstantiationException |
+//          IllegalAccessException |
+//          SQLException ex ) {
+//    Logger.getLogger (SecurityCheck.class
+//        .getName ()).
+//        log (Level.SEVERE,
+//             null,
+//             ex);
+//
+//  }
     }//GEN-LAST:event_btnSubmitActionPerformed
 
   private void formPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_formPropertyChange
