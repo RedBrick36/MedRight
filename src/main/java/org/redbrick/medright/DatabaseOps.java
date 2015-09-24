@@ -220,6 +220,8 @@ public static Connection connectToDB (String whichDB)
  * @throws InstantiationException
  * @throws ClassNotFoundException
  * @throws IllegalAccessException
+ *
+ * Used to create the table if this is the first run of the program
  */
 public boolean createTableIfNecessary (Connection con)
     throws SQLException, InstantiationException, ClassNotFoundException, IllegalAccessException {

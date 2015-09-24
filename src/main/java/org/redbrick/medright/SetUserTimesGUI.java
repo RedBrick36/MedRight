@@ -266,64 +266,52 @@ public class SetUserTimesGUI extends javax.swing.JFrame {
   }// </editor-fold>//GEN-END:initComponents
 
   private void AfternoonHourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AfternoonHourActionPerformed
-        // TODO add your handling code here:
+  // TODO add your handling code here:
   }//GEN-LAST:event_AfternoonHourActionPerformed
 
-    /**
-     * @param args the command line arguments
-     *
-     * @throws java.lang.ClassNotFoundException
-     * @throws java.lang.InstantiationException
-     * @throws java.lang.IllegalAccessException
-     * @throws javax.swing.UnsupportedLookAndFeelException
-     */
-    public static void main (String args[]) throws
-            ClassNotFoundException, InstantiationException,
-            IllegalAccessException, UnsupportedLookAndFeelException {
-        /*
-         * Set the Nimbus look and feel
-         */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /*
-         * If Nimbus (introduced in Java SE 6) is not available, stay
-         * with the default look and feel.
-         * For details see
-         * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-         */
-        try {
-            UIManager.setLookAndFeel (
-                    "javax.swing.plaf.metal.MetalLookAndFeel");
-//      for ( javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels () ) {
-//        if ("Metal".equals ( info.getName () ) ) {
-//          javax.swing.UIManager.setLookAndFeel ( info.getClassName () );
-//          break;
-        }
-        catch ( ClassNotFoundException | InstantiationException |
-                IllegalAccessException |
-                javax.swing.UnsupportedLookAndFeelException ex ) {
-            java.util.logging.Logger.getLogger (SetUserTimesGUI.class.
-                    getName ()).
-                    log (java.util.logging.Level.SEVERE,
-                         null,
-                         ex);
-        }
-    //</editor-fold>
-        //</editor-fold>
+/**
+ * @param args the command line arguments
+ *
+ * @throws java.lang.ClassNotFoundException
+ * @throws java.lang.InstantiationException
+ * @throws java.lang.IllegalAccessException
+ * @throws javax.swing.UnsupportedLookAndFeelException
+ */
+public static void main (String args[]) throws
+    ClassNotFoundException, InstantiationException,
+    IllegalAccessException, UnsupportedLookAndFeelException {
+  /*
+   * Set the Nimbus look and feel
+   */
 
-        //</editor-fold>
-        //</editor-fold>
-
-        /*
-         * Create and display the form
-         */
-        java.awt.EventQueue.invokeLater (new Runnable () {
-            @Override
-            public void run () {
-                new SetUserTimesGUI ().setVisible (true);
-            }
-        });
+  try {
+    for ( javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.
+        getInstalledLookAndFeels () ) {
+      if ( "Nimbus".equals (info.getName ()) ) {
+        javax.swing.UIManager.setLookAndFeel (info.
+            getClassName ());
+        break;
+      }
     }
-
+  }
+  catch ( ClassNotFoundException | InstantiationException |
+          IllegalAccessException |
+          javax.swing.UnsupportedLookAndFeelException ex ) {
+    java.util.logging.Logger.getLogger (ScheduleCreatorGUI.class.getName ()).
+        log (java.util.logging.Level.SEVERE,
+             null,
+             ex);
+  }
+  /*
+   * Create and display the form
+   */
+  java.awt.EventQueue.invokeLater (new Runnable () {
+  @Override
+  public void run () {
+    new SetUserTimesGUI ().setVisible (true);
+  }
+  });
+}
   // Variables declaration - do not modify//GEN-BEGIN:variables
   private javax.swing.JComboBox AMHour;
   private javax.swing.JComboBox AMMins;

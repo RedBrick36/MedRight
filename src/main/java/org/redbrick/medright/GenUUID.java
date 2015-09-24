@@ -5,7 +5,16 @@
  */
 package org.redbrick.medright;
 
-// TODO add writes to a new table that keeps track of the last issued uuid per type
+/*
+ * FIXME add writes to the Treatments table that keeps track of the
+ * last issued uuid per type. That uuid needs to be the starting point
+ * for the next issued uuid per type. This requires a read of the
+ * Treatments table uuid field to determine where we left off.
+ *
+ * It may turn out that we do not need this class and can use some
+ * other mechanism
+ *
+ */
 /**
  *
  * @author RedBrick
@@ -13,12 +22,12 @@ package org.redbrick.medright;
  * This class is created to provide a systematic way of assigning a
  * unique identifier for each schedule entered. Since using the Name
  * variable in the Schedule objects could become unwieldy --
- * especially
- * with medicinal names -- a unique integer identifier is a better
- * choice. The unique identifier is tied to the type of schedule
- * (pill,
- * liquid, topical or fitness) that the user desires to create. The
- * arrays hold values consistent with the type of schedule being
+ * especially with medicinal names potentially misspelled.
+ * Using a unique integer identifier is a better choice.
+ * The unique identifier is tied to the type of schedule (pill,
+ * liquid, topical or fitness) that the user desires to create.
+ *
+ * The arrays hold values consistent with the type of schedule being
  * entered; with each being assigned a specific block of integers.
  *
  */
